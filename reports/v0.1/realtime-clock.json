@@ -1,0 +1,9 @@
+{
+	"difference_seconds": 0.011765666666661,
+	"game_seconds": 3.01666666666666,
+	"launch": "graphical CLI without fixed-fps",
+	"passed": true,
+	"physics_hz": 60,
+	"time_scale": 1.0,
+	"wall_seconds": 3.004901
+}

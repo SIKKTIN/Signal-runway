@@ -1,0 +1,23 @@
+{
+  "audio_playing_during_event": {
+    "death": true,
+    "finish": true,
+    "jump": true,
+    "land": true,
+    "wall_jump": true
+  },
+  "event_counts": {
+    "death": 1,
+    "finish": 1,
+    "jump": 1,
+    "land": 4,
+    "wall_jump": 1
+  },
+  "goal_event_finished_once": true,
+  "menu_ok": true,
+  "note": "wall_jump event is synthetic for audio bridge; producer route verifies physical wall jump",
+  "real_jump_and_land_events": true,
+  "real_spike_death_once": true,
+  "recovered": true,
+  "visual_attached": true
+}

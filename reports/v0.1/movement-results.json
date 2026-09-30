@@ -1,0 +1,67 @@
+{
+	"checks": [
+		{
+			"check": "horizontal_speed",
+			"detail": 280.0,
+			"passed": true
+		},
+		{
+			"check": "ground_stop",
+			"detail": 0.0,
+			"passed": true
+		},
+		{
+			"check": "full_jump_height",
+			"detail": 100.580932617188,
+			"passed": true
+		},
+		{
+			"check": "no_held_autojump",
+			"detail": "(80.0, 432.9883)",
+			"passed": true
+		},
+		{
+			"check": "variable_jump",
+			"detail": 33.18994140625,
+			"passed": true
+		},
+		{
+			"check": "coyote_jump",
+			"detail": "(280.0, -536.65)",
+			"passed": true
+		},
+		{
+			"check": "landing_buffer",
+			"detail": "(0.0, -311.65)",
+			"passed": true
+		},
+		{
+			"check": "wall_slide",
+			"detail": "(0.0, 90.0)",
+			"passed": true
+		},
+		{
+			"check": "wall_jump",
+			"detail": "(-220.0, -550.0)",
+			"passed": true
+		},
+		{
+			"check": "same_wall_lock",
+			"detail": "(100.0, 230.0)",
+			"passed": true
+		},
+		{
+			"check": "20_hazard_recoveries",
+			"detail": 20,
+			"passed": true
+		},
+		{
+			"check": "recovery_velocity",
+			"detail": "(0.0, 0.0)",
+			"passed": true
+		}
+	],
+	"godot": "4.7.2-stable (official)",
+	"passed": true,
+	"suite": "movement"
+}

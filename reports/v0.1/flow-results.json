@@ -1,0 +1,467 @@
+{
+	"checks": [
+		{
+			"check": "menu_on_launch",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "wait_for_first_input",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "first_input_starts_timer",
+			"detail": 0.5,
+			"passed": true
+		},
+		{
+			"check": "pause_freezes_time_and_world",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "resume",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "hazard_once_and_recovery",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "death_recovery_counted",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "manual_restart_resets_round",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "death_wins_same_frame",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "real_goal_finishes",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "finish_once_and_stop_clock",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "replay_preserves_best",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "menu_from_pause",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "lab_entry",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "keyboard_escape_pauses",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "keyboard_r_restarts_from_pause",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "20_integrated_recoveries",
+			"detail": 20,
+			"passed": true
+		},
+		{
+			"check": "full_route_no_teleport",
+			"detail": {
+				"deaths": 0,
+				"phase": "finished",
+				"seconds": 48.6166666666652,
+				"x": 13422.1162109375
+			},
+			"passed": true
+		},
+		{
+			"check": "route_wall_jumps_required",
+			"detail": 2,
+			"passed": true
+		},
+		{
+			"check": "route_duration_45_90",
+			"detail": 48.6166666666652,
+			"passed": true
+		}
+	],
+	"godot": "4.7.2-stable (official)",
+	"passed": true,
+	"route_trace": [
+		{
+			"frame": 0,
+			"phase": "ready",
+			"state": "idle",
+			"x": 96.0,
+			"y": 432.994140625
+		},
+		{
+			"frame": 60,
+			"phase": "running",
+			"state": "run",
+			"x": 356.499908447266,
+			"y": 432.994140625
+		},
+		{
+			"frame": 120,
+			"phase": "running",
+			"state": "rise",
+			"x": 636.528381347656,
+			"y": 337.555847167969
+		},
+		{
+			"frame": 180,
+			"phase": "running",
+			"state": "run",
+			"x": 916.529541015625,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 240,
+			"phase": "running",
+			"state": "run",
+			"x": 1196.52905273438,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 300,
+			"phase": "running",
+			"state": "fall",
+			"x": 1476.52709960938,
+			"y": 366.93359375
+		},
+		{
+			"frame": 360,
+			"phase": "running",
+			"state": "rise",
+			"x": 1756.52514648438,
+			"y": 335.679351806641
+		},
+		{
+			"frame": 420,
+			"phase": "running",
+			"state": "run",
+			"x": 2036.52270507813,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 480,
+			"phase": "running",
+			"state": "rise",
+			"x": 2316.52783203125,
+			"y": 337.540191650391
+		},
+		{
+			"frame": 540,
+			"phase": "running",
+			"state": "run",
+			"x": 2596.53271484375,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 600,
+			"phase": "running",
+			"state": "run",
+			"x": 2876.5380859375,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 660,
+			"phase": "running",
+			"state": "fall",
+			"x": 3156.54345703125,
+			"y": 388.601104736328
+		},
+		{
+			"frame": 720,
+			"phase": "running",
+			"state": "run",
+			"x": 3436.54833984375,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 780,
+			"phase": "running",
+			"state": "fall",
+			"x": 3716.5537109375,
+			"y": 396.990264892578
+		},
+		{
+			"frame": 840,
+			"phase": "running",
+			"state": "rise",
+			"x": 3996.55908203125,
+			"y": 342.511840820313
+		},
+		{
+			"frame": 900,
+			"phase": "running",
+			"state": "run",
+			"x": 4276.5546875,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 960,
+			"phase": "running",
+			"state": "rise",
+			"x": 4556.54541015625,
+			"y": 392.370147705078
+		},
+		{
+			"event": "wall_jump",
+			"position": "(4597.925, 344.3161)",
+			"time": 16.1833333333337
+		},
+		{
+			"frame": 1020,
+			"phase": "running",
+			"state": "fall",
+			"x": 4704.42236328125,
+			"y": 310.758605957031
+		},
+		{
+			"frame": 1080,
+			"phase": "running",
+			"state": "fall",
+			"x": 4984.41357421875,
+			"y": 366.933563232422
+		},
+		{
+			"frame": 1140,
+			"phase": "running",
+			"state": "run",
+			"x": 5264.40380859375,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 1200,
+			"phase": "running",
+			"state": "fall",
+			"x": 5544.39453125,
+			"y": 405.962768554688
+		},
+		{
+			"frame": 1260,
+			"phase": "running",
+			"state": "rise",
+			"x": 5824.38525390625,
+			"y": 335.679351806641
+		},
+		{
+			"frame": 1320,
+			"phase": "running",
+			"state": "run",
+			"x": 6104.37548828125,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 1380,
+			"phase": "running",
+			"state": "run",
+			"x": 6384.3662109375,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 1440,
+			"phase": "running",
+			"state": "run",
+			"x": 6664.35693359375,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 1500,
+			"phase": "running",
+			"state": "run",
+			"x": 6944.34716796875,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 1560,
+			"phase": "running",
+			"state": "run",
+			"x": 7224.337890625,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 1620,
+			"phase": "running",
+			"state": "rise",
+			"x": 7504.32861328125,
+			"y": 385.509307861328
+		},
+		{
+			"frame": 1680,
+			"phase": "running",
+			"state": "run",
+			"x": 7784.31884765625,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 1740,
+			"phase": "running",
+			"state": "fall",
+			"x": 8064.3095703125,
+			"y": 342.487731933594
+		},
+		{
+			"event": "wall_jump",
+			"position": "(8293.926, 344.3161)",
+			"time": 29.8666666666663
+		},
+		{
+			"frame": 1800,
+			"phase": "running",
+			"state": "rise",
+			"x": 8264.8134765625,
+			"y": 276.8154296875
+		},
+		{
+			"frame": 1860,
+			"phase": "running",
+			"state": "run",
+			"x": 8489.10546875,
+			"y": 432.925140380859
+		},
+		{
+			"frame": 1920,
+			"phase": "running",
+			"state": "rise",
+			"x": 8769.125,
+			"y": 367.426788330078
+		},
+		{
+			"frame": 1980,
+			"phase": "running",
+			"state": "run",
+			"x": 9049.14453125,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 2040,
+			"phase": "running",
+			"state": "run",
+			"x": 9329.1640625,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 2100,
+			"phase": "running",
+			"state": "fall",
+			"x": 9609.18359375,
+			"y": 334.820220947266
+		},
+		{
+			"frame": 2160,
+			"phase": "running",
+			"state": "rise",
+			"x": 9889.203125,
+			"y": 399.647644042969
+		},
+		{
+			"frame": 2220,
+			"phase": "running",
+			"state": "run",
+			"x": 10169.22265625,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 2280,
+			"phase": "running",
+			"state": "run",
+			"x": 10449.2421875,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 2340,
+			"phase": "running",
+			"state": "rise",
+			"x": 10729.26171875,
+			"y": 349.150177001953
+		},
+		{
+			"frame": 2400,
+			"phase": "running",
+			"state": "run",
+			"x": 11009.28125,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 2460,
+			"phase": "running",
+			"state": "fall",
+			"x": 11289.30078125,
+			"y": 342.487731933594
+		},
+		{
+			"frame": 2520,
+			"phase": "running",
+			"state": "run",
+			"x": 11569.3203125,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 2580,
+			"phase": "running",
+			"state": "fall",
+			"x": 11849.33984375,
+			"y": 425.657775878906
+		},
+		{
+			"frame": 2640,
+			"phase": "running",
+			"state": "run",
+			"x": 12129.359375,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 2700,
+			"phase": "running",
+			"state": "fall",
+			"x": 12409.37890625,
+			"y": 380.795257568359
+		},
+		{
+			"frame": 2760,
+			"phase": "running",
+			"state": "rise",
+			"x": 12689.3984375,
+			"y": 392.370147705078
+		},
+		{
+			"frame": 2820,
+			"phase": "running",
+			"state": "run",
+			"x": 12969.41796875,
+			"y": 432.925262451172
+		},
+		{
+			"frame": 2880,
+			"phase": "running",
+			"state": "run",
+			"x": 13249.4375,
+			"y": 432.925262451172
+		}
+	],
+	"suite": "v0.1-flow-and-route"
+}

@@ -1,0 +1,37 @@
+{
+  "sfx_death.wav": {
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "duration_s": 0.3,
+    "peak_dbfs": -3.1,
+    "rms_dbfs": -8.74
+  },
+  "sfx_finish.wav": {
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "duration_s": 0.62,
+    "peak_dbfs": -3.1,
+    "rms_dbfs": -13.37
+  },
+  "sfx_jump.wav": {
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "duration_s": 0.18,
+    "peak_dbfs": -3.1,
+    "rms_dbfs": -7.99
+  },
+  "sfx_land.wav": {
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "duration_s": 0.13,
+    "peak_dbfs": -3.1,
+    "rms_dbfs": -18.19
+  },
+  "sfx_wall_jump.wav": {
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "duration_s": 0.22,
+    "peak_dbfs": -3.1,
+    "rms_dbfs": -9.78
+  }
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <title>信号跑道美术方向板</title>
+  <rect width="1280" height="760" fill="#101821"/>
+  <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#F8FBFA">
+    <text x="48" y="62" font-size="34" font-weight="700">信号跑道｜2D 跑酷原型方向板</text>
+    <text x="48" y="94" font-size="17" fill="#AFC2CA">轮廓先于颜色 · 失误原因可读 · 快速重试</text>
+    <rect x="42" y="132" width="574" height="430" rx="16" fill="#18212B" stroke="#45DCCB" stroke-width="3"/>
+    <text x="68" y="172" font-size="24" font-weight="700" fill="#45DCCB">A  信号跑道 · 采用</text>
+    <text x="68" y="202" font-size="15" fill="#C5D7D9">平面几何 / 工业标识 / 高速可读</text>
+    <g opacity=".6" fill="#334554">
+      <rect x="68" y="238" width="180" height="110"/>
+      <rect x="295" y="224" width="110" height="86"/>
+      <rect x="442" y="246" width="128" height="102"/>
+    </g>
+    <rect x="68" y="438" width="216" height="55" fill="#334554"/>
+    <rect x="68" y="430" width="216" height="9" fill="#E6EFED"/>
+    <rect x="354" y="398" width="126" height="95" fill="#334554"/>
+    <rect x="354" y="390" width="126" height="9" fill="#E6EFED"/>
+    <path d="M287 493l17-43 17 43m0 0 17-43 17 43" fill="#FF685C" stroke="#FF685C" stroke-width="4"/>
+    <path d="M286 493h68" stroke="#FFB2A9" stroke-width="6" stroke-dasharray="7 6"/>
+    <g transform="translate(159 381)">
+      <rect x="0" y="0" width="27" height="44" rx="8" fill="#45DCCB"/>
+      <path d="M7 42l-5 9m19-9 7 9" stroke="#45DCCB" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="18" cy="12" r="3" fill="#18212B"/>
+    </g>
+    <g stroke="#FFD166" fill="none" stroke-width="7">
+      <path d="M524 493V334h52v159"/>
+      <path d="M536 352h29v22h-29"/>
+    </g>
+    <path d="M543 363l13 0-6-6m6 6-6 6" stroke="#FFD166" fill="none" stroke-width="3"/>
+    <text x="70" y="542" font-size="16" fill="#E6EFED">安全平台  ───</text>
+    <text x="274" y="542" font-size="16" fill="#FF685C">危险  ▲▲</text>
+    <text x="459" y="542" font-size="16" fill="#FFD166">终点  ▯↗</text>
+    <rect x="642" y="132" width="596" height="430" rx="16" fill="#1A1C31" stroke="#566073" stroke-width="2"/>
+    <text x="668" y="172" font-size="24" font-weight="700" fill="#B6BFD4">B  霓虹夜城 · 未采用</text>
+    <text x="668" y="202" font-size="15" fill="#A7AEC0">氛围鲜明，但亮牌、光晕与地面竞争注意力</text>
+    <g opacity=".8">
+      <rect x="668" y="235" width="95" height="128" fill="#343758"/>
+      <rect x="780" y="213" width="132" height="150" fill="#373450"/>
+      <rect x="934" y="244" width="107" height="119" fill="#30415D"/>
+      <rect x="1063" y="225" width="143" height="138" fill="#49355C"/>
+      <path d="M708 273h25m79 34h67m84-28h45m84 35h78" stroke="#E452E3" stroke-width="12"/>
+      <path d="M682 401h514" stroke="#6EDAF0" stroke-width="8"/>
+      <path d="M694 432h470" stroke="#D17BE1" stroke-width="7"/>
+      <path d="M708 467h430" stroke="#F476AF" stroke-width="7"/>
+    </g>
+    <text x="668" y="524" font-size="17" fill="#C3BBD1">保留少量速度感；舍弃高光晕与密集灯牌。</text>
+    <text x="48" y="614" font-size="20" font-weight="700">功能配色</text>
+    <g font-size="15">
+      <rect x="49" y="636" width="115" height="38" rx="5" fill="#18212B" stroke="#66808E"/><text x="49" y="697">背景 #18212B</text>
+      <rect x="220" y="636" width="115" height="38" rx="5" fill="#E6EFED"/><text x="220" y="697">安全 #E6EFED</text>
+      <rect x="391" y="636" width="115" height="38" rx="5" fill="#45DCCB"/><text x="391" y="697">角色 #45DCCB</text>
+      <rect x="562" y="636" width="115" height="38" rx="5" fill="#FF685C"/><text x="562" y="697">危险 #FF685C</text>
+      <rect x="733" y="636" width="115" height="38" rx="5" fill="#FFD166"/><text x="733" y="697">终点 #FFD166</text>
+    </g>
+    <text x="956" y="656" font-size="16" fill="#C5D7D9">参考画布 960 × 540</text>
+    <text x="956" y="684" font-size="16" fill="#C5D7D9">原型规格 · 2026-09-29</text>
+  </g>
+</svg>
