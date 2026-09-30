@@ -25,6 +25,19 @@
 !/reports/v0.1/generate-manifest.cjs
 /reports/v0.1/workflow/
 
+# v0.2 workflow payloads stay local; publish only verification results.
+/reports/v0.2/*.json
+!/reports/v0.2/*-results.json
+!/reports/v0.2/version-manifest.json
+!/reports/v0.2/realtime-clock.json
+!/reports/v0.2/independent_runtime.json
+/reports/v0.2/*.cjs
+!/reports/v0.2/generate-manifest.cjs
+/reports/v0.2/workflow/
+/reports/**/workflow/
+/reports/v0.2/independent-checks/start.json
+/reports/v0.2/independent-checks/delivery*.json
+
 # Godot regenerates import sidecars and editor caches.
 *.import
 *.log

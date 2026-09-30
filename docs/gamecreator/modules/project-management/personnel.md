@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-09-30T09:13:11.090Z
-> 文档内容基准：b1c3da39e08906d76323449f4c7b5d6d8ebf1c95e3b8db1f090ee933491f0526
+> 文档生成时间：2026-09-30T10:59:25.497Z
+> 文档内容基准：a72efbfbf01166f7513acfcacf202bd06f50d1a916130f3972111e50380297af
 
-> 项目版本：v0.1.0
+> 项目版本：v0.2.0
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -20,6 +20,10 @@
 - v0.1 首关与界面流程 [5960fc52-5260-4918-8722-d84132de8705] · 已完成
 - v0.1 首关集成与工程验证 [c7b68136-a1bb-4dae-86da-eeccd61e6b8c] · 已完成
 - v0.1 缺陷修复与最终工程交付 [deb79b6b-6654-4faa-b7cc-816b34087969] · 已完成
+- v0.2 追赶控制与规则原型 [11e462a6-437c-456a-bcc5-ae7c7b05f10e] · 已完成
+- v0.2 首关追赶预算与局部适配 [addd47d6-f955-4ab5-919f-cbcfe0bb58b5] · 已完成
+- v0.2 双模式流程与正式集成 [9d723ec1-7d19-406a-8037-81f5c8ce4fc1] · 已完成
+- v0.2 修复与最终工程交付 [aa391c62-4c6c-43b2-8d3b-e2296fcbd8c8] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -28,6 +32,8 @@
 - 跑酷原型的视觉与音效方案 [ec00bb5d-a185-4bcd-9919-f6ca3f88ff59] · 已完成
 - v0.1 表现资源与视听反馈 [92f80ecf-0051-4f5f-b0d5-f34be219179b] · 已完成
 - v0.1 独立技术与表现检查 [d5808be7-d6cc-43cc-a0c6-2d1724a318ec] · 已完成
+- v0.2 崩塌资源与威胁反馈 [d50eea61-70ac-4578-bde9-09a13a65861f] · 已完成
+- v0.2 独立技术与表现检查 [68970662-1e71-45a5-b606-b1ddb7ff77c3] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -344,6 +350,52 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 自验收约定：制作人开发；先提交证据，再单独填写结论
 - 验收要求：阻塞缺陷清零，已修复问题有复测证据；同一工程完整可玩、必需资源齐全；交付入口、代码资源、运行说明、独立报告和最终验收记录完整，未覆盖项和非阻塞问题明确。
 - 验收负责人：制作人
+### v0.2 追赶控制与规则原型
+- ID：11e462a6-437c-456a-bcc5-ae7c7b05f10e
+- 当前状态：已完成
+- 内容：验证后方固定边界、首次输入与缓冲、世界距离、越界检测、暂停和完整重开。先用已有测试房明确共享接口，不以视觉假前沿替代规则。
+- 前置任务：无
+- 允许修改路径：project.godot、scenes/main、scenes/player、scenes/test_room、scenes/levels、scripts/core、scripts/player、scripts/level、scripts/ui、docs/run-v0.2.md、reports/v0.2
+- 接口契约：规则以v0.2计划为准，模式time_trial/pursuit；threat_updated(front_x,gap_px,warning_level,grace_remaining)，run_failed(reason,elapsed,furthest_ratio)，原因spike/fall/caught；A冻结签名。制作人维护共享业务，主美只消费事件，不改玩家/关卡判定。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.2-execution-plan.md
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：实际原型中等待安全，首次输入只启动一次，暂停冻结；停留最终被吞，回退缩短距离；高速/低帧率越界与重置正确；交付接口与真实记录reports/v0.2/prototype.md。
+- 验收负责人：制作人
+### v0.2 首关追赶预算与局部适配
+- ID：addd47d6-f955-4ab5-919f-cbcfe0bb58b5
+- 当前状态：已完成
+- 内容：复用四段首关比较250/260/270三组速度，记录最低距离与局部动作耗时；调整确有证据的障碍空间，保持原动作规则和原模式。
+- 前置任务：11e462a6-437c-456a-bcc5-ae7c7b05f10e
+- 允许修改路径：project.godot、scenes/main、scenes/player、scenes/test_room、scenes/levels、scripts/core、scripts/player、scripts/level、scripts/ui、docs/run-v0.2.md、reports/v0.2
+- 接口契约：规则以v0.2计划为准，模式time_trial/pursuit；threat_updated(front_x,gap_px,warning_level,grace_remaining)，run_failed(reason,elapsed,furthest_ratio)，原因spike/fall/caught；A冻结签名。制作人维护共享业务，主美只消费事件，不改玩家/关卡判定。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.2-execution-plan.md
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：普通输入无传送通关；两处代表性2秒停止移动后仍能完成；持续站立被吞，既有墙跳无必死点；记录四段余量、候选比较及选定参数reports/v0.2/route-budget.md。
+- 验收负责人：制作人
+### v0.2 双模式流程与正式集成
+- ID：9d723ec1-7d19-406a-8037-81f5c8ce4fc1
+- 当前状态：已完成
+- 内容：集成追赶模式为默认入口，保留计时模式；统一失败/终点仲裁、按模式统计、暂停与原子重开；接入正式威胁资源，记录同一版本。
+- 前置任务：11e462a6-437c-456a-bcc5-ae7c7b05f10e、addd47d6-f955-4ab5-919f-cbcfe0bb58b5、d50eea61-70ac-4578-bde9-09a13a65861f
+- 允许修改路径：project.godot、scenes/main、scenes/player、scenes/test_room、scenes/levels、scripts/core、scripts/player、scripts/level、scripts/ui、docs/run-v0.2.md、reports/v0.2
+- 接口契约：规则以v0.2计划为准，模式time_trial/pursuit；threat_updated(front_x,gap_px,warning_level,grace_remaining)，run_failed(reason,elapsed,furthest_ratio)，原因spike/fall/caught；A冻结签名。制作人维护共享业务，主美只消费事件，不改玩家/关卡判定。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.2-execution-plan.md
+- 集成来源任务：11e462a6-437c-456a-bcc5-ae7c7b05f10e、addd47d6-f955-4ab5-919f-cbcfe0bb58b5、d50eea61-70ac-4578-bde9-09a13a65861f
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：两模式完整流程可达；失败原因一次结算，失败优先终点；20次失败再玩和暂停中R无遗留；最佳隔离；真实主路径/短停/图形时钟及原模式回归记录reports/v0.2/integration.md。
+- 验收负责人：制作人
+### v0.2 修复与最终工程交付
+- ID：aa391c62-4c6c-43b2-8d3b-e2296fcbd8c8
+- 当前状态：已完成
+- 内容：按主美报告修复本人程序/关卡/接线，资源问题反馈主美；复测具体缺陷，生成同版本清单、运行说明和最终结论，源工程交付不打包。
+- 前置任务：9d723ec1-7d19-406a-8037-81f5c8ce4fc1、68970662-1e71-45a5-b606-b1ddb7ff77c3
+- 允许修改路径：project.godot、scenes/main、scenes/player、scenes/test_room、scenes/levels、scripts/core、scripts/player、scripts/level、scripts/ui、docs/run-v0.2.md、reports/v0.2
+- 接口契约：规则以v0.2计划为准，模式time_trial/pursuit；threat_updated(front_x,gap_px,warning_level,grace_remaining)，run_failed(reason,elapsed,furthest_ratio)，原因spike/fall/caught；A冻结签名。制作人维护共享业务，主美只消费事件，不改玩家/关卡判定。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.2-execution-plan.md
+- 集成来源任务：9d723ec1-7d19-406a-8037-81f5c8ce4fc1
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：无启动/可达/重开/统计阻塞；已修复问题有复测证据；docs/run-v0.2.md、资源清单、独立报告、版本清单和reports/v0.2/final-acceptance.md齐全；体验未验证范围如实记录。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -353,6 +405,11 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.1 首关集成与工程验证 [c7b68136-a1bb-4dae-86da-eeccd61e6b8c] · 已完成
 - v0.1 独立技术与表现检查 [d5808be7-d6cc-43cc-a0c6-2d1724a318ec] · 已完成
 - v0.1 缺陷修复与最终工程交付 [deb79b6b-6654-4faa-b7cc-816b34087969] · 已完成
+- v0.2 追赶控制与规则原型 [11e462a6-437c-456a-bcc5-ae7c7b05f10e] · 已完成
+- v0.2 首关追赶预算与局部适配 [addd47d6-f955-4ab5-919f-cbcfe0bb58b5] · 已完成
+- v0.2 双模式流程与正式集成 [9d723ec1-7d19-406a-8037-81f5c8ce4fc1] · 已完成
+- v0.2 独立技术与表现检查 [68970662-1e71-45a5-b606-b1ddb7ff77c3] · 已完成
+- v0.2 修复与最终工程交付 [aa391c62-4c6c-43b2-8d3b-e2296fcbd8c8] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -621,9 +678,32 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 交付入口：制作人交付的同一 res://scenes/main/main.tscn 集成版本
 - 验收要求：reports/v0.1/independent-review.md 写明版本、实际入口、检查步骤、真实结果、缺陷复现/严重程度和未覆盖项；发现缺陷仍可形成有效报告，不据此自动判定版本通过。
 - 验收负责人：制作人
+### v0.2 崩塌资源与威胁反馈
+- ID：d50eea61-70ac-4578-bde9-09a13a65861f
+- 当前状态：已完成
+- 内容：按已确认风格并行制作前沿/覆盖、分级HUD/失败皮肤和威胁/吞没音效；先独立预览，在A后核对真实接口与锚点。
+- 前置任务：无
+- 允许修改路径：assets/visual/v02、assets/audio/v02、scenes/visual、scenes/ui/skins、scripts/visual、docs/art、reports/v0.2/art
+- 接口契约：规则以v0.2计划为准，模式time_trial/pursuit；threat_updated(front_x,gap_px,warning_level,grace_remaining)，run_failed(reason,elapsed,furthest_ratio)，原因spike/fall/caught；A冻结签名。制作人维护共享业务，主美只消费事件，不改玩家/关卡判定。
+- 交付入口：主美独立预览场景；docs/art/v0.2-assets.md
+- 自验收约定：主美制作；先提交证据，再单独填写结论
+- 验收要求：三类资源需求有路径、锚点、尺寸、导入和事件清单；正式预览能区分安全/接近/紧急和失败原因，落点不遮挡；声音生命周期与实际触发有证据，试听结论如实写明docs/art/v0.2-assets.md。
+- 验收负责人：主美
+### v0.2 独立技术与表现检查
+- ID：68970662-1e71-45a5-b606-b1ddb7ff77c3
+- 当前状态：已完成
+- 内容：在D指定版本独立运行，检查启动缓冲、追赶与回退、短停、暂停/重开、吞没/终点竞争、原模式、HUD和声音。只读工程，报告可复现缺陷和实际未覆盖范围。
+- 前置任务：9d723ec1-7d19-406a-8037-81f5c8ce4fc1
+- 允许修改路径：reports/v0.2/independent-review.md、reports/v0.2/independent-checks
+- 接口契约：规则以v0.2计划为准，模式time_trial/pursuit；threat_updated(front_x,gap_px,warning_level,grace_remaining)，run_failed(reason,elapsed,furthest_ratio)，原因spike/fall/caught；A冻结签名。制作人维护共享业务，主美只消费事件，不改玩家/关卡判定。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.2-execution-plan.md
+- 验收要求：reports/v0.2/independent-review.md注明同一版本、实际检查与缺陷复现；技术与主观观察分别记录，不把fixtures或自动通关当真人体验。报告有效性与被测功能是否通过分别验收。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
 - 跑酷原型的视觉与音效方案 [ec00bb5d-a185-4bcd-9919-f6ca3f88ff59] · 已完成
 - v0.1 表现资源与视听反馈 [92f80ecf-0051-4f5f-b0d5-f34be219179b] · 已完成
 - v0.1 独立技术与表现检查 [d5808be7-d6cc-43cc-a0c6-2d1724a318ec] · 已完成
+- v0.2 崩塌资源与威胁反馈 [d50eea61-70ac-4578-bde9-09a13a65861f] · 已完成
+- v0.2 独立技术与表现检查 [68970662-1e71-45a5-b606-b1ddb7ff77c3] · 已完成

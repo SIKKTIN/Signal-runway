@@ -1,0 +1,402 @@
+{
+	"boundary": {
+		"front_screen_x": 23.0,
+		"front_world_x": 22.9999999999994,
+		"gap": 153.166702270508,
+		"player_left": 176.166702270508,
+		"viewport": "(1707.0, 960.0)"
+	},
+	"checks": [
+		{
+			"actual": {
+				"mode": "pursuit",
+				"phase": "menu"
+			},
+			"check": "menu_defaults_to_pursuit",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"mode": "pursuit",
+				"phase": "ready"
+			},
+			"check": "real_enter_starts_ready_pursuit",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"elapsed": 0.0,
+				"front": -544.0,
+				"grace": 2.0
+			},
+			"check": "idle_before_first_action_is_safe",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"elapsed": 0.533333333333333,
+				"front": -544.0,
+				"grace": 1.46666666666667,
+				"player": "(186.1667, 432.9941)"
+			},
+			"check": "real_d_starts_grace",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"elapsed": 2.2,
+				"front": -490.000000000001,
+				"speed": 270.0
+			},
+			"check": "grace_ends_front_advances_at_270",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 3.71666666666666,
+				"caught_playing": false,
+				"caught_position": 0.0,
+				"front_x": -490.000000000001,
+				"gap_px": 666.166702270508,
+				"hud_visible": true,
+				"loop_paused": false,
+				"loop_playing": true,
+				"loop_position": 0.0560000017285347,
+				"mode": "pursuit",
+				"paused": false,
+				"resolved": false,
+				"warning_level": "near"
+			},
+			"check": "live_loop_loaded_and_playing",
+			"method": "engine-audio-state",
+			"passed": true
+		},
+		{
+			"actual": {
+				"after": [
+					2.2,
+					-490.000000000001,
+					0.0,
+					"(186.1667, 432.9941)",
+					3.73333333333333
+				],
+				"before": [
+					2.2,
+					-490.000000000001,
+					0.0,
+					"(186.1667, 432.9941)",
+					3.73333333333333
+				]
+			},
+			"check": "real_esc_freezes_time_front_player_animation",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"after": 0.0773333311080933,
+				"before": 0.0773333311080933
+			},
+			"check": "real_esc_freezes_threat_audio",
+			"method": "engine-audio-state",
+			"passed": true
+		},
+		{
+			"actual": {
+				"audio": {
+					"animation_time": 1.05,
+					"caught_playing": false,
+					"caught_position": 0.0,
+					"front_x": -544.0,
+					"gap_px": 630.0,
+					"hud_visible": true,
+					"loop_paused": false,
+					"loop_playing": false,
+					"loop_position": 0.0,
+					"mode": "pursuit",
+					"paused": false,
+					"resolved": false,
+					"warning_level": "grace"
+				},
+				"elapsed": 0.0,
+				"front": -544.0,
+				"phase": "ready"
+			},
+			"check": "real_r_while_paused_resets_and_waits",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"rate": 270.000000000001
+			},
+			"check": "stationary_front_rate",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"failures": 1,
+				"front": 180.499999999999,
+				"gap": -4.33329772949162,
+				"phase": "failed",
+				"player_left": 176.166702270508,
+				"reason": "caught"
+			},
+			"check": "stationary_player_is_naturally_caught_once",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": [
+				"grace",
+				"near",
+				"urgent",
+				"stopped"
+			],
+			"check": "warning_text_uses_grade_and_actual_speed",
+			"method": "state-and-GPU-screenshots",
+			"passed": true
+		},
+		{
+			"actual": {
+				"audio": {
+					"animation_time": 5.73333333333332,
+					"caught_playing": true,
+					"caught_position": 0.00266666663810611,
+					"front_x": 180.499999999999,
+					"gap_px": -4.33329772949162,
+					"hud_visible": false,
+					"loop_paused": false,
+					"loop_playing": false,
+					"loop_position": 0.0,
+					"mode": "pursuit",
+					"paused": false,
+					"resolved": true,
+					"warning_level": "stopped"
+				},
+				"labels": [
+					"SIGNAL LOST",
+					"被崩塌吞没",
+					"00:04.68",
+					"最远进度 0%   /   最佳通关 —",
+					"重开会重置跑道、追赶与计时。"
+				]
+			},
+			"check": "caught_card_and_loop_stop",
+			"method": "real-input-and-engine-state",
+			"passed": true
+		},
+		{
+			"actual": {
+				"failures": 1,
+				"finishes": 0
+			},
+			"check": "resolved_result_ignores_duplicate_goal_failure",
+			"method": "event-fixture",
+			"passed": true
+		},
+		{
+			"actual": "ready",
+			"check": "result_enter_restarts",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"best": -1.0,
+				"failures": 2,
+				"finishes": 0,
+				"phase": "failed",
+				"reason": "spike"
+			},
+			"check": "same_frame_failure_beats_goal_once",
+			"method": "event-fixture",
+			"passed": true
+		},
+		{
+			"actual": {
+				"labels": [
+					"SIGNAL LOST",
+					"坠入空隙",
+					"00:00.55",
+					"最远进度 0%   /   最佳通关 —",
+					"重开会重置跑道、追赶与计时。"
+				],
+				"phase": "failed",
+				"reason": "fall"
+			},
+			"check": "fall_card_matches_real_fall_threshold",
+			"method": "position-fixture-real-physics",
+			"passed": true
+		},
+		{
+			"actual": {
+				"mode": "time_trial",
+				"phase": "ready"
+			},
+			"check": "keyboard_selects_original_time_trial",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 0.55,
+				"caught_playing": false,
+				"caught_position": 0.0,
+				"front_x": -544.0,
+				"gap_px": 630.0,
+				"hud_visible": false,
+				"loop_paused": false,
+				"loop_playing": false,
+				"loop_position": 0.0,
+				"mode": "time_trial",
+				"paused": false,
+				"resolved": false,
+				"warning_level": "grace"
+			},
+			"check": "original_mode_has_no_threat",
+			"method": "real-input",
+			"passed": true
+		},
+		{
+			"actual": {
+				"deaths": 1,
+				"phase": "recovering"
+			},
+			"check": "original_real_spike_enters_recovery",
+			"method": "position-fixture-real-collision",
+			"passed": true
+		},
+		{
+			"actual": {
+				"deaths": 1,
+				"elapsed": 1.01666666666667,
+				"phase": "running",
+				"player": "(96.0, 432.9844)"
+			},
+			"check": "original_recovery_keeps_elapsed_and_respawns",
+			"method": "position-fixture-real-collision",
+			"passed": true
+		},
+		{
+			"actual": {
+				"audio": {
+					"animation_time": 0.6,
+					"caught_playing": false,
+					"caught_position": 0.0,
+					"front_x": -544.0,
+					"gap_px": 720.166702270508,
+					"hud_visible": false,
+					"loop_paused": false,
+					"loop_playing": false,
+					"loop_position": 0.0,
+					"mode": "pursuit",
+					"paused": false,
+					"resolved": true,
+					"warning_level": "stopped"
+				},
+				"phase": "failed",
+				"reason": "spike",
+				"tree_paused": false
+			},
+			"check": "pending_death_then_pause_resolves_without_dead_lock",
+			"method": "same-callback-event-fixture",
+			"passed": true
+		},
+		{
+			"actual": {
+				"phase": "failed",
+				"reason": "fall",
+				"tree_paused": false
+			},
+			"check": "late_death_after_pause_resolves",
+			"method": "same-callback-event-fixture",
+			"passed": true
+		},
+		{
+			"actual": {
+				"finishes": 0,
+				"pending": true,
+				"phase": "paused"
+			},
+			"check": "pending_goal_is_retained_during_pause",
+			"method": "same-callback-event-fixture",
+			"passed": true
+		},
+		{
+			"actual": {
+				"finishes": 1,
+				"pending": false,
+				"phase": "finished"
+			},
+			"check": "pending_goal_resolves_once_after_real_resume",
+			"method": "event-fixture-real-resume",
+			"passed": true
+		},
+		{
+			"actual": {
+				"deaths": 1,
+				"phase": "paused",
+				"resume_phase": "recovering"
+			},
+			"check": "legacy_late_death_preserves_pause_and_recovery",
+			"method": "same-callback-event-fixture",
+			"passed": true
+		},
+		{
+			"actual": {
+				"deaths": 1,
+				"phase": "running",
+				"player": "(96.0, 432.9844)"
+			},
+			"check": "legacy_late_death_recovers_after_real_resume",
+			"method": "event-fixture-real-resume",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 1.0,
+				"caught_playing": false,
+				"caught_position": 0.0,
+				"front_x": -544.0,
+				"gap_px": 630.0,
+				"hud_visible": false,
+				"loop_paused": false,
+				"loop_playing": false,
+				"loop_position": 0.0,
+				"mode": "time_trial",
+				"paused": false,
+				"resolved": true,
+				"warning_level": "stopped"
+			},
+			"check": "menu_clears_active_audio_and_hud",
+			"method": "real-input",
+			"passed": true
+		}
+	],
+	"godot": "4.7.2-stable (official)",
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"scope": "Real GPU/input critical paths plus explicitly marked event/position fixtures; no subjective listening or player study.",
+	"screenshots": [
+		"menu.png",
+		"ready.png",
+		"grace.png",
+		"pause.png",
+		"near.png",
+		"urgent.png",
+		"front_with.png",
+		"front_without.png",
+		"caught.png",
+		"spike.png",
+		"fall.png",
+		"time_trial.png"
+	],
+	"version": "v0.2.0+6433013766cf"
+}

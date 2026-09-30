@@ -1,0 +1,67 @@
+{
+	"checks": [
+		{
+			"check": "waiting_does_not_advance",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "grace_holds_front",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "grace_uses_remaining_delta",
+			"detail": -430.0,
+			"passed": true
+		},
+		{
+			"check": "zero_active_time_freezes",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "fast_forward_gains_gap",
+			"detail": 20.0,
+			"passed": true
+		},
+		{
+			"check": "retreat_loses_gap",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "large_delta_crossing_caught",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "retreat_into_half_plane_caught",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "20_full_resets",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "standing_eventually_caught",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "warning_hysteresis",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "warning_recovers",
+			"detail": "",
+			"passed": true
+		}
+	],
+	"godot": "4.7.2-stable (official)",
+	"passed": true,
+	"suite": "v0.2-chase-rules"
+}

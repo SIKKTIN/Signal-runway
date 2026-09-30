@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "check": "initial_properties_without_event",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "single_loop_and_audio_loaded",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "duplicate_rank_does_not_restart",
+      "detail": {
+        "cue_after": 0.0560000017285347,
+        "cue_before": 0.0453333333134651,
+        "loop_after": 0.0560000017285347,
+        "loop_before": 0.0453333333134651
+      },
+      "passed": true
+    },
+    {
+      "check": "pause_freezes_visual_and_loop",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "resume_loop",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "time_trial_stops_and_hides",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "result_stops_loop_and_caught_once",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "success_stops_all_audio",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "menu_initial_state_silent",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "restart_grace_resets_result",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "rebind_has_one_subscription",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "failure_reasons_have_distinct_icons",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "exit_stops_and_releases_streams",
+      "detail": "",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

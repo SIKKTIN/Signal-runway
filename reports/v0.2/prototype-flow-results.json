@@ -1,0 +1,46 @@
+{
+	"checks": [
+		{
+			"check": "main_defaults_to_pursuit",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "ready_waits_for_input",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "real_input_starts_grace",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "pause_freezes_grace_and_world",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "real_r_resets_from_pause",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "real_standing_run_gets_caught",
+			"detail": 4.43333333333332,
+			"passed": true
+		},
+		{
+			"check": "failure_stops_clock_and_front",
+			"detail": "",
+			"passed": true
+		},
+		{
+			"check": "failure_replay_is_clean",
+			"detail": "",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"suite": "v0.2-real-input-prototype"
+}

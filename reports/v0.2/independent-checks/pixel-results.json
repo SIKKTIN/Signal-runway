@@ -1,0 +1,18 @@
+{
+  "version": "v0.2.0+0dd12888c9bf",
+  "method": "Same frozen live main scene, actual Esc pause; pause card temporarily hidden and ChaseVisual draw toggled. HUD unchanged. Pixel fixture only.",
+  "image_size": [
+    1280,
+    720
+  ],
+  "logical_canvas": [
+    960,
+    540
+  ],
+  "front_world_x": 22.9999999999994,
+  "front_canvas_x": 23.0,
+  "front_pixel_x": 30.666666666666664,
+  "max_changed_pixel_x": 30,
+  "ahead_region_identical": true,
+  "passed": true
+}

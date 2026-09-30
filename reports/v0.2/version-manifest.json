@@ -1,0 +1,294 @@
+{
+  "version": "v0.2.0+0dd12888c9bf",
+  "sha256": "0dd12888c9bf9798ce1ca9f5fe5511a569fefb452b827f3d04e850b38f7e6023",
+  "generatedAt": "2026-09-30T10:44:54.975Z",
+  "entry": "res://scenes/main/main.tscn",
+  "engine": "Godot 4.7.2 stable",
+  "parameters": {
+    "chase_speed": 270,
+    "initial_gap": 640,
+    "start_delay": 2
+  },
+  "files": [
+    {
+      "path": "assets/audio/sfx_death.wav",
+      "sha256": "69136391022a1047faedbd5ad24fdcf2720da409c0c002adf176631ee9571b74",
+      "bytes": 28844
+    },
+    {
+      "path": "assets/audio/sfx_finish.wav",
+      "sha256": "72b0e889b72ff0b3cba039d611505de9473c3a5817025d0c8ff51bac4b9bb0df",
+      "bytes": 59564
+    },
+    {
+      "path": "assets/audio/sfx_jump.wav",
+      "sha256": "b67cdb34135fea5c197246048bbc37ccaf57a0797482d3ec95929bf9c407f425",
+      "bytes": 17324
+    },
+    {
+      "path": "assets/audio/sfx_land.wav",
+      "sha256": "1a15ce70804b8b7f970747b1a27ee034c107b0b63643628d8073d2d8e0c08c14",
+      "bytes": 12524
+    },
+    {
+      "path": "assets/audio/sfx_wall_jump.wav",
+      "sha256": "0025c2125c26a8925c91254849a5278530dd340e73bc56013186214617a03b9c",
+      "bytes": 21164
+    },
+    {
+      "path": "assets/audio/v02/caught.wav",
+      "sha256": "510b33ca40c5db191e92c6f22fc543d860f29a30edc07636a9e9492ff2e6eab5",
+      "bytes": 44204
+    },
+    {
+      "path": "assets/audio/v02/threat_loop.wav",
+      "sha256": "bb5826542031177af24e69d7c7bff6b3a95692e70e63397e7fd1e0208b5c3fe2",
+      "bytes": 192044
+    },
+    {
+      "path": "assets/audio/v02/warning_near.wav",
+      "sha256": "a19ae770588811ce05e3edf2b048bc4a78986059c2d1bdc7fb9fdd2292cbdcdd",
+      "bytes": 19244
+    },
+    {
+      "path": "assets/audio/v02/warning_urgent.wav",
+      "sha256": "4d936db8ec6f10664ec4cd9e7c3b3ab60d86951d13fdf3513ab4bf0aa3f01086",
+      "bytes": 23084
+    },
+    {
+      "path": "assets/visual/background_industrial.png",
+      "sha256": "5f9e6edcff206dba5c251864df09353e465dae58d8a273d5a337e2486a86d4fb",
+      "bytes": 14208
+    },
+    {
+      "path": "assets/visual/goal_gate.png",
+      "sha256": "2c623896484f0d04b8373e455b098db252be7c485e904a71280fb71a77c0595e",
+      "bytes": 1555
+    },
+    {
+      "path": "assets/visual/hazard_spike_left.png",
+      "sha256": "81dc1291cd87171bb3dff97bfe1d749def5b6e4533d99cc4cddb13130cf87210",
+      "bytes": 851
+    },
+    {
+      "path": "assets/visual/hazard_spike_right.png",
+      "sha256": "1a86c88b80838968e22db5264f282c234e14fe7581b709b79776280b36e69c8c",
+      "bytes": 899
+    },
+    {
+      "path": "assets/visual/hazard_spike_up.png",
+      "sha256": "42b3a170a713aed96dc3f89d3b507e82a8ee209859bb5d0141fddd75178882a2",
+      "bytes": 926
+    },
+    {
+      "path": "assets/visual/player_dead_0.png",
+      "sha256": "55a17c7b2375a58dca713d3186a2f8c01897d98ad992e4b41297c8bcc71dc420",
+      "bytes": 902
+    },
+    {
+      "path": "assets/visual/player_fall_0.png",
+      "sha256": "57d5050f8acf426f95ac98b5e0b074eae01e0e7c8b229da8afb3a0949492ef6b",
+      "bytes": 1368
+    },
+    {
+      "path": "assets/visual/player_finish_0.png",
+      "sha256": "4fac9bb221e87c5313ed5cff923bdc8a2dea0961870262a86243a55f0ca2cb4f",
+      "bytes": 1462
+    },
+    {
+      "path": "assets/visual/player_idle_0.png",
+      "sha256": "57fd6a53a3c1d039c6bea1cdb3eedb182d24d0d8774d260b80db694cc76488a7",
+      "bytes": 1319
+    },
+    {
+      "path": "assets/visual/player_jump_0.png",
+      "sha256": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+      "bytes": 1295
+    },
+    {
+      "path": "assets/visual/player_land_0.png",
+      "sha256": "d555c80904bae1ae47d64168acb3f1b61b2126814cfeeefc799a79f02cb4b0cf",
+      "bytes": 1276
+    },
+    {
+      "path": "assets/visual/player_rise_0.png",
+      "sha256": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+      "bytes": 1295
+    },
+    {
+      "path": "assets/visual/player_run_0_0.png",
+      "sha256": "95546103282c3690d78a8ce7ed788a4f705d8e9b7b54faba474ed072ae08d5e4",
+      "bytes": 1412
+    },
+    {
+      "path": "assets/visual/player_run_1_0.png",
+      "sha256": "9ee19fe10d58529d9e734c5b2cc78a3b722bf0562e8468ae5b13315f0f066661",
+      "bytes": 1343
+    },
+    {
+      "path": "assets/visual/player_wall_jump_0.png",
+      "sha256": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+      "bytes": 1295
+    },
+    {
+      "path": "assets/visual/player_wall_slide_0.png",
+      "sha256": "0b6bb6de22a61f60ab995e3d1335e6e8e2373964dc6532afc530b54b14fca7dc",
+      "bytes": 1378
+    },
+    {
+      "path": "assets/visual/terrain_platform.png",
+      "sha256": "7d95b9e9b1d82603f31167c11dbfaceac8f67376b476d005aded9c1675e4a5e0",
+      "bytes": 255
+    },
+    {
+      "path": "assets/visual/terrain_solid.png",
+      "sha256": "5eb87d8dd555db3b2193506229ab0b2c80a758e081b59299d8c04e9a673785f7",
+      "bytes": 241
+    },
+    {
+      "path": "assets/visual/terrain_wall_left.png",
+      "sha256": "8ff6f6424cf16363926ca996e09389d3c80e03bdb5e9cfd39e968008cbf35dd4",
+      "bytes": 299
+    },
+    {
+      "path": "assets/visual/terrain_wall_right.png",
+      "sha256": "97e2051952c9f52e0f6ec3d0f45098f6ef074308d67718246f243c190ec11e4c",
+      "bytes": 299
+    },
+    {
+      "path": "assets/visual/ui_clock.png",
+      "sha256": "0e89de8d85a42f39001f0dceeb50987d85017d1368ea9e89ec6dc3a122483047",
+      "bytes": 1420
+    },
+    {
+      "path": "assets/visual/ui_deaths.png",
+      "sha256": "746a9d675b90d1b54a98290b25d89e07c4b60777a0ae7dff1cc84f9da6d6cb05",
+      "bytes": 765
+    },
+    {
+      "path": "assets/visual/ui_finish.png",
+      "sha256": "d2182b63a37af0bc0a6f077951c0236639df7b62f7510e2ccd36fc7e843e8202",
+      "bytes": 634
+    },
+    {
+      "path": "assets/visual/v02/collapse_cover.png",
+      "sha256": "521cd44d86d6239df730ff80de917d4d18e8acd232f7072750a3f595498a3891",
+      "bytes": 503
+    },
+    {
+      "path": "assets/visual/v02/collapse_front.png",
+      "sha256": "573d1bb2ef99a76d3dcf7be6048992690b1a094c1412102b441380e48ea0d523",
+      "bytes": 329
+    },
+    {
+      "path": "assets/visual/v02/failure_caught.png",
+      "sha256": "938368fe03e203f1f0adfdd4f77ac2b10512e9a9592d7cdaae40e25de05f7ffb",
+      "bytes": 1430
+    },
+    {
+      "path": "assets/visual/v02/failure_fall.png",
+      "sha256": "d8f512af1e7ea1267d92ce606c52d4638311576d8c0fabe9b6c4a3984a5e240b",
+      "bytes": 813
+    },
+    {
+      "path": "assets/visual/v02/failure_spike.png",
+      "sha256": "de1c1e9a3cfeeec54538ba3500ae6cb22a4106966be47b82f8d3a6fe3b54a648",
+      "bytes": 977
+    },
+    {
+      "path": "assets/visual/v02/warning_near.png",
+      "sha256": "28cd9a0f23ea839431834e7a240120fe97115eb4218c50e8a1b06fda90d86519",
+      "bytes": 409
+    },
+    {
+      "path": "assets/visual/v02/warning_safe.png",
+      "sha256": "0bce7a588b5c53fab7d85f9da8fc41bdd2bbdc9ab465990a6d35c3134ca4abda",
+      "bytes": 815
+    },
+    {
+      "path": "assets/visual/v02/warning_urgent.png",
+      "sha256": "1719005b2086b80dbcd2e555655c239fd9fba4d9d2de80a2ddbad69a89e06e98",
+      "bytes": 1158
+    },
+    {
+      "path": "project.godot",
+      "sha256": "ece0a02de23795c0a303674b6304a57028c7d5b7186c3d66b4e361570b0d4d8a",
+      "bytes": 902
+    },
+    {
+      "path": "scenes/levels/level_01.tscn",
+      "sha256": "7cb2e5d7576a2efe9785e317371d8da6de1266cf4319e1b7e0e22848079a2aff",
+      "bytes": 174
+    },
+    {
+      "path": "scenes/main/main.tscn",
+      "sha256": "ab96f1052da19d012ec461557ebef11a65b62c8e332f08325b35cb19fd7dfbb3",
+      "bytes": 167
+    },
+    {
+      "path": "scenes/player/player.tscn",
+      "sha256": "6cb01e34ccd43613f38e49b3d327ce8a4648d55d068d7b867e3320c8c4141ee9",
+      "bytes": 179
+    },
+    {
+      "path": "scenes/test_room/test_room.tscn",
+      "sha256": "79fda5f414c9bce82ddee1fd6a5d305e35e6f388b460a35da3999ac6e3064692",
+      "bytes": 176
+    },
+    {
+      "path": "scenes/ui/skins/chase_theme.tres",
+      "sha256": "628a473b8149ccbcba930fecd3482fb123c337fda805e0ca427635568dc3fd0d",
+      "bytes": 7637
+    },
+    {
+      "path": "scenes/ui/skins/signal_theme.tres",
+      "sha256": "4695c6d964072d8915fa547379fa1c8ac90b4329e07e93f7c2237b0eae480b54",
+      "bytes": 3679
+    },
+    {
+      "path": "scripts/core/input_bindings.gd",
+      "sha256": "edf9cc0a3ef7e2ed971aa6baef8d5fbc436a79de6525be667e822b1cf0ae5fcc",
+      "bytes": 562
+    },
+    {
+      "path": "scripts/core/test_room.gd",
+      "sha256": "2f32b91a2f8e7be30210d914da4c607aa3aa258312bc73c78637b79f98fdc342",
+      "bytes": 2554
+    },
+    {
+      "path": "scripts/level/chase_controller.gd",
+      "sha256": "f751ac422512a7ba69d34fcf38777178d0231a22652ae584ca1e0b405f2609f3",
+      "bytes": 1815
+    },
+    {
+      "path": "scripts/level/course.gd",
+      "sha256": "36a5d27f6ab81912aec4eafda986b5a07a7e8ae02d01d5192cd200b0c9afcb56",
+      "bytes": 6712
+    },
+    {
+      "path": "scripts/level/run_flow.gd",
+      "sha256": "4a4f1072d5d5c96ecc852bc33269ee7b57c081b625b3a9cbc98dc32f9961c00d",
+      "bytes": 10222
+    },
+    {
+      "path": "scripts/player/player.gd",
+      "sha256": "5c55db3d3e1cb8cffc3ea0a71aa444db83deee9597b9401bc99ab6eabaab3d9a",
+      "bytes": 4380
+    },
+    {
+      "path": "scripts/ui/interface.gd",
+      "sha256": "3b0bebfeb6af59b871fbb9bb1bed27e02bdb46c94523270a81d6c824436c9a72",
+      "bytes": 10728
+    },
+    {
+      "path": "scripts/visual/chase_visual.gd",
+      "sha256": "0a239c8c4a2157b03cb537f5d7fc39bcabbfc505214b1aa30aca1097fc27a868",
+      "bytes": 11292
+    },
+    {
+      "path": "scripts/visual/player_visual.gd",
+      "sha256": "59ee940a7cfd6c94563448dd1e2e481fef41818eb4bdb31a7f271486270dc45c",
+      "bytes": 3955
+    }
+  ]
+}

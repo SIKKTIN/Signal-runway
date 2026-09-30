@@ -1,0 +1,127 @@
+{
+  "files": [
+    {
+      "path": "assets/audio/v02/caught.wav",
+      "sha256": "510b33ca40c5db191e92c6f22fc543d860f29a30edc07636a9e9492ff2e6eab5",
+      "bytes": 44204
+    },
+    {
+      "path": "assets/audio/v02/threat_loop.wav",
+      "sha256": "bb5826542031177af24e69d7c7bff6b3a95692e70e63397e7fd1e0208b5c3fe2",
+      "bytes": 192044
+    },
+    {
+      "path": "assets/audio/v02/warning_near.wav",
+      "sha256": "a19ae770588811ce05e3edf2b048bc4a78986059c2d1bdc7fb9fdd2292cbdcdd",
+      "bytes": 19244
+    },
+    {
+      "path": "assets/audio/v02/warning_urgent.wav",
+      "sha256": "4d936db8ec6f10664ec4cd9e7c3b3ab60d86951d13fdf3513ab4bf0aa3f01086",
+      "bytes": 23084
+    },
+    {
+      "path": "assets/visual/v02/collapse_cover.png",
+      "sha256": "521cd44d86d6239df730ff80de917d4d18e8acd232f7072750a3f595498a3891",
+      "bytes": 503,
+      "dimensions": [
+        128,
+        128
+      ]
+    },
+    {
+      "path": "assets/visual/v02/collapse_front.png",
+      "sha256": "573d1bb2ef99a76d3dcf7be6048992690b1a094c1412102b441380e48ea0d523",
+      "bytes": 329,
+      "dimensions": [
+        32,
+        128
+      ]
+    },
+    {
+      "path": "assets/visual/v02/failure_caught.png",
+      "sha256": "938368fe03e203f1f0adfdd4f77ac2b10512e9a9592d7cdaae40e25de05f7ffb",
+      "bytes": 1430,
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "assets/visual/v02/failure_fall.png",
+      "sha256": "d8f512af1e7ea1267d92ce606c52d4638311576d8c0fabe9b6c4a3984a5e240b",
+      "bytes": 813,
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "assets/visual/v02/failure_spike.png",
+      "sha256": "de1c1e9a3cfeeec54538ba3500ae6cb22a4106966be47b82f8d3a6fe3b54a648",
+      "bytes": 977,
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "assets/visual/v02/warning_near.png",
+      "sha256": "28cd9a0f23ea839431834e7a240120fe97115eb4218c50e8a1b06fda90d86519",
+      "bytes": 409,
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "assets/visual/v02/warning_safe.png",
+      "sha256": "0bce7a588b5c53fab7d85f9da8fc41bdd2bbdc9ab465990a6d35c3134ca4abda",
+      "bytes": 815,
+      "dimensions": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "assets/visual/v02/warning_urgent.png",
+      "sha256": "1719005b2086b80dbcd2e555655c239fd9fba4d9d2de80a2ddbad69a89e06e98",
+      "bytes": 1158,
+      "dimensions": [
+        32,
+        32
+      ]
+    }
+  ],
+  "audio": {
+    "threat_loop": {
+      "duration_s": 2.0,
+      "peak_dbfs": -12.0,
+      "rms_dbfs": -17.6,
+      "sample_rate_hz": 48000,
+      "channels": 1,
+      "loop_seam_delta": 0.003931774993647165
+    },
+    "warning_near": {
+      "duration_s": 0.2,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -11.57,
+      "sample_rate_hz": 48000,
+      "channels": 1
+    },
+    "warning_urgent": {
+      "duration_s": 0.24,
+      "peak_dbfs": -7.0,
+      "rms_dbfs": -11.57,
+      "sample_rate_hz": 48000,
+      "channels": 1
+    },
+    "caught": {
+      "duration_s": 0.46,
+      "peak_dbfs": -4.0,
+      "rms_dbfs": -13.78,
+      "sample_rate_hz": 48000,
+      "channels": 1
+    }
+  }
+}

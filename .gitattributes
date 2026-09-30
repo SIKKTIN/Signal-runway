@@ -3,6 +3,6 @@
 
 # Preserve the exact bytes of the verified v0.1 runtime source manifest.
 project.godot -text
-*.gd -text
+*.gd -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 *.tscn -text
 *.tres -text

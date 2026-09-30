@@ -1,0 +1,10 @@
+{
+  "front_world_x": 540,
+  "front_screen_x": 720,
+  "ahead_region_unchanged": true,
+  "max_changed_x_below_hud": 719,
+  "front_does_not_extend_ahead": true,
+  "loop_seam_delta_pcm": 129.0,
+  "max_adjacent_delta_pcm": 129.0,
+  "loop_seam_within_normal_wave_slope": true
+}
