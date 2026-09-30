@@ -1,0 +1,45 @@
+{
+  "pause_changed_pixels": 0,
+  "pause_max_channel_delta": 0,
+  "rebase_changed_pixels": 1500,
+  "rebase_max_channel_delta": 4,
+  "frame_changed_pixels": [
+    22523,
+    22296,
+    22134,
+    22262,
+    22252,
+    21927,
+    21771,
+    21981,
+    21894
+  ],
+  "sources": [
+    {
+      "path": "scripts/visual/endless_world_visual.gd",
+      "sha256": "13f4c877c9285db4e707ff3febda195a57731c915791a68cb413acfff6109431"
+    },
+    {
+      "path": "scripts/visual/endless_module_visual.gd",
+      "sha256": "b2612da323954d2c555f99fed7eace5e69be06b9d4e1d5370bff8a2af676b5d9"
+    },
+    {
+      "path": "scripts/visual/endless_hud_visual.gd",
+      "sha256": "ea5eec11b3165285ec8dae628b247f5e087fc6d122d5eae544ec363ac275013f"
+    },
+    {
+      "path": "scripts/visual/environment_visual.gd",
+      "sha256": "80c7e0c8d87bacb210a850d60165ce9450f0f35e4e9de33551b25569ebb17136"
+    },
+    {
+      "path": "scripts/visual/relay_visual.gd",
+      "sha256": "3532ac1731160019b9f45864d6901e245e2b10aa26f53f1cd01c3c298a763140"
+    },
+    {
+      "path": "scripts/visual/chase_visual.gd",
+      "sha256": "e23516009fee62de95eeffd89a3d0d1cab1d6df81b14f4b72bed4ead014ffbc6"
+    }
+  ],
+  "rebase_changed_fraction": 0.0016276041666666667,
+  "passed": true
+}

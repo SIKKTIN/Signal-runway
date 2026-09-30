@@ -20,6 +20,7 @@ signal died(reason: String, position: Vector2)
 var state := "idle"
 var facing := 1.0
 var control_enabled := true
+var auto_run := false
 var dead := false
 var fallback_visual_enabled := true
 var _coyote := 0.0
@@ -45,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	if dead:
 		return
 	var grounded := is_on_floor()
-	var direction := Input.get_axis("move_left", "move_right") if control_enabled else 0.0
+	var direction := (1.0 if auto_run else Input.get_axis("move_left", "move_right")) if control_enabled else 0.0
 	_coyote = coyote_window if grounded else maxf(0.0, _coyote - delta)
 	_buffer = maxf(0.0, _buffer - delta)
 	_wall_lock = maxf(0.0, _wall_lock - delta)

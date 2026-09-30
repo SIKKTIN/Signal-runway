@@ -1,0 +1,58 @@
+{
+	"checks": [
+		{
+			"check": "100_seeds_200_chunks_structure",
+			"passed": true
+		},
+		{
+			"check": "same_seed_prefix_reproducible",
+			"passed": true
+		},
+		{
+			"check": "six_templates_selected",
+			"passed": true
+		},
+		{
+			"check": "ordinary_40k_streaming_route",
+			"passed": true
+		},
+		{
+			"check": "recycle_and_rebase_preserve_gap",
+			"passed": true
+		},
+		{
+			"check": "active_holders_match_chunks",
+			"passed": true
+		},
+		{
+			"check": "pause_stops_streaming",
+			"passed": true
+		},
+		{
+			"check": "same_seed_restart_clears_stream_offset",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"route": {
+		"active_max": 7,
+		"distance": 40002.4619140625,
+		"gap": 2555.36191405739,
+		"lifecycle": {
+			"bodies": 6,
+			"chunks": 6,
+			"generated": 34,
+			"holders": 6,
+			"offset": 25600.0,
+			"relays": 1
+		},
+		"method": "ordinary jump actions, no teleport/controller freeze/immunity",
+		"nodes": 5,
+		"phase": "running",
+		"rebase_gap_delta": 4.666015625,
+		"seconds": 143.916666666673,
+		"seed": 404,
+		"wall_jumps": 2
+	},
+	"scope": "D six-template production stream; 100-seed structure plus actual 40k route, not full final library/long-duration evidence"
+}

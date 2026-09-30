@@ -1,0 +1,88 @@
+{
+	"checks": [
+		{
+			"check": "actual_enter_default_endless_autostart",
+			"passed": true
+		},
+		{
+			"check": "production_visuals_and_pause_button",
+			"passed": true
+		},
+		{
+			"check": "stream_has_no_goal",
+			"passed": true
+		},
+		{
+			"check": "keyboard_pause_freezes_logic_and_five_clocks",
+			"passed": true
+		},
+		{
+			"check": "paused_r_same_seed_new_round",
+			"passed": true
+		},
+		{
+			"check": "normal_jump_input_collects_first_relay",
+			"passed": true
+		},
+		{
+			"check": "relay_score_exact_formula",
+			"passed": true
+		},
+		{
+			"check": "delay_front_stops_clock_continues",
+			"passed": true
+		},
+		{
+			"check": "relay_feedback_once",
+			"passed": true
+		},
+		{
+			"check": "repeated_candidate_no_double_score",
+			"passed": true
+		},
+		{
+			"check": "active_delay_pause_freezes",
+			"passed": true
+		},
+		{
+			"check": "delay_exhausts_and_front_resumes",
+			"passed": true
+		},
+		{
+			"check": "rebase_preserves_gap_score_node_ids",
+			"passed": true
+		},
+		{
+			"check": "rebase_art_snapshot_matches_active_chunks",
+			"passed": true
+		},
+		{
+			"check": "death_priority_single_record_result",
+			"passed": true
+		},
+		{
+			"check": "result_enter_same_seed_retry",
+			"passed": true
+		},
+		{
+			"check": "new_map_guarantees_different_seed",
+			"passed": true
+		},
+		{
+			"check": "actual_f2_manual_lab_goal_present",
+			"passed": true
+		},
+		{
+			"check": "menu_keeps_valid_fixed_selection",
+			"passed": true
+		},
+		{
+			"check": "fixed_challenge_original_manual_rules",
+			"passed": true
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"scope": "Actual main GPU keyboard/default/normal first relay plus explicit rebase/candidate/death fixtures. Full random routes separately recorded."
+}

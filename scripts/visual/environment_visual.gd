@@ -14,6 +14,7 @@ var _phase := "menu"
 var _station_enabled := false
 var _station_section := 0
 var _station_font: Font
+var _world_offset := 0.0
 const STATION_COLORS := [Color("45dccb"), Color("ffd166"), Color("69bcd1"), Color("ffd166"), Color("ffd166")]
 
 
@@ -33,6 +34,7 @@ func bind_flow(flow: Node, camera: Camera2D, course: Node2D) -> void:
 	_camera = camera
 	_course = course
 	_animation_time = 0.0
+	_world_offset = float(course.get("total_offset")) if flow.has_method("is_endless") and flow.is_endless() else 0.0
 	if not is_node_ready():
 		return
 	_phase = str(flow.get("phase"))
@@ -43,6 +45,7 @@ func bind_flow(flow: Node, camera: Camera2D, course: Node2D) -> void:
 	_connect_source("run_failed", _on_run_failed)
 	_connect_source("run_finished", _on_run_finished)
 	_connect_source("mode_changed", _on_mode_changed)
+	_connect_source("world_shifted", _on_world_shifted)
 	queue_redraw()
 
 
@@ -62,6 +65,10 @@ func _disconnect_sources() -> void:
 
 func _on_pause_changed(value: bool) -> void:
 	_paused = value
+
+func _on_world_shifted(_distance: float) -> void:
+	_world_offset = float(_course.get("total_offset"))
+	queue_redraw()
 
 
 func _on_run_failed(_reason: String, _elapsed: float, _ratio: float) -> void:
@@ -97,7 +104,7 @@ func _draw() -> void:
 	draw_rect(view, Color("18212b"))
 	# Three independently projected industrial layers. World geometry and
 	# instructional text remain in Course at their existing z/order.
-	var camera_x := top_left.x
+	var camera_x := top_left.x + _world_offset
 	_draw_far_layer(view, camera_x)
 	_draw_mid_layer(view, camera_x)
 	_draw_near_layer(view, camera_x)
@@ -110,7 +117,7 @@ func _draw() -> void:
 
 
 func _screen_world_x(index: int, spacing: float, camera_x: float, parallax: float) -> float:
-	return float(index) * spacing + camera_x * (1.0 - parallax)
+	return float(index) * spacing + camera_x * (1.0 - parallax) - _world_offset
 
 
 func _draw_far_layer(view: Rect2, camera_x: float) -> void:
@@ -168,7 +175,7 @@ func _draw_particles(view: Rect2, camera_x: float) -> void:
 	# Deterministic sparse particles stay above the main ground/landing band.
 	for index in 22:
 		var p := 0.22 + float(index % 3) * 0.12
-		var x := camera_x + fposmod(index * 173.31 + _animation_time * (5.0 + index % 5) - camera_x * p, view.size.x)
+		var x := camera_x - _world_offset + fposmod(index * 173.31 + _animation_time * (5.0 + index % 5) - camera_x * p, view.size.x)
 		var y := 126.0 + fposmod(index * 43.71 - _animation_time * (3.0 + index % 4), 262.0)
 		var alpha := 0.10 + 0.10 * (0.5 + 0.5 * sin(_animation_time * 1.6 + index))
 		draw_line(Vector2(x - 3, y + 1), Vector2(x, y), Color(0.37, 0.68, 0.68, alpha), 1)
@@ -254,6 +261,8 @@ func _draw_route_arrow(at: Vector2, up: bool, color: Color) -> void:
 func _draw_goal_beacon(view: Rect2) -> void:
 	if not is_instance_valid(_course):
 		return
+	if is_instance_valid(_flow) and _flow.has_method("is_endless") and _flow.is_endless():
+		return
 	var finish_x := float(_course.get("finish_x"))
 	if finish_x < view.position.x - 80 or finish_x > view.end.x + 80:
 		return
@@ -269,7 +278,7 @@ func _draw_goal_beacon(view: Rect2) -> void:
 func presentation_state() -> Dictionary:
 	return {"animation_time": _animation_time, "paused": _paused, "resolved": _resolved, "phase": _phase,
 		"parallax_factors": PARALLAX, "camera_bound": is_instance_valid(_camera), "course_bound": is_instance_valid(_course),
-		"station_enabled": _station_enabled, "station_section": _station_section}
+		"station_enabled": _station_enabled, "station_section": _station_section, "world_offset": _world_offset}
 
 
 func _exit_tree() -> void:

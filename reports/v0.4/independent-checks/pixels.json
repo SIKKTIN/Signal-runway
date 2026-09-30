@@ -1,0 +1,28 @@
+{
+  "pause": {
+    "changed_pixels": 0,
+    "changed_fraction": 0.0,
+    "max_channel_delta": 0
+  },
+  "rebase": {
+    "changed_pixels": 637,
+    "changed_fraction": 0.0006911892361111111,
+    "max_channel_delta": 13
+  },
+  "continuous_frame_changed_pixels": [
+    26623,
+    26998,
+    26429,
+    27270,
+    26716,
+    26630,
+    26925
+  ],
+  "passed": false,
+  "pause_passed": true,
+  "animation_passed": true,
+  "rebase_strict_8_color_level_gate_passed": false,
+  "rebase_pixels_over_8": 3,
+  "note": "Strict color gate is retained even when logical anchors and visual continuity pass; producer must review the observed sparse AA differences.",
+  "checks_source_sha256": "1e7add9da441ccd9e06150eede162e9a673f53956b28b0c14587c212a75f13f3"
+}

@@ -89,6 +89,12 @@ func bind_flow(flow: Node, course: Node) -> void:
 		if flow.has_signal(pair[0]):
 			flow.connect(pair[0], pair[1])
 			_connections.append({"source": flow, "signal": pair[0], "callback": pair[1]})
+	if course.has_signal("chunks_changed"):
+		course.connect("chunks_changed", _read_nodes)
+		_connections.append({"source": course, "signal": "chunks_changed", "callback": _read_nodes})
+	if flow.has_signal("world_shifted"):
+		flow.connect("world_shifted", _on_world_shifted)
+		_connections.append({"source": flow, "signal": "world_shifted", "callback": _on_world_shifted})
 	_refresh_toast()
 	queue_redraw()
 
@@ -98,10 +104,22 @@ func _read_nodes() -> void:
 	var relays: Variant = _course.get("relays")
 	if not relays is Array:
 		return
+	var active := {}
 	for entry in relays:
 		var id := str(entry.get("id", ""))
 		if id != "":
-			_nodes[id] = {"position": entry.get("position", Vector2.ZERO), "activated": bool(entry.get("activated", false)) or _activated_ids.has(id)}
+			active[id] = {"position": entry.get("position", Vector2.ZERO), "activated": bool(entry.get("activated", false)) or _activated_ids.has(id)}
+	for id in _activated_ids.keys():
+		if not active.has(id):
+			_activated_ids.erase(id)
+	for id in _pulses.keys():
+		if not active.has(id):
+			_pulses.erase(id)
+	_nodes = active
+	queue_redraw()
+
+func _on_world_shifted(_distance: float) -> void:
+	_read_nodes()
 
 func _sync_phase() -> void:
 	if not is_instance_valid(_flow):
@@ -120,6 +138,8 @@ func _on_relay_activated(id: String, added_delay: float, count: int) -> void:
 	_pulses[id] = _animation_time
 	_toast_end = _animation_time + 1.1
 	_toast_text.text = "中继接入 %d/%d" % [count, _nodes.size()]
+	if _flow.has_method("is_endless") and _flow.is_endless():
+		_toast_text.text = "中继接入  ·  累计 %d" % count
 	if added_delay > 0.0:
 		_toast_text.text += "  ·  +%.1f s" % added_delay
 	_sound.play()
@@ -206,7 +226,8 @@ func presentation_state() -> Dictionary:
 		states[id] = "activating" if age < ACTIVATION_DURATION else ("activated" if _nodes[id].activated else "available")
 	return {"animation_time": _animation_time, "paused": _paused, "resolved": _resolved, "node_states": states,
 		"activated_ids": _activated_ids.keys(), "sound_triggers": _sound_triggers, "sound_playing": _sound.playing,
-		"sound_paused": _sound.stream_paused, "toast_visible": _toast.visible, "delay_remaining": _delay_remaining}
+		"sound_paused": _sound.stream_paused, "toast_visible": _toast.visible, "delay_remaining": _delay_remaining,
+		"node_count": _nodes.size(), "pulse_count": _pulses.size(), "activated_count": _activated_ids.size()}
 
 func _disconnect_sources() -> void:
 	for connection in _connections:

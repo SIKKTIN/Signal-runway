@@ -1,0 +1,55 @@
+{
+	"checks": [
+		{
+			"check": "no_physics_objects_added",
+			"passed": true
+		},
+		{
+			"check": "initial_snapshot_has_no_gain_or_record",
+			"passed": true
+		},
+		{
+			"check": "relay_feedback_and_record_visible",
+			"passed": true
+		},
+		{
+			"check": "distance_update_does_not_retrigger_record",
+			"passed": true
+		},
+		{
+			"check": "pause_freezes_all_clocks",
+			"passed": true
+		},
+		{
+			"check": "gain_and_record_expire",
+			"passed": true
+		},
+		{
+			"check": "module_rebase_preserves_absolute_phase",
+			"passed": true
+		},
+		{
+			"check": "result_hides_transient_feedback",
+			"passed": true
+		},
+		{
+			"check": "reset_clears_run_pulses",
+			"passed": true
+		},
+		{
+			"check": "rebind_keeps_single_stats_listener",
+			"passed": true
+		},
+		{
+			"check": "decoration_never_mutates_seed_or_stats",
+			"passed": true
+		},
+		{
+			"check": "exit_disconnects_stats_listener",
+			"passed": true
+		}
+	],
+	"fixture": "Independent mock snapshots; no physics or score formula test.",
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

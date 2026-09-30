@@ -1,0 +1,101 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "production_components_and_old_hud_visibility",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "one_decoration_per_active_chunk",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "presentation_rebind_preserves_seed_geometry_generator",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "catchup_title_speed_and_gap",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "pause_freezes_all_five_visual_clocks",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "resume_advances_all_five_visual_clocks",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "rebase_preserves_visual_clocks_and_module_phases",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "rebase_updates_environment_chase_offsets",
+			"passed": true
+		},
+		{
+			"actual": {
+				"max_modules": 5,
+				"max_relays": 1,
+				"rebases": 6
+			},
+			"check": "120_stream_snapshots_keep_all_caches_bounded",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "duplicate_and_retired_relays_are_silent",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "failure_freezes_visuals_and_hides_transients",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "same_seed_restart_resets_visuals_and_offsets",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "menu_hides_endless_hud",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "production_relay_pulse_and_score_feedback",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "production_relay_settles_and_uses_total_count",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "fixed_station_retains_hud_and_environment",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "lab_retains_original_visibility",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "exit_disconnects_world_shifted",
+			"passed": true
+		}
+	],
+	"fixture": "Fixed production scene and manual public-state snapshots; no ordinary input route or score proof.",
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

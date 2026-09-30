@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-09-30T14:15:58.253Z
-> 文档内容基准：ec7e2f3e86898c89a7a77039574063b82ecf57b9ccf44a289e8dbb5fc67d1d8c
+> 文档生成时间：2026-09-30T16:32:49.999Z
+> 文档内容基准：8700778bb1b0f703de1e50a4e67041f7654101d9b5a687a4808259df6789abf6
 
-> 项目版本：v0.3.0
+> 项目版本：v0.4.0
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -30,6 +30,12 @@
 - v0.3 断线中继站完整关卡 [0b0586ad-7a43-4595-9486-58e71ae2e04f] · 已完成
 - v0.3 正式集成与技术验证 [c07376be-f8a6-49c6-982a-ce6625e45187] · 已完成
 - v0.3 修复与最终源工程交付 [e136ed54-976a-4c62-ba6e-6afc1ffbdea1] · 已完成
+- v0.4 无限模式灰盒 [a9762bbc-30be-4456-8925-7a3344743c95] · 已完成
+- v0.4 片段接口与首批地图 [922e611f-a1d8-485b-a825-c8e66ac49178] · 已完成
+- v0.4 随机生成回收与坐标管理 [5fdc1b4e-e19b-4597-b352-4dde9551b49c] · 已完成
+- v0.4 完整片段库计分与记录 [d3448bcb-c006-4530-b0a8-4e8c83b5e920] · 已完成
+- v0.4 多种子集成与长局检查 [b25d15b1-5882-4a38-9594-04994d611935] · 已完成
+- v0.4 修复与最终源工程交付 [04edf782-428e-4ca7-b721-61d77dad2599] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -44,6 +50,9 @@
 - v0.3 中继节点与接入反馈 [4c6d3ddd-8266-425c-b3c3-e1e5a93aabea] · 已完成
 - v0.3 中继站场景包装 [63a15d2d-5d06-4b48-8e92-eff0c97ae09f] · 已完成
 - v0.3 独立技术与表现检查 [34e93674-c4e4-4b57-a53c-bf798a0a1c66] · 已完成
+- v0.4 模块化场景与HUD草案 [d335eb76-b39a-4ebd-b052-d4e7fd2b9db5] · 已完成
+- v0.4 无限模式正式美术接入 [41feb898-38b6-4233-9bf3-77795a0345af] · 已完成
+- v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -476,6 +485,74 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 自验收约定：制作人开发；先提交证据，再单独填写结论
 - 验收要求：无启动/可达/延迟/重开/统计阻塞；修复有同版本证据，docs/run-v0.3.md与reports/v0.3/final-acceptance.md齐全，不打包。
 - 验收负责人：制作人
+### v0.4 无限模式灰盒
+- ID：a9762bbc-30be-4456-8925-7a3344743c95
+- 当前状态：已完成
+- 内容：制作自动奔跑、无终点流程、起步/阶段追赶原型并冻结初始接口。
+- 前置任务：无
+- 允许修改路径：project.godot、scripts/core、scripts/player、scripts/level、scripts/ui、scenes/main、scenes/player、scenes/levels、scenes/test_room、docs/run-v0.4.md、reports/v0.4
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：自动跳跃/蹬墙可控，失败/R/暂停完整；原手动关兼容，记录reports/v0.4/prototype.md。
+- 验收负责人：制作人
+### v0.4 片段接口与首批地图
+- ID：922e611f-a1d8-485b-a825-c8e66ac49178
+- 当前状态：已完成
+- 内容：测量并冻结入口出口和安全接缝，制作首批6片段和可达证据。
+- 前置任务：a9762bbc-30be-4456-8925-7a3344743c95
+- 允许修改路径：project.godot、scripts/core、scripts/player、scripts/level、scripts/ui、scenes/main、scenes/player、scenes/levels、scenes/test_room、docs/run-v0.4.md、reports/v0.4
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：每段和允许接缝普通输入通过，墙跳出口/中继路线有证据，片段目录明确。
+- 验收负责人：制作人
+### v0.4 随机生成回收与坐标管理
+- ID：5fdc1b4e-e19b-4597-b352-4dde9551b49c
+- 当前状态：已完成
+- 内容：实现seed约束选段、安全兜底、前方生成/覆盖后回收、长距离重定位，冻结公共接口。
+- 前置任务：922e611f-a1d8-485b-a825-c8e66ac49178
+- 允许修改路径：project.godot、scripts/core、scripts/player、scripts/level、scripts/ui、scenes/main、scenes/player、scenes/levels、scenes/test_room、docs/run-v0.4.md、reports/v0.4
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：同seed前缀稳定、装饰隔离，暂停/重开/低帧率/坐标调整无残留，活跃资源有界。
+- 验收负责人：制作人
+### v0.4 完整片段库计分与记录
+- ID：d3448bcb-c006-4530-b0a8-4e8c83b5e920
+- 当前状态：已完成
+- 内容：扩12片段，接入阶段压力、距离/节点分数、同图/换图、本机纪录。
+- 前置任务：5fdc1b4e-e19b-4597-b352-4dde9551b49c
+- 允许修改路径：project.godot、scripts/core、scripts/player、scripts/level、scripts/ui、scenes/main、scenes/player、scenes/levels、scenes/test_room、docs/run-v0.4.md、reports/v0.4
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：12片段可达，奖励长期预算合理；回退/重复/失败不刷分，纪录读写/异常有证据。
+- 验收负责人：制作人
+### v0.4 多种子集成与长局检查
+- ID：b25d15b1-5882-4a38-9594-04994d611935
+- 当前状态：已完成
+- 内容：汇合正式入口，100种子结构、代表普通输入长路线、30分钟资源趋势及旧模式回归，生成冻结候选。
+- 前置任务：d3448bcb-c006-4530-b0a8-4e8c83b5e920、41feb898-38b6-4233-9bf3-77795a0345af
+- 允许修改路径：project.godot、scripts/core、scripts/player、scripts/level、scripts/ui、scenes/main、scenes/player、scenes/levels、scenes/test_room、docs/run-v0.4.md、reports/v0.4
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 集成来源任务：d3448bcb-c006-4530-b0a8-4e8c83b5e920、41feb898-38b6-4233-9bf3-77795a0345af
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：规则/计分/记录/种子/压力/回收/坐标检查通过，无已知死路；reports/v0.4/integration.md与源清单一致。
+- 验收负责人：制作人
+### v0.4 修复与最终源工程交付
+- ID：04edf782-428e-4ca7-b721-61d77dad2599
+- 当前状态：已完成
+- 内容：依独立报告修复具体风险并同版本复测，完成运行说明、最终清单和验收结论。
+- 前置任务：b25d15b1-5882-4a38-9594-04994d611935、8005841f-57c0-430d-a664-1876eecef397
+- 允许修改路径：project.godot、scripts/core、scripts/player、scripts/level、scripts/ui、scenes/main、scenes/player、scenes/levels、scenes/test_room、docs/run-v0.4.md、reports/v0.4
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 集成来源任务：b25d15b1-5882-4a38-9594-04994d611935
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：无启动/生成可达/计分/重开/记录阻塞；修复有同版本确认，docs/run-v0.4.md和reports/v0.4/final-acceptance.md齐全，不打包。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -497,6 +574,13 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.3 正式集成与技术验证 [c07376be-f8a6-49c6-982a-ce6625e45187] · 已完成
 - v0.3 独立技术与表现检查 [34e93674-c4e4-4b57-a53c-bf798a0a1c66] · 已完成
 - v0.3 修复与最终源工程交付 [e136ed54-976a-4c62-ba6e-6afc1ffbdea1] · 已完成
+- v0.4 无限模式灰盒 [a9762bbc-30be-4456-8925-7a3344743c95] · 已完成
+- v0.4 片段接口与首批地图 [922e611f-a1d8-485b-a825-c8e66ac49178] · 已完成
+- v0.4 随机生成回收与坐标管理 [5fdc1b4e-e19b-4597-b352-4dde9551b49c] · 已完成
+- v0.4 完整片段库计分与记录 [d3448bcb-c006-4530-b0a8-4e8c83b5e920] · 已完成
+- v0.4 多种子集成与长局检查 [b25d15b1-5882-4a38-9594-04994d611935] · 已完成
+- v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
+- v0.4 修复与最终源工程交付 [04edf782-428e-4ca7-b721-61d77dad2599] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -829,6 +913,38 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 交付入口：res://scenes/main/main.tscn；planning/v0.3-execution-plan.md
 - 验收要求：reports/v0.3/independent-review.md注明构建、步骤、实际结果及未覆盖；区分自动fixture、引用路线证据、实际体验与主观试听。
 - 验收负责人：制作人
+### v0.4 模块化场景与HUD草案
+- ID：d335eb76-b39a-4ebd-b052-d4e7fd2b9db5
+- 当前状态：已完成
+- 内容：并行制作可复用工业组件、路线标识和HUD独立预览，跟随B接口对齐。
+- 前置任务：a9762bbc-30be-4456-8925-7a3344743c95
+- 允许修改路径：assets/visual、assets/audio、scripts/visual、scenes/visual、scenes/ui/skins、docs/art/v0.4-assets.md、reports/v0.4/art
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 自验收约定：主美制作；先提交证据，再单独填写结论
+- 验收要求：尺寸/锚点/事件清单齐全，动态与50%可读，docs/art/v0.4-assets.md，碰撞和地形RNG不改。
+- 验收负责人：主美
+### v0.4 无限模式正式美术接入
+- ID：41feb898-38b6-4233-9bf3-77795a0345af
+- 当前状态：已完成
+- 内容：按冻结接口接入环境、接缝、分数/纪录/结果反馈。
+- 前置任务：d335eb76-b39a-4ebd-b052-d4e7fd2b9db5、5fdc1b4e-e19b-4597-b352-4dde9551b49c
+- 允许修改路径：assets/visual、assets/audio、scripts/visual、scenes/visual、scenes/ui/skins、docs/art/v0.4-assets.md、reports/v0.4/art
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 自验收约定：主美制作；先提交证据，再单独填写结论
+- 验收要求：正式GPU正常/50%/连续图可读，暂停重开和回收生命周期正确，seed/几何不变。
+- 验收负责人：主美
+### v0.4 独立技术与表现检查
+- ID：8005841f-57c0-430d-a664-1876eecef397
+- 当前状态：已完成
+- 内容：只读指定候选检查真实入口/键盘、生成接缝、计分/重试状态与画面，报告可复现缺陷。
+- 前置任务：b25d15b1-5882-4a38-9594-04994d611935
+- 允许修改路径：reports/v0.4/independent-review.md、reports/v0.4/independent-checks
+- 接口契约：planning/v0.4-execution-plan.md；A/D冻结endless、chunk/seed/score只读和生命周期/重定位事件；旧威胁/中继/玩家事件兼容。制作人唯一维护生成、碰撞、动作、推进/分数，主美只消费状态，地形与装饰RNG分离。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
+- 验收要求：reports/v0.4/independent-review.md含同版本哈希、步骤/实际/范围，区分fixture、引用路线、体验与试听。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -841,3 +957,6 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.3 中继节点与接入反馈 [4c6d3ddd-8266-425c-b3c3-e1e5a93aabea] · 已完成
 - v0.3 中继站场景包装 [63a15d2d-5d06-4b48-8e92-eff0c97ae09f] · 已完成
 - v0.3 独立技术与表现检查 [34e93674-c4e4-4b57-a53c-bf798a0a1c66] · 已完成
+- v0.4 模块化场景与HUD草案 [d335eb76-b39a-4ebd-b052-d4e7fd2b9db5] · 已完成
+- v0.4 无限模式正式美术接入 [41feb898-38b6-4233-9bf3-77795a0345af] · 已完成
+- v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成

@@ -35,6 +35,7 @@ var _hud_title: Label
 var _hud_detail: Label
 var _hud_delay: Label
 var _relay_delay_remaining := 0.0
+var _world_offset := 0.0
 
 
 func _ready() -> void:
@@ -127,11 +128,15 @@ func bind_flow(flow: Node, chase: Node) -> void:
 		return
 	_stop_all_audio()
 	_animation_time = 0.0
+	_world_offset = 0.0
+	if flow.has_method("is_endless") and flow.is_endless():
+		var course: Variant = _property(flow, "course", null)
+		_world_offset = float(_property(course, "total_offset", 0.0))
 	_relay_delay_remaining = float(_property(chase, "relay_remaining", _property(flow, "relay_delay_remaining", 0.0)))
 	_resolved = false
 	_mode = str(_property(flow, "mode", "time_trial"))
-	_paused = get_tree().paused
 	var phase := str(_property(flow, "phase", "ready"))
+	_paused = get_tree().paused or phase == "paused"
 	_last_phase = phase
 	_resolved = phase in ["finished", "failed", "menu"]
 	_connect_source(flow, "mode_changed", _on_mode_changed)
@@ -139,6 +144,7 @@ func bind_flow(flow: Node, chase: Node) -> void:
 	_connect_source(flow, "run_failed", _on_run_failed)
 	_connect_source(flow, "run_finished", _on_run_finished)
 	_connect_source(flow, "relay_delay_changed", _on_relay_delay_changed)
+	_connect_source(flow, "world_shifted", _on_world_shifted)
 	_connect_source(chase, "threat_updated", _on_threat_updated)
 	warning_level = "stopped"
 	_on_threat_updated(float(_property(chase, "front_x", 0.0)), float(_property(chase, "gap_px", 0.0)),
@@ -203,6 +209,10 @@ func _on_pause_changed(paused: bool) -> void:
 func _on_relay_delay_changed(remaining: float) -> void:
 	_relay_delay_remaining = maxf(remaining, 0.0)
 	_refresh_hud()
+
+func _on_world_shifted(distance: float) -> void:
+	_world_offset += distance
+	queue_redraw()
 
 
 func _on_run_failed(reason: String, _elapsed: float, _furthest_ratio: float) -> void:
@@ -269,6 +279,11 @@ func _refresh_hud() -> void:
 	_hud_title.text = str(title.get(grade, "追赶停止"))
 	var speed := maxf(1.0, float(_property(_chase, "speed", 1.0)))
 	_hud_detail.text = "%.1f s 后启动" % maxf(0.0, grace_remaining) if grade == "grace" else "原地余量约 %.1f 秒" % (maxf(0.0, gap_px) / speed)
+	var catchup := float(_property(_flow, "catchup_bonus", 0.0)) > 0.5
+	_hud_detail.add_theme_font_size_override("font_size", 13 if catchup else 15)
+	if catchup and grade != "grace":
+		_hud_title.text = "远距追速"
+		_hud_detail.text = "追速 %.0f/s · 余量 %.1fs" % [speed, maxf(0.0, gap_px) / speed]
 	_hud_delay.visible = _relay_delay_remaining > 0.0
 	_hud_delay.text = "中继延迟  %.1f 秒" % _relay_delay_remaining
 	_hud_panel.offset_bottom = 236.0 if _hud_delay.visible else 212.0
@@ -340,7 +355,7 @@ func _draw() -> void:
 	draw_colored_polygon(coverage, Color(0.055, 0.095, 0.14, 0.80))
 	var uv := PackedVector2Array()
 	for point in coverage:
-		uv.append(point / 128.0)
+		uv.append((point + Vector2(_world_offset, 0)) / 128.0)
 	draw_polygon(coverage, PackedColorArray([Color(1, 1, 1, 0.40)]), uv, _cover)
 	_draw_signal_flow(left, right, top, height)
 	for index in range(wave.size() - 1, -1, -1):
@@ -372,10 +387,10 @@ func _draw_signal_flow(left: float, right: float, top: float, height: float) -> 
 			x += 16.0
 		if path.size() >= 2:
 			draw_polyline(path, Color(0.28, 0.70, 0.72, 0.13), 1.0, true)
-	var first := int(floor((left + _animation_time * 118.0) / 96.0))
-	var last := int(ceil((right + _animation_time * 118.0) / 96.0))
+	var first := int(floor((left + _world_offset + _animation_time * 118.0) / 96.0))
+	var last := int(ceil((right + _world_offset + _animation_time * 118.0) / 96.0))
 	for index in range(first, last + 1):
-		var x := float(index) * 96.0 - _animation_time * 118.0
+		var x := float(index) * 96.0 - _animation_time * 118.0 - _world_offset
 		var width := minf(28.0, right - x - 2.0)
 		if x < left or width <= 0.0:
 			continue
@@ -394,7 +409,8 @@ func presentation_state() -> Dictionary:
 		"caught_playing": _caught.playing, "caught_position": _caught.get_playback_position(),
 		"coverage_max_x": front_x, "wave_center_offset_min": 13.0, "wave_center_offset_max": 63.0,
 		"wave_stroke_max_x": front_x - 7.0, "wave_travel_speed": 120.0,
-		"relay_delay_remaining": _relay_delay_remaining, "relay_delay_visible": _hud_delay.visible and _hud_panel.visible}
+		"relay_delay_remaining": _relay_delay_remaining, "relay_delay_visible": _hud_delay.visible and _hud_panel.visible,
+		"world_offset": _world_offset}
 
 
 static func failure_presentation(reason: String) -> Dictionary:

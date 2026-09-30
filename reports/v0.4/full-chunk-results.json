@@ -1,0 +1,3855 @@
+{
+	"passed": true,
+	"routes": [
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52416992188,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18603515625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52416992188,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18603515625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.5244140625,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925231933594
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52416992188,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18603515625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52416992188,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18603515625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.5244140625,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925231933594
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "safe_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16845703125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52490234375,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "gap",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52490234375,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "spike",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52587890625,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52587890625,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.5263671875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1884765625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.5263671875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1884765625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 2,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52685546875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18896484375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925231933594
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52685546875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18896484375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52685546875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18896484375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52685546875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18896484375,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 2,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.17016601563,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78833007813,
+					"y": 432.925140380859
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1171875,
+			"y": 432.925140380859
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78833007813,
+					"y": 432.925140380859
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1171875,
+			"y": 432.925140380859
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78881835938,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.11767578125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78881835938,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.11767578125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78930664063,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1181640625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 16.2500000000004,
+			"wall_jumps": 2,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78857421875,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1171875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78930664063,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1181640625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78930664063,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1181640625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78930664063,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1181640625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 16.2333333333337,
+			"wall_jumps": 2,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.103515625,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 16.2500000000004,
+			"wall_jumps": 2,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925231933594
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925231933594
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52465820313,
+					"y": 432.925231933594
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1865234375,
+			"y": 432.925231933594
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "step",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52490234375,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "step",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "step",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925231933594
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.525390625,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.525390625,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52563476563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.525390625,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.1875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52612304688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18798828125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "rhythm_c",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.16943359375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.78686523438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.44921875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.78686523438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.44921875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.78735351563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.44970703125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.78735351563,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.44970703125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 2,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.78784179688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.4501953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 16.266666666667,
+			"wall_jumps": 2,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.787109375,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.44921875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.78784179688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.4501953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.78784179688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.4501953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.78784179688,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4352.4501953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 2,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 16.2500000000004,
+			"wall_jumps": 2,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2560.43115234375,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.103515625,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 16.266666666667,
+			"wall_jumps": 2,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78833007813,
+					"y": 432.925140380859
+				}
+			],
+			"second": "safe_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1171875,
+			"y": 432.925140380859
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78833007813,
+					"y": 432.925140380859
+				}
+			],
+			"second": "safe_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1171875,
+			"y": 432.925140380859
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78881835938,
+					"y": 432.925262451172
+				}
+			],
+			"second": "gap",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.11767578125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78881835938,
+					"y": 432.925262451172
+				}
+			],
+			"second": "spike",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.11767578125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78930664063,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1181640625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.10327148438,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_a",
+			"seconds": 16.2500000000004,
+			"wall_jumps": 2,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78857421875,
+					"y": 432.925231933594
+				}
+			],
+			"second": "step",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1171875,
+			"y": 432.925231933594
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78930664063,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_a",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1181640625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78930664063,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_b",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1181640625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3841.78930664063,
+					"y": 432.925262451172
+				}
+			],
+			"second": "rhythm_c",
+			"seconds": 15.766666666667,
+			"wall_jumps": 1,
+			"x": 4355.1181640625,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_b",
+			"nodes": 1,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3840.44091796875,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 16.2333333333337,
+			"wall_jumps": 2,
+			"x": 4353.76953125,
+			"y": 432.925262451172
+		},
+		{
+			"first": "wall_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": true,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2563.09936523438,
+					"y": 432.925140380859
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3843.103515625,
+					"y": 432.925140380859
+				}
+			],
+			"second": "wall_b",
+			"seconds": 16.2500000000004,
+			"wall_jumps": 2,
+			"x": 4356.43212890625,
+			"y": 432.925140380859
+		},
+		{
+			"first": "relay_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": false,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_a",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": false,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": false,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_a",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		},
+		{
+			"first": "relay_b",
+			"nodes": 0,
+			"passed": true,
+			"phase": "running",
+			"risk": false,
+			"seams": [
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 2561.1689453125,
+					"y": 432.925262451172
+				},
+				{
+					"grounded": true,
+					"vx": 280.0,
+					"x": 3844.52514648438,
+					"y": 432.925262451172
+				}
+			],
+			"second": "relay_b",
+			"seconds": 15.2833333333337,
+			"wall_jumps": 0,
+			"x": 4353.18701171875,
+			"y": 432.925262451172
+		}
+	],
+	"scope": "All ordered neutral-seam combinations; ordinary jump-only auto-run, plus low relay routes; no teleport or disabled collision",
+	"templates": 12
+}

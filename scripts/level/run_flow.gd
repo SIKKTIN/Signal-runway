@@ -9,16 +9,31 @@ signal mode_changed(mode: String)
 signal run_failed(reason: String, elapsed: float, furthest_ratio: float)
 signal relay_activated(relay_id: String, added_delay: float, activated_count: int)
 signal relay_delay_changed(remaining: float)
+signal endless_stats_changed(score: int, distance: float, count: int, stage: int)
+signal world_shifted(distance: float)
 
 const PlayerScene = preload("res://scenes/player/player.tscn")
 const CourseScript = preload("res://scripts/level/course.gd")
 const InterfaceScript = preload("res://scripts/ui/interface.gd")
 const ChaseScript = preload("res://scripts/level/chase_controller.gd")
+const EndlessCourseScript = preload("res://scripts/level/endless_course.gd")
+const EndlessRecordScript = preload("res://scripts/level/endless_record.gd")
 var phase := "menu"
 var mode := "pursuit"
 var level_id := "level01"
 var relay_count := 0
 var relay_prototype := false
+var endless_prototype := false
+var endless_test_sequence: Array[String] = []
+var run_seed := 1
+var run_distance := 0.0
+var run_score := 0
+var difficulty_stage := 0
+var catchup_bonus := 0.0
+var best_score := 0
+var new_record := false
+var record_path := EndlessRecordScript.DEFAULT_PATH
+var endless_record := EndlessRecordScript.new()
 var relay_delay_remaining: float:
 	get:
 		return float(chase.relay_remaining) if is_instance_valid(chase) else 0.0
@@ -48,6 +63,7 @@ var _best_by_mode := {"time_trial": {"seconds": -1.0, "deaths": 0}, "pursuit": {
 var _best_by_level: Dictionary = {}
 
 func _ready() -> void:
+	reload_endless_record()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Resolve the front after the player's current-frame move_and_slide.
 	process_physics_priority = 100
@@ -65,6 +81,8 @@ func _ready() -> void:
 	ui.resume_requested.connect(toggle_pause)
 	ui.restart_requested.connect(restart_challenge)
 	ui.menu_requested.connect(return_to_menu)
+	ui.endless_requested.connect(func(): start_endless())
+	ui.new_seed_requested.connect(func(): start_endless())
 	_build_world(false)
 	player.set_control_enabled(false)
 	ui.show_menu()
@@ -78,16 +96,21 @@ func _build_world(use_lab: bool) -> void:
 	world.process_mode = Node.PROCESS_MODE_PAUSABLE
 	add_child(world)
 	move_child(world, 0)
-	course = CourseScript.new()
+	course = EndlessCourseScript.new() if is_endless() else CourseScript.new()
 	course.name = "Course"
 	course.lab_mode = use_lab
 	course.level_id = level_id
 	course.relay_prototype = relay_prototype
+	if is_endless():
+		course.run_seed = run_seed
+		course.prototype = endless_prototype
+		course.test_sequence = endless_test_sequence
 	world.add_child(course)
 	player = PlayerScene.instantiate()
 	player.name = "Player"
 	world.add_child(player)
 	player.reset_at(course.spawn_position)
+	player.auto_run = is_endless()
 	_previous_position = player.position
 	player.died.connect(_on_death)
 	course.goal_reached.connect(_on_goal)
@@ -107,6 +130,19 @@ func _build_world(use_lab: bool) -> void:
 	_install_presentation()
 
 func _install_presentation() -> void:
+	ui.external_endless_hud = false
+	if is_endless():
+		for pair in [["endless_world_visual", "EndlessWorldVisual"], ["endless_hud_visual", "EndlessHUDVisual"]]:
+			var path: String = "res://scripts/visual/" + pair[0] + ".gd"
+			if ResourceLoader.exists(path):
+				var presentation: Node = load(path).new()
+				presentation.name = pair[1]
+				world.add_child(presentation)
+				if pair[0] == "endless_world_visual":
+					presentation.bind_flow(self, course)
+				else:
+					presentation.bind_flow(self)
+					ui.external_endless_hud = true
 	var relay_path := "res://scripts/visual/relay_visual.gd"
 	if ResourceLoader.exists(relay_path):
 		var relay_visual := Node2D.new()
@@ -151,7 +187,7 @@ func start_challenge(use_lab: bool = false, selected_mode: String = "", selected
 	_relay_pending.clear()
 	relay_count = 0
 	lab_mode = use_lab
-	if selected_level in ["level01", "relay_station"]:
+	if selected_level in ["level01", "relay_station", "endless"]:
 		level_id = selected_level
 	if selected_mode in ["pursuit", "time_trial"]:
 		mode = selected_mode
@@ -162,6 +198,11 @@ func start_challenge(use_lab: bool = false, selected_mode: String = "", selected
 	_recovery = 0.0
 	furthest_ratio = 0.0
 	failure_reason = ""
+	run_distance = 0.0
+	run_score = 0
+	difficulty_stage = 0
+	catchup_bonus = 0.0
+	new_record = false
 	phase = "ready"
 	_load_best()
 	_build_world(use_lab)
@@ -172,7 +213,30 @@ func start_challenge(use_lab: bool = false, selected_mode: String = "", selected
 	mode_changed.emit(mode)
 	pause_changed.emit(false)
 	run_started.emit()
+	if is_endless():
+		phase = "running"
+		chase.set_enabled(true)
+		ui.set_notice("自动奔跑 · 跳跃选择路线", Color("45dccb"))
 	_update_ui()
+
+func start_endless(seed_value: int = -1) -> void:
+	if seed_value < 0:
+		var rng := RandomNumberGenerator.new()
+		rng.randomize()
+		var next_seed := run_seed
+		while next_seed == run_seed:
+			next_seed = rng.randi_range(1, 2147483646)
+		run_seed = next_seed
+	else:
+		run_seed = seed_value
+	start_challenge(false, "pursuit", "endless")
+
+func is_endless() -> bool:
+	return level_id == "endless" and not lab_mode
+
+func reload_endless_record() -> void:
+	endless_record.load_from(record_path)
+	best_score = int(endless_record.best.score)
 
 func restart_challenge() -> void:
 	start_challenge(lab_mode, mode)
@@ -186,7 +250,8 @@ func return_to_menu() -> void:
 	_failures.clear()
 	phase = "menu"
 	_relay_pending.clear()
-	ui.selected_level = level_id
+	if level_id != "endless":
+		ui.selected_level = level_id
 	chase.set_enabled(false)
 	player.reset_at(course.spawn_position)
 	player.set_control_enabled(false)
@@ -243,7 +308,16 @@ func _physics_process(delta: float) -> void:
 				phase = "running"
 				ui.set_notice("已回到起点 · 本轮计时继续", Color("607987"))
 		else:
-			furthest_ratio = maxf(furthest_ratio, clampf((player.position.x - course.spawn_position.x) / (course.finish_x - course.spawn_position.x), 0.0, 1.0))
+			if is_endless():
+				run_distance = maxf(run_distance, player.position.x + course.total_offset - course.spawn_position.x)
+				difficulty_stage = mini(3, int(elapsed / 30.0))
+				var gap_now: float = player.position.x - 10.0 - chase.front_x
+				var target_bonus := clampf((gap_now - 1400.0) / 60.0, 0.0, 14.0) if difficulty_stage == 3 else 0.0
+				catchup_bonus = move_toward(catchup_bonus, target_bonus, 8.0 * delta)
+				chase.speed = 270.0 + difficulty_stage * 4.0 + catchup_bonus
+				run_score = int(floor(run_distance / 10.0)) + relay_count * 100
+			else:
+				furthest_ratio = maxf(furthest_ratio, clampf((player.position.x - course.spawn_position.x) / (course.finish_x - course.spawn_position.x), 0.0, 1.0))
 			if player.position.y > 650:
 				player.die("fall")
 			if is_pursuit() and chase.advance(delta, player.global_position.x - 10.0):
@@ -252,10 +326,25 @@ func _physics_process(delta: float) -> void:
 			if not player.dead and _failures.is_empty():
 				for relay_id in course.relay_candidates(_previous_position, player.position):
 					_queue_relay(relay_id)
+			if is_endless() and not player.dead and _failures.is_empty():
+				course.update_stream(player.position.x, chase.front_x)
+				if course.streaming and player.position.x >= course.REBASE_AT:
+					_shift_endless_world(course.REBASE_BY)
 	if phase in ["ready", "running"]:
-		camera.position.x = clampf(player.position.x + player.facing * 96.0, 480.0, course.course_length - 480.0)
+		camera.position.x = maxf(player.position.x + 180.0, 480.0) if is_endless() else clampf(player.position.x + player.facing * 96.0, 480.0, course.course_length - 480.0)
 	_update_ui()
 	_previous_position = player.position
+
+func _shift_endless_world(distance: float) -> void:
+	course.shift_world(distance)
+	player.position.x -= distance
+	_previous_position.x -= distance
+	camera.position.x -= distance
+	camera.reset_smoothing()
+	chase.front_x -= distance
+	chase._previous_player_left -= distance
+	chase.advance(0, player.position.x - 10)
+	world_shifted.emit(distance)
 
 func _queue_relay(relay_id: String) -> void:
 	if phase not in ["ready", "running"] or player.dead or not _failures.is_empty():
@@ -271,6 +360,8 @@ func _activate_pending_relays() -> void:
 			var added := 0.9 if is_pursuit() else 0.0
 			if added > 0.0:
 				chase.add_relay_delay(added)
+			if is_endless():
+				_update_ui()
 			relay_activated.emit(relay_id, added, relay_count)
 
 func is_pursuit() -> bool:
@@ -305,6 +396,8 @@ func _queue_failure(reason: String) -> void:
 	_schedule_resolution()
 
 func _on_goal(body: Node2D) -> void:
+	if is_endless():
+		return
 	var active := phase in ["running", "ready"] or (phase == "paused" and _previous_phase in ["running", "ready"])
 	if body != player or not active:
 		return
@@ -352,7 +445,12 @@ func _finish_failure(reason: String) -> void:
 	player.set_control_enabled(false)
 	player.set_physics_process(false)
 	ui.set_relay_count(relay_count)
-	ui.show_failure(reason, elapsed, furthest_ratio, best_seconds)
+	if is_endless():
+		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed)
+		best_score = int(endless_record.best.score)
+		ui.show_endless_result(reason, elapsed, run_score, run_distance, relay_count, run_seed, best_score, new_record, endless_record.status)
+	else:
+		ui.show_failure(reason, elapsed, furthest_ratio, best_seconds)
 	run_failed.emit(reason, elapsed, furthest_ratio)
 	_update_ui()
 
@@ -388,5 +486,10 @@ func _scores() -> Dictionary:
 
 func _update_ui() -> void:
 	ui.set_relay_count(relay_count)
-	ui.update_stats(elapsed, deaths, best_seconds, furthest_ratio if is_pursuit() else player.position.x / course.finish_x, course.section_at(player.position.x), lab_mode)
+	if is_endless():
+		run_score = int(floor(run_distance / 10.0)) + relay_count * 100
+		ui.update_endless(elapsed, run_score, run_distance, relay_count, difficulty_stage, best_score)
+		endless_stats_changed.emit(run_score, run_distance, relay_count, difficulty_stage)
+	else:
+		ui.update_stats(elapsed, deaths, best_seconds, furthest_ratio if is_pursuit() else player.position.x / course.finish_x, course.section_at(player.position.x), lab_mode)
 	stats_changed.emit(elapsed, deaths)

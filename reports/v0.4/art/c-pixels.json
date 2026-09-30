@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "pause_changed_pixels": 0,
+  "adjacent_changed_pixels": [
+    22733,
+    22988,
+    22693,
+    24249,
+    21119,
+    20898,
+    20850,
+    20653,
+    29068,
+    20390,
+    21447
+  ],
+  "sources": [
+    {
+      "path": "scripts/visual/endless_module_visual.gd",
+      "sha256": "96f29ee29fbda6b76180c3c25b31acb396b4fe62954103dac7937134a6fa7935"
+    },
+    {
+      "path": "scripts/visual/endless_hud_visual.gd",
+      "sha256": "e73244e83fe11d6f2cae4e1c64d8e6f64ef8232eff45888dc0c10af7fe3a4a50"
+    },
+    {
+      "path": "scripts/visual/endless_art_preview.gd",
+      "sha256": "d78316070462172bc9d84e7c2a7c427743a7b6fc9bd9d64441fbf7a7c56c9bf2"
+    },
+    {
+      "path": "scenes/visual/endless_art_preview.tscn",
+      "sha256": "9bdf1680266d289c8f7763f23002bb1357b9170837450e66414ce92858758881"
+    }
+  ]
+}

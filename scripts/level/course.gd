@@ -29,20 +29,21 @@ func _ready() -> void:
 		_add_solid(rect)
 	for rect in spikes:
 		_add_spikes(rect)
-	var goal := Area2D.new()
-	goal.name = "Goal"
-	goal.position = Vector2(finish_x, 400)
-	goal.collision_layer = 8
-	goal.collision_mask = 2
-	var collider := CollisionShape2D.new()
-	var shape := RectangleShape2D.new()
-	shape.size = Vector2(36, 96)
-	collider.shape = shape
-	goal.add_child(collider)
-	goal.body_entered.connect(func(body: Node2D):
-		if body.is_in_group("player"):
-			goal_reached.emit(body))
-	add_child(goal)
+	if level_id != "endless" or lab_mode:
+		var goal := Area2D.new()
+		goal.name = "Goal"
+		goal.position = Vector2(finish_x, 400)
+		goal.collision_layer = 8
+		goal.collision_mask = 2
+		var collider := CollisionShape2D.new()
+		var shape := RectangleShape2D.new()
+		shape.size = Vector2(36, 96)
+		collider.shape = shape
+		goal.add_child(collider)
+		goal.body_entered.connect(func(body: Node2D):
+			if body.is_in_group("player"):
+				goal_reached.emit(body))
+		add_child(goal)
 	for key in ["terrain_platform", "terrain_solid", "terrain_wall_left", "hazard_spike_up", "goal_gate", "background_industrial"]:
 		var resource_path: String = "res://assets/visual/" + key + ".png"
 		if ResourceLoader.exists(resource_path):
@@ -73,7 +74,7 @@ func _build_layout() -> void:
 		cursor = gap.end.x
 	floors.append(Rect2(cursor, 448, course_length - cursor, 160))
 
-func _add_solid(rect: Rect2) -> void:
+func _add_solid(rect: Rect2, owner_node: Node = null) -> void:
 	var body := StaticBody2D.new()
 	body.position = rect.get_center()
 	body.collision_layer = 1
@@ -83,9 +84,9 @@ func _add_solid(rect: Rect2) -> void:
 	shape.size = rect.size
 	collider.shape = shape
 	body.add_child(collider)
-	add_child(body)
+	(owner_node if owner_node != null else self).add_child(body)
 
-func _add_spikes(rect: Rect2) -> void:
+func _add_spikes(rect: Rect2, owner_node: Node = null) -> void:
 	var area := Area2D.new()
 	area.position = rect.position
 	area.collision_layer = 4
@@ -106,7 +107,7 @@ func _add_spikes(rect: Rect2) -> void:
 	area.body_entered.connect(func(body: Node2D):
 		if body.is_in_group("player"):
 			body.die("spike"))
-	add_child(area)
+	(owner_node if owner_node != null else self).add_child(area)
 
 func section_at(x: float) -> int:
 	for i in range(section_starts.size() - 1, -1, -1):
@@ -179,7 +180,8 @@ func _draw() -> void:
 		if _textures.has("terrain_wall_left"):
 			draw_texture_rect(_textures.terrain_wall_left, Rect2(wall.position, Vector2(32, wall.size.y)), true)
 		draw_rect(Rect2(wall.position, Vector2(4, wall.size.y)), Color("45dccb"))
-		draw_string(_font(), Vector2(wall.position.x - 168, 288), "蹬墙：跳跃 → 再次跳跃", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("45dccb"))
+		if wall.size.y >= 96:
+			draw_string(_font(), Vector2(wall.position.x - 168, 288), "蹬墙：跳跃 → 再次跳跃", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("45dccb"))
 	for rect in spikes:
 		for x in range(int(rect.position.x), int(rect.end.x), 32):
 			if _textures.has("hazard_spike_up"):
@@ -192,8 +194,10 @@ func _draw() -> void:
 	if fallback_relays_enabled:
 		for relay in relays:
 			draw_circle(relay.position, 18, Color("607987") if relay.activated else Color("ffd166"), false, 3)
-	draw_string(_font(), Vector2(96, 382), "A / D 移动     SPACE 跳跃", HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("e6efed"))
+	draw_string(_font(), Vector2(96, 382), "自动奔跑 · SPACE 跳跃" if level_id == "endless" and not lab_mode else "A / D 移动     SPACE 跳跃", HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("e6efed"))
 	draw_string(_font(), Vector2(96, 410), "短按低跳 · 长按高跳 · R 重开", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color("607987"))
+	if level_id == "endless" and not lab_mode:
+		return
 	if _textures.has("goal_gate"):
 		draw_texture_rect(_textures.goal_gate, Rect2(finish_x - 24, 352, 48, 96), false)
 	else:

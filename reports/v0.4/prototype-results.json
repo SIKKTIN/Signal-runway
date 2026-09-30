@@ -1,0 +1,54 @@
+{
+	"checks": [
+		{
+			"check": "auto_start_without_direction",
+			"passed": true
+		},
+		{
+			"check": "no_goal_area",
+			"passed": true
+		},
+		{
+			"check": "goal_ignored_in_endless",
+			"passed": true
+		},
+		{
+			"check": "ordinary_jump_wall_jump_auto_resume",
+			"passed": true
+		},
+		{
+			"check": "pause_freezes_auto_run_and_threat",
+			"passed": true
+		},
+		{
+			"check": "paused_r_same_seed_clean_round",
+			"passed": true
+		},
+		{
+			"check": "stage_speed_cap_282",
+			"passed": true
+		},
+		{
+			"check": "endless_death_single_result",
+			"passed": true
+		},
+		{
+			"check": "failed_rejects_reward",
+			"passed": true
+		},
+		{
+			"check": "fixed_station_manual_idle_compatible",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"route": {
+		"gap": 1089.751953125,
+		"method": "jump-only ordinary input, automatic run, no teleport/controller freeze",
+		"phase": "running",
+		"seconds": 7.73333333333331,
+		"wall_jumps": 1,
+		"x": 2103.751953125
+	},
+	"scope": "A greybox; stage/death checks are explicit state fixtures; no final random route/score persistence claims"
+}

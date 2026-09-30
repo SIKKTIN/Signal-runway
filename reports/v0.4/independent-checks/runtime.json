@@ -1,0 +1,125 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "enter_autoruns_default_infinite",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "single_hud_pause_button_and_no_goal",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "escape_freezes_logic_and_visuals",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "paused_r_same_seed_clean_round",
+			"passed": true
+		},
+		{
+			"actual": {
+				"distance": 6926.4287109375,
+				"presses": 4
+			},
+			"check": "ordinary_space_events_collect_first_relay",
+			"passed": true
+		},
+		{
+			"actual": {
+				"count": 1,
+				"delay_added": 0.9,
+				"delay_remaining": 0.9,
+				"distance": 6926.4287109375,
+				"gain": "+100",
+				"id": "404:5:node",
+				"immediate_score": 792
+			},
+			"check": "relay_immediate_exact_100_and_point9",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "relay_visual_gain_and_one_audio_trigger",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "pause_preserves_active_relay_delay",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "unpaused_delay_stops_front_not_elapsed",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "natural_failure_saves_isolated_best",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "result_shows_score_best_seed_and_relay",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "result_enter_retry_loads_isolated_best",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "down_selects_new_map_button",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "keyboard_new_map_changes_seed",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "rebase_preserves_ids_clocks_and_screen_anchors",
+			"passed": true
+		},
+		{
+			"actual": {
+				"max_chunks": 5,
+				"max_nodes": 1
+			},
+			"check": "24_snapshot_cache_retirement",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "catchup_speed_and_elapsed_readable_fields",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "f2_manual_lab_has_goal_and_no_endless_hud",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "keyboard_fixed_entry_keeps_manual_start",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "fixed_d_starts_original_challenge",
+			"passed": true
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"fixture_scope": "Explicit caught result for button selection, manual coordinates/catchup and stream snapshots after the normal segment.",
+	"keyboard_method": "Input.parse_input_event keycode/physical_keycode through actual main GUI and unhandled-input routing; not physical human keypresses.",
+	"normal_route": "Seed404 first relay using Space key events, real player physics and natural failure; no teleport/freeze during this segment.",
+	"passed": true,
+	"record_file": "res://reports/v0.4/independent-checks/isolated-record-19488.json",
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

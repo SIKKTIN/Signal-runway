@@ -1,0 +1,53 @@
+{
+	"checks": [
+		{
+			"check": "100_seeds_200_chunks_valid",
+			"passed": true
+		},
+		{
+			"check": "same_seed_unrelated_rng_and_batch_independent",
+			"passed": true
+		},
+		{
+			"check": "12_templates_reached",
+			"passed": true
+		},
+		{
+			"check": "relay_interval_five_or_six_chunks",
+			"passed": true
+		},
+		{
+			"check": "high_difficulty_followed_by_adjustment",
+			"passed": true
+		},
+		{
+			"check": "different_seeds_have_varied_prefixes",
+			"passed": true
+		},
+		{
+			"check": "at_most_one_costly_wall_per_reward_interval",
+			"passed": true
+		},
+		{
+			"check": "empty_candidate_pool_safe_fallback",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"scope": "20,000 pure generator entries. Structure and reproducibility only; action reachability separately tested in full-chunk-results.",
+	"templates": [
+		"safe_a",
+		"safe_b",
+		"gap",
+		"relay_a",
+		"step",
+		"spike",
+		"relay_b",
+		"rhythm_b",
+		"wall_b",
+		"wall_a",
+		"rhythm_c",
+		"rhythm_a"
+	],
+	"unique_prefixes": 100
+}

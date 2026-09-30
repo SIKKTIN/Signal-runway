@@ -1,0 +1,82 @@
+{
+	"checks": [
+		{
+			"check": "missing_record_defaults_zero",
+			"passed": true
+		},
+		{
+			"check": "first_record_saved",
+			"passed": true
+		},
+		{
+			"check": "new_instance_reads_record",
+			"passed": true
+		},
+		{
+			"check": "lower_score_does_not_overwrite",
+			"passed": true
+		},
+		{
+			"check": "atomic_second_record",
+			"passed": true
+		},
+		{
+			"check": "corrupt_record_defaults_visible_status",
+			"passed": true
+		},
+		{
+			"check": "invalid_negative_record_rejected",
+			"passed": true
+		},
+		{
+			"check": "distance_score_real_motion",
+			"passed": true
+		},
+		{
+			"check": "explicit_12k_three_nodes_equals_1500",
+			"passed": true
+		},
+		{
+			"check": "earlier_position_does_not_recount_distance",
+			"passed": true
+		},
+		{
+			"check": "r_same_seed_clears_distance_nodes",
+			"passed": true
+		},
+		{
+			"check": "unique_node_adds_once_100_and_delay",
+			"passed": true
+		},
+		{
+			"check": "duplicate_unknown_no_score_reward",
+			"passed": true
+		},
+		{
+			"check": "pause_all_score_and_delay_frozen",
+			"passed": true
+		},
+		{
+			"check": "single_failure_saves_final_score",
+			"passed": true
+		},
+		{
+			"check": "root_record_reload_persists",
+			"passed": true
+		},
+		{
+			"check": "record_survives_same_seed_restart",
+			"passed": true
+		},
+		{
+			"check": "new_seed_new_round_preserves_record",
+			"passed": true
+		},
+		{
+			"check": "fixed_mode_manual_and_scores_isolated",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"scope": "Record tests use unique disposable user file; score budgets/direct node/death candidates explicitly are fixtures, not normal routes."
+}

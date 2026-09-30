@@ -6,6 +6,8 @@ signal lab_requested
 signal resume_requested
 signal restart_requested
 signal menu_requested
+signal endless_requested
+signal new_seed_requested
 
 var root_control: Control
 var overlay: ColorRect
@@ -27,6 +29,10 @@ var relay_counter: Label
 var relay_count := 0
 var brand_label: Label
 var count_title: Label
+var best_title: Label
+var keys_label: Label
+var external_endless_hud := false
+var endless_pause: Button
 var chase_theme_resource: Theme
 var section_names := ["01  安全教学", "02  单项练习", "03  组合挑战", "04  终点冲刺"]
 
@@ -51,6 +57,13 @@ func _ready() -> void:
 	if ResourceLoader.exists("res://scenes/ui/skins/chase_theme.tres"):
 		chase_theme_resource = load("res://scenes/ui/skins/chase_theme.tres")
 	_build_hud()
+	endless_pause = Button.new()
+	endless_pause.text = "暂停 Esc"
+	endless_pause.position = Vector2(832, 30)
+	endless_pause.size = Vector2(104, 52)
+	endless_pause.pressed.connect(func(): resume_requested.emit())
+	root_control.add_child(endless_pause)
+	endless_pause.hide()
 	overlay = ColorRect.new()
 	overlay.color = Color(0.035, 0.06, 0.09, 0.90)
 	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -124,7 +137,8 @@ func _build_hud() -> void:
 	var best_box := VBoxContainer.new()
 	best_box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	row.add_child(best_box)
-	best_box.add_child(_label("会话最佳", 11, Color("607987")))
+	best_title = _label("会话最佳", 11, Color("607987"))
+	best_box.add_child(best_title)
 	best_label = _label("—", 25, Color("ffd166"))
 	best_box.add_child(best_label)
 	var pause_button := Button.new()
@@ -149,11 +163,12 @@ func _build_hud() -> void:
 	relay_counter = _label("", 14, Color("ffd166"))
 	relay_counter.position = Vector2(24, 140)
 	hud.add_child(relay_counter)
-	var keys := _label("A/D 移动    SPACE 跳跃    R 新挑战    ESC 暂停    F2 测试房", 12, Color("8ca2ac"))
-	keys.position = Vector2(24, 510)
-	hud.add_child(keys)
+	keys_label = _label("A/D 移动    SPACE 跳跃    R 新挑战    ESC 暂停    F2 测试房", 12, Color("8ca2ac"))
+	keys_label.position = Vector2(24, 510)
+	hud.add_child(keys_label)
 
 func _clear_card() -> void:
+	endless_pause.hide()
 	card.add_theme_stylebox_override("panel", panel_style(Color("182b36"), Color("45dccb")))
 	for child in content.get_children():
 		content.remove_child(child)
@@ -194,15 +209,17 @@ func show_menu() -> void:
 	selector.select(0 if selected_level == "relay_station" else 1)
 	selector.item_selected.connect(func(index: int): selected_level = "relay_station" if index == 0 else "level01")
 	content.add_child(selector)
-	var start := _button("追赶挑战   ENTER", func(): start_requested.emit(), true)
+	var start := _button("无限挑战   ENTER", func(): endless_requested.emit(), true)
+	_button("所选固定关 · 追赶挑战", func(): start_requested.emit())
 	_button("计时挑战 · 原规则", func(): time_trial_requested.emit())
 	_button("进入控制测试房   F2", func(): lab_requested.emit())
-	_text("A/D 移动；Space 跳跃与蹬墙；R 重开。\n追赶中触碰危险或被吞没，本轮结束。", 13, Color("8ca2ac"))
+	_text("无限自动跑；固定关A/D移动。Space跳跃，R同图重试。", 12, Color("8ca2ac"))
 	start.grab_focus()
 
 func show_playing() -> void:
 	overlay.hide()
-	hud.show()
+	hud.visible = not (external_endless_hud and current_level == "endless")
+	endless_pause.visible = external_endless_hud and current_level == "endless"
 	get_viewport().gui_release_focus()
 
 func show_pause() -> void:
@@ -276,10 +293,36 @@ func show_failure(reason: String, seconds: float, fraction: float, best: float) 
 func set_course(value: String, names: Array) -> void:
 	current_level = value
 	section_names = names.duplicate()
+	best_title.text = "本机最高" if value == "endless" else "会话最佳"
+	keys_label.text = "自动奔跑    SPACE 跳跃/蹬墙    R 同图重试    ESC 暂停" if value == "endless" else "A/D 移动    SPACE 跳跃    R 新挑战    ESC 暂停    F2 测试房"
 
 func set_relay_count(value: int) -> void:
 	relay_count = value
 	relay_counter.text = "中继接入 %d / 2" % value if current_level == "relay_station" else ""
+
+func update_endless(seconds: float, score: int, distance: float, count: int, stage: int, best: int) -> void:
+	time_label.text = format_time(seconds)
+	count_title.text = "分数"
+	death_label.text = str(score)
+	best_label.text = str(best)
+	section_label.text = "无限 / " + ["起步", "推进", "组合", "持续挑战"][stage]
+	brand_label.text = "ENDLESS   /   " + _version()
+	relay_counter.text = "距离 %d · 中继 %d" % [int(distance), count]
+	progress_fill.size.x = 912 * fmod(seconds, 30.0) / 30.0
+
+func show_endless_result(reason: String, seconds: float, score: int, distance: float, count: int, seed_value: int, best: int, record_broken: bool = false, record_status: String = "") -> void:
+	_clear_card()
+	_text("新纪录 / ENDLESS" if record_broken else "ENDLESS / SIGNAL LOST", 12, Color("ffd166") if record_broken else Color("ff685c"))
+	_text(str(score) + " 分", 38, Color("ffd166"))
+	_text({"spike": "撞上尖刺", "fall": "坠入空隙", "caught": "被崩塌吞没"}.get(reason, "挑战结束"), 20)
+	_text("距离 %d · 中继 %d · 用时 %s" % [int(distance), count, format_time(seconds)], 14)
+	_text("本机最高 %d · 地图 %d" % [best, seed_value], 13)
+	if record_status == "save_failed":
+		_text("本轮已结算，纪录未能保存到本机。", 12, Color("ff685c"))
+	var retry := _button("同图再试   ENTER / R", func(): restart_requested.emit(), true)
+	_button("换图挑战", func(): new_seed_requested.emit())
+	_button("返回开始界面", func(): menu_requested.emit())
+	retry.grab_focus()
 
 func _version() -> String:
 	return "v" + str(ProjectSettings.get_setting("application/config/version", "0.3.0"))
