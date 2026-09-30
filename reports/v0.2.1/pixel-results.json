@@ -1,0 +1,12 @@
+{
+  "frame_count": 36,
+  "render_size": [
+    960,
+    540
+  ],
+  "wave_changed_pixels": 11877,
+  "environment_changed_pixels": 1644,
+  "pause_changed_pixels": 0,
+  "scope": "GPU frame differences at a fixed front/camera; no player experience conclusion",
+  "passed": true
+}

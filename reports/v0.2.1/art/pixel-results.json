@@ -1,0 +1,137 @@
+{
+  "boundary_checks": [
+    {
+      "front_canvas_x": 560.0,
+      "front_world_x": 560.0,
+      "time": 0.0,
+      "wave_stroke_max_x": 553.0,
+      "front_pixel_x": 746.6666666666666,
+      "max_changed_pixel_x": 737,
+      "ahead_identical": true,
+      "straight_marker_absent": true,
+      "passed": true
+    },
+    {
+      "front_canvas_x": 560.0,
+      "front_world_x": 560.0,
+      "time": 0.23,
+      "wave_stroke_max_x": 553.0,
+      "front_pixel_x": 746.6666666666666,
+      "max_changed_pixel_x": 737,
+      "ahead_identical": true,
+      "straight_marker_absent": true,
+      "passed": true
+    },
+    {
+      "front_canvas_x": 560.0,
+      "front_world_x": 560.0,
+      "time": 0.51,
+      "wave_stroke_max_x": 553.0,
+      "front_pixel_x": 746.6666666666666,
+      "max_changed_pixel_x": 734,
+      "ahead_identical": true,
+      "straight_marker_absent": true,
+      "passed": true
+    },
+    {
+      "front_canvas_x": 560.0,
+      "front_world_x": 560.0,
+      "time": 0.94,
+      "wave_stroke_max_x": 553.0,
+      "front_pixel_x": 746.6666666666666,
+      "max_changed_pixel_x": 733,
+      "ahead_identical": true,
+      "straight_marker_absent": true,
+      "passed": true
+    },
+    {
+      "front_canvas_x": 560.0,
+      "front_world_x": 560.0,
+      "time": 1.43,
+      "wave_stroke_max_x": 553.0,
+      "front_pixel_x": 746.6666666666666,
+      "max_changed_pixel_x": 737,
+      "ahead_identical": true,
+      "straight_marker_absent": true,
+      "passed": true
+    },
+    {
+      "front_canvas_x": 560.0,
+      "front_world_x": 560.0,
+      "time": 2.0,
+      "wave_stroke_max_x": 553.0,
+      "front_pixel_x": 746.6666666666666,
+      "max_changed_pixel_x": 732,
+      "ahead_identical": true,
+      "straight_marker_absent": true,
+      "passed": true
+    }
+  ],
+  "continuous_frames": 24,
+  "frame_interval_game_seconds": 0.06666666666666667,
+  "wave_changed_pixels_per_adjacent_pair": [
+    14987,
+    14921,
+    14988,
+    15189,
+    15350,
+    15413,
+    15298,
+    15140,
+    15041,
+    14941,
+    14971,
+    15008,
+    15010,
+    15040,
+    14956,
+    14926,
+    14912,
+    14837,
+    14793,
+    14846,
+    15011,
+    15127,
+    15157
+  ],
+  "environment_changed_pixels_per_adjacent_pair": [
+    608,
+    1813,
+    1392,
+    960,
+    1496,
+    1015,
+    1083,
+    1541,
+    1474,
+    698,
+    1740,
+    1107,
+    806,
+    733,
+    730,
+    1125,
+    1512,
+    1057,
+    577,
+    823,
+    1308,
+    1042,
+    1662
+  ],
+  "pause_changed_pixels": 0,
+  "passed": true,
+  "method": "Same fixed camera/front/actor. Adjacent frames prove motion. Paused paired draws isolate chase coverage from ambient movement.",
+  "source_files": [
+    {
+      "path": "scripts/visual/chase_visual.gd",
+      "sha256": "7e7786386d05d9795619867776f4cfd6d5ceb9045dbc9bbd4cc27ee4b02b9d23",
+      "bytes": 14530
+    },
+    {
+      "path": "scripts/visual/environment_visual.gd",
+      "sha256": "639776f7d946bd39304fd7aeda23665a934e843489cd617ece2fd20979316716",
+      "bytes": 7893
+    }
+  ]
+}

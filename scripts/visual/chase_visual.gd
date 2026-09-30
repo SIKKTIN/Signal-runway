@@ -119,6 +119,7 @@ func bind_flow(flow: Node, chase: Node) -> void:
 	if not is_node_ready():
 		return
 	_stop_all_audio()
+	_animation_time = 0.0
 	_resolved = false
 	_mode = str(_property(flow, "mode", "time_trial"))
 	_paused = get_tree().paused
@@ -296,12 +297,74 @@ func _draw() -> void:
 	var height := bottom_right.y - top_left.y + 256.0
 	if local_front <= left:
 		return
-	# The bright leading strip ends exactly at front_x; all coverage trails it.
-	draw_texture_rect(_cover, Rect2(left, top, local_front - left, height), true)
-	var segment_y := floorf(top / 128.0) * 128.0
-	while segment_y < top + height:
-		draw_texture_rect(_front, Rect2(local_front - 32.0, segment_y, 32.0, 128.0), false)
-		segment_y += 128.0
+	var right := minf(local_front, bottom_right.x + 48.0)
+	if local_front > bottom_right.x + 64.0:
+		draw_rect(Rect2(left, top, right - left, height), Color(0.055, 0.095, 0.14, 0.80))
+		draw_texture_rect(_cover, Rect2(left, top, right - left, height), true, Color(1, 1, 1, 0.40))
+		_draw_signal_flow(left, right, top, height)
+		return
+	# The wave rolls *behind* the exact lethal boundary. Neither its fill nor
+	# the antialiased strokes can create a dangerous-looking area ahead of it.
+	var wave := PackedVector2Array()
+	var echo := PackedVector2Array()
+	var ribbon := PackedVector2Array()
+	var coverage := PackedVector2Array([Vector2(left - 80.0, top)])
+	var y := top
+	while y <= top + height + 8.0:
+		var inset := _wave_inset(y)
+		wave.append(Vector2(local_front - inset, y))
+		echo.append(Vector2(local_front - inset - 32.0 - 7.0 * sin(y * 0.028 + _animation_time * 2.0), y))
+		ribbon.append(Vector2(local_front - inset - 12.0, y))
+		coverage.append(Vector2(local_front - inset, y))
+		y += 6.0
+	coverage.append(Vector2(left - 80.0, wave[wave.size() - 1].y))
+	draw_colored_polygon(coverage, Color(0.055, 0.095, 0.14, 0.80))
+	var uv := PackedVector2Array()
+	for point in coverage:
+		uv.append(point / 128.0)
+	draw_polygon(coverage, PackedColorArray([Color(1, 1, 1, 0.40)]), uv, _cover)
+	_draw_signal_flow(left, right, top, height)
+	for index in range(wave.size() - 1, -1, -1):
+		ribbon.append(wave[index])
+	draw_colored_polygon(ribbon, Color(1.0, 0.31, 0.26, 0.11))
+	draw_polyline(echo, Color(0.27, 0.86, 0.80, 0.32), 2.0, true)
+	draw_polyline(wave, Color(1.0, 0.35, 0.29, 0.10), 12.0, true)
+	draw_polyline(wave, Color(1.0, 0.40, 0.35, 0.86), 2.5, true)
+	for index in range(int(floor(top / 104.0)) - 1, int(ceil((top + height) / 104.0)) + 1):
+		var packet_y := float(index) * 104.0 + fposmod(_animation_time * 86.0, 104.0)
+		var packet_inset := _wave_inset(packet_y) + 5.0
+		draw_rect(Rect2(local_front - packet_inset - 8.0, packet_y, 8.0, 3.0), Color(1.0, 0.75, 0.61, 0.72))
+
+
+func _wave_inset(y: float) -> float:
+	return 38.0 + 20.0 * sin(y * 0.035 - _animation_time * 4.2) + 5.0 * sin(y * 0.072 - _animation_time * 2.7)
+
+
+func _draw_signal_flow(left: float, right: float, top: float, height: float) -> void:
+	var offset := fposmod(_animation_time * 44.0, 76.0)
+	for band in range(int(floor(top / 76.0)) - 2, int(ceil((top + height) / 76.0)) + 2):
+		var path := PackedVector2Array()
+		var x := left
+		while x < right - 3.0:
+			var y := float(band) * 76.0 + offset + sin((x - front_x) * 0.015 + _animation_time * 2.3 + band * 0.4) * 12.0
+			if x >= front_x - _wave_inset(y) - 3.0:
+				break
+			path.append(Vector2(x, y))
+			x += 16.0
+		if path.size() >= 2:
+			draw_polyline(path, Color(0.28, 0.70, 0.72, 0.13), 1.0, true)
+	var first := int(floor((left + _animation_time * 118.0) / 96.0))
+	var last := int(ceil((right + _animation_time * 118.0) / 96.0))
+	for index in range(first, last + 1):
+		var x := float(index) * 96.0 - _animation_time * 118.0
+		var width := minf(28.0, right - x - 2.0)
+		if x < left or width <= 0.0:
+			continue
+		for row in range(int(floor(top / 142.0)) - 1, int(ceil((top + height) / 142.0)) + 1):
+			var y := row * 142.0 + 24.0 * sin(index * 2.1 + row * 0.8) + fposmod(_animation_time * 19.0, 142.0)
+			var curved_width := minf(width, front_x - _wave_inset(y) - x - 3.0)
+			if curved_width > 0.0:
+				draw_rect(Rect2(x, y, curved_width, 2.0), Color(0.96, 0.37, 0.31, 0.22))
 
 
 func presentation_state() -> Dictionary:
@@ -309,7 +372,9 @@ func presentation_state() -> Dictionary:
 		"paused": _paused, "resolved": _resolved, "hud_visible": _hud_panel.visible,
 		"loop_playing": _loop.playing, "loop_paused": _loop.stream_paused,
 		"loop_position": _loop.get_playback_position(), "animation_time": _animation_time,
-		"caught_playing": _caught.playing, "caught_position": _caught.get_playback_position()}
+		"caught_playing": _caught.playing, "caught_position": _caught.get_playback_position(),
+		"coverage_max_x": front_x, "wave_center_offset_min": 13.0, "wave_center_offset_max": 63.0,
+		"wave_stroke_max_x": front_x - 7.0, "wave_travel_speed": 120.0}
 
 
 static func failure_presentation(reason: String) -> Dictionary:

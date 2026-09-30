@@ -2,7 +2,9 @@
 
 一个 2D 平台跳跃跑酷游戏。v0.2 加入从后方持续推进的信号崩塌：保持手动跑跳和蹬墙，争取安全距离，停顿会让威胁靠近。提供追赶挑战、原计时挑战和控制测试房。
 
-![追赶挑战画面](reports/v0.2/pursuit.png)
+当前版本 **v0.2.1**：崩塌前沿加入滚动信号波与流动数据带，工业场景加入三层视差、信号脉冲、灯光和环境微粒。
+
+![信号波与场景动态预览](reports/v0.2.1/motion-preview.gif)
 
 ## 运行
 
@@ -33,6 +35,9 @@
 
 ## 文档
 
+- [v0.2.1 动态美术优化与运行说明](docs/run-v0.2.1.md)
+- [v0.2.1 画面检查与交付](reports/v0.2.1/final-acceptance.md)
+- [v0.2.1 当前源文件清单](reports/v0.2.1/version-manifest.json)
 - [v0.2 信号崩塌追赶挑战计划](planning/v0.2-execution-plan.md)
 - [v0.2 运行与规则说明](docs/run-v0.2.md)
 - [总体策划、双人开发计划及工程实现记录](docs/gamecreator/modules/gameplay/planning.md)

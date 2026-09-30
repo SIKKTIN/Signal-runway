@@ -1,0 +1,57 @@
+{
+	"checks": [
+		{
+			"check": "menu_environment_installed",
+			"passed": true
+		},
+		{
+			"check": "environment_clock_moves",
+			"passed": true
+		},
+		{
+			"check": "wave_clock_moves",
+			"passed": true
+		},
+		{
+			"check": "visual_does_not_move_lethal_boundary",
+			"passed": true
+		},
+		{
+			"check": "pause_freezes_environment",
+			"passed": true
+		},
+		{
+			"check": "pause_freezes_wave",
+			"passed": true
+		},
+		{
+			"check": "resume_moves_environment",
+			"passed": true
+		},
+		{
+			"check": "failure_freezes_both",
+			"passed": true
+		},
+		{
+			"check": "restart_resets_environment_clock",
+			"passed": true
+		},
+		{
+			"check": "restart_resets_wave_clock",
+			"passed": true
+		},
+		{
+			"check": "time_trial_has_environment",
+			"passed": true
+		},
+		{
+			"check": "time_trial_has_no_threat_hud",
+			"passed": true
+		},
+		{
+			"check": "lab_has_environment",
+			"passed": true
+		}
+	],
+	"fixture": "fixed camera, fixed lethal front; no route proof"
+}

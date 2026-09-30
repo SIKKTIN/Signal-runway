@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-09-30T10:59:25.497Z
-> 文档内容基准：a72efbfbf01166f7513acfcacf202bd06f50d1a916130f3972111e50380297af
+> 文档生成时间：2026-09-30T12:48:04.190Z
+> 文档内容基准：acd692a507bd30e01e8a67044bc0fa0a6c106f732eb251d6ea7537f22512da6b
 
-> 项目版本：v0.2.0
+> 项目版本：v0.2.1
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -24,6 +24,8 @@
 - v0.2 首关追赶预算与局部适配 [addd47d6-f955-4ab5-919f-cbcfe0bb58b5] · 已完成
 - v0.2 双模式流程与正式集成 [9d723ec1-7d19-406a-8037-81f5c8ce4fc1] · 已完成
 - v0.2 修复与最终工程交付 [aa391c62-4c6c-43b2-8d3b-e2296fcbd8c8] · 已完成
+- v0.2.1 动态环境接入与画面验证 [c311f12f-452b-4e87-ae41-3a300bec1a38] · 已完成
+- v0.2.1 去除直线前沿后的最终接入复测 [bdd86fef-8296-47da-b0dc-8e30a9bd18f5] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -34,6 +36,7 @@
 - v0.1 独立技术与表现检查 [d5808be7-d6cc-43cc-a0c6-2d1724a318ec] · 已完成
 - v0.2 崩塌资源与威胁反馈 [d50eea61-70ac-4578-bde9-09a13a65861f] · 已完成
 - v0.2 独立技术与表现检查 [68970662-1e71-45a5-b606-b1ddb7ff77c3] · 已完成
+- v0.2.1 滚动信号波与场景动态表现 [212a0ed2-4887-407e-9f78-f1da13accd71] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -396,6 +399,30 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 自验收约定：制作人开发；先提交证据，再单独填写结论
 - 验收要求：无启动/可达/重开/统计阻塞；已修复问题有复测证据；docs/run-v0.2.md、资源清单、独立报告、版本清单和reports/v0.2/final-acceptance.md齐全；体验未验证范围如实记录。
 - 验收负责人：制作人
+### v0.2.1 动态环境接入与画面验证
+- ID：c311f12f-452b-4e87-ae41-3a300bec1a38
+- 当前状态：已完成
+- 内容：接入独立环境背景，保留业务几何与状态。用固定机位帧、暂停和重建测试验证表现，交付源工程。
+- 前置任务：无
+- 允许修改路径：scripts/level/course.gd、scripts/level/run_flow.gd、project.godot、README.md、.gitignore、.gitattributes、planning/art-motion-plan.md、docs/run-v0.2.1.md、reports/v0.2.1
+- 接口契约：planning/art-motion-plan.md；复用 v0.2 事件，环境 bind_flow(flow,camera,course)，z_index=-10；动画时钟可暂停，结算冻结，重建清零；实际致命覆盖不越过 front_x；不改动作、追赶参数或碰撞。
+- 交付入口：res://scenes/main/main.tscn
+- 集成来源任务：初始主干
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：组件正式接入首关和测试房；连续帧可见波形和背景运动，暂停画面静止；既有规则回归通过；运行说明、图形证据、版本清单和源工程齐全。
+- 验收负责人：制作人
+### v0.2.1 去除直线前沿后的最终接入复测
+- ID：bdd86fef-8296-47da-b0dc-8e30a9bd18f5
+- 当前状态：已完成
+- 内容：用户在主美聊天纠正保留直线的方案；保留原接线，刷新无直线候选的GPU证据、动画预览、源清单并交付。
+- 前置任务：无
+- 允许修改路径：scripts/level/course.gd、scripts/level/run_flow.gd、project.godot、README.md、.gitignore、.gitattributes、planning/art-motion-plan.md、docs/run-v0.2.1.md、reports/v0.2.1
+- 接口契约：planning/art-motion-plan.md；复用 v0.2 事件，环境 bind_flow(flow,camera,course)，z_index=-10；动画时钟可暂停，结算冻结，重建清零；实际致命覆盖不越过 front_x；不改动作、追赶参数或碰撞。
+- 交付入口：res://scenes/main/main.tscn
+- 集成来源任务：初始主干
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：最终无直线版本的运动/暂停/边界及规则证据有效，版本清单一致，正式记录和源工程交付完成。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -410,6 +437,8 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.2 双模式流程与正式集成 [9d723ec1-7d19-406a-8037-81f5c8ce4fc1] · 已完成
 - v0.2 独立技术与表现检查 [68970662-1e71-45a5-b606-b1ddb7ff77c3] · 已完成
 - v0.2 修复与最终工程交付 [aa391c62-4c6c-43b2-8d3b-e2296fcbd8c8] · 已完成
+- v0.2.1 动态环境接入与画面验证 [c311f12f-452b-4e87-ae41-3a300bec1a38] · 已完成
+- v0.2.1 去除直线前沿后的最终接入复测 [bdd86fef-8296-47da-b0dc-8e30a9bd18f5] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -699,6 +728,17 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 交付入口：res://scenes/main/main.tscn；planning/v0.2-execution-plan.md
 - 验收要求：reports/v0.2/independent-review.md注明同一版本、实际检查与缺陷复现；技术与主观观察分别记录，不把fixtures或自动通关当真人体验。报告有效性与被测功能是否通过分别验收。
 - 验收负责人：制作人
+### v0.2.1 滚动信号波与场景动态表现
+- ID：212a0ed2-4887-407e-9f78-f1da13accd71
+- 当前状态：已完成
+- 内容：解决用户指出的静态崩塌与死板场景。制作滚动起伏波形、内部流动、背景视差、信号脉冲和微粒。
+- 前置任务：无
+- 允许修改路径：scripts/visual、assets/visual、scenes/visual、docs/art、reports/v0.2.1/art
+- 接口契约：planning/art-motion-plan.md；复用 v0.2 事件，环境 bind_flow(flow,camera,course)，z_index=-10；动画时钟可暂停，结算冻结，重建清零；实际致命覆盖不越过 front_x；不改动作、追赶参数或碰撞。
+- 交付入口：res://scenes/main/main.tscn
+- 自验收约定：主美制作；先提交证据，再单独填写结论
+- 验收要求：正式图形画面有明显连续运动；覆盖边界正确、玩家落点清楚；暂停结算冻结、重建清零；提交资源说明与真实 GPU 自测。
+- 验收负责人：主美
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -707,3 +747,4 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.1 独立技术与表现检查 [d5808be7-d6cc-43cc-a0c6-2d1724a318ec] · 已完成
 - v0.2 崩塌资源与威胁反馈 [d50eea61-70ac-4578-bde9-09a13a65861f] · 已完成
 - v0.2 独立技术与表现检查 [68970662-1e71-45a5-b606-b1ddb7ff77c3] · 已完成
+- v0.2.1 滚动信号波与场景动态表现 [212a0ed2-4887-407e-9f78-f1da13accd71] · 已完成

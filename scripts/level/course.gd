@@ -3,6 +3,7 @@ extends Node2D
 signal goal_reached(player: Node2D)
 
 var lab_mode := false
+var dynamic_environment_enabled := false
 var course_length := 13600.0
 var spawn_position := Vector2(96, 430)
 var finish_x := 13440.0
@@ -103,15 +104,16 @@ func section_at(x: float) -> int:
 	return clampi(int(x / 3400.0), 0, 3)
 
 func _draw() -> void:
-	draw_rect(Rect2(-1000, -1000, course_length + 2000, 2000), Color("18212b"))
-	if _textures.has("background_industrial"):
-		for x in range(0, int(course_length), 960):
-			draw_texture_rect(_textures.background_industrial, Rect2(x, 0, 960, 540), false)
-	for x in range(0, int(course_length), 128):
-		draw_line(Vector2(x, 96), Vector2(x, 540), Color("20303b"), 1)
-		draw_line(Vector2(x, 272), Vector2(x + 64, 272), Color("273b47"), 1)
-		if x % 512 == 0:
-			draw_rect(Rect2(x, 200, 80, 96), Color("1d2934"))
+	if not dynamic_environment_enabled:
+		draw_rect(Rect2(-1000, -1000, course_length + 2000, 2000), Color("18212b"))
+		if _textures.has("background_industrial"):
+			for x in range(0, int(course_length), 960):
+				draw_texture_rect(_textures.background_industrial, Rect2(x, 0, 960, 540), false)
+		for x in range(0, int(course_length), 128):
+			draw_line(Vector2(x, 96), Vector2(x, 540), Color("20303b"), 1)
+			draw_line(Vector2(x, 272), Vector2(x + 64, 272), Color("273b47"), 1)
+			if x % 512 == 0:
+				draw_rect(Rect2(x, 200, 80, 96), Color("1d2934"))
 	for i in 4:
 		var x := float(i * 3400 + 260)
 		draw_string(_font(), Vector2(x, 176), "%02d" % (i + 1), HORIZONTAL_ALIGNMENT_LEFT, -1, 100, Color("263947"))

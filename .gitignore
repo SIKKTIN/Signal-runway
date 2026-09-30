@@ -35,6 +35,14 @@
 !/reports/v0.2/generate-manifest.cjs
 /reports/v0.2/workflow/
 /reports/**/workflow/
+/reports/v0.2.1/art/workflow/
+/reports/v0.2.1/frames/
+/reports/v0.2.1/art/frames/
+/reports/v0.2.1/art/start.json
+/reports/v0.2.1/art/delivery*.json
+/reports/v0.2.1/art/review*.json
+/reports/v0.2.1/*-request.json
+/reports/v0.2.1/*-receipt.json
 /reports/v0.2/independent-checks/start.json
 /reports/v0.2/independent-checks/delivery*.json
 

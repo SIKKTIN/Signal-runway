@@ -1,0 +1,166 @@
+{
+	"boundary_samples": [
+		{
+			"front_canvas_x": 560.0,
+			"front_world_x": 560.0,
+			"time": 0.0,
+			"wave_stroke_max_x": 553.0
+		},
+		{
+			"front_canvas_x": 560.0,
+			"front_world_x": 560.0,
+			"time": 0.23,
+			"wave_stroke_max_x": 553.0
+		},
+		{
+			"front_canvas_x": 560.0,
+			"front_world_x": 560.0,
+			"time": 0.51,
+			"wave_stroke_max_x": 553.0
+		},
+		{
+			"front_canvas_x": 560.0,
+			"front_world_x": 560.0,
+			"time": 0.94,
+			"wave_stroke_max_x": 553.0
+		},
+		{
+			"front_canvas_x": 560.0,
+			"front_world_x": 560.0,
+			"time": 1.43,
+			"wave_stroke_max_x": 553.0
+		},
+		{
+			"front_canvas_x": 560.0,
+			"front_world_x": 560.0,
+			"time": 2.0,
+			"wave_stroke_max_x": 553.0
+		}
+	],
+	"checks": [
+		{
+			"actual": "",
+			"check": "environment_installed_with_identity_and_layer",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "menu_ambient_motion",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "new_world_clocks_start_at_zero",
+			"passed": true
+		},
+		{
+			"actual": {
+				"environment": {
+					"animation_time": 1.6,
+					"camera_bound": true,
+					"course_bound": true,
+					"parallax_factors": [
+						0.14,
+						0.32,
+						0.57
+					],
+					"paused": false,
+					"phase": "running",
+					"resolved": false
+				},
+				"threat": {
+					"animation_time": 1.6,
+					"caught_playing": false,
+					"caught_position": 0.0,
+					"coverage_max_x": 560.0,
+					"front_x": 560.0,
+					"gap_px": 250.0,
+					"hud_visible": true,
+					"loop_paused": false,
+					"loop_playing": true,
+					"loop_position": 1.17599999904633,
+					"mode": "pursuit",
+					"paused": false,
+					"resolved": false,
+					"warning_level": "urgent",
+					"wave_center_offset_max": 63.0,
+					"wave_center_offset_min": 13.0,
+					"wave_stroke_max_x": 553.0,
+					"wave_travel_speed": 120.0
+				}
+			},
+			"check": "both_clocks_advance_with_fixed_front",
+			"passed": true
+		},
+		{
+			"actual": [
+				1.6,
+				1.6
+			],
+			"check": "pause_freezes_clocks_and_loop",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "resume_advances_clocks_and_loop",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "legacy_diagnostics_preserved",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "failure_freezes_both_and_stops_loop",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "restart_clears_both_clocks",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "success_freezes_both_and_stops_loop",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "time_trial_ambient_without_threat",
+			"passed": true
+		},
+		{
+			"actual": {
+				"far_shift": 112.0,
+				"near_shift": 456.0
+			},
+			"check": "distinct_parallax_depths",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "rebind_does_not_duplicate_listeners",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "lab_environment_installed",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "menu_leaves_no_threat",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "exit_disconnects_and_releases_audio",
+			"passed": true
+		}
+	],
+	"fixture": "Fixed main scene, camera, player and chase boundary. Animation/lifecycle evidence only.",
+	"godot": "4.7.2-stable (official)",
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

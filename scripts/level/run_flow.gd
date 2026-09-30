@@ -92,6 +92,16 @@ func _build_world(use_lab: bool) -> void:
 	_install_presentation()
 
 func _install_presentation() -> void:
+	var environment_path := "res://scripts/visual/environment_visual.gd"
+	if ResourceLoader.exists(environment_path):
+		var environment := Node2D.new()
+		environment.name = "EnvironmentVisual"
+		environment.z_index = -10
+		environment.set_script(load(environment_path))
+		world.add_child(environment)
+		environment.bind_flow(self, camera, course)
+		course.dynamic_environment_enabled = true
+		course.queue_redraw()
 	var visual_path := "res://scripts/visual/player_visual.gd"
 	if ResourceLoader.exists(visual_path):
 		var visual := Node2D.new()
