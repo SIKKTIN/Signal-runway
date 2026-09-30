@@ -1,0 +1,8 @@
+{
+  "pause_changed_pixels": 0,
+  "continuous_frames": 16,
+  "min_adjacent_changed_pixels": 1451,
+  "environment_sha256": "5f684217e0a3d0e92d2fb2b06a21fd885429697a39e093fc51da08e4f11fee28",
+  "passed": true,
+  "method": "Fixed camera/actor, no actor collision in layout fixtures; motion/readability only, not route evidence."
+}

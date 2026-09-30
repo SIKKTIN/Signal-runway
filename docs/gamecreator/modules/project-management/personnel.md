@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-09-30T12:48:04.190Z
-> 文档内容基准：acd692a507bd30e01e8a67044bc0fa0a6c106f732eb251d6ea7537f22512da6b
+> 文档生成时间：2026-09-30T14:15:58.253Z
+> 文档内容基准：ec7e2f3e86898c89a7a77039574063b82ecf57b9ccf44a289e8dbb5fc67d1d8c
 
-> 项目版本：v0.2.1
+> 项目版本：v0.3.0
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -26,6 +26,10 @@
 - v0.2 修复与最终工程交付 [aa391c62-4c6c-43b2-8d3b-e2296fcbd8c8] · 已完成
 - v0.2.1 动态环境接入与画面验证 [c311f12f-452b-4e87-ae41-3a300bec1a38] · 已完成
 - v0.2.1 去除直线前沿后的最终接入复测 [bdd86fef-8296-47da-b0dc-8e30a9bd18f5] · 已完成
+- v0.3 灰盒分支与中继规则 [8215eae2-d489-446d-ba75-7ea0b7b8075b] · 已完成
+- v0.3 断线中继站完整关卡 [0b0586ad-7a43-4595-9486-58e71ae2e04f] · 已完成
+- v0.3 正式集成与技术验证 [c07376be-f8a6-49c6-982a-ce6625e45187] · 已完成
+- v0.3 修复与最终源工程交付 [e136ed54-976a-4c62-ba6e-6afc1ffbdea1] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -37,6 +41,9 @@
 - v0.2 崩塌资源与威胁反馈 [d50eea61-70ac-4578-bde9-09a13a65861f] · 已完成
 - v0.2 独立技术与表现检查 [68970662-1e71-45a5-b606-b1ddb7ff77c3] · 已完成
 - v0.2.1 滚动信号波与场景动态表现 [212a0ed2-4887-407e-9f78-f1da13accd71] · 已完成
+- v0.3 中继节点与接入反馈 [4c6d3ddd-8266-425c-b3c3-e1e5a93aabea] · 已完成
+- v0.3 中继站场景包装 [63a15d2d-5d06-4b48-8e92-eff0c97ae09f] · 已完成
+- v0.3 独立技术与表现检查 [34e93674-c4e4-4b57-a53c-bf798a0a1c66] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -423,6 +430,52 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 自验收约定：制作人开发；先提交证据，再单独填写结论
 - 验收要求：最终无直线版本的运动/暂停/边界及规则证据有效，版本清单一致，正式记录和源工程交付完成。
 - 验收负责人：制作人
+### v0.3 灰盒分支与中继规则
+- ID：8215eae2-d489-446d-ba75-7ea0b7b8075b
+- 当前状态：已完成
+- 内容：先验证第一处分支能形成风险收益，实现节点去重、0.9秒延迟、缓冲与同帧边界，测量当前动作能力并冻结接口。
+- 前置任务：无
+- 允许修改路径：project.godot、scenes/main、scenes/player、scenes/test_room、scenes/levels、scripts/core、scripts/player、scripts/level、scripts/ui、docs/run-v0.3.md、reports/v0.3
+- 接口契约：planning/v0.3-execution-plan.md；旧追赶/玩家/流程事件兼容，建议relay_activated(id,added_delay,count)、relay_delay_changed(remaining)、level_id在A冻结。节点每轮各一次，延迟显式，失效不撤销失败；主美只消费事件，不改动作/碰撞/推进/成绩。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.3-execution-plan.md
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：两路普通输入可达；同入口比较额外耗时与汇合余量；重复/同帧/缓冲/暂停/失败/重开正确，报告reports/v0.3/prototype.md。
+- 验收负责人：制作人
+### v0.3 断线中继站完整关卡
+- ID：0b0586ad-7a43-4595-9486-58e71ae2e04f
+- 当前状态：已完成
+- 内容：将通过的第一分支扩成五段新关，加入第二处分流；实现独立布局、关卡选择、两模式与按关卡成绩。
+- 前置任务：8215eae2-d489-446d-ba75-7ea0b7b8075b
+- 允许修改路径：project.godot、scenes/main、scenes/player、scenes/test_room、scenes/levels、scripts/core、scripts/player、scripts/level、scripts/ui、docs/run-v0.3.md、reports/v0.3
+- 接口契约：planning/v0.3-execution-plan.md；旧追赶/玩家/流程事件兼容，建议relay_activated(id,added_delay,count)、relay_delay_changed(remaining)、level_id在A冻结。节点每轮各一次，延迟显式，失效不撤销失败；主美只消费事件，不改动作/碰撞/推进/成绩。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.3-execution-plan.md
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：四种分支组合普通输入可达，稳/稳无节点可完成，收益扣除耗时合理；原首关/测试房兼容，记录reports/v0.3/route-budget.md。
+- 验收负责人：制作人
+### v0.3 正式集成与技术验证
+- ID：c07376be-f8a6-49c6-982a-ce6625e45187
+- 当前状态：已完成
+- 内容：汇合新关、节点、追赶延迟与正式表现，核对旧接口及两关两模式；生成供独立检查的同版本候选。
+- 前置任务：4c6d3ddd-8266-425c-b3c3-e1e5a93aabea、0b0586ad-7a43-4595-9486-58e71ae2e04f、63a15d2d-5d06-4b48-8e92-eff0c97ae09f
+- 允许修改路径：project.godot、scenes/main、scenes/player、scenes/test_room、scenes/levels、scripts/core、scripts/player、scripts/level、scripts/ui、docs/run-v0.3.md、reports/v0.3
+- 接口契约：planning/v0.3-execution-plan.md；旧追赶/玩家/流程事件兼容，建议relay_activated(id,added_delay,count)、relay_delay_changed(remaining)、level_id在A冻结。节点每轮各一次，延迟显式，失效不撤销失败；主美只消费事件，不改动作/碰撞/推进/成绩。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.3-execution-plan.md
+- 集成来源任务：4c6d3ddd-8266-425c-b3c3-e1e5a93aabea、0b0586ad-7a43-4595-9486-58e71ae2e04f、63a15d2d-5d06-4b48-8e92-eff0c97ae09f
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：节点/延迟边界、暂停/失败/重开、成绩隔离、原关回归及实际路线证据通过，reports/v0.3/integration.md与源清单一致。
+- 验收负责人：制作人
+### v0.3 修复与最终源工程交付
+- ID：e136ed54-976a-4c62-ba6e-6afc1ffbdea1
+- 当前状态：已完成
+- 内容：按独立报告修复本人主干，资源问题反馈原负责人；复测具体风险，生成运行说明、最终源清单和结论。
+- 前置任务：c07376be-f8a6-49c6-982a-ce6625e45187、34e93674-c4e4-4b57-a53c-bf798a0a1c66
+- 允许修改路径：project.godot、scenes/main、scenes/player、scenes/test_room、scenes/levels、scripts/core、scripts/player、scripts/level、scripts/ui、docs/run-v0.3.md、reports/v0.3
+- 接口契约：planning/v0.3-execution-plan.md；旧追赶/玩家/流程事件兼容，建议relay_activated(id,added_delay,count)、relay_delay_changed(remaining)、level_id在A冻结。节点每轮各一次，延迟显式，失效不撤销失败；主美只消费事件，不改动作/碰撞/推进/成绩。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.3-execution-plan.md
+- 集成来源任务：c07376be-f8a6-49c6-982a-ce6625e45187
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：无启动/可达/延迟/重开/统计阻塞；修复有同版本证据，docs/run-v0.3.md与reports/v0.3/final-acceptance.md齐全，不打包。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -439,6 +492,11 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.2 修复与最终工程交付 [aa391c62-4c6c-43b2-8d3b-e2296fcbd8c8] · 已完成
 - v0.2.1 动态环境接入与画面验证 [c311f12f-452b-4e87-ae41-3a300bec1a38] · 已完成
 - v0.2.1 去除直线前沿后的最终接入复测 [bdd86fef-8296-47da-b0dc-8e30a9bd18f5] · 已完成
+- v0.3 灰盒分支与中继规则 [8215eae2-d489-446d-ba75-7ea0b7b8075b] · 已完成
+- v0.3 断线中继站完整关卡 [0b0586ad-7a43-4595-9486-58e71ae2e04f] · 已完成
+- v0.3 正式集成与技术验证 [c07376be-f8a6-49c6-982a-ce6625e45187] · 已完成
+- v0.3 独立技术与表现检查 [34e93674-c4e4-4b57-a53c-bf798a0a1c66] · 已完成
+- v0.3 修复与最终源工程交付 [e136ed54-976a-4c62-ba6e-6afc1ffbdea1] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -739,6 +797,38 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 自验收约定：主美制作；先提交证据，再单独填写结论
 - 验收要求：正式图形画面有明显连续运动；覆盖边界正确、玩家落点清楚；暂停结算冻结、重建清零；提交资源说明与真实 GPU 自测。
 - 验收负责人：主美
+### v0.3 中继节点与接入反馈
+- ID：4c6d3ddd-8266-425c-b3c3-e1e5a93aabea
+- 当前状态：已完成
+- 内容：按接口草案并行制作三态节点、接入脉冲/短音效和延迟提示，A交付前保持独立预览，随后对齐正式接口。
+- 前置任务：无
+- 允许修改路径：assets/visual、assets/audio、scripts/visual、scenes/visual、scenes/ui/skins、docs/art、reports/v0.3/art
+- 接口契约：planning/v0.3-execution-plan.md；旧追赶/玩家/流程事件兼容，建议relay_activated(id,added_delay,count)、relay_delay_changed(remaining)、level_id在A冻结。节点每轮各一次，延迟显式，失效不撤销失败；主美只消费事件，不改动作/碰撞/推进/成绩。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.3-execution-plan.md
+- 自验收约定：主美制作；先提交证据，再单独填写结论
+- 验收要求：清单/锚点/尺寸/导入齐全；三态与危险不混淆，波形延迟表现正确，暂停重开无残留，提交docs/art/v0.3-assets.md。
+- 验收负责人：主美
+### v0.3 中继站场景包装
+- ID：63a15d2d-5d06-4b48-8e92-eff0c97ae09f
+- 当前状态：已完成
+- 内容：按正式几何配置接入场景、路线标识和节点表现，复用现有动态工业环境，区分接入/传输/输出段。
+- 前置任务：4c6d3ddd-8266-425c-b3c3-e1e5a93aabea、0b0586ad-7a43-4595-9486-58e71ae2e04f
+- 允许修改路径：assets/visual、assets/audio、scripts/visual、scenes/visual、scenes/ui/skins、docs/art、reports/v0.3/art
+- 接口契约：planning/v0.3-execution-plan.md；旧追赶/玩家/流程事件兼容，建议relay_activated(id,added_delay,count)、relay_delay_changed(remaining)、level_id在A冻结。节点每轮各一次，延迟显式，失效不撤销失败；主美只消费事件，不改动作/碰撞/推进/成绩。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.3-execution-plan.md
+- 自验收约定：主美制作；先提交证据，再单独填写结论
+- 验收要求：正式入口正常与50%动态画面可读，落点/出口/节点/危险区分，暂停结果冻结，提交资源清单与GPU证据。
+- 验收负责人：主美
+### v0.3 独立技术与表现检查
+- ID：34e93674-c4e4-4b57-a53c-bf798a0a1c66
+- 当前状态：已完成
+- 内容：只读指定候选，重点独立检查中继收益、风险路线可读性、延迟/暂停/重开及模式/关卡状态，报告可复现缺陷。
+- 前置任务：c07376be-f8a6-49c6-982a-ce6625e45187
+- 允许修改路径：reports/v0.3/independent-review.md、reports/v0.3/independent-checks
+- 接口契约：planning/v0.3-execution-plan.md；旧追赶/玩家/流程事件兼容，建议relay_activated(id,added_delay,count)、relay_delay_changed(remaining)、level_id在A冻结。节点每轮各一次，延迟显式，失效不撤销失败；主美只消费事件，不改动作/碰撞/推进/成绩。
+- 交付入口：res://scenes/main/main.tscn；planning/v0.3-execution-plan.md
+- 验收要求：reports/v0.3/independent-review.md注明构建、步骤、实际结果及未覆盖；区分自动fixture、引用路线证据、实际体验与主观试听。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -748,3 +838,6 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.2 崩塌资源与威胁反馈 [d50eea61-70ac-4578-bde9-09a13a65861f] · 已完成
 - v0.2 独立技术与表现检查 [68970662-1e71-45a5-b606-b1ddb7ff77c3] · 已完成
 - v0.2.1 滚动信号波与场景动态表现 [212a0ed2-4887-407e-9f78-f1da13accd71] · 已完成
+- v0.3 中继节点与接入反馈 [4c6d3ddd-8266-425c-b3c3-e1e5a93aabea] · 已完成
+- v0.3 中继站场景包装 [63a15d2d-5d06-4b48-8e92-eff0c97ae09f] · 已完成
+- v0.3 独立技术与表现检查 [34e93674-c4e4-4b57-a53c-bf798a0a1c66] · 已完成

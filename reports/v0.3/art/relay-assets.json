@@ -1,0 +1,35 @@
+[
+  {
+    "path": "assets/visual/relay/relay_activated.png",
+    "size": [
+      48,
+      48
+    ],
+    "sha256": "93bab59513c10423871889e7506d1c25890f50e8e99142449428c7c753dc5790"
+  },
+  {
+    "path": "assets/visual/relay/relay_activating.png",
+    "size": [
+      48,
+      48
+    ],
+    "sha256": "43351a87222c9da4df7a6537a1844f023776b0aa8f7495c295ccc0a6cc8f5742"
+  },
+  {
+    "path": "assets/visual/relay/relay_available.png",
+    "size": [
+      48,
+      48
+    ],
+    "sha256": "c8d4317ee7a376a47ccba5d9dd4856cb0761323ebee2f93787f26ee10f76feed"
+  },
+  {
+    "path": "assets/audio/relay/relay_connect.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "bits": 16,
+    "seconds": 0.3,
+    "peak_dbfs": -7.999851954109188,
+    "sha256": "b696b2f4a468d2aa3bd3298234ff704caf8b2145c249684eb93adb30929afb95"
+  }
+]

@@ -1,6 +1,7 @@
 extends Node
 
 signal threat_updated(front_x: float, gap_px: float, warning_level: String, grace_remaining: float)
+signal relay_delay_changed(remaining: float)
 
 @export var initial_gap := 640.0
 @export var start_delay := 2.0
@@ -11,6 +12,7 @@ var grace_remaining := 0.0
 var warning_level := "stopped"
 var enabled := false
 var started := false
+var relay_remaining := 0.0
 var _previous_player_left := 0.0
 
 func reset(spawn_x: float) -> void:
@@ -20,6 +22,8 @@ func reset(spawn_x: float) -> void:
 	grace_remaining = maxf(start_delay, 0.0)
 	enabled = false
 	started = false
+	relay_remaining = 0.0
+	relay_delay_changed.emit(relay_remaining)
 	warning_level = "grace"
 	_publish()
 
@@ -38,6 +42,11 @@ func advance(active_delta: float, player_left_x: float) -> bool:
 		var used := minf(grace_remaining, delta)
 		grace_remaining -= used
 		delta -= used
+		var relay_used := minf(relay_remaining, delta)
+		relay_remaining -= relay_used
+		delta -= relay_used
+		if relay_used > 0.0:
+			relay_delay_changed.emit(relay_remaining)
 		front_x += maxf(speed, 1.0) * delta
 	gap_px = player_left_x - front_x
 	_previous_player_left = player_left_x
@@ -47,6 +56,10 @@ func advance(active_delta: float, player_left_x: float) -> bool:
 	# A filled half-plane catches interval crossings even when neither old nor
 	# new positions overlaps a thin Area2D. The boundary never skips a body.
 	return enabled and gap_px <= 0.0
+
+func add_relay_delay(seconds: float) -> void:
+	relay_remaining += maxf(seconds, 0.0)
+	relay_delay_changed.emit(relay_remaining)
 
 func _update_warning() -> void:
 	if grace_remaining > 0.0:

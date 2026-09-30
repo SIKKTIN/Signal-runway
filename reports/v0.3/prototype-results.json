@@ -1,0 +1,78 @@
+{
+	"checks": [
+		{
+			"check": "grace_before_relay",
+			"passed": true
+		},
+		{
+			"check": "large_delta_segmented",
+			"passed": true
+		},
+		{
+			"check": "distinct_nodes_accumulate",
+			"passed": true
+		},
+		{
+			"check": "reset_clears_delay",
+			"passed": true
+		},
+		{
+			"check": "safe_route_no_relay_completes",
+			"passed": true
+		},
+		{
+			"check": "risk_route_collects_and_completes",
+			"passed": true
+		},
+		{
+			"check": "relay_net_gain",
+			"passed": true
+		},
+		{
+			"check": "duplicate_contact_once",
+			"passed": true
+		},
+		{
+			"check": "pause_freezes_delay",
+			"passed": true
+		},
+		{
+			"check": "restart_resets_node_and_delay",
+			"passed": true
+		},
+		{
+			"check": "failure_beats_relay",
+			"passed": true
+		},
+		{
+			"check": "trial_records_without_delay",
+			"passed": true
+		},
+		{
+			"check": "trial_recovery_does_not_repeat",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"routes": [
+		{
+			"count": 0,
+			"jumps": 1,
+			"merge_gap": 1193.52795410156,
+			"merge_seconds": 4.29999999999999,
+			"phase": "finished",
+			"risk": false,
+			"seconds": 8.38333333333333
+		},
+		{
+			"count": 1,
+			"jumps": 3,
+			"merge_gap": 1436.52868652344,
+			"merge_seconds": 4.29999999999999,
+			"phase": "finished",
+			"risk": true,
+			"seconds": 8.38333333333333
+		}
+	],
+	"scope": "Two routes use direction/jump input; state edge checks use fixtures."
+}

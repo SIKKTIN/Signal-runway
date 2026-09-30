@@ -1,0 +1,336 @@
+{
+	"checks": [
+		{
+			"actual": {
+				"level": "relay_station",
+				"mode": "pursuit",
+				"phase": "ready"
+			},
+			"check": "actual_enter_default_new_station",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": [
+				0.0,
+				-544.0,
+				2.0,
+				0.0,
+				"(96.0, 432.9941)",
+				1.01666666666667,
+				1.01666666666667,
+				1.01666666666667
+			],
+			"check": "idle_safe_before_first_action",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": [
+				0.5,
+				-544.0,
+				1.5,
+				0.0,
+				"(186.1667, 432.9941)",
+				1.51666666666667,
+				1.51666666666667,
+				1.51666666666667
+			],
+			"check": "actual_d_starts_grace",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": [
+				0.5,
+				-544.0,
+				1.5,
+				0.0,
+				"(186.1667, 432.9941)",
+				1.53333333333333,
+				1.53333333333333,
+				1.53333333333333
+			],
+			"check": "actual_esc_freezes_startup_grace",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": [
+				0.0,
+				-544.0,
+				2.0,
+				0.0,
+				"(96.0, 432.9941)",
+				0.05,
+				0.05,
+				0.05
+			],
+			"check": "actual_r_while_paused_resets",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": [
+				2.06666666666666,
+				-526.000000000001,
+				0.0,
+				0.0,
+				"(186.1667, 432.9941)",
+				2.11666666666666,
+				2.11666666666666,
+				2.11666666666666
+			],
+			"check": "baseline_chase_started_before_contact",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": {
+				"count": 1,
+				"delay": 0.883333333333333,
+				"node": {
+					"activated_ids": [
+						"relay_one"
+					],
+					"animation_time": 2.15,
+					"delay_remaining": 0.883333333333333,
+					"node_states": {
+						"relay_one": "activating",
+						"relay_two": "available"
+					},
+					"paused": false,
+					"resolved": false,
+					"sound_paused": false,
+					"sound_playing": true,
+					"sound_triggers": 1,
+					"toast_visible": true
+				}
+			},
+			"check": "physical_node_contact_activates_once",
+			"method": "position-fixture-real-contact",
+			"passed": true
+		},
+		{
+			"actual": {
+				"count": 1,
+				"delay": 0.549999999999999,
+				"triggers": 1
+			},
+			"check": "overlap_does_not_refresh_or_replay",
+			"method": "position-fixture-real-contact",
+			"passed": true
+		},
+		{
+			"actual": [
+				2.43333333333333,
+				-521.500000000001,
+				0.0,
+				0.549999999999999,
+				"(2530.0, 336.9893)",
+				2.48333333333333,
+				2.48333333333333,
+				2.48333333333333
+			],
+			"check": "delay_stops_translation_not_clock_or_wave",
+			"method": "position-fixture-real-contact",
+			"passed": true
+		},
+		{
+			"actual": {
+				"after": [
+					2.43333333333333,
+					-521.500000000001,
+					0.0,
+					0.549999999999999,
+					"(2530.0, 336.9893)",
+					2.5,
+					2.5,
+					2.5
+				],
+				"before": [
+					2.43333333333333,
+					-521.500000000001,
+					0.0,
+					0.549999999999999,
+					"(2530.0, 336.9893)",
+					2.5,
+					2.5,
+					2.5
+				]
+			},
+			"check": "actual_esc_freezes_active_delay_and_all_visuals",
+			"method": "real-keyboard-after-contact-fixture",
+			"passed": true
+		},
+		{
+			"actual": [
+				3.33333333333333,
+				-427.0,
+				0.0,
+				0.0,
+				"(2530.0, 336.9893)",
+				3.38333333333333,
+				3.38333333333333,
+				3.38333333333333
+			],
+			"check": "resume_exhausts_delay_without_backtracking",
+			"method": "real-keyboard-after-contact-fixture",
+			"passed": true
+		},
+		{
+			"actual": {
+				"actual_front": -427.0,
+				"baseline_front_without_delay": -184.000000000002,
+				"observed_saved_advance": 242.999999999998,
+				"theoretical_full_delay": 243.0
+			},
+			"check": "one_relay_avoids_about_243_units",
+			"method": "contact-fixture-time-budget",
+			"passed": true
+		},
+		{
+			"actual": {
+				"activated_ids": [],
+				"animation_time": 0.05,
+				"delay_remaining": 0.0,
+				"node_states": {
+					"relay_one": "available",
+					"relay_two": "available"
+				},
+				"paused": false,
+				"resolved": false,
+				"sound_paused": false,
+				"sound_playing": false,
+				"sound_triggers": 0,
+				"toast_visible": false
+			},
+			"check": "r_clears_nodes_and_feedback",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": {
+				"level": "relay_station",
+				"mode": "time_trial"
+			},
+			"check": "keyboard_enters_station_time_trial",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": {
+				"activated_ids": [
+					"relay_one"
+				],
+				"animation_time": 0.566666666666667,
+				"delay_remaining": 0.0,
+				"node_states": {
+					"relay_one": "activating",
+					"relay_two": "available"
+				},
+				"paused": false,
+				"resolved": false,
+				"sound_paused": false,
+				"sound_playing": true,
+				"sound_triggers": 1,
+				"toast_visible": true
+			},
+			"check": "trial_contact_counts_without_delay",
+			"method": "position-fixture-real-contact",
+			"passed": true
+		},
+		{
+			"actual": {
+				"deaths": 1,
+				"phase": "recovering",
+				"relays": 1
+			},
+			"check": "trial_real_hazard_recovers_same_round",
+			"method": "position-fixture-real-hazard",
+			"passed": true
+		},
+		{
+			"actual": {
+				"activated_ids": [
+					"relay_one"
+				],
+				"animation_time": 1.05,
+				"delay_remaining": 0.0,
+				"node_states": {
+					"relay_one": "activated",
+					"relay_two": "available"
+				},
+				"paused": false,
+				"resolved": false,
+				"sound_paused": false,
+				"sound_playing": true,
+				"sound_triggers": 1,
+				"toast_visible": true
+			},
+			"check": "trial_recovery_retains_used_node",
+			"method": "position-fixture-real-hazard",
+			"passed": true
+		},
+		{
+			"actual": {
+				"deaths": 0,
+				"phase": "ready",
+				"relays": 0
+			},
+			"check": "trial_r_creates_new_round",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": {
+				"lab": true,
+				"level": "relay_station"
+			},
+			"check": "actual_f2_uses_lab_bool_and_no_nodes",
+			"method": "real-keyboard",
+			"passed": true
+		},
+		{
+			"actual": {
+				"count": 1,
+				"node": {
+					"activated_ids": [
+						"relay_one"
+					],
+					"animation_time": 0.583333333333333,
+					"delay_remaining": 0.0,
+					"node_states": {
+						"relay_one": "activating",
+						"relay_two": "available"
+					},
+					"paused": false,
+					"resolved": true,
+					"sound_paused": false,
+					"sound_playing": false,
+					"sound_triggers": 1,
+					"toast_visible": false
+				},
+				"phase": "failed"
+			},
+			"check": "failed_round_rejects_late_reward_and_feedback",
+			"method": "position-and-late-event-fixture",
+			"passed": true
+		},
+		{
+			"actual": {
+				"count": 0,
+				"level": "relay_station",
+				"phase": "ready"
+			},
+			"check": "result_enter_restarts_station",
+			"method": "real-keyboard",
+			"passed": true
+		}
+	],
+	"godot": "4.7.2-stable (official)",
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"scope": "Actual keyboard paths plus explicitly marked position/contact/event fixtures. No full-route or player-study claims.",
+	"version": "v0.3.0+8f8f69c021f9"
+}

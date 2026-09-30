@@ -1,0 +1,82 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "initial_two_available_nodes",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "instant_activation_and_loaded_sound",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "relay_delay_hud_visible",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "delay_keeps_wave_rolling_with_fixed_front",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "activated_closed_state",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "duplicate_event_is_silent",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "pause_freezes_node_wave_delay_and_audio",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "resume_advances_and_unpauses_sound",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "delay_and_toast_expire",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "failure_freezes_and_rejects_late_feedback",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "rebind_resets_clock_nodes_delay_and_audio",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "time_trial_feedback_without_delay",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "success_freezes_clears_audio_and_toast",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "rebind_subscription_count",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "exit_disconnects_and_releases_sound",
+			"passed": true
+		}
+	],
+	"fixture": "Frozen public interface preview; fixed front. Not gameplay or route proof.",
+	"godot": "4.7.2-stable (official)",
+	"passed": true
+}

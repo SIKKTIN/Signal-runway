@@ -3,6 +3,11 @@ extends Node2D
 signal goal_reached(player: Node2D)
 
 var lab_mode := false
+var level_id := "level01"
+var relay_prototype := true
+var relays: Array[Dictionary] = []
+var section_starts: Array[float] = [0.0, 3400.0, 6800.0, 10200.0]
+var fallback_relays_enabled := true
 var dynamic_environment_enabled := false
 var course_length := 13600.0
 var spawn_position := Vector2(96, 430)
@@ -45,6 +50,9 @@ func _ready() -> void:
 	queue_redraw()
 
 func _build_layout() -> void:
+	if level_id == "relay_station" and not lab_mode:
+		preload("res://scripts/level/relay_layout.gd").build(self, relay_prototype)
+		return
 	if lab_mode:
 		course_length = 2400.0
 		finish_x = 2240.0
@@ -101,7 +109,46 @@ func _add_spikes(rect: Rect2) -> void:
 	add_child(area)
 
 func section_at(x: float) -> int:
-	return clampi(int(x / 3400.0), 0, 3)
+	for i in range(section_starts.size() - 1, -1, -1):
+		if x >= section_starts[i]:
+			return i
+	return 0
+
+func relay_candidates(from_position: Vector2, to_position: Vector2) -> Array[String]:
+	var result: Array[String] = []
+	for relay in relays:
+		if relay.activated:
+			continue
+		# Swept rectangle-vs-point: Minkowski sum of body and node dimensions.
+		var area := Rect2(relay.position - Vector2(26, 35), Vector2(52, 70))
+		if _segment_rect(from_position, to_position, area):
+			result.append(str(relay.id))
+	return result
+
+func _segment_rect(a: Vector2, b: Vector2, rect: Rect2) -> bool:
+	var enter := 0.0
+	var leave := 1.0
+	var movement := b - a
+	for axis in 2:
+		if absf(movement[axis]) < 0.00001:
+			if a[axis] < rect.position[axis] or a[axis] > rect.end[axis]:
+				return false
+		else:
+			var t0 := (rect.position[axis] - a[axis]) / movement[axis]
+			var t1 := (rect.end[axis] - a[axis]) / movement[axis]
+			enter = maxf(enter, minf(t0, t1))
+			leave = minf(leave, maxf(t0, t1))
+			if enter > leave:
+				return false
+	return true
+
+func activate_relay(relay_id: String) -> bool:
+	for relay in relays:
+		if relay.id == relay_id and not relay.activated:
+			relay.activated = true
+			queue_redraw()
+			return true
+	return false
 
 func _draw() -> void:
 	if not dynamic_environment_enabled:
@@ -114,8 +161,8 @@ func _draw() -> void:
 			draw_line(Vector2(x, 272), Vector2(x + 64, 272), Color("273b47"), 1)
 			if x % 512 == 0:
 				draw_rect(Rect2(x, 200, 80, 96), Color("1d2934"))
-	for i in 4:
-		var x := float(i * 3400 + 260)
+	for i in section_starts.size():
+		var x := section_starts[i] + 260.0
 		draw_string(_font(), Vector2(x, 176), "%02d" % (i + 1), HORIZONTAL_ALIGNMENT_LEFT, -1, 100, Color("263947"))
 		draw_string(_font(), Vector2(x, 205), section_names[i] if not lab_mode else "MOVEMENT LAB / 控制测试房", HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("607987"))
 	for rect in floors + walls:
@@ -123,10 +170,11 @@ func _draw() -> void:
 		if _textures.has("terrain_solid"):
 			draw_texture_rect(_textures.terrain_solid, rect, true)
 		if _textures.has("terrain_platform"):
-			draw_texture_rect(_textures.terrain_platform, Rect2(rect.position, Vector2(rect.size.x, 32)), true)
+			draw_texture_rect(_textures.terrain_platform, Rect2(rect.position, Vector2(rect.size.x, minf(32, rect.size.y))), true)
 		draw_rect(Rect2(rect.position, Vector2(rect.size.x, 4)), Color("e6efed"))
 		for x in range(int(rect.position.x) + 16, int(rect.end.x), 64):
-			draw_line(Vector2(x, rect.position.y + 20), Vector2(x + 18, rect.position.y + 38), Color("405a65"), 2)
+			if rect.size.y >= 40:
+				draw_line(Vector2(x, rect.position.y + 20), Vector2(x + 18, rect.position.y + 38), Color("405a65"), 2)
 	for wall in walls:
 		if _textures.has("terrain_wall_left"):
 			draw_texture_rect(_textures.terrain_wall_left, Rect2(wall.position, Vector2(32, wall.size.y)), true)
@@ -141,6 +189,9 @@ func _draw() -> void:
 	for gap in gaps:
 		draw_line(Vector2(gap.position.x, 466), Vector2(gap.end.x, 466), Color("ff685c"), 1)
 		draw_string(_font(), Vector2(gap.position.x + 4, 494), "VOID", HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color("8d5550"))
+	if fallback_relays_enabled:
+		for relay in relays:
+			draw_circle(relay.position, 18, Color("607987") if relay.activated else Color("ffd166"), false, 3)
 	draw_string(_font(), Vector2(96, 382), "A / D 移动     SPACE 跳跃", HORIZONTAL_ALIGNMENT_LEFT, -1, 18, Color("e6efed"))
 	draw_string(_font(), Vector2(96, 410), "短按低跳 · 长按高跳 · R 重开", HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color("607987"))
 	if _textures.has("goal_gate"):

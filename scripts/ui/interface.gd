@@ -21,6 +21,10 @@ var card: PanelContainer
 var content: VBoxContainer
 var theme_resource: Theme
 var current_mode := "pursuit"
+var selected_level := "relay_station"
+var current_level := "level01"
+var relay_counter: Label
+var relay_count := 0
 var brand_label: Label
 var count_title: Label
 var chase_theme_resource: Theme
@@ -52,16 +56,16 @@ func _ready() -> void:
 	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	root_control.add_child(overlay)
 	card = PanelContainer.new()
-	card.position = Vector2(252, 42)
+	card.position = Vector2(252, 20)
 	card.size = Vector2(456, 400)
 	card.add_theme_stylebox_override("panel", panel_style(Color("182b36"), Color("45dccb")))
 	overlay.add_child(card)
 	var margin := MarginContainer.new()
 	for side in ["left", "top", "right", "bottom"]:
-		margin.add_theme_constant_override("margin_" + side, 28)
+		margin.add_theme_constant_override("margin_" + side, 20)
 	card.add_child(margin)
 	content = VBoxContainer.new()
-	content.add_theme_constant_override("separation", 12)
+	content.add_theme_constant_override("separation", 8)
 	margin.add_child(content)
 
 func panel_style(background: Color, border: Color) -> StyleBoxFlat:
@@ -102,7 +106,7 @@ func _build_hud() -> void:
 	var brand := VBoxContainer.new()
 	brand.custom_minimum_size.x = 245
 	row.add_child(brand)
-	brand_label = _label("SIGNAL RUN   /   v0.2", 12, Color("45dccb"))
+	brand_label = _label("SIGNAL RUN   /   " + _version(), 12, Color("45dccb"))
 	brand.add_child(brand_label)
 	section_label = _label("01  安全教学", 21)
 	brand.add_child(section_label)
@@ -142,6 +146,9 @@ func _build_hud() -> void:
 	notice = _label("", 16, Color("45dccb"))
 	notice.position = Vector2(24, 112)
 	hud.add_child(notice)
+	relay_counter = _label("", 14, Color("ffd166"))
+	relay_counter.position = Vector2(24, 140)
+	hud.add_child(relay_counter)
 	var keys := _label("A/D 移动    SPACE 跳跃    R 新挑战    ESC 暂停    F2 测试房", 12, Color("8ca2ac"))
 	keys.position = Vector2(24, 510)
 	hud.add_child(keys)
@@ -164,7 +171,7 @@ func _text(text: String, size: int = 16, color: Color = Color("e6efed")) -> void
 func _button(text: String, callback: Callable, primary: bool = false) -> Button:
 	var button := Button.new()
 	button.text = text
-	button.custom_minimum_size = Vector2(392, 44)
+	button.custom_minimum_size = Vector2(392, 38)
 	button.add_theme_font_size_override("font_size", 17)
 	button.add_theme_stylebox_override("normal", panel_style(Color("45dccb") if primary else Color("213845"), Color("45dccb") if primary else Color("405a65")))
 	button.add_theme_color_override("font_color", Color("18212b") if primary else Color("e6efed"))
@@ -177,9 +184,16 @@ func _button(text: String, callback: Callable, primary: bool = false) -> Button:
 func show_menu() -> void:
 	_clear_card()
 	hud.hide()
-	_text("SIGNAL RUN  /  v0.2", 12, Color("45dccb"))
-	_text("信号跑道", 48)
+	_text("SIGNAL RUN  /  " + _version(), 12, Color("45dccb"))
+	_text("信号跑道", 38)
 	_text("信号正在崩塌，保持前进。", 18, Color("8ca2ac"))
+	var selector := OptionButton.new()
+	selector.custom_minimum_size = Vector2(392, 36)
+	selector.add_item("断线中继站 · 可选中继与分支", 0)
+	selector.add_item("原首关 · 四段跑道", 1)
+	selector.select(0 if selected_level == "relay_station" else 1)
+	selector.item_selected.connect(func(index: int): selected_level = "relay_station" if index == 0 else "level01")
+	content.add_child(selector)
 	var start := _button("追赶挑战   ENTER", func(): start_requested.emit(), true)
 	_button("计时挑战 · 原规则", func(): time_trial_requested.emit())
 	_button("进入控制测试房   F2", func(): lab_requested.emit())
@@ -207,6 +221,8 @@ func show_result(seconds: float, count: int, best: float, lab: bool) -> void:
 	_text(format_time(seconds), 40, Color("45dccb"))
 	_text("会话最佳 %s" % (format_time(best) if best >= 0 else "—"), 15)
 	_text("已逃离信号崩塌 · 暂停不计时" if current_mode == "pursuit" and not lab else "死亡 %d 次 · 用时包含死亡恢复，暂停不计时。" % count, 12, Color("8ca2ac"))
+	if current_level == "relay_station" and not lab:
+		_text("中继接入 %d / 2" % relay_count, 14, Color("ffd166"))
 	var restart := _button("再次挑战   ENTER", func(): restart_requested.emit(), true)
 	_button("返回开始界面", func(): menu_requested.emit())
 	restart.grab_focus()
@@ -227,7 +243,7 @@ func format_time(seconds: float) -> String:
 
 func set_mode(value: String) -> void:
 	current_mode = value
-	brand_label.text = ("PURSUIT" if value == "pursuit" else "TIME TRIAL") + "   /   v0.2"
+	brand_label.text = ("PURSUIT" if value == "pursuit" else "TIME TRIAL") + "   /   " + _version()
 	count_title.text = "进度" if value == "pursuit" else "死亡"
 
 func show_failure(reason: String, seconds: float, fraction: float, best: float) -> void:
@@ -251,6 +267,19 @@ func show_failure(reason: String, seconds: float, fraction: float, best: float) 
 	_text(format_time(seconds), 40, Color("ff685c"))
 	_text("最远进度 %d%%   /   最佳通关 %s" % [int(fraction * 100.0), format_time(best) if best >= 0 else "—"], 14)
 	_text("重开会重置跑道、追赶与计时。", 13, Color("8ca2ac"))
+	if current_level == "relay_station":
+		_text("中继接入 %d / 2" % relay_count, 14, Color("ffd166"))
 	var restart := _button("再次挑战   ENTER / R", func(): restart_requested.emit(), true)
 	_button("返回开始界面", func(): menu_requested.emit())
 	restart.grab_focus()
+
+func set_course(value: String, names: Array) -> void:
+	current_level = value
+	section_names = names.duplicate()
+
+func set_relay_count(value: int) -> void:
+	relay_count = value
+	relay_counter.text = "中继接入 %d / 2" % value if current_level == "relay_station" else ""
+
+func _version() -> String:
+	return "v" + str(ProjectSettings.get_setting("application/config/version", "0.3.0"))

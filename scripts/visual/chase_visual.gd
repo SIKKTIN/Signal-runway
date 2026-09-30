@@ -33,6 +33,8 @@ var _hud_panel: PanelContainer
 var _hud_icon: TextureRect
 var _hud_title: Label
 var _hud_detail: Label
+var _hud_delay: Label
+var _relay_delay_remaining := 0.0
 
 
 func _ready() -> void:
@@ -109,6 +111,11 @@ func _make_hud() -> void:
 	_hud_detail = Label.new()
 	_hud_detail.add_theme_font_size_override("font_size", 15)
 	text_column.add_child(_hud_detail)
+	_hud_delay = Label.new()
+	_hud_delay.add_theme_font_size_override("font_size", 13)
+	_hud_delay.add_theme_color_override("font_color", Color("ffd166"))
+	text_column.add_child(_hud_delay)
+	_hud_delay.hide()
 	_hud_panel.visible = false
 
 
@@ -120,6 +127,7 @@ func bind_flow(flow: Node, chase: Node) -> void:
 		return
 	_stop_all_audio()
 	_animation_time = 0.0
+	_relay_delay_remaining = float(_property(chase, "relay_remaining", _property(flow, "relay_delay_remaining", 0.0)))
 	_resolved = false
 	_mode = str(_property(flow, "mode", "time_trial"))
 	_paused = get_tree().paused
@@ -130,6 +138,7 @@ func bind_flow(flow: Node, chase: Node) -> void:
 	_connect_source(flow, "pause_changed", _on_pause_changed)
 	_connect_source(flow, "run_failed", _on_run_failed)
 	_connect_source(flow, "run_finished", _on_run_finished)
+	_connect_source(flow, "relay_delay_changed", _on_relay_delay_changed)
 	_connect_source(chase, "threat_updated", _on_threat_updated)
 	warning_level = "stopped"
 	_on_threat_updated(float(_property(chase, "front_x", 0.0)), float(_property(chase, "gap_px", 0.0)),
@@ -191,10 +200,16 @@ func _on_pause_changed(paused: bool) -> void:
 	_sync_audio(false)
 
 
+func _on_relay_delay_changed(remaining: float) -> void:
+	_relay_delay_remaining = maxf(remaining, 0.0)
+	_refresh_hud()
+
+
 func _on_run_failed(reason: String, _elapsed: float, _furthest_ratio: float) -> void:
 	if _resolved:
 		return
 	_resolved = true
+	_relay_delay_remaining = 0.0
 	_stop_all_audio()
 	_hud_panel.visible = false
 	if _mode == "pursuit" and reason == "caught":
@@ -203,6 +218,7 @@ func _on_run_failed(reason: String, _elapsed: float, _furthest_ratio: float) -> 
 
 func _on_run_finished(_elapsed: float, _deaths: int, _best: float) -> void:
 	_resolved = true
+	_relay_delay_remaining = 0.0
 	_stop_all_audio()
 	_hud_panel.visible = false
 
@@ -253,6 +269,9 @@ func _refresh_hud() -> void:
 	_hud_title.text = str(title.get(grade, "追赶停止"))
 	var speed := maxf(1.0, float(_property(_chase, "speed", 1.0)))
 	_hud_detail.text = "%.1f s 后启动" % maxf(0.0, grace_remaining) if grade == "grace" else "原地余量约 %.1f 秒" % (maxf(0.0, gap_px) / speed)
+	_hud_delay.visible = _relay_delay_remaining > 0.0
+	_hud_delay.text = "中继延迟  %.1f 秒" % _relay_delay_remaining
+	_hud_panel.offset_bottom = 236.0 if _hud_delay.visible else 212.0
 	if _hud_grade != grade:
 		_hud_grade = grade
 		_hud_title.add_theme_color_override("font_color", COLORS.get(grade, Color.WHITE))
@@ -374,7 +393,8 @@ func presentation_state() -> Dictionary:
 		"loop_position": _loop.get_playback_position(), "animation_time": _animation_time,
 		"caught_playing": _caught.playing, "caught_position": _caught.get_playback_position(),
 		"coverage_max_x": front_x, "wave_center_offset_min": 13.0, "wave_center_offset_max": 63.0,
-		"wave_stroke_max_x": front_x - 7.0, "wave_travel_speed": 120.0}
+		"wave_stroke_max_x": front_x - 7.0, "wave_travel_speed": 120.0,
+		"relay_delay_remaining": _relay_delay_remaining, "relay_delay_visible": _hud_delay.visible and _hud_panel.visible}
 
 
 static func failure_presentation(reason: String) -> Dictionary:

@@ -1,0 +1,31 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "root_public_activation_reaches_presentation",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "root_delay_event_reaches_hud",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "late_bind_reads_existing_delay",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "root_trial_counts_without_delay",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "lab_boolean_compatible",
+			"passed": true
+		}
+	],
+	"fixture": "Formal RunFlow event candidates and late bind; no route/collision proof. Shared layout under development.",
+	"passed": true
+}

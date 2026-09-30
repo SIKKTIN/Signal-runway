@@ -1,0 +1,175 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "formal_station_enabled",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 0.0666666666666667,
+				"camera_bound": true,
+				"course_bound": true,
+				"parallax_factors": [
+					0.14,
+					0.32,
+					0.57
+				],
+				"paused": false,
+				"phase": "running",
+				"resolved": false,
+				"station_enabled": true,
+				"station_section": 0
+			},
+			"check": "section_intake",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 0.133333333333333,
+				"camera_bound": true,
+				"course_bound": true,
+				"parallax_factors": [
+					0.14,
+					0.32,
+					0.57
+				],
+				"paused": false,
+				"phase": "running",
+				"resolved": false,
+				"station_enabled": true,
+				"station_section": 1
+			},
+			"check": "section_branch-one",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 0.2,
+				"camera_bound": true,
+				"course_bound": true,
+				"parallax_factors": [
+					0.14,
+					0.32,
+					0.57
+				],
+				"paused": false,
+				"phase": "running",
+				"resolved": false,
+				"station_enabled": true,
+				"station_section": 1
+			},
+			"check": "section_branch-one-exit",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 0.233333333333333,
+				"camera_bound": true,
+				"course_bound": true,
+				"parallax_factors": [
+					0.14,
+					0.32,
+					0.57
+				],
+				"paused": false,
+				"phase": "failed",
+				"resolved": true,
+				"station_enabled": true,
+				"station_section": 2
+			},
+			"check": "section_transmission",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 0.233333333333333,
+				"camera_bound": true,
+				"course_bound": true,
+				"parallax_factors": [
+					0.14,
+					0.32,
+					0.57
+				],
+				"paused": false,
+				"phase": "failed",
+				"resolved": true,
+				"station_enabled": true,
+				"station_section": 3
+			},
+			"check": "section_branch-two",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 0.233333333333333,
+				"camera_bound": true,
+				"course_bound": true,
+				"parallax_factors": [
+					0.14,
+					0.32,
+					0.57
+				],
+				"paused": false,
+				"phase": "failed",
+				"resolved": true,
+				"station_enabled": true,
+				"station_section": 3
+			},
+			"check": "section_branch-two-exit",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 0.233333333333333,
+				"camera_bound": true,
+				"course_bound": true,
+				"parallax_factors": [
+					0.14,
+					0.32,
+					0.57
+				],
+				"paused": false,
+				"phase": "failed",
+				"resolved": true,
+				"station_enabled": true,
+				"station_section": 4
+			},
+			"check": "section_output",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "node_and_hud_formal_feedback",
+			"passed": false
+		},
+		{
+			"actual": "",
+			"check": "pause_freezes_station",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "failure_freezes_station",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "geometry_unchanged_by_presentation",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "original_level_uses_original_ambient",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "lab_bool_disables_station_wrapper",
+			"passed": true
+		}
+	],
+	"fixture": "Fixed camera and actor in formal completed geometry; no route proof. Event activation candidates for layout/HUD checks.",
+	"godot": "4.7.2-stable (official)",
+	"passed": false
+}

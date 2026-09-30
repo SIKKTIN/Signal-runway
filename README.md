@@ -2,15 +2,15 @@
 
 一个 2D 平台跳跃跑酷游戏。v0.2 加入从后方持续推进的信号崩塌：保持手动跑跳和蹬墙，争取安全距离，停顿会让威胁靠近。提供追赶挑战、原计时挑战和控制测试房。
 
-当前版本 **v0.2.1**：崩塌前沿加入滚动信号波与流动数据带，工业场景加入三层视差、信号脉冲、灯光和环境微粒。
+当前版本 **v0.3**：新增断线中继站、两处分支和两个可选中继。身体接触金色节点可延迟追赶0.9秒；选择稳路或更准确的跑跳路线，为后续动作争取余量。
 
-![信号波与场景动态预览](reports/v0.2.1/motion-preview.gif)
+![第一处分支与中继接入实际输入预览](reports/v0.3/relay-run.gif)
 
 ## 运行
 
 1. 使用 Godot **4.7.2 stable** 导入根目录的 `project.godot`。
 2. 按 **F5** 运行，进入开始界面。
-3. 按 Enter 或点击开始按钮进入首关。
+3. 选择断线中继站或原首关，按 Enter 或点击追赶挑战；也可进入所选关卡的计时模式。
 
 本仓库交付源工程，没有打包的可执行文件。主场景是 `scenes/main/main.tscn`。本机验证使用 Windows、Forward+、D3D12 和 NVIDIA RTX 4050 Laptop GPU；其他设备与平台尚未验证。
 
@@ -35,6 +35,12 @@
 
 ## 文档
 
+- [v0.3 内容设计与制作计划](planning/v0.3-execution-plan.md)
+- [v0.3 运行说明](docs/run-v0.3.md)
+- [v0.3 路线与中继收益](reports/v0.3/route-budget.md)
+- [v0.3 主美独立检查](reports/v0.3/independent-review.md)
+- [v0.3 最终工程验收](reports/v0.3/final-acceptance.md)
+- [v0.3 当前源文件清单](reports/v0.3/version-manifest.json)
 - [v0.2.1 动态美术优化与运行说明](docs/run-v0.2.1.md)
 - [v0.2.1 画面检查与交付](reports/v0.2.1/final-acceptance.md)
 - [v0.2.1 当前源文件清单](reports/v0.2.1/version-manifest.json)
@@ -56,6 +62,6 @@
 | `scenes/` | 主场景、首关、角色、UI 主题与测试房 |
 | `assets/` | PNG 视觉资源和 WAV 音效 |
 | `docs/`、`planning/` | 项目设计、运行说明与资源规范 |
-| `reports/v0.1/`、`reports/v0.2/` | 各版本验收报告、结果数据与实际画面 |
+| `reports/v0.1/` 至 `reports/v0.3/` | 各版本验收报告、结果数据与实际画面 |
 
 仓库保留工程当前依赖的 `addons/godot_ai`，其第三方许可见 [MIT LICENSE](addons/godot_ai/LICENSE)。游玩使用 F5；AI 开发连接需另行按插件文档配置。本机 Godot 缓存、GameCreator 连接信息、私人令牌及操作流水不纳入仓库。

@@ -1,0 +1,161 @@
+{
+	"passed": false,
+	"routes": [
+		{
+			"first": false,
+			"merges": [
+				{
+					"gap": 1252.8720703125,
+					"seconds": 10.2333333333334,
+					"x": 2940
+				},
+				{
+					"gap": 1467.80859375,
+					"seconds": 31.7333333333328,
+					"x": 8960
+				}
+			],
+			"minimum_gap": 630.0,
+			"mode": "pursuit",
+			"passed": false,
+			"phase": "failed",
+			"reason": "spike",
+			"relay_count": 0,
+			"second": false,
+			"seconds": 41.6666666666656,
+			"section_minimum": [
+				630.0,
+				1222.85693359375,
+				1305.0498046875,
+				1404.955078125,
+				1547.96484375
+			],
+			"wall_jumps": 0
+		},
+		{
+			"first": false,
+			"merges": [
+				{
+					"gap": 1252.8720703125,
+					"seconds": 10.2333333333334,
+					"x": 2940
+				},
+				{
+					"gap": 1581.6298828125,
+					"seconds": 32.2166666666661,
+					"x": 8960
+				}
+			],
+			"minimum_gap": 630.0,
+			"mode": "pursuit",
+			"passed": false,
+			"phase": "failed",
+			"reason": "spike",
+			"relay_count": 1,
+			"second": true,
+			"seconds": 42.1499999999989,
+			"section_minimum": [
+				630.0,
+				1222.85693359375,
+				1305.0498046875,
+				1317.9248046875,
+				1661.7861328125
+			],
+			"wall_jumps": 1
+		},
+		{
+			"first": true,
+			"merges": [
+				{
+					"gap": 1495.87255859375,
+					"seconds": 10.2333333333334,
+					"x": 2940
+				},
+				{
+					"gap": 1710.80859375,
+					"seconds": 31.7333333333328,
+					"x": 8960
+				}
+			],
+			"minimum_gap": 630.0,
+			"mode": "pursuit",
+			"passed": false,
+			"phase": "failed",
+			"reason": "spike",
+			"relay_count": 1,
+			"second": false,
+			"seconds": 41.6666666666656,
+			"section_minimum": [
+				630.0,
+				1222.85693359375,
+				1548.05029296875,
+				1647.95556640625,
+				1790.96484375
+			],
+			"wall_jumps": 0
+		},
+		{
+			"first": true,
+			"merges": [
+				{
+					"gap": 1495.87255859375,
+					"seconds": 10.2333333333334,
+					"x": 2940
+				},
+				{
+					"gap": 1824.6298828125,
+					"seconds": 32.2166666666661,
+					"x": 8960
+				}
+			],
+			"minimum_gap": 630.0,
+			"mode": "pursuit",
+			"passed": false,
+			"phase": "failed",
+			"reason": "spike",
+			"relay_count": 2,
+			"second": true,
+			"seconds": 42.1499999999989,
+			"section_minimum": [
+				630.0,
+				1222.85693359375,
+				1548.05029296875,
+				1560.9248046875,
+				1904.7861328125
+			],
+			"wall_jumps": 1
+		},
+		{
+			"first": true,
+			"merges": [
+				{
+					"gap": 630.0,
+					"seconds": 10.2333333333334,
+					"x": 2940
+				},
+				{
+					"gap": 630.0,
+					"seconds": 32.2166666666661,
+					"x": 8960
+				}
+			],
+			"minimum_gap": 630.0,
+			"mode": "time_trial",
+			"passed": false,
+			"phase": "running",
+			"reason": "",
+			"relay_count": 2,
+			"second": true,
+			"seconds": 99.9999999999956,
+			"section_minimum": [
+				630.0,
+				630.0,
+				630.0,
+				630.0,
+				630.0
+			],
+			"wall_jumps": 2
+		}
+	],
+	"scope": "Ordinary input, no teleport, no controller freeze or immunity."
+}
