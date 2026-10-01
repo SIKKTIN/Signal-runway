@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-10-01T03:49:26.326Z
-> 文档内容基准：19ea579a1bb29fc1731d0a36892afc62b79db1c5a054aa4829f0a80207cf0a8e
+> 文档生成时间：2026-10-01T05:13:30.319Z
+> 文档内容基准：f63cbbe12e362288f462e918d107ccb29b791dd6930381ce68c0436a0f0dd701
 
-> 项目版本：v0.4.1
+> 项目版本：v0.5
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -39,12 +39,12 @@
 - v0.4.1 配置与生成器接口 [d20365cd-4692-453e-bbe9-edcaee41bd23] · 已完成
 - v0.4.1 地图编辑器与隔离试玩 [c82f936c-f37c-4524-a65b-0e5e9a80ddf0] · 已完成
 - v0.4.1 集成与工具源工程交付 [f307bb6b-6dca-4ede-befc-c60aae0ea443] · 已完成
-- v0.5 生命与距离加速原型 [4ea4a0e8-d147-4600-85ec-a4d6416644de] · 待开始
-- v0.5 立体灰盒与恢复接口 [8ee6111d-45f5-431b-a6f8-30a2383a1788] · 待开始
-- v0.5 参数化生成与地图内容 [ebb9d098-0286-4664-928d-1759796c7161] · 待开始
-- v0.5 编辑器与配置升级 [20674273-a249-42bf-9f19-b64ddfa7aaa7] · 待开始
-- v0.5 追赶联动与成绩集成 [ab334011-e6cf-4ad2-9ee5-0b4a392e4329] · 待开始
-- v0.5 缺陷修复与源工程交付 [b777488d-40ae-4774-9f30-69aee7cd5e43] · 待开始
+- v0.5 生命与距离加速原型 [4ea4a0e8-d147-4600-85ec-a4d6416644de] · 已完成
+- v0.5 立体灰盒与恢复接口 [8ee6111d-45f5-431b-a6f8-30a2383a1788] · 已完成
+- v0.5 参数化生成与地图内容 [ebb9d098-0286-4664-928d-1759796c7161] · 已完成
+- v0.5 编辑器与配置升级 [20674273-a249-42bf-9f19-b64ddfa7aaa7] · 已完成
+- v0.5 追赶联动与成绩集成 [ab334011-e6cf-4ad2-9ee5-0b4a392e4329] · 已完成
+- v0.5 缺陷修复与源工程交付 [b777488d-40ae-4774-9f30-69aee7cd5e43] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -63,8 +63,8 @@
 - v0.4 无限模式正式美术接入 [41feb898-38b6-4233-9bf3-77795a0345af] · 已完成
 - v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
 - v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
-- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 待开始
-- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 待开始
+- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 已完成
+- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -348,7 +348,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 
 ## 制作人行动清单
 
-当前排期判断：已建立计划，准备组织制作。这只是排期快照，不能代替引擎实际检查。
+当前排期判断：任务已完成，需检查里程碑验收与下一轮目标。这只是排期快照，不能代替引擎实际检查。
 
 ### 制作人职责与交接边界
 
@@ -649,7 +649,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.5 生命与距离加速原型
 - ID：4ea4a0e8-d147-4600-85ec-a4d6416644de
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
 - 前置任务：无
 - 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
@@ -660,7 +660,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.5 立体灰盒与恢复接口
 - ID：8ee6111d-45f5-431b-a6f8-30a2383a1788
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
 - 前置任务：4ea4a0e8-d147-4600-85ec-a4d6416644de
 - 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
@@ -671,7 +671,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.5 参数化生成与地图内容
 - ID：ebb9d098-0286-4664-928d-1759796c7161
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.5-plan.md对应工作包；预算4至6小时。当前仅登记计划，尚未开始。
 - 前置任务：8ee6111d-45f5-431b-a6f8-30a2383a1788
 - 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
@@ -682,7 +682,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.5 编辑器与配置升级
 - ID：20674273-a249-42bf-9f19-b64ddfa7aaa7
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
 - 前置任务：ebb9d098-0286-4664-928d-1759796c7161
 - 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
@@ -693,7 +693,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.5 追赶联动与成绩集成
 - ID：ab334011-e6cf-4ad2-9ee5-0b4a392e4329
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
 - 前置任务：4ea4a0e8-d147-4600-85ec-a4d6416644de、ebb9d098-0286-4664-928d-1759796c7161
 - 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
@@ -704,7 +704,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.5 缺陷修复与源工程交付
 - ID：b777488d-40ae-4774-9f30-69aee7cd5e43
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.5-plan.md对应工作包；预算2至3小时。当前仅登记计划，尚未开始。
 - 前置任务：55770c96-0113-4ab1-b1f6-721c3418bbef
 - 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
@@ -746,14 +746,14 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.4.1 地图编辑器与隔离试玩 [c82f936c-f37c-4524-a65b-0e5e9a80ddf0] · 已完成
 - v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
 - v0.4.1 集成与工具源工程交付 [f307bb6b-6dca-4ede-befc-c60aae0ea443] · 已完成
-- v0.5 生命与距离加速原型 [4ea4a0e8-d147-4600-85ec-a4d6416644de] · 待开始
-- v0.5 立体灰盒与恢复接口 [8ee6111d-45f5-431b-a6f8-30a2383a1788] · 待开始
-- v0.5 参数化生成与地图内容 [ebb9d098-0286-4664-928d-1759796c7161] · 待开始
-- v0.5 编辑器与配置升级 [20674273-a249-42bf-9f19-b64ddfa7aaa7] · 待开始
-- v0.5 追赶联动与成绩集成 [ab334011-e6cf-4ad2-9ee5-0b4a392e4329] · 待开始
-- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 待开始
-- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 待开始
-- v0.5 缺陷修复与源工程交付 [b777488d-40ae-4774-9f30-69aee7cd5e43] · 待开始
+- v0.5 生命与距离加速原型 [4ea4a0e8-d147-4600-85ec-a4d6416644de] · 已完成
+- v0.5 立体灰盒与恢复接口 [8ee6111d-45f5-431b-a6f8-30a2383a1788] · 已完成
+- v0.5 参数化生成与地图内容 [ebb9d098-0286-4664-928d-1759796c7161] · 已完成
+- v0.5 编辑器与配置升级 [20674273-a249-42bf-9f19-b64ddfa7aaa7] · 已完成
+- v0.5 追赶联动与成绩集成 [ab334011-e6cf-4ad2-9ee5-0b4a392e4329] · 已完成
+- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 已完成
+- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
+- v0.5 缺陷修复与源工程交付 [b777488d-40ae-4774-9f30-69aee7cd5e43] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -1178,7 +1178,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.5 地形层次与状态美术
 - ID：d256cca8-e192-49da-99b5-62aa8d1a96d6
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
 - 前置任务：4ea4a0e8-d147-4600-85ec-a4d6416644de、ebb9d098-0286-4664-928d-1759796c7161
 - 允许修改路径：assets、scenes/ui、scenes/tools/generation_editor_theme.tres、docs/art/v0.5.md、reports/v0.5/art、reports/v0.5/independent-checks、reports/v0.5/independent-review.md
@@ -1188,7 +1188,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.5 同版本独立试玩与验收
 - ID：55770c96-0113-4ab1-b1f6-721c3418bbef
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.5-plan.md对应工作包；预算2至3小时。当前仅登记计划，尚未开始。
 - 前置任务：20674273-a249-42bf-9f19-b64ddfa7aaa7、ab334011-e6cf-4ad2-9ee5-0b4a392e4329、d256cca8-e192-49da-99b5-62aa8d1a96d6
 - 允许修改路径：assets、scenes/ui、scenes/tools/generation_editor_theme.tres、docs/art/v0.5.md、reports/v0.5/art、reports/v0.5/independent-checks、reports/v0.5/independent-review.md
@@ -1212,5 +1212,5 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.4 无限模式正式美术接入 [41feb898-38b6-4233-9bf3-77795a0345af] · 已完成
 - v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
 - v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
-- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 待开始
-- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 待开始
+- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 已完成
+- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
