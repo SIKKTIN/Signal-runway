@@ -1,0 +1,63 @@
+{
+  "pause_changed_pixels": 0,
+  "svg_resources": [
+    {
+      "path": "assets/visual/v05/platform_cap.svg",
+      "size": [
+        128,
+        16
+      ],
+      "passed": true
+    },
+    {
+      "path": "assets/visual/v05/ground_side.svg",
+      "size": [
+        64,
+        64
+      ],
+      "passed": true
+    },
+    {
+      "path": "assets/visual/v05/route_upper.svg",
+      "size": [
+        80,
+        28
+      ],
+      "passed": true
+    }
+  ],
+  "audio_technical": {
+    "duration": 0.16,
+    "channels": 1,
+    "sample_rate": 48000,
+    "peak_dbfs": -14.000100374307355
+  },
+  "passed": true,
+  "sources": [
+    {
+      "path": "scenes/ui/v05_status.gd",
+      "sha256": "028f91abe19aa3ded07070a17f629836241b5fb72bf84368972305455a3c4184"
+    },
+    {
+      "path": "scenes/ui/v05_status.tscn",
+      "sha256": "309cb394b1d047ae1cf3eb7f91540caf8d427ba221ee67cce2bec33f163fe4df"
+    },
+    {
+      "path": "assets/visual/v05/platform_cap.svg",
+      "sha256": "e036c057be516a4dfaf11881bd0f921aa8a2686ffce6224c22155a31e0f5cd3d"
+    },
+    {
+      "path": "assets/visual/v05/ground_side.svg",
+      "sha256": "58e266bb1104e9615cce3ea11c917038358178b9e569646d5e8307e3f454c840"
+    },
+    {
+      "path": "assets/visual/v05/route_upper.svg",
+      "sha256": "6c65d43852864ecee35ed766cccebff5fd0525d828a5cbaf64538da9257e7720"
+    },
+    {
+      "path": "assets/audio/v05/hurt_tick.wav",
+      "sha256": "c39756f5fdf6250be879bb1c993a013eb22c7a6fdd69b0fc4fd5c9b26f7291ca"
+    }
+  ],
+  "scope": "Standalone preparation; audio numeric analysis only, not listening/production trigger proof."
+}

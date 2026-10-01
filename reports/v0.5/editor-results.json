@@ -1,0 +1,62 @@
+{
+	"checks": [
+		{
+			"name": "v3几何控件与实际预览",
+			"passed": true
+		},
+		{
+			"name": "真实几何参数变化与差异",
+			"passed": true
+		},
+		{
+			"name": "工具20段实际几何逐项一致",
+			"passed": true
+		},
+		{
+			"name": "坏范围阻止试玩保存",
+			"passed": true
+		},
+		{
+			"name": "v2明确模式且几何锁定",
+			"passed": true
+		},
+		{
+			"name": "显式升级v3而非静默改图",
+			"passed": true
+		},
+		{
+			"name": "命名方案写入合法指纹",
+			"passed": true
+		},
+		{
+			"name": "应用必须先出现确认",
+			"passed": true
+		},
+		{
+			"name": "原子应用并保留备份",
+			"passed": true
+		},
+		{
+			"name": "最高速度档与生命真实接口",
+			"passed": true
+		},
+		{
+			"name": "实际F9受伤扣1并重置高速",
+			"passed": true
+		},
+		{
+			"name": "实际F10掉坑扣血后恢复",
+			"passed": true
+		},
+		{
+			"name": "实际F8返回并清理隔离记录",
+			"passed": true
+		},
+		{
+			"name": "正式与历史成绩逐字节不变",
+			"passed": true
+		}
+	],
+	"method": "真实F9/F10/F8输入；参数/确认使用程序化控件调用，default_path与个人方案为隔离fixture，正常GPU固定步长",
+	"passed": true
+}

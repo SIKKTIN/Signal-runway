@@ -35,6 +35,14 @@ var run_distance := 0.0
 var run_score := 0
 var difficulty_stage := 0
 var catchup_bonus := 0.0
+var speed_distance_base := 0.0
+var target_run_speed := 280.0
+var trial_speed := 0.0
+var _survival_status: Control
+var safe_points: Array[Dictionary] = []
+var fall_recovery_remaining := 0.0
+var _grounded_frames := 0
+var relay_delay_chunks: Dictionary = {}
 var best_score := 0
 var new_record := false
 var record_path := EndlessRecordScript.DEFAULT_PATH
@@ -73,6 +81,7 @@ func _ready() -> void:
 		var loaded := GenerationProfile.load_profile()
 		generation_profile = loaded.profile
 		generation_notice = "生成配置不可用，已回退内置默认" if loaded.fallback else ""
+	endless_record.expected_rules_revision = 5
 	reload_endless_record()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Resolve the front after the player's current-frame move_and_slide.
@@ -132,6 +141,8 @@ func _build_world(use_lab: bool) -> void:
 	world.add_child(player)
 	player.reset_at(course.spawn_position)
 	player.auto_run = is_endless()
+	player.health_enabled = is_endless()
+	player.damage_taken.connect(_on_damage_taken)
 	_previous_position = player.position
 	player.died.connect(_on_death)
 	course.goal_reached.connect(_on_goal)
@@ -151,6 +162,13 @@ func _build_world(use_lab: bool) -> void:
 	_install_presentation()
 
 func _install_presentation() -> void:
+	if is_instance_valid(_survival_status):
+		_survival_status.queue_free()
+		_survival_status = null
+	if is_endless() and ResourceLoader.exists("res://scenes/ui/v05_status.tscn"):
+		_survival_status = load("res://scenes/ui/v05_status.tscn").instantiate()
+		_survival_status.enable_hurt_audio = true
+		ui.add_child(_survival_status)
 	ui.external_endless_hud = false
 	if is_endless():
 		for pair in [["endless_world_visual", "EndlessWorldVisual"], ["endless_hud_visual", "EndlessHUDVisual"]]:
@@ -223,7 +241,13 @@ func start_challenge(use_lab: bool = false, selected_mode: String = "", selected
 	run_score = 0
 	difficulty_stage = 0
 	catchup_bonus = 0.0
+	speed_distance_base = 0.0
+	target_run_speed = 280.0
 	new_record = false
+	safe_points.clear()
+	fall_recovery_remaining = 0.0
+	_grounded_frames = 0
+	relay_delay_chunks.clear()
 	phase = "ready"
 	_load_best()
 	_build_world(use_lab)
@@ -336,16 +360,24 @@ func _physics_process(delta: float) -> void:
 		else:
 			if is_endless():
 				run_distance = maxf(run_distance, player.position.x + course.total_offset - course.spawn_position.x)
-				difficulty_stage = mini(3, int(elapsed / 30.0))
-				var gap_now: float = player.position.x - 10.0 - chase.front_x
-				var target_bonus := clampf((gap_now - 1400.0) / 60.0, 0.0, 14.0) if difficulty_stage == 3 else 0.0
-				catchup_bonus = move_toward(catchup_bonus, target_bonus, 8.0 * delta)
-				chase.speed = 270.0 + difficulty_stage * 4.0 + catchup_bonus
+				target_run_speed = trial_speed if trial_speed > 0 else 280.0 + 100.0 * clampf((run_distance - speed_distance_base) / 50000.0, 0, 1)
+				player.move_speed = target_run_speed
+				if fall_recovery_remaining > 0:
+					fall_recovery_remaining = maxf(0, fall_recovery_remaining - delta)
+					player.invulnerable_remaining = maxf(0, player.invulnerable_remaining - delta)
+					if fall_recovery_remaining <= 0:
+						_restore_safe_point()
+				elif not player.dead:
+					_record_safe_point()
+				update_endless_pressure(delta)
 				run_score = int(floor(run_distance / 10.0)) + relay_count * 100
 			else:
 				furthest_ratio = maxf(furthest_ratio, clampf((player.position.x - course.spawn_position.x) / (course.finish_x - course.spawn_position.x), 0.0, 1.0))
 			if player.position.y > 650:
-				player.die("fall")
+				if is_endless():
+					_handle_endless_fall()
+				else:
+					player.die("fall")
 			if is_pursuit() and chase.advance(delta, player.global_position.x - 10.0):
 				_queue_failure("caught")
 				player.die("caught")
@@ -354,10 +386,18 @@ func _physics_process(delta: float) -> void:
 					_queue_relay(relay_id)
 			if is_endless() and not player.dead and _failures.is_empty():
 				course.update_stream(player.position.x, chase.front_x)
+				var active_ids := {}
+				for chunk in course.chunks:
+					active_ids[chunk.id] = true
+				for id in relay_delay_chunks.keys():
+					if not active_ids.has(id):
+						relay_delay_chunks.erase(id)
 				if course.streaming and player.position.x >= course.REBASE_AT:
 					_shift_endless_world(course.REBASE_BY)
 	if phase in ["ready", "running"]:
 		camera.position.x = maxf(player.position.x + 180.0, 480.0) if is_endless() else clampf(player.position.x + player.facing * 96.0, 480.0, course.course_length - 480.0)
+		if is_endless():
+			camera.position.y = clampf(player.position.y-163,270,420)
 	_update_ui()
 	_previous_position = player.position
 
@@ -372,6 +412,14 @@ func _shift_endless_world(distance: float) -> void:
 	chase.advance(0, player.position.x - 10)
 	world_shifted.emit(distance)
 
+func update_endless_pressure(delta: float) -> void:
+	difficulty_stage = mini(3,int(elapsed/30.0))
+	var gap_now: float = player.position.x-10-chase.front_x
+	var target_bonus := clampf((gap_now-1400)/60,0,14) if difficulty_stage==3 else 0.0
+	catchup_bonus = move_toward(catchup_bonus,target_bonus,8*delta)
+	var target := (270+difficulty_stage*4+catchup_bonus)*target_run_speed/280
+	chase.speed = move_toward(chase.speed,target,(300.0 if target<chase.speed else 80.0)*delta)
+
 func _queue_relay(relay_id: String) -> void:
 	if phase not in ["ready", "running"] or player.dead or not _failures.is_empty():
 		return
@@ -384,6 +432,10 @@ func _activate_pending_relays() -> void:
 		if course.activate_relay(relay_id):
 			relay_count += 1
 			var added := 0.9 if is_pursuit() else 0.0
+			if is_endless():
+				var chunk_id := relay_id.get_slice(":",0)+":"+relay_id.get_slice(":",1)
+				added = 0.0 if relay_delay_chunks.has(chunk_id) else 0.9
+				relay_delay_chunks[chunk_id] = true
 			if added > 0.0:
 				chase.add_relay_delay(added)
 			if is_endless():
@@ -413,6 +465,53 @@ func _on_death(reason: String, _position: Vector2) -> void:
 		phase = "recovering"
 		_recovery = 0.25
 		ui.set_notice("撞上尖刺 · 立即重试" if reason == "spike" else "坠入空隙 · 立即重试", Color("ff685c"))
+
+func _on_damage_taken(reason: String, _health: int) -> void:
+	speed_distance_base = run_distance
+	target_run_speed = 280.0
+	trial_speed = 0.0
+	ui.set_notice("受伤 · 生命 %d/3 · 速度重新积累" % player.health, Color("ff685c"))
+
+func _record_safe_point() -> void:
+	_grounded_frames = _grounded_frames + 1 if player.is_on_floor() else 0
+	safe_points = safe_points.filter(func(p): return course.safe_point_exists(p) and p.global_point.x - course.total_offset > chase.front_x + 12)
+	if _grounded_frames < 2:
+		return
+	var saved: Dictionary = course.safe_surface(player.position)
+	if not saved.is_empty():
+		if safe_points.is_empty() or saved.global_point.x - safe_points.back().global_point.x > 64:
+			safe_points.append(saved)
+			if safe_points.size() > 32:
+				safe_points.pop_front()
+
+func _handle_endless_fall() -> void:
+	if player.dead or fall_recovery_remaining > 0:
+		return
+	player.take_damage("fall")
+	if player.dead:
+		return
+	fall_recovery_remaining = 0.25
+	player.control_enabled = false
+	player.set_physics_process(false)
+	_relay_pending.clear()
+	_grounded_frames = 0
+
+func _restore_safe_point() -> void:
+	var original_x: float = player.position.x + course.total_offset
+	for i in range(safe_points.size()-1,-1,-1):
+		var saved := safe_points[i]
+		if not course.safe_point_exists(saved) or saved.global_point.x > original_x:
+			continue
+		var local: Vector2 = saved.global_point - Vector2(course.total_offset,0)
+		if local.x - 10 <= chase.front_x:
+			player.die("caught")
+			return
+		player.recover_at(local)
+		camera.position.y = clampf(local.y-163,270,420)
+		camera.reset_smoothing()
+		_previous_position = local
+		return
+	player.die("unrecoverable")
 
 func _queue_failure(reason: String) -> void:
 	if phase not in ["ready", "running"] and not (phase == "paused" and _previous_phase in ["ready", "running"]):
@@ -449,7 +548,7 @@ func _resolve_result(generation: int) -> void:
 		_relay_pending.clear()
 		return
 	if is_pursuit() and not _failures.is_empty():
-		for reason in ["spike", "fall", "caught"]:
+		for reason in (["caught", "health", "unrecoverable", "spike", "fall"] if is_endless() else ["spike", "fall", "caught"]):
 			if reason in _failures:
 				_finish_failure(reason)
 				break
@@ -472,7 +571,7 @@ func _finish_failure(reason: String) -> void:
 	player.set_physics_process(false)
 	ui.set_relay_count(relay_count)
 	if is_endless():
-		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed)
+		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed, {"rules_revision":5,"generator_revision":generation_profile.generator_revision,"profile_fingerprint":GenerationProfile.fingerprint(generation_profile)})
 		best_score = int(endless_record.best.score)
 		ui.show_endless_result(reason, elapsed, run_score, run_distance, relay_count, run_seed, best_score, new_record, endless_record.status)
 	else:
@@ -513,6 +612,10 @@ func _scores() -> Dictionary:
 func _update_ui() -> void:
 	ui.set_relay_count(relay_count)
 	if is_endless():
+		if is_instance_valid(_survival_status):
+			_survival_status.visible = phase in ["running","paused"]
+			_survival_status.set_feedback_active(phase in ["running","paused"])
+			_survival_status.update_state(player.health,target_run_speed,player.velocity.x,player.invulnerable_remaining>0,player.hurt_count)
 		run_score = int(floor(run_distance / 10.0)) + relay_count * 100
 		ui.update_endless(elapsed, run_score, run_distance, relay_count, difficulty_stage, best_score)
 		endless_stats_changed.emit(run_score, run_distance, relay_count, difficulty_stage)

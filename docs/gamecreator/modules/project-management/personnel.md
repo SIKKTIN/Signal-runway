@@ -1,7 +1,7 @@
 # 测试3
 
-> 文档生成时间：2026-10-01T03:18:51.881Z
-> 文档内容基准：dba6b6bfb507fd18a34c9b8b70ed9c0144debbd9889a362c64a5b6a760e2a78f
+> 文档生成时间：2026-10-01T03:49:26.326Z
+> 文档内容基准：19ea579a1bb29fc1731d0a36892afc62b79db1c5a054aa4829f0a80207cf0a8e
 
 > 项目版本：v0.4.1
 > 由 GameCreator 同步，供开发查阅。
@@ -39,6 +39,12 @@
 - v0.4.1 配置与生成器接口 [d20365cd-4692-453e-bbe9-edcaee41bd23] · 已完成
 - v0.4.1 地图编辑器与隔离试玩 [c82f936c-f37c-4524-a65b-0e5e9a80ddf0] · 已完成
 - v0.4.1 集成与工具源工程交付 [f307bb6b-6dca-4ede-befc-c60aae0ea443] · 已完成
+- v0.5 生命与距离加速原型 [4ea4a0e8-d147-4600-85ec-a4d6416644de] · 待开始
+- v0.5 立体灰盒与恢复接口 [8ee6111d-45f5-431b-a6f8-30a2383a1788] · 待开始
+- v0.5 参数化生成与地图内容 [ebb9d098-0286-4664-928d-1759796c7161] · 待开始
+- v0.5 编辑器与配置升级 [20674273-a249-42bf-9f19-b64ddfa7aaa7] · 待开始
+- v0.5 追赶联动与成绩集成 [ab334011-e6cf-4ad2-9ee5-0b4a392e4329] · 待开始
+- v0.5 缺陷修复与源工程交付 [b777488d-40ae-4774-9f30-69aee7cd5e43] · 待开始
 
 ### 主美
 - 岗位 ID：art-director
@@ -57,6 +63,8 @@
 - v0.4 无限模式正式美术接入 [41feb898-38b6-4233-9bf3-77795a0345af] · 已完成
 - v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
 - v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
+- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 待开始
+- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 待开始
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -340,7 +348,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 
 ## 制作人行动清单
 
-当前排期判断：任务已完成，需检查里程碑验收与下一轮目标。这只是排期快照，不能代替引擎实际检查。
+当前排期判断：已建立计划，准备组织制作。这只是排期快照，不能代替引擎实际检查。
 
 ### 制作人职责与交接边界
 
@@ -639,6 +647,73 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 自验收约定：制作人开发；先提交证据，再单独填写结论
 - 验收要求：对应计划测试门与报告，拒绝坏输入、共享生成器、旧默认兼容、安全约束保留；不冒称真人体验。
 - 验收负责人：制作人
+### v0.5 生命与距离加速原型
+- ID：4ea4a0e8-d147-4600-85ec-a4d6416644de
+- 当前状态：待开始
+- 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
+- 前置任务：无
+- 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
+- 接口契约：A/B冻结生命变化/受伤/速度事件与安全表面；C输出最终几何供Course/Preview共享；主美只维护资源/Theme与独立测试，不改生命/随机/成绩逻辑。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：三点生命/伤害去重/无敌、连续加速与受伤0.2秒降速、暂停与重试；实际危险接触证据。
+- 验收负责人：制作人
+### v0.5 立体灰盒与恢复接口
+- ID：8ee6111d-45f5-431b-a6f8-30a2383a1788
+- 当前状态：待开始
+- 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
+- 前置任务：4ea4a0e8-d147-4600-85ec-a4d6416644de
+- 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
+- 接口契约：A/B冻结生命变化/受伤/速度事件与安全表面；C输出最终几何供Course/Preview共享；主美只维护资源/Theme与独立测试，不改生命/随机/成绩逻辑。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：六结构灰盒、基础动作包络、稳定安全点、掉坑恢复、已定义状态事件。
+- 验收负责人：制作人
+### v0.5 参数化生成与地图内容
+- ID：ebb9d098-0286-4664-928d-1759796c7161
+- 当前状态：待开始
+- 内容：执行planning/v0.5-plan.md对应工作包；预算4至6小时。当前仅登记计划，尚未开始。
+- 前置任务：8ee6111d-45f5-431b-a6f8-30a2383a1788
+- 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
+- 接口契约：A/B冻结生命变化/受伤/速度事件与安全表面；C输出最终几何供Course/Preview共享；主美只维护资源/Theme与独立测试，不改生命/随机/成绩逻辑。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：六结构各三有效变体、三速度/空中受伤可达、100seed×200约束、有限兜底/回收重定位。
+- 验收负责人：制作人
+### v0.5 编辑器与配置升级
+- ID：20674273-a249-42bf-9f19-b64ddfa7aaa7
+- 当前状态：待开始
+- 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
+- 前置任务：ebb9d098-0286-4664-928d-1759796c7161
+- 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
+- 接口契约：A/B冻结生命变化/受伤/速度事件与安全表面；C输出最终几何供Course/Preview共享；主美只维护资源/Theme与独立测试，不改生命/随机/成绩逻辑。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：实际几何前缀20段一致、三速度与伤害调试、旧revision2明确适配、读写应用/F8隔离。
+- 验收负责人：制作人
+### v0.5 追赶联动与成绩集成
+- ID：ab334011-e6cf-4ad2-9ee5-0b4a392e4329
+- 当前状态：待开始
+- 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
+- 前置任务：4ea4a0e8-d147-4600-85ec-a4d6416644de、ebb9d098-0286-4664-928d-1759796c7161
+- 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
+- 接口契约：A/B冻结生命变化/受伤/速度事件与安全表面；C输出最终几何供Course/Preview共享；主美只维护资源/Theme与独立测试，不改生命/随机/成绩逻辑。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：三速度取/跳节点/伤害压力曲线、防刷/终局优先、新规则记录和至少30分钟游戏长局。
+- 验收负责人：制作人
+### v0.5 缺陷修复与源工程交付
+- ID：b777488d-40ae-4774-9f30-69aee7cd5e43
+- 当前状态：待开始
+- 内容：执行planning/v0.5-plan.md对应工作包；预算2至3小时。当前仅登记计划，尚未开始。
+- 前置任务：55770c96-0113-4ab1-b1f6-721c3418bbef
+- 允许修改路径：scripts、resources/generation、scenes、assets/art-manifest.json、project.godot、planning/v0.5-plan.md、docs、reports/v0.5、README.md
+- 接口契约：A/B冻结生命变化/受伤/速度事件与安全表面；C输出最终几何供Course/Preview共享；主美只维护资源/Theme与独立测试，不改生命/随机/成绩逻辑。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 集成来源任务：55770c96-0113-4ab1-b1f6-721c3418bbef
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：阻塞问题修复、针对性复验、旧模式回归、运行说明、冻结清单、GameCreator记录和GitHub源码，不打包。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -671,6 +746,14 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.4.1 地图编辑器与隔离试玩 [c82f936c-f37c-4524-a65b-0e5e9a80ddf0] · 已完成
 - v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
 - v0.4.1 集成与工具源工程交付 [f307bb6b-6dca-4ede-befc-c60aae0ea443] · 已完成
+- v0.5 生命与距离加速原型 [4ea4a0e8-d147-4600-85ec-a4d6416644de] · 待开始
+- v0.5 立体灰盒与恢复接口 [8ee6111d-45f5-431b-a6f8-30a2383a1788] · 待开始
+- v0.5 参数化生成与地图内容 [ebb9d098-0286-4664-928d-1759796c7161] · 待开始
+- v0.5 编辑器与配置升级 [20674273-a249-42bf-9f19-b64ddfa7aaa7] · 待开始
+- v0.5 追赶联动与成绩集成 [ab334011-e6cf-4ad2-9ee5-0b4a392e4329] · 待开始
+- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 待开始
+- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 待开始
+- v0.5 缺陷修复与源工程交付 [b777488d-40ae-4774-9f30-69aee7cd5e43] · 待开始
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -1093,6 +1176,26 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 交付入口：res://scenes/tools/generation_editor.tscn
 - 验收要求：同版本实际编辑器1280/960界面、真实操作/调参/保存/试玩/F8独立报告，生成逻辑不变，制作人评审。
 - 验收负责人：制作人
+### v0.5 地形层次与状态美术
+- ID：d256cca8-e192-49da-99b5-62aa8d1a96d6
+- 当前状态：待开始
+- 内容：执行planning/v0.5-plan.md对应工作包；预算3至4小时。当前仅登记计划，尚未开始。
+- 前置任务：4ea4a0e8-d147-4600-85ec-a4d6416644de、ebb9d098-0286-4664-928d-1759796c7161
+- 允许修改路径：assets、scenes/ui、scenes/tools/generation_editor_theme.tres、docs/art/v0.5.md、reports/v0.5/art、reports/v0.5/independent-checks、reports/v0.5/independent-review.md
+- 接口契约：A/B冻结生命变化/受伤/速度事件与安全表面；C输出最终几何供Course/Preview共享；主美只维护资源/Theme与独立测试，不改生命/随机/成绩逻辑。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 验收要求：平台顶沿/侧面/上下路线、3生命与跑速HUD、受伤/加速反馈，1280/960实际界面可读；不改业务。
+- 验收负责人：制作人
+### v0.5 同版本独立试玩与验收
+- ID：55770c96-0113-4ab1-b1f6-721c3418bbef
+- 当前状态：待开始
+- 内容：执行planning/v0.5-plan.md对应工作包；预算2至3小时。当前仅登记计划，尚未开始。
+- 前置任务：20674273-a249-42bf-9f19-b64ddfa7aaa7、ab334011-e6cf-4ad2-9ee5-0b4a392e4329、d256cca8-e192-49da-99b5-62aa8d1a96d6
+- 允许修改路径：assets、scenes/ui、scenes/tools/generation_editor_theme.tres、docs/art/v0.5.md、reports/v0.5/art、reports/v0.5/independent-checks、reports/v0.5/independent-review.md
+- 接口契约：A/B冻结生命变化/受伤/速度事件与安全表面；C输出最终几何供Course/Preview共享；主美只维护资源/Theme与独立测试，不改生命/随机/成绩逻辑。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 验收要求：至少三种子实际操作、路线收益/伤后挽回、界面和工具/旧入口，记录构建/输入/结果及局限，制作人评审。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -1109,3 +1212,5 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.4 无限模式正式美术接入 [41feb898-38b6-4233-9bf3-77795a0345af] · 已完成
 - v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
 - v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
+- v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 待开始
+- v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 待开始

@@ -1,0 +1,13 @@
+{
+  "old_version": "v0.5.0+fa4bea71e3bd",
+  "new_version": "v0.5.0+e0fa1276c8cd",
+  "old_count": 98,
+  "new_count": 98,
+  "changed_files": [
+    "scripts/level/vertical_library.gd",
+    "scripts/visual/endless_module_visual.gd"
+  ],
+  "current_mismatches": [],
+  "archived_old_mismatches": [],
+  "passed": true
+}

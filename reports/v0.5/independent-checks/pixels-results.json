@@ -1,0 +1,22 @@
+{
+  "version": "v0.5.0+fa4bea71e3bd",
+  "file_count": 98,
+  "final_source_mismatches": [],
+  "pause_changed_pixels": 0,
+  "image_sizes": {
+    "tool-hurt-1280.png": [
+      1280,
+      720
+    ],
+    "tool-recovered-960.png": [
+      960,
+      540
+    ],
+    "route-404-upper-upper.png": [
+      1280,
+      720
+    ]
+  },
+  "passed": true,
+  "scope": "GPU screenshot pixels and frozen source verification; no human experience claim."
+}

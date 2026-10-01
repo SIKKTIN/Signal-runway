@@ -59,7 +59,7 @@ func _draw() -> void:
 		var x := origin * zoom + pan.x
 		if x + Library.LENGTH * zoom < 0 or x > size.x:
 			continue
-		var d := Library.definition(rows[i].template_id)
+		var d: Dictionary = rows[i].get("geometry",Library.definition(rows[i].template_id))
 		var accent := Color("48d7ce") if d.category == "safe" else (Color("ffc95c") if d.category == "relay" else Color("8295ae"))
 		draw_rect(Rect2(x, 0, Library.LENGTH * zoom, size.y), Color(accent, 0.06))
 		draw_line(Vector2(x, 0), Vector2(x, size.y), accent, 2 if i == focus_index else 1)
@@ -76,6 +76,10 @@ func _draw() -> void:
 		for relay in d.relays:
 			draw_circle(relay.position, 16, Color("ffc95c"), false, 3)
 			draw_line(relay.position - Vector2(7, 0), relay.position + Vector2(7, 0), Color("ffc95c"), 2)
+		for route in d.get("routes",[]):
+			var color := Color("54e1d3") if route.kind == "upper" else Color("83b0bc")
+			draw_line(route.from-Vector2(0,8),route.to-Vector2(0,8),color,2)
+			draw_circle((route.from+route.to)/2-Vector2(0,16),4,Color("a4e9b5"))
 		draw_set_transform(Vector2.ZERO)
 		if Library.LENGTH * zoom > 95:
 			draw_string(_font, Vector2(x + 6, 22), "%02d %s" % [i, rows[i].template_id], HORIZONTAL_ALIGNMENT_LEFT, Library.LENGTH * zoom - 10, 14, accent)

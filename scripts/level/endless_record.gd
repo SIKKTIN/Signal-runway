@@ -1,8 +1,10 @@
 extends RefCounted
 ## Separate local endless record. Static-course session scores are not migrated.
-const DEFAULT_PATH := "user://signal_runway_endless.json"
+const DEFAULT_PATH := "user://signal_runway_endless_v05.json"
+const LEGACY_PATH := "user://signal_runway_endless.json"
 var best := {"score": 0, "distance": 0.0, "nodes": 0, "seed": 0}
 var status := "missing"
+var expected_rules_revision := 0
 func load_from(file_path: String) -> void:
 	best = {"score": 0, "distance": 0.0, "nodes": 0, "seed": 0}
 	status = "missing"
@@ -19,7 +21,13 @@ func load_from(file_path: String) -> void:
 		status = "invalid"
 		return
 	var data: Dictionary = parser.data
-	if data.get("schema") != 1 or not data.get("best") is Dictionary:
+	if expected_rules_revision > 0 and (data.get("schema") != 2 or data.get("rules_revision") != expected_rules_revision):
+		status = "invalid"
+		return
+	if (data.get("schema") != 1 and data.get("schema") != 2) or not data.get("best") is Dictionary:
+		status = "invalid"
+		return
+	if data.schema == 2 and (data.get("rules_revision") != 5 or (data.get("generator_revision") != 2 and data.get("generator_revision") != 3) or not data.get("profile_fingerprint") is String or data.profile_fingerprint.length() != 12):
 		status = "invalid"
 		return
 	var row: Dictionary = data.best
@@ -33,7 +41,7 @@ func load_from(file_path: String) -> void:
 			return
 	best = {"score": int(row.score), "distance": float(row.distance), "nodes": int(row.nodes), "seed": int(row.seed)}
 	status = "loaded"
-func consider(file_path: String, score: int, distance: float, nodes: int, seed_value: int) -> bool:
+func consider(file_path: String, score: int, distance: float, nodes: int, seed_value: int, metadata: Dictionary = {}) -> bool:
 	if score <= int(best.score):
 		return false
 	best = {"score": score, "distance": distance, "nodes": nodes, "seed": seed_value}
@@ -43,10 +51,20 @@ func consider(file_path: String, score: int, distance: float, nodes: int, seed_v
 	if file == null:
 		status = "save_failed"
 		return true
-	file.store_string(JSON.stringify({"schema": 1, "generator_revision": 1, "best": best}))
+	var data := {"schema":1,"generator_revision":1,"best":best}
+	if not metadata.is_empty():
+		data.schema = 2
+		data.merge(metadata,true)
+	file.store_string(JSON.stringify(data))
 	file.flush()
+	var write_error := file.get_error()
 	file.close()
+	if write_error != OK:
+		status = "save_failed"
+		return true
 	var had_old := FileAccess.file_exists(file_path)
+	if had_old and FileAccess.file_exists(backup):
+		DirAccess.remove_absolute(backup)
 	if had_old and DirAccess.rename_absolute(file_path, backup) != OK:
 		status = "save_failed"
 		return true

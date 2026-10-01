@@ -314,9 +314,9 @@ func show_endless_result(reason: String, seconds: float, score: int, distance: f
 	_clear_card()
 	_text("新纪录 / ENDLESS" if record_broken else "ENDLESS / SIGNAL LOST", 12, Color("ffd166") if record_broken else Color("ff685c"))
 	_text(str(score) + " 分", 38, Color("ffd166"))
-	_text({"spike": "撞上尖刺", "fall": "坠入空隙", "caught": "被崩塌吞没"}.get(reason, "挑战结束"), 20)
+	_text({"spike": "撞上尖刺", "fall": "坠入空隙", "caught": "被崩塌吞没", "health":"生命耗尽", "unrecoverable":"坠落 · 无安全落脚点"}.get(reason, "挑战结束"), 20)
 	_text("距离 %d · 中继 %d · 用时 %s" % [int(distance), count, format_time(seconds)], 14)
-	_text("本机最高 %d · 地图 %d" % [best, seed_value], 13)
+	_text("v0.5 本机最高 %d · 地图 %d" % [best, seed_value], 13)
 	if record_status == "save_failed":
 		_text("本轮已结算，纪录未能保存到本机。", 12, Color("ff685c"))
 	var retry := _button("同图再试   ENTER / R", func(): restart_requested.emit(), true)

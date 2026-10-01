@@ -3,6 +3,7 @@ extends Node2D
 var _chunk_id := ""
 var _template_id := ""
 var _category := "safe"
+var _vertical := false
 var _length := 960.0
 var _total_offset := 0.0
 var _animation_time := 0.0
@@ -20,6 +21,7 @@ func configure(chunk: Dictionary, total_offset: float = 0.0) -> void:
 	_chunk_id = str(chunk.get("id", ""))
 	_template_id = str(chunk.get("template_id", ""))
 	_category = str(chunk.get("category", "safe"))
+	_vertical = chunk.get("geometry",{}).get("vertical",false)
 	_length = maxf(float(chunk.get("length", 960.0)), 1.0)
 	_phase_offset = float(absi(_chunk_id.hash()) % 127) * 0.17
 	set_world_offset(float(chunk.get("origin", 0.0)), total_offset)
@@ -69,7 +71,7 @@ func _draw() -> void:
 	# Seam marker is a dim vertical conduit, not a floor or obstacle.
 	draw_line(Vector2(0, 239), Vector2(0, 430), Color("243641"), 1)
 	if gold:
-		var title := "中继路线  ↑  蹬墙" if _template_id == "relay_b" else "中继路线  ↑"
+		var title := "高路中继  ↑  连跳" if _vertical else ("中继路线  ↑  蹬墙" if _template_id == "relay_b" else "中继路线  ↑")
 		draw_string(_font, Vector2(288, 220), title, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("d6b665"))
 		draw_string(_font, Vector2(288, 423), "稳路  →", HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("9bb5ba"))
 	elif tower:

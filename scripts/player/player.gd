@@ -3,6 +3,7 @@ extends CharacterBody2D
 signal state_changed(state: String)
 signal action_triggered(action: String)
 signal died(reason: String, position: Vector2)
+signal damage_taken(reason: String, remaining_health: int)
 
 @export var move_speed := 280.0
 @export var ground_acceleration := 1800.0
@@ -28,6 +29,11 @@ var _buffer := 0.0
 var _wall_lock := 0.0
 var _spent_wall_side := 0.0
 var _previous_floor := false
+var health_enabled := false
+var health := 3
+var invulnerable_remaining := 0.0
+var hurt_count := 0
+var _hurt_frame := -1
 
 func _ready() -> void:
 	collision_layer = 2
@@ -45,6 +51,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if dead:
 		return
+	invulnerable_remaining = maxf(0.0, invulnerable_remaining - delta)
+	modulate.a = 0.45 if invulnerable_remaining > 0 and int(invulnerable_remaining * 12) % 2 == 0 else 1.0
 	var grounded := is_on_floor()
 	var direction := (1.0 if auto_run else Input.get_axis("move_left", "move_right")) if control_enabled else 0.0
 	_coyote = coyote_window if grounded else maxf(0.0, _coyote - delta)
@@ -104,6 +112,9 @@ func _set_state(next_state: String) -> void:
 		state_changed.emit(state)
 
 func die(reason: String) -> void:
+	if health_enabled and reason in ["spike", "fall"]:
+		take_damage(reason)
+		return
 	if dead:
 		return
 	dead = true
@@ -113,6 +124,35 @@ func die(reason: String) -> void:
 	action_triggered.emit("death")
 	died.emit(reason, global_position)
 	queue_redraw()
+
+func take_damage(reason: String) -> bool:
+	if not health_enabled:
+		die(reason)
+		return true
+	if dead or get_tree().paused or invulnerable_remaining > 0 or _hurt_frame == Engine.get_physics_frames():
+		return false
+	_hurt_frame = Engine.get_physics_frames()
+	health = maxi(0, health - 1)
+	hurt_count += 1
+	invulnerable_remaining = 1.2
+	move_speed = 280.0
+	velocity.x = minf(velocity.x, 280.0)
+	damage_taken.emit(reason, health)
+	action_triggered.emit("hurt")
+	if health == 0:
+		die("health")
+	return true
+
+func recover_at(point: Vector2) -> void:
+	global_position = point
+	velocity = Vector2(280, 0)
+	control_enabled = true
+	_buffer = 0
+	_coyote = 0
+	_wall_lock = 0
+	_spent_wall_side = 0
+	_previous_floor = false
+	set_physics_process(true)
 
 func reset_at(spawn_position: Vector2) -> void:
 	global_position = spawn_position
@@ -124,6 +164,11 @@ func reset_at(spawn_position: Vector2) -> void:
 	_wall_lock = 0.0
 	_spent_wall_side = 0.0
 	_previous_floor = false
+	health = 3
+	hurt_count = 0
+	_hurt_frame = -1
+	invulnerable_remaining = 0
+	modulate.a = 1
 	_set_state("idle")
 	queue_redraw()
 

@@ -5,13 +5,21 @@ const LOCKED := ["safe_a", "safe_b", "relay_a"]
 static func defaults() -> Dictionary:
 	var entries := {}
 	for id in Library.ids():
-		entries[id] = {"enabled": true, "weight": 1.0}
-	return {"schema": 1, "generator_revision": 2, "stage_distance": 8400.0, "relay_min": 5, "relay_max": 6, "templates": entries}
+		entries[id] = {"enabled": id not in ["wall_a","wall_b"], "weight": 4.0 if id in ["safe_b","step","gap","rhythm_a","relay_a","relay_b"] else 1.0}
+	return {"schema": 1, "generator_revision": 3, "stage_distance": 8400.0, "relay_min": 5, "relay_max": 6, "height_min":32,"height_max":64,"gap_min":64,"gap_max":96,"templates": entries}
+static func legacy_defaults() -> Dictionary:
+	var result := defaults()
+	result.generator_revision = 2
+	for key in ["height_min","height_max","gap_min","gap_max"]:
+		result.erase(key)
+	for id in Library.ids():
+		result.templates[id] = {"enabled":true,"weight":1.0}
+	return result
 static func validate(value: Variant) -> Array[String]:
 	var errors: Array[String] = []
 	if not value is Dictionary:
 		return ["配置必须是对象"]
-	var expected: Array = defaults().keys()
+	var expected: Array = (legacy_defaults() if value.get("generator_revision") == 2 else defaults()).keys()
 	for key in value:
 		if key not in expected:
 			errors.append("未知字段：" + str(key))
@@ -20,7 +28,7 @@ static func validate(value: Variant) -> Array[String]:
 			errors.append("缺少字段：" + key)
 	if not errors.is_empty():
 		return errors
-	if value.schema != 1 or value.generator_revision != 2:
+	if value.schema != 1 or (value.generator_revision != 2 and value.generator_revision != 3):
 		errors.append("不支持的配置/生成规则版本")
 	for key in ["stage_distance", "relay_min", "relay_max"]:
 		var v: Variant = value[key]
@@ -32,6 +40,13 @@ static func validate(value: Variant) -> Array[String]:
 		errors.append("阶段距离范围4200至16800")
 	if value.relay_min < 4 or value.relay_max > 8 or value.relay_min > value.relay_max or floor(value.relay_min) != value.relay_min or floor(value.relay_max) != value.relay_max:
 		errors.append("中继间隔必须为4至8的整数，最小不大于最大")
+	if value.generator_revision == 3:
+		for pair in [["height_min",32,64],["height_max",32,64],["gap_min",64,96],["gap_max",64,96]]:
+			var v: Variant = value[pair[0]]
+			if not (v is int or v is float) or not is_finite(float(v)) or v < pair[1] or v > pair[2] or fmod(float(v),16) != 0:
+				errors.append(pair[0]+"须在已验证范围按16档位取值")
+		if errors.is_empty() and (value.height_min > value.height_max or value.gap_min > value.gap_max):
+			errors.append("几何最小值不能大于最大值")
 	if not value.templates is Dictionary:
 		errors.append("templates必须是对象")
 		return errors
@@ -53,10 +68,13 @@ static func validate(value: Variant) -> Array[String]:
 			errors.append(id + "为安全/奖励保障，必须启用且权重至少1")
 	return errors
 static func normalized(value: Dictionary) -> Dictionary:
-	var result := defaults()
+	var result := legacy_defaults() if value.generator_revision == 2 else defaults()
 	result.stage_distance = float(value.stage_distance)
 	result.relay_min = int(value.relay_min)
 	result.relay_max = int(value.relay_max)
+	if value.generator_revision == 3:
+		for key in ["height_min","height_max","gap_min","gap_max"]:
+			result[key] = int(value[key])
 	for id in Library.ids():
 		result.templates[id] = {"enabled": bool(value.templates[id].enabled), "weight": float(value.templates[id].weight)}
 	return result

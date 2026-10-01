@@ -1,0 +1,2652 @@
+{
+	"method": "真实Player/move_and_slide碰撞；每种结构3档参数、3跑速；injury为首次跳跃上升阶段显式伤害注入降到280；脚本自动按跳跃，非真人体验",
+	"passed": true,
+	"runs": [
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50036621094,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16784667969,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50036621094,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16784667969,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50036621094,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16784667969,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_a",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_a",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 0
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50036621094,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 1
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16784667969,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 2
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 3
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50036621094,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 4
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16784667969,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 5
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.948028564453
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 6
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16772460938,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50036621094,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925231933594
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 7
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.83520507813,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 280,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1121.16784667969,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1123.16845703125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 330,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_b",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1125.50048828125,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		},
+		{
+			"id": "relay_b",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": [
+				1122.50170898438,
+				432.925170898438
+			],
+			"rewards": [
+				"high",
+				"crest",
+				"low"
+			],
+			"speed": 380,
+			"surfaces": [
+				0,
+				1,
+				2,
+				3,
+				4
+			],
+			"variant": 8
+		}
+	]
+}

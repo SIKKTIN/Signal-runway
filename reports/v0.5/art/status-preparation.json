@@ -1,0 +1,47 @@
+{
+	"checks": [
+		{
+			"check": "initial_snapshot_silent_and_readonly",
+			"passed": true
+		},
+		{
+			"check": "actual_and_target_distinguished",
+			"passed": true
+		},
+		{
+			"check": "repeated_snapshot_does_not_repeat_hurt",
+			"passed": true
+		},
+		{
+			"check": "pause_freezes_pulse_and_clock",
+			"passed": true
+		},
+		{
+			"check": "hurt_pulse_expires",
+			"passed": true
+		},
+		{
+			"check": "low_life_and_max_target_readable",
+			"passed": true
+		},
+		{
+			"check": "owner_result_gate_freezes_feedback",
+			"passed": true
+		},
+		{
+			"check": "new_round_clears_hurt_history",
+			"passed": true
+		},
+		{
+			"check": "logical_bounds_avoid_f8_and_floor",
+			"passed": true
+		},
+		{
+			"check": "zero_life_stops_nonfatal_feedback",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"scope": "Standalone simulated snapshots and SVG sample; no actual run, physics or gameplay-rule proof."
+}

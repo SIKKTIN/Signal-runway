@@ -43,7 +43,7 @@ func _ready() -> void:
 	_score = _column(row, "总分", "0", 30, Color("e6efed"), 120)
 	_distance = _column(row, "最远距离", "0", 25, Color("45dccb"), 160)
 	_relay = _column(row, "中继", "0", 25, Color("ffd166"), 96)
-	_record = _column(row, "本机最高", "0", 25, Color("ffd166"), 140)
+	_record = _column(row, "v0.5 本机最高", "0", 25, Color("ffd166"), 140)
 	_gain = Label.new()
 	_gain.add_theme_font_size_override("font_size", 18)
 	_gain.add_theme_color_override("font_color", Color("ffd166"))
@@ -59,7 +59,7 @@ func _ready() -> void:
 	_banner.add_theme_color_override("font_color", Color("ffd166"))
 	_root.add_child(_banner)
 	_instructions = Label.new()
-	_instructions.position = Vector2(24, 497)
+	_instructions.position = Vector2(24, 519)
 	_instructions.add_theme_font_size_override("font_size", 14)
 	_instructions.add_theme_color_override("font_color", Color("9bb5ba"))
 	_instructions.text = "自动奔跑    SPACE / W / ↑ 跳跃、蹬墙    R 同图重试    ESC 暂停"

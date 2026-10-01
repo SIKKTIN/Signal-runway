@@ -19,7 +19,6 @@ var _resolved := false
 var _animation_time := 0.0
 var _target_volume := -24.0
 var _cover: Texture2D
-var _front: Texture2D
 var _theme: Theme
 var _loop: AudioStreamPlayer
 var _cue: AudioStreamPlayer
@@ -42,7 +41,6 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 	_cover = load(VISUAL_DIR + "collapse_cover.png")
-	_front = load(VISUAL_DIR + "collapse_front.png")
 	_theme = load("res://scenes/ui/skins/chase_theme.tres")
 	_loop = _make_audio("ThreatLoop")
 	var loop_stream := load(AUDIO_DIR + "threat_loop.wav").duplicate() as AudioStreamWAV

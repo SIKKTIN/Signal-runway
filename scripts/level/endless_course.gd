@@ -34,6 +34,12 @@ func _ready() -> void:
 	texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 	for key in ["terrain_platform", "terrain_solid", "terrain_wall_left", "hazard_spike_up"]:
 		_textures[key] = load("res://assets/visual/" + key + ".png")
+	for pair in [["terrain_platform","platform_cap"],["terrain_solid","ground_side"]]:
+		var path: String = "res://assets/visual/v05/"+pair[1]+".svg"
+		if ResourceLoader.exists(path):
+			_textures[pair[0]] = load(path)
+	if ResourceLoader.exists("res://assets/visual/v05/route_upper.svg"):
+		_textures["upper_route"] = load("res://assets/visual/v05/route_upper.svg")
 	generator.reset(run_seed, generation_profile)
 	update_stream(spawn_position.x, -544)
 
@@ -59,17 +65,20 @@ func update_stream(player_x: float, front_x: float) -> void:
 		queue_redraw()
 
 func _append_chunk(entry: Dictionary) -> void:
-	var d := Library.definition(entry.template_id)
+	var d: Dictionary = entry.get("geometry", Library.definition(entry.template_id))
 	var id := "%d:%d" % [run_seed, entry.index]
 	var origin := _generated_end
 	var chunk := {"id": id, "index": entry.index, "template_id": entry.template_id, "origin": origin, "length": d.length, "difficulty": d.difficulty, "category": d.category, "relays": []}
+	chunk.geometry = d.duplicate(true)
 	var holder := Node2D.new()
 	holder.name = "Chunk_%d" % entry.index
 	holder.position.x = origin
 	add_child(holder)
 	_holders[id] = holder
-	for rect in d.floors + d.platforms + d.walls:
+	for rect in d.floors + d.walls:
 		_add_solid(rect, holder)
+	for rect in d.platforms:
+		_add_solid(rect,holder,d.get("vertical",false))
 	for rect in d.spikes:
 		_add_spikes(rect, holder)
 	for relay in d.relays:
@@ -86,7 +95,7 @@ func _sync_geometry() -> void:
 	spikes.clear()
 	relays.clear()
 	for chunk in chunks:
-		var d := Library.definition(chunk.template_id)
+		var d: Dictionary = chunk.get("geometry", Library.definition(chunk.template_id))
 		for pair in [["floors", floors], ["platforms", floors], ["walls", walls], ["gaps", gaps], ["spikes", spikes]]:
 			for rect in d[pair[0]]:
 				pair[1].append(Rect2(rect.position + Vector2(chunk.origin, 0), rect.size))
@@ -136,3 +145,34 @@ func _add_layout(template_id: String, index: int, origin: float) -> void:
 			pair[1].append(Rect2(rect.position + Vector2(origin, 0), rect.size))
 	for relay in d.relays:
 		relays.append({"id": "%d:%d:%s" % [run_seed, index, relay.local_id], "position": relay.position + Vector2(origin, 0), "activated": false})
+
+func safe_surface(point: Vector2) -> Dictionary:
+	for chunk in chunks:
+		var d: Dictionary = chunk.get("geometry", Library.definition(chunk.template_id))
+		for rect in d.floors + d.platforms + d.walls:
+			var x: float = point.x - chunk.origin
+			if x < rect.position.x + 14 or x > rect.end.x - 14 or absf(point.y + 15 - rect.position.y) > 5:
+				continue
+			var unsafe := false
+			for spike in d.spikes:
+				unsafe = unsafe or (x > spike.position.x - 20 and x < spike.end.x + 20 and absf(rect.position.y - spike.end.y) < 32)
+			if not unsafe:
+				return {"chunk_id":chunk.id,"global_point":Vector2(point.x + total_offset,rect.position.y - 16)}
+	return {}
+
+func safe_point_exists(saved: Dictionary) -> bool:
+	for chunk in chunks:
+		if chunk.id == saved.get("chunk_id", ""):
+			return true
+	return false
+
+func _draw() -> void:
+	super._draw()
+	if not _textures.has("upper_route"):
+		return
+	for chunk in chunks:
+		var d: Dictionary = chunk.get("geometry",{})
+		if not d.get("vertical",false) or d.relays.is_empty() or d.platforms.is_empty():
+			continue
+		var rect: Rect2 = d.platforms[0]
+		draw_texture_rect(_textures.upper_route,Rect2(chunk.origin+rect.position.x,rect.position.y-58,80,28),false)

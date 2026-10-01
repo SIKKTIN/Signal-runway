@@ -1,6 +1,9 @@
 extends RefCounted
 const Library = preload("res://scripts/level/endless_library.gd")
 const Profile = preload("res://scripts/level/generation_profile.gd")
+const Vertical = preload("res://scripts/level/vertical_library.gd")
+var geometry_seed := 0
+var recent_vertical: Array[bool] = []
 var profile: Dictionary = Profile.defaults()
 var rng := RandomNumberGenerator.new()
 var index := 0
@@ -12,6 +15,8 @@ var pool: Array[String] = []
 func reset(seed_value: int, settings: Dictionary = {}) -> void:
 	profile = Profile.defaults() if settings.is_empty() or not Profile.validate(settings).is_empty() else Profile.normalized(settings)
 	rng.seed = seed_value
+	geometry_seed = seed_value
+	recent_vertical.clear()
 	index = 0
 	next_relay = int(profile.relay_min)
 	last_id = ""
@@ -38,6 +43,12 @@ func next() -> Dictionary:
 			if not profile.templates[id].enabled:
 				excluded[id] = "配置禁用"
 				continue
+			if profile.generator_revision == 3 and not due and id not in Vertical.STRUCTURES:
+				var count_vertical := recent_vertical.count(true)
+				var two_flat := recent_vertical.size() >= 2 and not recent_vertical[-1] and not recent_vertical[-2]
+				if two_flat or (recent_vertical.size() >= 9 and count_vertical < 3):
+					excluded[id] = "保留立体变化：十段至少三段/最多两连续平段"
+					continue
 			if id == last_id or (d.category == "relay") != due:
 				excluded[id] = "禁止重复" if id == last_id else "中继间隔资格"
 				continue
@@ -61,6 +72,9 @@ func next() -> Dictionary:
 		if candidates.is_empty():
 			selected = "safe_b" if last_id == "safe_a" else "safe_a"
 			reason = "安全兜底：无合格候选"
+			if profile.generator_revision == 3:
+				selected = "step" if last_id == "safe_b" else "safe_b"
+				reason = "安全兜底：已验证缓和起伏，覆盖权重以保障可通行与空间变化"
 		else:
 			var uniform := true
 			var total := 0.0
@@ -86,5 +100,16 @@ func next() -> Dictionary:
 	last_id = selected
 	last_difficulty = definition.difficulty
 	var result := {"index": index, "template_id": selected, "stage": stage, "length": definition.length, "difficulty": definition.difficulty, "category": definition.category, "reason": reason, "candidates": candidates, "excluded": excluded, "next_relay": next_relay}
+	if profile.generator_revision == 3 and index >= 2:
+		var shape_rng := RandomNumberGenerator.new()
+		shape_rng.seed = absi((str(geometry_seed)+":"+str(index)+":geometry3").hash())
+		var h := shape_rng.randi_range(profile.height_min/16,profile.height_max/16)*16
+		var gap := shape_rng.randi_range(profile.gap_min/16,profile.gap_max/16)*16
+		result.geometry = Vertical.build(selected,h,gap,int(h-32)/16)
+	else:
+		result.geometry = Library.definition(selected)
+	recent_vertical.append(result.geometry.get("vertical",false))
+	if recent_vertical.size() > 9:
+		recent_vertical.pop_front()
 	index += 1
 	return result

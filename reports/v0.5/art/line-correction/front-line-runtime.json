@@ -1,0 +1,8 @@
+{
+	"canvas_size": "(960.0, 540.0)",
+	"fixture": "Current main scene with fixed camera/player/front; visual evidence only.",
+	"front_canvas_x": 560.0,
+	"front_world_x": 560.0,
+	"godot": "4.7.2-stable (official)",
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

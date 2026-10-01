@@ -6,3 +6,6 @@ project.godot -text
 *.gd -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 *.tscn -text
 *.tres -text
+
+# Unified-diff context intentionally begins with a space before source tabs.
+reports/v0.5/independent-checks/h-rewards/source-difference.diff whitespace=-space-before-tab

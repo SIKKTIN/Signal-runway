@@ -1,0 +1,7 @@
+{
+  "version": "v0.5.0+fa4bea71e3bd",
+  "manifestSha256": "fa4bea71e3bd6d51d627503b8fb908f4d4dce80fa41df80ec9a611dd6180564f",
+  "fileCount": 98,
+  "mismatches": [],
+  "scope": "G preparation source verification only; formal runtime waits E approval"
+}

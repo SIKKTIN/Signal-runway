@@ -1,0 +1,116 @@
+{
+	"checks": [
+		{
+			"name": "新默认v3合法",
+			"passed": true
+		},
+		{
+			"name": "旧配置v2合法且保留版本",
+			"passed": true
+		},
+		{
+			"name": "100种子200段旧默认序列精确兼容",
+			"passed": true
+		},
+		{
+			"name": "100种子200段空间与奖励约束",
+			"passed": true
+		},
+		{
+			"name": "同种子最终几何逐字节一致",
+			"passed": true
+		},
+		{
+			"name": "六结构各至少三参数变体",
+			"passed": true
+		},
+		{
+			"name": "极端开关仍有有限安全兜底",
+			"passed": true
+		},
+		{
+			"name": "坏几何类型与范围拒绝",
+			"passed": true
+		},
+		{
+			"name": "Course20段碰撞源与预览几何一致",
+			"passed": true
+		},
+		{
+			"name": "地形回收清理holder索引",
+			"passed": true
+		}
+	],
+	"fallback_count": 0,
+	"method": "100种子各200段；v2按历史固定选择器逐项比对，几何/生命周期为结构检查，动作另见324路线报告",
+	"passed": true,
+	"variants": {
+		"gap": {
+			"{\"height\":32.0,\"spacing\":64.0}": true,
+			"{\"height\":32.0,\"spacing\":80.0}": true,
+			"{\"height\":32.0,\"spacing\":96.0}": true,
+			"{\"height\":48.0,\"spacing\":64.0}": true,
+			"{\"height\":48.0,\"spacing\":80.0}": true,
+			"{\"height\":48.0,\"spacing\":96.0}": true,
+			"{\"height\":64.0,\"spacing\":64.0}": true,
+			"{\"height\":64.0,\"spacing\":80.0}": true,
+			"{\"height\":64.0,\"spacing\":96.0}": true
+		},
+		"relay_a": {
+			"{\"height\":32.0,\"spacing\":64.0}": true,
+			"{\"height\":32.0,\"spacing\":80.0}": true,
+			"{\"height\":32.0,\"spacing\":96.0}": true,
+			"{\"height\":48.0,\"spacing\":64.0}": true,
+			"{\"height\":48.0,\"spacing\":80.0}": true,
+			"{\"height\":48.0,\"spacing\":96.0}": true,
+			"{\"height\":64.0,\"spacing\":64.0}": true,
+			"{\"height\":64.0,\"spacing\":80.0}": true,
+			"{\"height\":64.0,\"spacing\":96.0}": true
+		},
+		"relay_b": {
+			"{\"height\":32.0,\"spacing\":64.0}": true,
+			"{\"height\":32.0,\"spacing\":80.0}": true,
+			"{\"height\":32.0,\"spacing\":96.0}": true,
+			"{\"height\":48.0,\"spacing\":64.0}": true,
+			"{\"height\":48.0,\"spacing\":80.0}": true,
+			"{\"height\":48.0,\"spacing\":96.0}": true,
+			"{\"height\":64.0,\"spacing\":64.0}": true,
+			"{\"height\":64.0,\"spacing\":80.0}": true,
+			"{\"height\":64.0,\"spacing\":96.0}": true
+		},
+		"rhythm_a": {
+			"{\"height\":32.0,\"spacing\":64.0}": true,
+			"{\"height\":32.0,\"spacing\":80.0}": true,
+			"{\"height\":32.0,\"spacing\":96.0}": true,
+			"{\"height\":48.0,\"spacing\":64.0}": true,
+			"{\"height\":48.0,\"spacing\":80.0}": true,
+			"{\"height\":48.0,\"spacing\":96.0}": true,
+			"{\"height\":64.0,\"spacing\":64.0}": true,
+			"{\"height\":64.0,\"spacing\":80.0}": true,
+			"{\"height\":64.0,\"spacing\":96.0}": true
+		},
+		"safe_b": {
+			"{\"height\":32.0,\"spacing\":64.0}": true,
+			"{\"height\":32.0,\"spacing\":80.0}": true,
+			"{\"height\":32.0,\"spacing\":96.0}": true,
+			"{\"height\":48.0,\"spacing\":64.0}": true,
+			"{\"height\":48.0,\"spacing\":80.0}": true,
+			"{\"height\":48.0,\"spacing\":96.0}": true,
+			"{\"height\":64.0,\"spacing\":64.0}": true,
+			"{\"height\":64.0,\"spacing\":80.0}": true,
+			"{\"height\":64.0,\"spacing\":96.0}": true
+		},
+		"step": {
+			"{\"height\":32.0,\"spacing\":64.0}": true,
+			"{\"height\":32.0,\"spacing\":80.0}": true,
+			"{\"height\":32.0,\"spacing\":96.0}": true,
+			"{\"height\":48.0,\"spacing\":64.0}": true,
+			"{\"height\":48.0,\"spacing\":80.0}": true,
+			"{\"height\":48.0,\"spacing\":96.0}": true,
+			"{\"height\":64.0,\"spacing\":64.0}": true,
+			"{\"height\":64.0,\"spacing\":80.0}": true,
+			"{\"height\":64.0,\"spacing\":96.0}": true
+		}
+	},
+	"vertical_count": 16405
+}

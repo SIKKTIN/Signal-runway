@@ -25,6 +25,7 @@ var trial: Node2D
 var updating := false
 var _debounce: Timer
 var _trial_record := ""
+var speed_choice: OptionButton
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	var background := ColorRect.new()
@@ -110,6 +111,12 @@ func _build_ui() -> void:
 		s.name = item[0]
 		controls[item[0]] = s
 		s.value_changed.connect(func(_v): changed())
+	label(params, "立体几何（16单位档位）")
+	for item in [["height_min","高差最小",32,64,32],["height_max","高差最大",32,64,64],["gap_min","平台间距最小",64,96,64],["gap_max","平台间距最大",64,96,96]]:
+		label(params,item[1])
+		var s := spin(params,item[2],item[3],16,item[4])
+		controls[item[0]] = s
+		s.value_changed.connect(func(_v): changed())
 	label(params, "片段开关 / 合格候选权重")
 	for id in Library.ids():
 		var row := HBoxContainer.new()
@@ -147,6 +154,15 @@ func _build_ui() -> void:
 	details.custom_minimum_size.y = 80
 	details.scroll_active = true
 	middle.add_child(details)
+	var debug_row := HBoxContainer.new()
+	chrome.add_child(debug_row)
+	label(debug_row,"试玩速度")
+	speed_choice = OptionButton.new()
+	for item in ["自然加速","基础280","过渡330","最高380"]:
+		speed_choice.add_item(item)
+	debug_row.add_child(speed_choice)
+	label(debug_row,"试玩：F9受伤 · F10掉坑 · F8返回")
+	button(debug_row,"升级v3草稿",upgrade_draft,"Upgrade")
 	var actions := HBoxContainer.new()
 	chrome.add_child(actions)
 	profile_name = LineEdit.new()
@@ -174,7 +190,7 @@ func _build_ui() -> void:
 	confirm_apply.ok_button_text = "应用"
 	confirm_apply.cancel_button_text = "取消"
 	confirm_apply.theme = theme
-	confirm_apply.dialog_text = "将当前规则写入工程默认配置，旧文件备份为.bak。\n只影响新创建的局；不改地形几何或正式纪录。"
+	confirm_apply.dialog_text = "将当前规则写入工程默认配置，旧文件备份为.bak。\n新局使用新几何参数；当前局和正式纪录保持。"
 	confirm_apply.confirmed.connect(apply_default)
 	add_child(confirm_apply)
 func changed() -> void:
@@ -185,15 +201,21 @@ func set_draft(value: Dictionary) -> void:
 	draft = value.duplicate(true)
 	for key in ["stage_distance", "relay_min", "relay_max"]:
 		controls[key].value = draft[key]
+	for key in ["height_min","height_max","gap_min","gap_max"]:
+		controls[key].value = draft.get(key,Profile.defaults()[key])
+		controls[key].editable = draft.generator_revision == 3
 	for id in Library.ids():
 		controls[id].enabled.button_pressed = draft.templates[id].enabled
 		controls[id].weight.value = draft.templates[id].weight
 	updating = false
 	regenerate()
 func read_draft() -> Dictionary:
-	var value := Profile.defaults()
+	var value := draft.duplicate(true)
 	for key in ["stage_distance", "relay_min", "relay_max"]:
 		value[key] = controls[key].value
+	if value.generator_revision == 3:
+		for key in ["height_min","height_max","gap_min","gap_max"]:
+			value[key] = controls[key].value
 	for id in Library.ids():
 		value.templates[id] = {"enabled": controls[id].enabled.button_pressed, "weight": controls[id].weight.value}
 	return value
@@ -210,14 +232,14 @@ func regenerate() -> void:
 	for _i in int(count_control.value):
 		rows.append(g.next())
 	preview.set_rows(rows)
-	fingerprint_label.text = "规则v2 · 草稿 %s · 工程 %s · 相同种子+配置+构建可复现" % [Profile.fingerprint(draft), Profile.fingerprint(baseline)]
+	fingerprint_label.text = "规则v%d%s · 草稿 %s · 工程 %s" % [draft.generator_revision," 旧配置模式，几何锁定" if draft.generator_revision==2 else " 立体参数化",Profile.fingerprint(draft),Profile.fingerprint(baseline)]
 	var original := Generator.new()
 	original.reset(int(seed_control.value), baseline)
 	var changed_segments := 0
 	var distribution := {}
 	var fallback := 0
 	for row in rows:
-		changed_segments += int(original.next().template_id != row.template_id)
+		changed_segments += int(var_to_bytes(original.next().geometry) != var_to_bytes(row.geometry))
 		distribution[row.template_id] = distribution.get(row.template_id, 0) + 1
 		fallback += int(row.reason.begins_with("安全兜底"))
 	summary.text = "%d段 / %.0f距离 · 与工程默认同seed %d段不同 · 安全兜底%d次\n分布 %s" % [rows.size(), rows.size() * Library.LENGTH, changed_segments, fallback, JSON.stringify(distribution)]
@@ -230,15 +252,23 @@ func select_chunk(index: int) -> void:
 	index = clampi(index, 0, rows.size() - 1)
 	preview.focus_on(index)
 	var r := rows[index]
-	var d := Library.definition(r.template_id)
+	var d: Dictionary = r.get("geometry",Library.definition(r.template_id))
 	var changes: Array[String] = []
-	for key in ["stage_distance", "relay_min", "relay_max"]:
-		if draft[key] != baseline[key]:
-			changes.append("%s: %s→%s" % [key, baseline[key], draft[key]])
+	for key in ["stage_distance", "relay_min", "relay_max","height_min","height_max","gap_min","gap_max"]:
+		if draft.get(key) != baseline.get(key):
+			changes.append("%s: %s→%s" % [key, baseline.get(key), draft.get(key)])
 	for id in Library.ids():
 		if draft.templates[id] != baseline.templates[id]:
 			changes.append(id + ": " + JSON.stringify(draft.templates[id]))
 	details.text = "段%d · %s · %s · 入口/出口地面448 · 长度1280\n原因：%s\n合格候选：%s\n排除：%s\n几何：%d地面 / %d平台 / %d墙 / %d坑 / %d尖刺 / %d节点\n配置差异：%s" % [index, r.template_id, r.category, r.reason, ", ".join(r.candidates), JSON.stringify(r.excluded), d.floors.size(), d.platforms.size(), d.walls.size(), d.gaps.size(), d.spikes.size(), d.relays.size(), "；".join(changes) if not changes.is_empty() else "无"]
+	details.text += "\n结构：%s · 变体%d · 参数%s\n路线/安全表面：%d · %s\n六立体结构的发布范围有三档动作检查；当前配置压力需试玩。" % [d.get("structure","旧固定片段"),d.get("variant",0),JSON.stringify(d.get("parameters",{})),d.get("routes",[]).size(),d.get("validation","旧版固定几何")]
+
+func upgrade_draft() -> void:
+	var value := Profile.defaults()
+	for key in ["stage_distance","relay_min","relay_max","templates"]:
+		value[key] = draft[key]
+	set_draft(value)
+	message("已升级为v3草稿；地图几何将变化，工程默认需另行应用")
 func toggle_single() -> void:
 	preview.single = not preview.single
 	preview.focus_on(preview.focus_index)
@@ -318,6 +348,7 @@ func play_draft() -> void:
 	trial.record_path = _trial_record
 	add_child(trial)
 	trial.start_endless(int(seed_control.value))
+	trial.trial_speed = [0.0,280.0,330.0,380.0][speed_choice.selected]
 	chrome.hide()
 	var hint := PanelContainer.new()
 	hint.name = "EditorReturnHint"
@@ -349,6 +380,14 @@ func stop_trial() -> void:
 		chrome.show()
 		message("已返回草稿，试玩配置和正式纪录分离")
 func _input(event: InputEvent) -> void:
+	if is_instance_valid(trial) and event is InputEventKey and event.pressed and not event.echo and event.keycode in [KEY_F9,KEY_F10]:
+		if trial.phase == "running" and not get_tree().paused:
+			if event.keycode == KEY_F9:
+				trial.player.take_damage("debug")
+			else:
+				trial.player.position.y = 660
+		get_viewport().set_input_as_handled()
+		return
 	if is_instance_valid(trial) and event is InputEventKey and event.pressed and event.keycode == KEY_F8:
 		stop_trial()
 		get_viewport().set_input_as_handled()

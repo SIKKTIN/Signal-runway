@@ -1,0 +1,196 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "actual_Main_installs_status_and_v05_textures",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "initial_real_snapshot_full_and_silent",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "status_bounds_leave_floor_and_F8_space",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "render_snapshot_and_actual_static_body_rectangles_match",
+			"passed": true
+		},
+		{
+			"actual": [
+				{
+					"chunk": "404:2",
+					"fixture": "Camera/player position on actual seed404 geometry; no route completion claim.",
+					"image": "main-geometry-00-1280.png",
+					"parameters": {
+						"height": 48.0,
+						"spacing": 64.0
+					},
+					"structure": "阶梯抬升",
+					"variant": 1
+				},
+				{
+					"chunk": "404:3",
+					"fixture": "Camera/player position on actual seed404 geometry; no route completion claim.",
+					"image": "main-geometry-01-1280.png",
+					"parameters": {
+						"height": 64.0,
+						"spacing": 80.0
+					},
+					"structure": "下沉回升",
+					"variant": 2
+				},
+				{
+					"chunk": "404:4",
+					"fixture": "Camera/player position on actual seed404 geometry; no route completion claim.",
+					"image": "main-geometry-02-1280.png",
+					"parameters": {
+						"height": 48.0,
+						"spacing": 64.0
+					},
+					"structure": "断层桥接",
+					"variant": 1
+				},
+				{
+					"chunk": "404:5",
+					"fixture": "Camera/player position on actual seed404 geometry; no route completion claim.",
+					"image": "main-geometry-03-1280.png",
+					"parameters": {
+						"height": 48.0,
+						"spacing": 80.0
+					},
+					"structure": "上下双路线",
+					"variant": 1
+				}
+			],
+			"check": "actual_generated_vertical_samples_present",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_and_target_fields_remain_distinct",
+			"passed": true
+		},
+		{
+			"actual": {
+				"actual_speed": 280.0,
+				"animation_time": 0.483333333333333,
+				"audio_enabled": true,
+				"feedback_active": true,
+				"health": 2,
+				"hurt_count": 1,
+				"hurt_pulses": 1,
+				"hurt_remaining": 0.65,
+				"invulnerable": true,
+				"status": "受伤降速 · 无敌中",
+				"target_speed": 280.0
+			},
+			"check": "actual_generated_spike_triggers_one_cue_and_life_display",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "repeated_real_UI_sync_does_not_repeat_cue",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "Main_pause_preserves_pulse_clock_and_audio",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "Main_resume_continues_hurt_pulse",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "local_pulse_expires_once",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "one_life_uses_numeric_and_empty_heart_shapes",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_result_hides_status_and_stops_cue",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "restart_full_life_without_stale_hurt",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "menu_hides_status_and_stops_cue",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "tool_trial_installs_status",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_F8_returns_to_editor",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"samples": [
+		{
+			"chunk": "404:2",
+			"fixture": "Camera/player position on actual seed404 geometry; no route completion claim.",
+			"image": "main-geometry-00-1280.png",
+			"parameters": {
+				"height": 48.0,
+				"spacing": 64.0
+			},
+			"structure": "阶梯抬升",
+			"variant": 1
+		},
+		{
+			"chunk": "404:3",
+			"fixture": "Camera/player position on actual seed404 geometry; no route completion claim.",
+			"image": "main-geometry-01-1280.png",
+			"parameters": {
+				"height": 64.0,
+				"spacing": 80.0
+			},
+			"structure": "下沉回升",
+			"variant": 2
+		},
+		{
+			"chunk": "404:4",
+			"fixture": "Camera/player position on actual seed404 geometry; no route completion claim.",
+			"image": "main-geometry-02-1280.png",
+			"parameters": {
+				"height": 48.0,
+				"spacing": 64.0
+			},
+			"structure": "断层桥接",
+			"variant": 1
+		},
+		{
+			"chunk": "404:5",
+			"fixture": "Camera/player position on actual seed404 geometry; no route completion claim.",
+			"image": "main-geometry-03-1280.png",
+			"parameters": {
+				"height": 48.0,
+				"spacing": 80.0
+			},
+			"structure": "上下双路线",
+			"variant": 1
+		}
+	],
+	"scope": "F presentation integration on actual Main. Fixed camera, disabled root clock/physics, location and target/velocity fixtures. Hurt via actual generated spike overlap; second fixture resets invulnerability. Tool F8 is synthetic Input.parse_input_event. No human input/route/recovery/acceleration-rule/audio-listening claim. G awaits final frozen build.",
+	"seed": 404
+}

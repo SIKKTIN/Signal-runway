@@ -111,3 +111,16 @@ Thumbs.db
 .env.*
 *.pem
 *.key
+
+# v0.5 signed workflow receipts and isolated test records stay local.
+/reports/v0.5/art/workflow.cjs
+/reports/v0.5/art/*start*.json
+/reports/v0.5/art/*submit*.json
+/reports/v0.5/art/*review*.json
+/reports/v0.5/art/*append*.json
+/reports/v0.5/independent-checks/workflow.cjs
+/reports/v0.5/independent-checks/*start*.json
+/reports/v0.5/independent-checks/*submit*.json
+/reports/v0.5/independent-checks/*review*.json
+/reports/v0.5/independent-checks/*append*.json
+/reports/v0.5/**/isolated-*

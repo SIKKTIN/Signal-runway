@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "pause_changed_pixels": 0,
+  "image_sizes": {
+    "main-full-1280.png": [
+      1280,
+      720
+    ],
+    "main-hurt-1280.png": [
+      1280,
+      720
+    ],
+    "main-hurt-960.png": [
+      960,
+      540
+    ],
+    "main-tool-960.png": [
+      960,
+      540
+    ]
+  },
+  "sources": [
+    {
+      "path": "scenes/ui/v05_status.gd",
+      "sha256": "f3e0a7cb69efddde65aeffe615fcea56f1e5321058479f9e548be03bcd23b85e"
+    },
+    {
+      "path": "scenes/ui/v05_status.tscn",
+      "sha256": "309cb394b1d047ae1cf3eb7f91540caf8d427ba221ee67cce2bec33f163fe4df"
+    },
+    {
+      "path": "assets/visual/v05/platform_cap.svg",
+      "sha256": "e036c057be516a4dfaf11881bd0f921aa8a2686ffce6224c22155a31e0f5cd3d"
+    },
+    {
+      "path": "assets/visual/v05/ground_side.svg",
+      "sha256": "58e266bb1104e9615cce3ea11c917038358178b9e569646d5e8307e3f454c840"
+    },
+    {
+      "path": "assets/visual/v05/route_upper.svg",
+      "sha256": "6c65d43852864ecee35ed766cccebff5fd0525d828a5cbaf64538da9257e7720"
+    },
+    {
+      "path": "assets/audio/v05/hurt_tick.wav",
+      "sha256": "c39756f5fdf6250be879bb1c993a013eb22c7a6fdd69b0fc4fd5c9b26f7291ca"
+    },
+    {
+      "path": "scripts/visual/chase_visual.gd",
+      "sha256": "810f5b171c4770f01e4ae37a2591b76286362e9541e3846dff8b64af70c65d58"
+    },
+    {
+      "path": "scripts/level/run_flow.gd",
+      "sha256": "4619b082ebf18090c6ebb604e6a43892930756c2790ea7822cbd8cc835e89ec8"
+    },
+    {
+      "path": "scripts/level/course.gd",
+      "sha256": "091c0c461ea362b17a749ddcb8bdfbccb221a5d2e2480ddfcac7743a5ba78d89"
+    },
+    {
+      "path": "scripts/level/endless_course.gd",
+      "sha256": "24e571b5f3d433c8f21eb8c5382d440c8e91073eff486cf9488e549ad3aa315c"
+    },
+    {
+      "path": "scripts/visual/endless_hud_visual.gd",
+      "sha256": "9f876d8ddf6992aca58791a1e474fb4643b2be3d2b33e79ff7c683574a3e13c9"
+    }
+  ],
+  "scope": "F capture-time presentation/source snapshot; not final G frozen manifest. Grayscale copies are QA artifacts, not production assets."
+}

@@ -74,7 +74,7 @@ func _build_layout() -> void:
 		cursor = gap.end.x
 	floors.append(Rect2(cursor, 448, course_length - cursor, 160))
 
-func _add_solid(rect: Rect2, owner_node: Node = null) -> void:
+func _add_solid(rect: Rect2, owner_node: Node = null, one_way: bool = false) -> void:
 	var body := StaticBody2D.new()
 	body.position = rect.get_center()
 	body.collision_layer = 1
@@ -83,6 +83,8 @@ func _add_solid(rect: Rect2, owner_node: Node = null) -> void:
 	var shape := RectangleShape2D.new()
 	shape.size = rect.size
 	collider.shape = shape
+	collider.one_way_collision = one_way
+	collider.one_way_collision_margin = 4.0
 	body.add_child(collider)
 	(owner_node if owner_node != null else self).add_child(body)
 
@@ -107,6 +109,10 @@ func _add_spikes(rect: Rect2, owner_node: Node = null) -> void:
 	area.body_entered.connect(func(body: Node2D):
 		if body.is_in_group("player"):
 			body.die("spike"))
+	# Recheck continuous overlap after invulnerability expires; legacy courses
+	# still use their original death-on-entry callback.
+	if level_id == "endless" and not lab_mode:
+		area.set_script(preload("res://scripts/level/continuous_hazard.gd"))
 	(owner_node if owner_node != null else self).add_child(area)
 
 func section_at(x: float) -> int:
@@ -185,7 +191,7 @@ func _draw() -> void:
 	for rect in spikes:
 		for x in range(int(rect.position.x), int(rect.end.x), 32):
 			if _textures.has("hazard_spike_up"):
-				draw_texture_rect(_textures.hazard_spike_up, Rect2(x, 416, 32, 32), false)
+				draw_texture_rect(_textures.hazard_spike_up, Rect2(x, rect.position.y - 8, 32, 32), false)
 			else:
 				draw_colored_polygon(PackedVector2Array([Vector2(x, 448), Vector2(x + 16, 424), Vector2(x + 32, 448)]), Color("ff685c"))
 	for gap in gaps:
