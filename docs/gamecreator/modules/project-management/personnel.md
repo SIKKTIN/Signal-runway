@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-10-01T11:51:26.177Z
-> 文档内容基准：14905e218105a3df7e0f147141eacec6d77660c507b3bf2549dfd4196dd770aa
+> 文档生成时间：2026-10-01T12:59:33.606Z
+> 文档内容基准：43db2c0e4fb3787f6b7d4bf15f97efb0209a42981605eaefdc71abee38693a7a
 
-> 项目版本：v0.7
+> 项目版本：v0.8
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -55,11 +55,11 @@
 - v0.7 运行兼容与记录 [899c343b-d951-4092-b276-2e50c5735e83] · 已完成
 - v0.7 编辑器扩展 [43354328-744f-4674-ad67-e2f6257e8f05] · 已完成
 - v0.7 修复与源交付 [6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76] · 已完成
-- v0.8 冲刺及三段手工原型 [d83f9e39-ff4d-4289-9b52-806a953879ef] · 待开始
-- v0.8 技能路线与资源预算 [ead27836-4bca-4bf9-8770-5b7673ee1470] · 待开始
-- v0.8 运行兼容与独立记录 [c87fe1a5-435c-45b9-8367-de139b7326ed] · 待开始
-- v0.8 技能地图工具 [6a6e0ff4-6e4d-4344-95c5-28fd6f9b17c3] · 待开始
-- v0.8 修复与源交付 [5f3e382f-966c-41bd-9b0e-2f855ec891b8] · 待开始
+- v0.8 冲刺及三段手工原型 [d83f9e39-ff4d-4289-9b52-806a953879ef] · 已完成
+- v0.8 技能路线与资源预算 [ead27836-4bca-4bf9-8770-5b7673ee1470] · 已完成
+- v0.8 运行兼容与独立记录 [c87fe1a5-435c-45b9-8367-de139b7326ed] · 已完成
+- v0.8 技能地图工具 [6a6e0ff4-6e4d-4344-95c5-28fd6f9b17c3] · 已完成
+- v0.8 修复与源交付 [5f3e382f-966c-41bd-9b0e-2f855ec891b8] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -84,8 +84,8 @@
 - v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
 - v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 已完成
 - v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 已完成
-- v0.8 冲刺及路线表现 [da2b78c9-087c-4166-8752-aed8dbd69876] · 待开始
-- v0.8 独立玩法与回归 [1c56193c-50f6-473c-9c1a-0393fc314980] · 待开始
+- v0.8 冲刺及路线表现 [da2b78c9-087c-4166-8752-aed8dbd69876] · 已完成
+- v0.8 独立玩法与回归 [1c56193c-50f6-473c-9c1a-0393fc314980] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -369,7 +369,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 
 ## 制作人行动清单
 
-当前排期判断：已建立计划，准备组织制作。这只是排期快照，不能代替引擎实际检查。
+当前排期判断：任务已完成，需检查里程碑验收与下一轮目标。这只是排期快照，不能代替引擎实际检查。
 
 ### 制作人职责与交接边界
 
@@ -849,7 +849,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.8 冲刺及三段手工原型
 - ID：d83f9e39-ff4d-4289-9b52-806a953879ef
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.8-plan.md工作包A；估算5至7小时，建议日期按M1结果调整。计划已批准，尚未开工。
 - 前置任务：无
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.8-plan.md、reports/v0.8、README.md
@@ -860,7 +860,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.8 技能路线与资源预算
 - ID：ead27836-4bca-4bf9-8770-5b7673ee1470
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.8-plan.md工作包B；估算6至8小时，建议日期按M1结果调整。计划已批准，尚未开工。
 - 前置任务：d83f9e39-ff4d-4289-9b52-806a953879ef
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.8-plan.md、reports/v0.8、README.md
@@ -871,7 +871,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.8 运行兼容与独立记录
 - ID：c87fe1a5-435c-45b9-8367-de139b7326ed
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.8-plan.md工作包C；估算2至3小时，建议日期按M1结果调整。计划已批准，尚未开工。
 - 前置任务：ead27836-4bca-4bf9-8770-5b7673ee1470
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.8-plan.md、reports/v0.8、README.md
@@ -882,7 +882,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.8 技能地图工具
 - ID：6a6e0ff4-6e4d-4344-95c5-28fd6f9b17c3
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.8-plan.md工作包D；估算3至5小时，建议日期按M1结果调整。计划已批准，尚未开工。
 - 前置任务：ead27836-4bca-4bf9-8770-5b7673ee1470、c87fe1a5-435c-45b9-8367-de139b7326ed
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.8-plan.md、reports/v0.8、README.md
@@ -893,7 +893,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.8 修复与源交付
 - ID：5f3e382f-966c-41bd-9b0e-2f855ec891b8
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.8-plan.md工作包G；估算4至6小时，建议日期按M1结果调整。计划已批准，尚未开工。
 - 前置任务：1c56193c-50f6-473c-9c1a-0393fc314980
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.8-plan.md、reports/v0.8、README.md
@@ -957,13 +957,13 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 已完成
 - v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 已完成
 - v0.7 修复与源交付 [6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76] · 已完成
-- v0.8 冲刺及三段手工原型 [d83f9e39-ff4d-4289-9b52-806a953879ef] · 待开始
-- v0.8 技能路线与资源预算 [ead27836-4bca-4bf9-8770-5b7673ee1470] · 待开始
-- v0.8 运行兼容与独立记录 [c87fe1a5-435c-45b9-8367-de139b7326ed] · 待开始
-- v0.8 技能地图工具 [6a6e0ff4-6e4d-4344-95c5-28fd6f9b17c3] · 待开始
-- v0.8 冲刺及路线表现 [da2b78c9-087c-4166-8752-aed8dbd69876] · 待开始
-- v0.8 独立玩法与回归 [1c56193c-50f6-473c-9c1a-0393fc314980] · 待开始
-- v0.8 修复与源交付 [5f3e382f-966c-41bd-9b0e-2f855ec891b8] · 待开始
+- v0.8 冲刺及三段手工原型 [d83f9e39-ff4d-4289-9b52-806a953879ef] · 已完成
+- v0.8 技能路线与资源预算 [ead27836-4bca-4bf9-8770-5b7673ee1470] · 已完成
+- v0.8 运行兼容与独立记录 [c87fe1a5-435c-45b9-8367-de139b7326ed] · 已完成
+- v0.8 技能地图工具 [6a6e0ff4-6e4d-4344-95c5-28fd6f9b17c3] · 已完成
+- v0.8 冲刺及路线表现 [da2b78c9-087c-4166-8752-aed8dbd69876] · 已完成
+- v0.8 独立玩法与回归 [1c56193c-50f6-473c-9c1a-0393fc314980] · 已完成
+- v0.8 修复与源交付 [5f3e382f-966c-41bd-9b0e-2f855ec891b8] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -1448,7 +1448,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.8 冲刺及路线表现
 - ID：da2b78c9-087c-4166-8752-aed8dbd69876
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.8-plan.md工作包E；估算4至6小时，建议日期按M1结果调整。计划已批准，尚未开工。
 - 前置任务：d83f9e39-ff4d-4289-9b52-806a953879ef
 - 允许修改路径：assets/visual/v08、assets/audio/v08、scripts/visual/dash_visual.gd、scripts/visual/route_visual.gd、scenes/ui/v08_dash_status.gd、scenes/ui/v08_dash_status.tscn、docs/art/v0.8.md、reports/v0.8/art、reports/v0.8/independent-checks、reports/v0.8/independent-review.md
@@ -1458,7 +1458,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.8 独立玩法与回归
 - ID：1c56193c-50f6-473c-9c1a-0393fc314980
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.8-plan.md工作包F；估算2至4小时，建议日期按M1结果调整。计划已批准，尚未开工。
 - 前置任务：6a6e0ff4-6e4d-4344-95c5-28fd6f9b17c3、da2b78c9-087c-4166-8752-aed8dbd69876
 - 允许修改路径：assets/visual/v08、assets/audio/v08、scripts/visual/dash_visual.gd、scripts/visual/route_visual.gd、scenes/ui/v08_dash_status.gd、scenes/ui/v08_dash_status.tscn、docs/art/v0.8.md、reports/v0.8/art、reports/v0.8/independent-checks、reports/v0.8/independent-review.md
@@ -1488,5 +1488,5 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
 - v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 已完成
 - v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 已完成
-- v0.8 冲刺及路线表现 [da2b78c9-087c-4166-8752-aed8dbd69876] · 待开始
-- v0.8 独立玩法与回归 [1c56193c-50f6-473c-9c1a-0393fc314980] · 待开始
+- v0.8 冲刺及路线表现 [da2b78c9-087c-4166-8752-aed8dbd69876] · 已完成
+- v0.8 独立玩法与回归 [1c56193c-50f6-473c-9c1a-0393fc314980] · 已完成
