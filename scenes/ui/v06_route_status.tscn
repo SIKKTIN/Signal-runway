@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/v06_route_status.gd" id="1"]
+
+[node name="V06RouteStatus" type="Control"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 450.0
+offset_right = 700.0
+offset_bottom = 510.0
+mouse_filter = 2
+script = ExtResource("1")

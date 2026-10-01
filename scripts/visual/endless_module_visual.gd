@@ -4,6 +4,9 @@ var _chunk_id := ""
 var _template_id := ""
 var _category := "safe"
 var _vertical := false
+var _role := ""
+var _has_challenge := false
+var _has_station := false
 var _length := 960.0
 var _total_offset := 0.0
 var _animation_time := 0.0
@@ -22,6 +25,9 @@ func configure(chunk: Dictionary, total_offset: float = 0.0) -> void:
 	_template_id = str(chunk.get("template_id", ""))
 	_category = str(chunk.get("category", "safe"))
 	_vertical = chunk.get("geometry",{}).get("vertical",false)
+	_role = str(chunk.get("geometry",{}).get("segment_role",""))
+	_has_challenge = chunk.get("geometry",{}).has("challenge")
+	_has_station = chunk.get("geometry",{}).has("station")
 	_length = maxf(float(chunk.get("length", 960.0)), 1.0)
 	_phase_offset = float(absi(_chunk_id.hash()) % 127) * 0.17
 	set_world_offset(float(chunk.get("origin", 0.0)), total_offset)
@@ -70,12 +76,19 @@ func _draw() -> void:
 		draw_line(Vector2(x + packet, 255), Vector2(x + packet + 10, 255), Color(accent.r, accent.g, accent.b, 0.40), 2)
 	# Seam marker is a dim vertical conduit, not a floor or obstacle.
 	draw_line(Vector2(0, 239), Vector2(0, 430), Color("243641"), 1)
-	if gold:
+	if _has_station:
+		# The dedicated route visual owns the two choices and their advance sign.
+		pass
+	elif _has_challenge:
+		draw_string(_font, Vector2(40,220), "分路 · 稳路 / 连段", HORIZONTAL_ALIGNMENT_LEFT,-1,15,Color("d6b665"))
+	elif gold:
 		var title := "高路中继  ↑  连跳" if _vertical else ("中继路线  ↑  蹬墙" if _template_id == "relay_b" else "中继路线  ↑")
 		draw_string(_font, Vector2(288, 220), title, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("d6b665"))
 		draw_string(_font, Vector2(288, 423), "稳路  →", HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("9bb5ba"))
 	elif tower:
 		draw_string(_font, Vector2(440, 220), "蹬墙  ↑  向前", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("77aaa9"))
+	elif not _role.is_empty():
+		draw_string(_font,Vector2(40,220),_role+"段",HORIZONTAL_ALIGNMENT_LEFT,-1,14,Color("77aaa9"))
 
 func presentation_state() -> Dictionary:
 	return {"id": _chunk_id, "template_id": _template_id, "category": _category, "origin": position.x,

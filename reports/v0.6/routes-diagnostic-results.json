@@ -1,0 +1,32 @@
+{
+	"method": "actual Main from start, real Player physics and automatic jump actions; upper runs inject one damage at distance2000 to verify restoration, no position/speed/front/time injection; headless fixed60 accelerated game time",
+	"passed": true,
+	"runs": [
+		{
+			"distance": 29442.744140625,
+			"first_station": 22,
+			"health": 3,
+			"hurt_count": 0,
+			"passed": true,
+			"phase": "running",
+			"reason": "",
+			"routes": {
+				"active": "",
+				"combo_score": 0,
+				"completed": 0,
+				"heal_choices": 0,
+				"identities": 1,
+				"interrupted": 0,
+				"last_event": "station",
+				"progress": 0,
+				"score_choices": 1,
+				"station_score": 200,
+				"total": 3
+			},
+			"score": 3544,
+			"seed": 404,
+			"time": 95.5166666666625,
+			"upper": false
+		}
+	]
+}

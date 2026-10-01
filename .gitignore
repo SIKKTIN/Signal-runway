@@ -124,3 +124,18 @@ Thumbs.db
 /reports/v0.5/independent-checks/*review*.json
 /reports/v0.5/independent-checks/*append*.json
 /reports/v0.5/**/isolated-*
+
+# v0.6 signed workflow receipts and isolated fixtures stay local.
+/reports/v0.6/art/workflow.cjs
+/reports/v0.6/art/*start*.json
+/reports/v0.6/art/*submit*.json
+/reports/v0.6/art/*review*.json
+/reports/v0.6/art/*append*.json
+/reports/v0.6/independent-checks/workflow.cjs
+/reports/v0.6/independent-checks/*start*.json
+/reports/v0.6/independent-checks/*submit*.json
+/reports/v0.6/independent-checks/*review*.json
+/reports/v0.6/independent-checks/*append*.json
+/reports/v0.6/**/isolated-*
+
+/reports/v0.6/art/append_same_frame.cjs

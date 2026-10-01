@@ -1,0 +1,139 @@
+{
+	"approaches": [
+		{
+			"choice": "score",
+			"event": {
+				"amount": 200,
+				"id": "404:22",
+				"kind": "score"
+			},
+			"health": 3,
+			"method": "Actual380 physics/SPACE approach from explicit position -1100 before seeded first station; health2 only for heal, chase gap1200, public trial_speed380; not natural opening/three-seed F.",
+			"window_seconds": 2.18333333333333
+		},
+		{
+			"choice": "heal",
+			"event": {
+				"amount": 1,
+				"id": "404:22",
+				"kind": "heal"
+			},
+			"health": 3,
+			"method": "Actual380 physics/SPACE approach from explicit position -1100 before seeded first station; health2 only for heal, chase gap1200, public trial_speed380; not natural opening/three-seed F.",
+			"window_seconds": 2.18333333333333
+		}
+	],
+	"checks": [
+		{
+			"actual": "",
+			"check": "actual_Main_installs_revision4_presentation",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "initial_bind_silent_and_hidden",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_three_ordered_markers_and_entry_exit",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "three_nodes_wait_for_real_exit_event",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "completion_uses_actual_bonus_one_cue",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "repeated_completion_deduplicated",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "pause_preserves_world_clock_and_feedback",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "resume_continues_without_new_cue",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "rebind_no_listener_duplicates_or_historical_cue",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "interruption_preserves_node_score_message",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "healing_full_does_not_reset_existing_hurt_clock",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "two_choice_preview_bounds_and_full_state",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "full_life_choice_is_silent_and_explicit",
+			"passed": true
+		},
+		{
+			"actual": {
+				"distance": 28502.775390625,
+				"event": {
+					"amount": 200,
+					"id": "404:22",
+					"kind": "score"
+				},
+				"health": 3,
+				"window": 2.18333333333333
+			},
+			"check": "380_score_actual_station_choice_and_advance_window",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "380_score_actual_feedback_uses_amount",
+			"passed": true
+		},
+		{
+			"actual": {
+				"distance": 28502.775390625,
+				"event": {
+					"amount": 1,
+					"id": "404:22",
+					"kind": "heal"
+				},
+				"health": 3,
+				"window": 2.18333333333333
+			},
+			"check": "380_heal_actual_station_choice_and_advance_window",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "380_heal_actual_feedback_uses_amount",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "menu_hides_world_and_HUD_stops_cue",
+			"passed": true
+		}
+	],
+	"method": "E actual Main presentation. Challenge/interrupt/full-health event snapshots are explicit fixtures, not B/C gameplay-rule proof. Two actual station physics approaches with public380 trial speed and labelled start/health/gap fixtures; synthetic SPACE. No natural-opening/3seed F/human/audio-listening claim.",
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU"
+}

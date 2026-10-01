@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "pause_changed_pixels": 0,
+  "sources": [
+    {
+      "path": "scripts/visual/route_visual.gd",
+      "sha256": "926aabd60b352f2c30816dcdca9854acbb6777357143cfc7a09d20af4377a5a2"
+    },
+    {
+      "path": "scenes/ui/v06_route_status.gd",
+      "sha256": "8877f8f1fec84b6e7966833bf5b7b5038cd5424d069b1a331134a7be7c49b715"
+    },
+    {
+      "path": "scenes/ui/v06_route_status.tscn",
+      "sha256": "44b7bfe6ecaba9ddd29ce48df4505451eb600f09cc1d9275c09e3770f5b5ff31"
+    },
+    {
+      "path": "scenes/ui/v05_status.gd",
+      "sha256": "9bdaca284fd97778cd5518c905692f26368276411a8f4225d34f32711a0b7938"
+    },
+    {
+      "path": "scripts/visual/endless_module_visual.gd",
+      "sha256": "6279b5d488ed467e5bdfaa91f6dca778b4ef9fb077ad867feade5d18feb67b15"
+    },
+    {
+      "path": "scripts/visual/endless_hud_visual.gd",
+      "sha256": "22f653f3c43b3be633af0c446edd6f80f1fcb6381672f1fd8d477d78af334d0b"
+    },
+    {
+      "path": "assets/audio/v06/complete.wav",
+      "sha256": "b8fa6314b8a49ca1c57dd9ad250c510d6e1d9b6597bddeaf46fd98775a9c5565"
+    },
+    {
+      "path": "assets/audio/v06/recover.wav",
+      "sha256": "7219a77788edc264ec45c0fd665d159bb44d058215d2dec28f9ea4faa59d69ca"
+    }
+  ],
+  "scope": "E final presentation resource hashes and screenshot QA, not F frozen production manifest."
+}

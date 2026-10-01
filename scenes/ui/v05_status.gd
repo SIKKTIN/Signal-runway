@@ -34,7 +34,8 @@ func _ready() -> void:
 	queue_redraw()
 
 func update_state(health: int, target_speed: float, actual_speed: float, invulnerable: bool, hurt_count: int = 0) -> void:
-	var new_round := _initialized and (hurt_count < _hurt_count or (health == 3 and health > _health))
+	# Healing to full life is not a new run. RunFlow rebuilds this UI on restart.
+	var new_round := _initialized and hurt_count < _hurt_count
 	if new_round:
 		_hurt_remaining = 0
 		_clock = 0

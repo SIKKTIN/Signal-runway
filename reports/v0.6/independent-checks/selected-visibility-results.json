@@ -1,0 +1,16 @@
+{
+	"elapsed": 0.233333333333333,
+	"hint_text": "工具试玩 · F8返回",
+	"hint_visible": true,
+	"method": "Actual focused Enter on PlaySelected, synthetic input, fixed60 GPU. Read is_visible_in_tree and screenshot after 12 frames. Public selected start is a debug injection; no production or formal-record writes. Supplement replaces the original text-only coverage claim.",
+	"notice_parent_visible": false,
+	"notice_text": "工具定点起跑 · 第5段 · 距离注入，成绩隔离",
+	"notice_visible": false,
+	"passed": false,
+	"run_distance": 6475.66650390625,
+	"selected_index": 5,
+	"source_version": "v0.6.0+9d61537a86e4",
+	"sources_unchanged": true,
+	"trial_speed": 330.0,
+	"world_position": "(6571.667, 432.9253)"
+}

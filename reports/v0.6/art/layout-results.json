@@ -1,0 +1,14 @@
+{
+	"checks": [
+		{
+			"check": "actual960_route_text_fits",
+			"passed": true
+		},
+		{
+			"check": "actual_tool_hint_life_and_route_bounds_clear",
+			"passed": true
+		}
+	],
+	"method": "Final native text placement at960 in actualMain and tool trial, explicit state/position fixtures. No F/D rule tests; no actual F8 key claim. Exit includes150ms actual mixer cleanup.",
+	"passed": true
+}

@@ -310,13 +310,16 @@ func update_endless(seconds: float, score: int, distance: float, count: int, sta
 	relay_counter.text = "距离 %d · 中继 %d" % [int(distance), count]
 	progress_fill.size.x = 912 * fmod(seconds, 30.0) / 30.0
 
-func show_endless_result(reason: String, seconds: float, score: int, distance: float, count: int, seed_value: int, best: int, record_broken: bool = false, record_status: String = "") -> void:
+func show_endless_result(reason: String, seconds: float, score: int, distance: float, count: int, seed_value: int, best: int, record_broken: bool = false, record_status: String = "", breakdown: Dictionary = {}) -> void:
 	_clear_card()
 	_text("新纪录 / ENDLESS" if record_broken else "ENDLESS / SIGNAL LOST", 12, Color("ffd166") if record_broken else Color("ff685c"))
 	_text(str(score) + " 分", 38, Color("ffd166"))
 	_text({"spike": "撞上尖刺", "fall": "坠入空隙", "caught": "被崩塌吞没", "health":"生命耗尽", "unrecoverable":"坠落 · 无安全落脚点"}.get(reason, "挑战结束"), 20)
 	_text("距离 %d · 中继 %d · 用时 %s" % [int(distance), count, format_time(seconds)], 14)
-	_text("v0.5 本机最高 %d · 地图 %d" % [best, seed_value], 13)
+	_text("v0.6 本机最高 %d · 地图 %d" % [best, seed_value], 13)
+	if not breakdown.is_empty():
+		_text("距离%d + 节点%d + 连段%d + 站点%d"%[breakdown.distance,breakdown.nodes,breakdown.combo,breakdown.station],13)
+		_text("完成连段%d · 补血选择%d · 积分选择%d"%[breakdown.completed,breakdown.heal_choices,breakdown.score_choices],13)
 	if record_status == "save_failed":
 		_text("本轮已结算，纪录未能保存到本机。", 12, Color("ff685c"))
 	var retry := _button("同图再试   ENTER / R", func(): restart_requested.emit(), true)

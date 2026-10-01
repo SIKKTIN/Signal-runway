@@ -1,0 +1,15 @@
+{
+  "version": "v0.6.0+9d61537a86e4",
+  "production_files": 105,
+  "mismatches": [],
+  "pause_changed_pixels": 0,
+  "gray_previews": [
+    "natural-404-completed-960-gray.png",
+    "natural-404-upper-station-selected-gray.png",
+    "tool-selected-start-visibility-gray.png"
+  ],
+  "passed": true,
+  "normal_log_route_checks": 8,
+  "normal_log_pause": true,
+  "method_corrected_without_new_routes": true
+}

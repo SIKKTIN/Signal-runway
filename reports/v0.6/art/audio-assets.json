@@ -1,0 +1,21 @@
+{
+  "resources": [
+    {
+      "path": "assets\\audio\\v06\\complete.wav",
+      "duration": 0.19,
+      "sample_rate": 48000,
+      "channels": 1,
+      "peak_dbfs": -14.000100374307355,
+      "sha256": "b8fa6314b8a49ca1c57dd9ad250c510d6e1d9b6597bddeaf46fd98775a9c5565"
+    },
+    {
+      "path": "assets\\audio\\v06\\recover.wav",
+      "duration": 0.17,
+      "sample_rate": 48000,
+      "channels": 1,
+      "peak_dbfs": -14.000100374307355,
+      "sha256": "7219a77788edc264ec45c0fd665d159bb44d058215d2dec28f9ea4faa59d69ca"
+    }
+  ],
+  "scope": "Synthetic PCM metrics only, not subjective listening."
+}

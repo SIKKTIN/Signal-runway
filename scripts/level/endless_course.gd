@@ -70,6 +70,8 @@ func _append_chunk(entry: Dictionary) -> void:
 	var origin := _generated_end
 	var chunk := {"id": id, "index": entry.index, "template_id": entry.template_id, "origin": origin, "length": d.length, "difficulty": d.difficulty, "category": d.category, "relays": []}
 	chunk.geometry = d.duplicate(true)
+	chunk.segment_role = entry.get("segment_role","")
+	chunk.stage = entry.stage
 	var holder := Node2D.new()
 	holder.name = "Chunk_%d" % entry.index
 	holder.position.x = origin

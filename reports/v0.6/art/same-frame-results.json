@@ -1,0 +1,34 @@
+{
+	"checks": [
+		{
+			"actual": {
+				"elapsed": 4.04999999999999,
+				"event": {
+					"amount": 1,
+					"id": "404:22",
+					"kind": "heal"
+				},
+				"life": {
+					"actual_speed": 380.0,
+					"animation_time": 4.04999999999999,
+					"audio_enabled": true,
+					"feedback_active": true,
+					"health": 3,
+					"hurt_count": 1,
+					"hurt_pulses": 1,
+					"hurt_remaining": 0.0,
+					"invulnerable": false,
+					"status": "最高目标跑速 · 伤 1 次",
+					"target_speed": 380.0
+				},
+				"physics_frame": 247,
+				"player_health": 3
+			},
+			"check": "first_station_event_frame_life_UI_matches",
+			"passed": true
+		}
+	],
+	"method": "Producer immediate UI fix only: same seeded first-station380/position/2life/gap fixtures as E. Sample first event process frame without extra physics waits or manual UI update. Original E evidence unchanged.",
+	"passed": true,
+	"run_flow_sha256": "eaf65be15357714ea5ac229b607f8a34f3f749d6f381c21d3ec10c4e63dee6f7"
+}

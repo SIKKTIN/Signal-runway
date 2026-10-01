@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generator_revision": 3,
+  "generator_revision": 4,
   "stage_distance": 8400,
   "relay_min": 5,
   "relay_max": 6,
@@ -57,5 +57,13 @@
   "height_min": 32,
   "height_max": 64,
   "gap_min": 64,
-  "gap_max": 96
+  "gap_max": 96,
+  "phase_one": 10000,
+  "phase_two": 30000,
+  "challenge_weight": 1,
+  "challenge_limit": 2,
+  "station_min": 16,
+  "station_max": 24,
+  "combo_bonus": 200,
+  "station_bonus": 200
 }

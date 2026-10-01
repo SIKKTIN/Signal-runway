@@ -1,0 +1,35 @@
+{
+	"checks": [
+		{
+			"actual": {
+				"actual_speed": 380.0,
+				"animation_time": 4.08333333333332,
+				"audio_enabled": true,
+				"feedback_active": true,
+				"health": 3,
+				"hurt_count": 1,
+				"hurt_pulses": 1,
+				"hurt_remaining": 0.0,
+				"invulnerable": false,
+				"status": "最高目标跑速 · 伤 1 次",
+				"target_speed": 380.0
+			},
+			"check": "actual_heal_syncs_full_UI_without_clock_reset",
+			"passed": true
+		},
+		{
+			"actual": 2.18333333333333,
+			"check": "actual380_1280_choice_window",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"scope": "One actual380 station heal approach at1280, explicit seeded start/2life/velocity/gap fixtures; wait2 live frames for deferred root UI synchronization then capture960. No new F or whole E rerun.",
+	"station_events": [
+		{
+			"amount": 1,
+			"id": "404:22",
+			"kind": "heal"
+		}
+	]
+}

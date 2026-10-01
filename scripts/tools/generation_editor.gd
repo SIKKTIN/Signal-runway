@@ -118,6 +118,12 @@ func _build_ui() -> void:
 		controls[item[0]] = s
 		s.value_changed.connect(func(_v): changed())
 	label(params, "片段开关 / 合格候选权重")
+	label(params,"v0.6 段落节奏与奖励")
+	for item in [["phase_one","进阶距离",5000,20000,1000,10000],["phase_two","持续挑战距离",20000,60000,1000,30000],["challenge_weight","挑战基础权重",1,3,1,1],["challenge_limit","最多连续挑战",1,2,1,2],["station_min","恢复站最小段距",16,24,1,16],["station_max","恢复站最大段距",16,24,1,24],["combo_bonus","连段完成分",100,400,100,200],["station_bonus","恢复站积分",100,400,100,200]]:
+		label(params,item[1])
+		var s:=spin(params,item[2],item[3],item[4],item[5])
+		controls[item[0]]=s
+		s.value_changed.connect(func(_v):changed())
 	for id in Library.ids():
 		var row := HBoxContainer.new()
 		params.add_child(row)
@@ -147,6 +153,7 @@ func _build_ui() -> void:
 	button(nav, "上一段", func(): select_chunk(maxi(0, preview.focus_index - 1)), "Previous")
 	button(nav, "下一段", func(): select_chunk(mini(rows.size() - 1, preview.focus_index + 1)), "Next")
 	button(nav, "单段 / 连续", toggle_single, "Single")
+	button(nav,"选段试玩",play_selected,"PlaySelected")
 	summary = label(middle, "")
 	summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	details = RichTextLabel.new()
@@ -162,7 +169,7 @@ func _build_ui() -> void:
 		speed_choice.add_item(item)
 	debug_row.add_child(speed_choice)
 	label(debug_row,"试玩：F9受伤 · F10掉坑 · F8返回")
-	button(debug_row,"升级v3草稿",upgrade_draft,"Upgrade")
+	button(debug_row,"升级v4草稿",upgrade_draft,"Upgrade")
 	var actions := HBoxContainer.new()
 	chrome.add_child(actions)
 	profile_name = LineEdit.new()
@@ -203,19 +210,31 @@ func set_draft(value: Dictionary) -> void:
 		controls[key].value = draft[key]
 	for key in ["height_min","height_max","gap_min","gap_max"]:
 		controls[key].value = draft.get(key,Profile.defaults()[key])
-		controls[key].editable = draft.generator_revision == 3
+		controls[key].editable = draft.generator_revision >= 3
+	for key in ["phase_one","phase_two","challenge_weight","challenge_limit","station_min","station_max","combo_bonus","station_bonus"]:
+		controls[key].value=draft.get(key,Profile.defaults()[key])
+		controls[key].editable=draft.generator_revision==4
 	for id in Library.ids():
 		controls[id].enabled.button_pressed = draft.templates[id].enabled
 		controls[id].weight.value = draft.templates[id].weight
+		var available: bool=draft.generator_revision!=4 or id in ["safe_a","safe_b","step","gap","rhythm_a","relay_a","relay_b"]
+		controls[id].enabled.disabled=id in Profile.LOCKED or not available
+		controls[id].weight.editable=available
+		controls[id].enabled.tooltip_text="v4段落库暂不选此旧结构；v2/v3保留原行为" if not available else ("安全/奖励保障锁定" if id in Profile.LOCKED else "影响本段合格候选")
+	controls.stage_distance.editable=draft.generator_revision!=4
+	controls.stage_distance.tooltip_text="v4使用进阶/持续挑战两个距离边界；此旧阶段参数保留用于旧配置兼容" if draft.generator_revision==4 else "旧版距离阶段边界"
 	updating = false
 	regenerate()
 func read_draft() -> Dictionary:
 	var value := draft.duplicate(true)
 	for key in ["stage_distance", "relay_min", "relay_max"]:
 		value[key] = controls[key].value
-	if value.generator_revision == 3:
+	if value.generator_revision >= 3:
 		for key in ["height_min","height_max","gap_min","gap_max"]:
 			value[key] = controls[key].value
+	if value.generator_revision==4:
+		for key in ["phase_one","phase_two","challenge_weight","challenge_limit","station_min","station_max","combo_bonus","station_bonus"]:
+			value[key]=controls[key].value
 	for id in Library.ids():
 		value.templates[id] = {"enabled": controls[id].enabled.button_pressed, "weight": controls[id].weight.value}
 	return value
@@ -232,7 +251,7 @@ func regenerate() -> void:
 	for _i in int(count_control.value):
 		rows.append(g.next())
 	preview.set_rows(rows)
-	fingerprint_label.text = "规则v%d%s · 草稿 %s · 工程 %s" % [draft.generator_revision," 旧配置模式，几何锁定" if draft.generator_revision==2 else " 立体参数化",Profile.fingerprint(draft),Profile.fingerprint(baseline)]
+	fingerprint_label.text = "规则v%d%s · 草稿 %s · 工程 %s" % [draft.generator_revision," 旧配置模式，几何锁定" if draft.generator_revision==2 else (" 旧v3立体，节奏锁定" if draft.generator_revision==3 else " 段落节奏"),Profile.fingerprint(draft),Profile.fingerprint(baseline)]
 	var original := Generator.new()
 	original.reset(int(seed_control.value), baseline)
 	var changed_segments := 0
@@ -254,7 +273,7 @@ func select_chunk(index: int) -> void:
 	var r := rows[index]
 	var d: Dictionary = r.get("geometry",Library.definition(r.template_id))
 	var changes: Array[String] = []
-	for key in ["stage_distance", "relay_min", "relay_max","height_min","height_max","gap_min","gap_max"]:
+	for key in ["stage_distance", "relay_min", "relay_max","height_min","height_max","gap_min","gap_max","phase_one","phase_two","challenge_weight","challenge_limit","station_min","station_max","combo_bonus","station_bonus"]:
 		if draft.get(key) != baseline.get(key):
 			changes.append("%s: %s→%s" % [key, baseline.get(key), draft.get(key)])
 	for id in Library.ids():
@@ -262,13 +281,15 @@ func select_chunk(index: int) -> void:
 			changes.append(id + ": " + JSON.stringify(draft.templates[id]))
 	details.text = "段%d · %s · %s · 入口/出口地面448 · 长度1280\n原因：%s\n合格候选：%s\n排除：%s\n几何：%d地面 / %d平台 / %d墙 / %d坑 / %d尖刺 / %d节点\n配置差异：%s" % [index, r.template_id, r.category, r.reason, ", ".join(r.candidates), JSON.stringify(r.excluded), d.floors.size(), d.platforms.size(), d.walls.size(), d.gaps.size(), d.spikes.size(), d.relays.size(), "；".join(changes) if not changes.is_empty() else "无"]
 	details.text += "\n结构：%s · 变体%d · 参数%s\n路线/安全表面：%d · %s\n六立体结构的发布范围有三档动作检查；当前配置压力需试玩。" % [d.get("structure","旧固定片段"),d.get("variant",0),JSON.stringify(d.get("parameters",{})),d.get("routes",[]).size(),d.get("validation","旧版固定几何")]
+	if draft.generator_revision==4:
+		details.text += "\n段落：%s · 距离阶段%d · 下一恢复站%d\n连段：%s · 恢复站：%s"%[r.segment_role,r.stage+1,r.next_station,"三个有序节点、出口奖励%d"%d.challenge.bonus if d.has("challenge") else "无","补1生命 / 积分%d，只能选一次"%d.station.bonus if d.has("station") else "无"]
 
 func upgrade_draft() -> void:
 	var value := Profile.defaults()
-	for key in ["stage_distance","relay_min","relay_max","templates"]:
-		value[key] = draft[key]
+	for key in ["stage_distance","relay_min","relay_max","templates","height_min","height_max","gap_min","gap_max"]:
+		value[key] = draft.get(key,value[key])
 	set_draft(value)
-	message("已升级为v3草稿；地图几何将变化，工程默认需另行应用")
+	message("已显式升级为v4草稿；段落/地图将变化，工程默认需另行应用")
 func toggle_single() -> void:
 	preview.single = not preview.single
 	preview.focus_on(preview.focus_index)
@@ -357,12 +378,12 @@ func play_draft() -> void:
 	hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	trial.ui.add_child(hint)
 	hint.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
-	hint.offset_left = -188
-	hint.offset_top = -44
+	hint.offset_left = -256
+	hint.offset_top = -76
 	hint.offset_right = -16
 	hint.offset_bottom = -12
 	var hint_text := Label.new()
-	hint_text.text = "工具试玩 · F8返回"
+	hint_text.text = "工具试玩 · 成绩隔离\nF8返回"
 	hint_text.tooltip_text = "试玩成绩与正式最高分隔离；F8返回当前配置。"
 	hint_text.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	hint_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -379,6 +400,26 @@ func stop_trial() -> void:
 				DirAccess.remove_absolute(_trial_record + suffix)
 		chrome.show()
 		message("已返回草稿，试玩配置和正式纪录分离")
+func play_selected() -> void:
+	var index: int=preview.focus_index
+	play_draft()
+	if not is_instance_valid(trial):
+		return
+	var target: float=index*Library.LENGTH+96
+	trial.course.update_stream(target,target-640)
+	trial.player.recover_at(Vector2(target,430))
+	trial._previous_position=trial.player.position
+	trial.run_distance=target-trial.course.spawn_position.x
+	trial.speed_distance_base=trial.run_distance
+	trial.chase.reset(target)
+	trial.chase.set_enabled(true)
+	trial.camera.position=Vector2(maxf(target+180,480),270)
+	trial.camera.reset_smoothing()
+	trial.ui.set_notice("工具定点起跑 · 第%d段 · 距离注入，成绩隔离"%index,Color("ffd166"))
+	var hint: PanelContainer = trial.ui.get_node("EditorReturnHint")
+	hint.offset_top = -96
+	var hint_text: Label = hint.get_child(0)
+	hint_text.text = "定点起跑 · 第%d段\n距离注入 · 成绩隔离\nF8返回" % index
 func _input(event: InputEvent) -> void:
 	if is_instance_valid(trial) and event is InputEventKey and event.pressed and not event.echo and event.keycode in [KEY_F9,KEY_F10]:
 		if trial.phase == "running" and not get_tree().paused:
@@ -392,6 +433,25 @@ func _input(event: InputEvent) -> void:
 		stop_trial()
 		get_viewport().set_input_as_handled()
 static func sequence_errors(sequence: Array[Dictionary], settings: Dictionary) -> Array[String]:
+	if settings.generator_revision==4:
+		var issues: Array[String]=[]
+		var station_index:=0
+		var previous_relay:=-1
+		for i in sequence.size():
+			var row:=sequence[i]
+			if row.challenge_streak>settings.challenge_limit:
+				issues.append("连续挑战超限："+str(i))
+			if row.segment_role=="恢复":
+				if i-station_index<settings.station_min or i-station_index>settings.station_max or sequence[i-1].segment_role!="缓和":
+					issues.append("恢复站间隔/入口："+str(i))
+				station_index=i
+			if i>0 and sequence[i-1].segment_role=="恢复" and row.segment_role!="缓和":
+				issues.append("恢复站出口："+str(i))
+			if row.category=="relay":
+				if previous_relay>=0 and (i-previous_relay<settings.relay_min or i-previous_relay>settings.relay_max):
+					issues.append("中继间隔："+str(i))
+				previous_relay=i
+		return issues
 	var errors: Array[String] = []
 	var last_relay := -1
 	var wall_cost := 0

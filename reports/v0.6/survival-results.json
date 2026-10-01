@@ -1,0 +1,50 @@
+{
+	"checks": [
+		{
+			"name": "开局3生命基础跑速",
+			"passed": true
+		},
+		{
+			"name": "新增最高距离封顶380",
+			"passed": true
+		},
+		{
+			"name": "扣1重置速度保留垂直运动",
+			"passed": true
+		},
+		{
+			"name": "同帧与无敌去重",
+			"passed": true
+		},
+		{
+			"name": "回跑旧路不恢复加速",
+			"passed": true
+		},
+		{
+			"name": "暂停冻结时钟和无敌",
+			"passed": true
+		},
+		{
+			"name": "同seed重试重置生命和距离",
+			"passed": true
+		},
+		{
+			"name": "真实尖刺接触首次扣1",
+			"passed": true
+		},
+		{
+			"name": "持续重叠无敌结束再次扣1",
+			"passed": true
+		},
+		{
+			"name": "第三次有效接触只结算一次",
+			"passed": true
+		},
+		{
+			"name": "固定关保留无生命规则",
+			"passed": true
+		}
+	],
+	"method": "真实尖刺Area持续碰撞；距离封顶通过显式位置注入，隔离记录；固定步长游戏时间",
+	"passed": true
+}

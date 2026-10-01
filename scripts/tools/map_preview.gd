@@ -76,6 +76,20 @@ func _draw() -> void:
 		for relay in d.relays:
 			draw_circle(relay.position, 16, Color("ffc95c"), false, 3)
 			draw_line(relay.position - Vector2(7, 0), relay.position + Vector2(7, 0), Color("ffc95c"), 2)
+		if d.has("challenge"):
+			var entry: Rect2=d.challenge.entry
+			draw_line(Vector2(entry.position.x,250),Vector2(entry.position.x,430),Color("85d9ed"),3)
+			for j in d.challenge.order.size():
+				for relay in d.relays:
+					if relay.local_id==d.challenge.order[j]:
+						draw_string(_font,relay.position+Vector2(-5,6),str(j+1),HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("85d9ed"))
+			draw_line(Vector2(d.challenge.exit_x,250),Vector2(d.challenge.exit_x,430),Color("85d9ed"),3)
+		if d.has("station"):
+			for kind in ["heal","score"]:
+				var p: Vector2=d.station[kind]
+				var tint:=Color("7ee6cf") if kind=="heal" else Color("ffd166")
+				draw_rect(Rect2(p-Vector2(20,18),Vector2(40,36)),tint,false,3)
+				draw_string(_font,p+Vector2(-10,6),"+1" if kind=="heal" else str(d.station.bonus),HORIZONTAL_ALIGNMENT_LEFT,-1,16,tint)
 		for route in d.get("routes",[]):
 			var color := Color("54e1d3") if route.kind == "upper" else Color("83b0bc")
 			draw_line(route.from-Vector2(0,8),route.to-Vector2(0,8),color,2)
@@ -83,7 +97,7 @@ func _draw() -> void:
 		draw_set_transform(Vector2.ZERO)
 		if Library.LENGTH * zoom > 95:
 			draw_string(_font, Vector2(x + 6, 22), "%02d %s" % [i, rows[i].template_id], HORIZONTAL_ALIGNMENT_LEFT, Library.LENGTH * zoom - 10, 14, accent)
-			draw_string(_font, Vector2(x + 6, 42), "阶段%d / 难度%d" % [rows[i].stage + 1, d.difficulty], HORIZONTAL_ALIGNMENT_LEFT, Library.LENGTH * zoom - 10, 13, Color("a0b4be"))
+			draw_string(_font, Vector2(x + 6, 42), "%s 阶段%d / 难度%d" % [rows[i].get("segment_role",""),rows[i].stage + 1, d.difficulty], HORIZONTAL_ALIGNMENT_LEFT, Library.LENGTH * zoom - 10, 13, Color("a0b4be"))
 		if i == focus_index:
 			draw_rect(Rect2(x, 1, Library.LENGTH * zoom, size.y - 2), Color("ffc95c"), false, 2)
 	draw_string(_font, Vector2(12, size.y - 12), "滚轮缩放 · 左/中键拖动 · 点击选段 · 黄色中继 / 红色危险", HORIZONTAL_ALIGNMENT_LEFT, size.x - 24, 14, Color("b0c4ca"))

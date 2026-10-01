@@ -11,6 +11,14 @@ signal relay_activated(relay_id: String, added_delay: float, activated_count: in
 signal relay_delay_changed(remaining: float)
 signal endless_stats_changed(score: int, distance: float, count: int, stage: int)
 signal world_shifted(distance: float)
+signal route_event(kind: String, data: Dictionary)
+signal route_state_changed(state: Dictionary)
+const RouteChallenge = preload("res://scripts/level/route_challenge.gd")
+var routes := RouteChallenge.new()
+var _feature_from := Vector2.ZERO
+var _feature_to := Vector2.ZERO
+var _feature_pending := false
+var _feature_damaged := false
 
 const PlayerScene = preload("res://scenes/player/player.tscn")
 const CourseScript = preload("res://scripts/level/course.gd")
@@ -39,6 +47,7 @@ var speed_distance_base := 0.0
 var target_run_speed := 280.0
 var trial_speed := 0.0
 var _survival_status: Control
+var _route_status: Control
 var safe_points: Array[Dictionary] = []
 var fall_recovery_remaining := 0.0
 var _grounded_frames := 0
@@ -81,7 +90,7 @@ func _ready() -> void:
 		var loaded := GenerationProfile.load_profile()
 		generation_profile = loaded.profile
 		generation_notice = "生成配置不可用，已回退内置默认" if loaded.fallback else ""
-	endless_record.expected_rules_revision = 5
+	endless_record.expected_rules_revision = 6
 	reload_endless_record()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Resolve the front after the player's current-frame move_and_slide.
@@ -162,6 +171,9 @@ func _build_world(use_lab: bool) -> void:
 	_install_presentation()
 
 func _install_presentation() -> void:
+	if is_instance_valid(_route_status):
+		_route_status.queue_free()
+		_route_status=null
 	if is_instance_valid(_survival_status):
 		_survival_status.queue_free()
 		_survival_status = null
@@ -171,6 +183,15 @@ func _install_presentation() -> void:
 		ui.add_child(_survival_status)
 	ui.external_endless_hud = false
 	if is_endless():
+		if generation_profile.generator_revision==4 and ResourceLoader.exists("res://scripts/visual/route_visual.gd"):
+			var route_visual: Node2D=load("res://scripts/visual/route_visual.gd").new()
+			route_visual.name="RouteVisual"
+			world.add_child(route_visual)
+			route_visual.bind_flow(self,course)
+		if generation_profile.generator_revision==4 and ResourceLoader.exists("res://scenes/ui/v06_route_status.tscn"):
+			_route_status=load("res://scenes/ui/v06_route_status.tscn").instantiate()
+			ui.add_child(_route_status)
+			_route_status.bind_flow(self)
 		for pair in [["endless_world_visual", "EndlessWorldVisual"], ["endless_hud_visual", "EndlessHUDVisual"]]:
 			var path: String = "res://scripts/visual/" + pair[0] + ".gd"
 			if ResourceLoader.exists(path):
@@ -248,6 +269,9 @@ func start_challenge(use_lab: bool = false, selected_mode: String = "", selected
 	fall_recovery_remaining = 0.0
 	_grounded_frames = 0
 	relay_delay_chunks.clear()
+	routes.reset()
+	_feature_pending=false
+	_feature_damaged=false
 	phase = "ready"
 	_load_best()
 	_build_world(use_lab)
@@ -370,7 +394,7 @@ func _physics_process(delta: float) -> void:
 				elif not player.dead:
 					_record_safe_point()
 				update_endless_pressure(delta)
-				run_score = int(floor(run_distance / 10.0)) + relay_count * 100
+				run_score = total_score()
 			else:
 				furthest_ratio = maxf(furthest_ratio, clampf((player.position.x - course.spawn_position.x) / (course.finish_x - course.spawn_position.x), 0.0, 1.0))
 			if player.position.y > 650:
@@ -382,6 +406,11 @@ func _physics_process(delta: float) -> void:
 				_queue_failure("caught")
 				player.die("caught")
 			if not player.dead and _failures.is_empty():
+				if is_endless() and course.streaming and generation_profile.generator_revision==4 and fall_recovery_remaining<=0:
+					_feature_from=_previous_position+Vector2(course.total_offset,0)
+					_feature_to=player.position+Vector2(course.total_offset,0)
+					_feature_pending=true
+					_schedule_resolution()
 				for relay_id in course.relay_candidates(_previous_position, player.position):
 					_queue_relay(relay_id)
 			if is_endless() and not player.dead and _failures.is_empty():
@@ -430,6 +459,8 @@ func _queue_relay(relay_id: String) -> void:
 func _activate_pending_relays() -> void:
 	for relay_id in _relay_pending:
 		if course.activate_relay(relay_id):
+			if is_endless() and generation_profile.generator_revision==4:
+				routes.node(relay_id)
 			relay_count += 1
 			var added := 0.9 if is_pursuit() else 0.0
 			if is_endless():
@@ -467,6 +498,8 @@ func _on_death(reason: String, _position: Vector2) -> void:
 		ui.set_notice("撞上尖刺 · 立即重试" if reason == "spike" else "坠入空隙 · 立即重试", Color("ff685c"))
 
 func _on_damage_taken(reason: String, _health: int) -> void:
+	_feature_damaged=true
+	routes.interrupt("damage")
 	speed_distance_base = run_distance
 	target_run_speed = 280.0
 	trial_speed = 0.0
@@ -555,12 +588,27 @@ func _resolve_result(generation: int) -> void:
 	elif _goal_pending:
 		_finish_if_alive()
 	elif not player.dead:
+		if _feature_pending:
+			routes.begin_step(_feature_from,_feature_to,course.chunks,course.total_offset,_feature_damaged)
 		_activate_pending_relays()
+		if _feature_pending:
+			for action in routes.end_step(course.chunks,course.total_offset,player.health):
+				if action.kind=="heal":
+					player.health=mini(3,player.health+int(action.amount))
+					ui.set_notice("生命已满" if action.amount==0 else "恢复站 · 生命 +1",Color("7ee6cf"))
+				else:
+					ui.set_notice("恢复站 · 积分 +%d"%action.amount,Color("ffd166"))
+			_flush_route_events()
+			_update_ui()
+	_feature_pending=false
+	_feature_damaged=false
 	_goal_pending = false
 	_failures.clear()
 	_relay_pending.clear()
 
 func _finish_failure(reason: String) -> void:
+	routes.interrupt("terminal")
+	_flush_route_events()
 	phase = "failed"
 	get_tree().paused = false
 	failure_reason = reason
@@ -571,9 +619,10 @@ func _finish_failure(reason: String) -> void:
 	player.set_physics_process(false)
 	ui.set_relay_count(relay_count)
 	if is_endless():
-		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed, {"rules_revision":5,"generator_revision":generation_profile.generator_revision,"profile_fingerprint":GenerationProfile.fingerprint(generation_profile)})
+		run_score=total_score()
+		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed, {"rules_revision":6,"generator_revision":generation_profile.generator_revision,"profile_fingerprint":GenerationProfile.fingerprint(generation_profile),"score_breakdown":score_breakdown()})
 		best_score = int(endless_record.best.score)
-		ui.show_endless_result(reason, elapsed, run_score, run_distance, relay_count, run_seed, best_score, new_record, endless_record.status)
+		ui.show_endless_result(reason, elapsed, run_score, run_distance, relay_count, run_seed, best_score, new_record, endless_record.status,score_breakdown())
 	else:
 		ui.show_failure(reason, elapsed, furthest_ratio, best_seconds)
 	run_failed.emit(reason, elapsed, furthest_ratio)
@@ -616,9 +665,19 @@ func _update_ui() -> void:
 			_survival_status.visible = phase in ["running","paused"]
 			_survival_status.set_feedback_active(phase in ["running","paused"])
 			_survival_status.update_state(player.health,target_run_speed,player.velocity.x,player.invulnerable_remaining>0,player.hurt_count)
-		run_score = int(floor(run_distance / 10.0)) + relay_count * 100
+		run_score = total_score()
 		ui.update_endless(elapsed, run_score, run_distance, relay_count, difficulty_stage, best_score)
 		endless_stats_changed.emit(run_score, run_distance, relay_count, difficulty_stage)
 	else:
 		ui.update_stats(elapsed, deaths, best_seconds, furthest_ratio if is_pursuit() else player.position.x / course.finish_x, course.section_at(player.position.x), lab_mode)
 	stats_changed.emit(elapsed, deaths)
+
+func total_score() -> int:
+	return int(floor(run_distance/10.0))+relay_count*100+routes.combo_score+routes.station_score
+func score_breakdown() -> Dictionary:
+	return {"distance":int(floor(run_distance/10.0)),"nodes":relay_count*100,"combo":routes.combo_score,"station":routes.station_score,"completed":routes.completed,"heal_choices":routes.heal_choices,"score_choices":routes.score_choices}
+func _flush_route_events() -> void:
+	for event in routes.events:
+		route_event.emit(event.kind,event.data)
+	routes.events.clear()
+	route_state_changed.emit(routes.snapshot())

@@ -8,6 +8,7 @@ var _paused := false
 var _resolved := false
 var _phase := "menu"
 var _nodes: Dictionary = {}
+var _challenge_nodes: Dictionary = {}
 var _activated_ids: Dictionary = {}
 var _pulses: Dictionary = {}
 var _connections: Array[Dictionary] = []
@@ -105,6 +106,13 @@ func _read_nodes() -> void:
 	if not relays is Array:
 		return
 	var active := {}
+	_challenge_nodes.clear()
+	if _flow.has_method("is_endless") and _flow.is_endless():
+		for chunk in _course.chunks:
+			var d: Dictionary=chunk.get("geometry",{})
+			if d.has("challenge"):
+				for local_id in d.challenge.order:
+					_challenge_nodes[chunk.id+":"+local_id]=true
 	for entry in relays:
 		var id := str(entry.get("id", ""))
 		if id != "":
@@ -198,6 +206,8 @@ func _draw() -> void:
 	if _textures.is_empty():
 		return
 	for id in _nodes:
+		if _challenge_nodes.has(id):
+			continue
 		var entry: Dictionary = _nodes[id]
 		var at: Vector2 = entry.position
 		var pulse_age := _animation_time - float(_pulses.get(id, -100.0))

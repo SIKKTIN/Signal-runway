@@ -1,0 +1,4006 @@
+[
+	{
+		"breakdown": {
+			"combo": 0.0,
+			"completed": 0.0,
+			"distance": 2944.0,
+			"heal_choices": 0.0,
+			"nodes": 400.0,
+			"score_choices": 1.0,
+			"station": 200.0
+		},
+		"distance": 29448.392578125,
+		"elapsed": 95.5333333333292,
+		"events": [
+			{
+				"data": {
+					"amount": 200.0,
+					"id": "404:22",
+					"kind": "score"
+				},
+				"distance": 28502.1484375,
+				"elapsed": 92.7333333333294,
+				"health": 3.0,
+				"kind": "station"
+			}
+		],
+		"failure": "",
+		"first_station_index": 22.0,
+		"generator_revision": 4.0,
+		"health": 3.0,
+		"hurt_count": 0.0,
+		"key_presses": 30.0,
+		"phase": "running",
+		"preview_window_seconds": 2.34999999999987,
+		"profile_fingerprint": "28caa4b5e31e",
+		"relay_events": [
+			{
+				"added_delay": 0.9,
+				"count": 1.0,
+				"distance": 7291.94384765625,
+				"health": 3.0,
+				"id": "404:5:low",
+				"position": "(7387.944, 432.948)",
+				"time": 25.4666666666665
+			},
+			{
+				"added_delay": 0.9,
+				"count": 2.0,
+				"distance": 13691.8359375,
+				"health": 3.0,
+				"id": "404:10:low",
+				"position": "(13787.84, 432.9252)",
+				"time": 46.733333333332
+			},
+			{
+				"added_delay": 0.9,
+				"count": 3.0,
+				"distance": 20092.068359375,
+				"health": 3.0,
+				"id": "404:15:low",
+				"position": "(20188.07, 432.9252)",
+				"time": 67.1333333333308
+			},
+			{
+				"added_delay": 0.9,
+				"count": 4.0,
+				"distance": 26492.22265625,
+				"health": 3.0,
+				"id": "404:20:low",
+				"position": "(26588.22, 432.9352)",
+				"time": 86.7333333333297
+			}
+		],
+		"routes": {
+			"active": "",
+			"combo_score": 0.0,
+			"completed": 0.0,
+			"heal_choices": 0.0,
+			"identities": 1.0,
+			"interrupted": 0.0,
+			"last_event": "station",
+			"progress": 0.0,
+			"score_choices": 1.0,
+			"station_score": 200.0,
+			"total": 3.0
+		},
+		"samples": [
+			{
+				"chunks": 3.0,
+				"distance": 15.6666564941406,
+				"elapsed": 0.133333333333333,
+				"gap": 645.666656494141,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1.0,
+				"target_speed": 280.031333312988
+			},
+			{
+				"chunks": 4.0,
+				"distance": 1427.03173828125,
+				"elapsed": 5.14999999999999,
+				"gap": 1200.54890982317,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 142.0,
+				"target_speed": 282.854063476562
+			},
+			{
+				"chunks": 5.0,
+				"distance": 2848.37353515625,
+				"elapsed": 10.1500000000001,
+				"gap": 1251.26572581177,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 284.0,
+				"target_speed": 285.696747070312
+			},
+			{
+				"chunks": 5.0,
+				"distance": 4284.0009765625,
+				"elapsed": 15.1500000000003,
+				"gap": 1302.49339850551,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 428.0,
+				"target_speed": 288.568001953125
+			},
+			{
+				"chunks": 6.0,
+				"distance": 5734.06689453125,
+				"elapsed": 20.1500000000001,
+				"gap": 1354.24623188825,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 573.0,
+				"target_speed": 291.468133789063
+			},
+			{
+				"chunks": 6.0,
+				"distance": 7198.69091796875,
+				"elapsed": 25.1499999999999,
+				"gap": 1406.50411858957,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 719.0,
+				"target_speed": 294.397381835937
+			},
+			{
+				"chunks": 6.0,
+				"distance": 8678.048828125,
+				"elapsed": 30.1499999999996,
+				"gap": 1714.63565720831,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 967.0,
+				"target_speed": 297.35609765625
+			},
+			{
+				"chunks": 6.0,
+				"distance": 10172.2734375,
+				"elapsed": 35.1499999999993,
+				"gap": 1746.61615866432,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1117.0,
+				"target_speed": 300.344546875
+			},
+			{
+				"chunks": 5.0,
+				"distance": 11681.5048828125,
+				"elapsed": 40.149999999999,
+				"gap": 1778.90788251476,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1268.0,
+				"target_speed": 303.363009765625
+			},
+			{
+				"chunks": 5.0,
+				"distance": 13205.9228515625,
+				"elapsed": 45.1499999999987,
+				"gap": 1811.5427616577,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1420.0,
+				"target_speed": 306.411845703125
+			},
+			{
+				"chunks": 6.0,
+				"distance": 14745.6513671875,
+				"elapsed": 50.1499999999984,
+				"gap": 2115.46119822135,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1674.0,
+				"target_speed": 309.491302734375
+			},
+			{
+				"chunks": 6.0,
+				"distance": 16300.849609375,
+				"elapsed": 55.1499999999982,
+				"gap": 2148.74063902794,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1830.0,
+				"target_speed": 312.60169921875
+			},
+			{
+				"chunks": 6.0,
+				"distance": 17871.669921875,
+				"elapsed": 60.1499999999979,
+				"gap": 2181.76355554813,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1987.0,
+				"target_speed": 315.74333984375
+			},
+			{
+				"chunks": 6.0,
+				"distance": 19458.294921875,
+				"elapsed": 65.1499999999976,
+				"gap": 2193.05881091504,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2145.0,
+				"target_speed": 318.91658984375
+			},
+			{
+				"chunks": 7.0,
+				"distance": 21060.86328125,
+				"elapsed": 70.1499999999973,
+				"gap": 2490.83501324903,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2406.0,
+				"target_speed": 322.1217265625
+			},
+			{
+				"chunks": 6.0,
+				"distance": 22679.53515625,
+				"elapsed": 75.149999999997,
+				"gap": 2502.35368331878,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2567.0,
+				"target_speed": 325.3590703125
+			},
+			{
+				"chunks": 6.0,
+				"distance": 24314.466796875,
+				"elapsed": 80.1499999999967,
+				"gap": 2513.98014132057,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2731.0,
+				"target_speed": 328.62893359375
+			},
+			{
+				"chunks": 6.0,
+				"distance": 25965.83984375,
+				"elapsed": 85.1499999999965,
+				"gap": 2525.73367964133,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2896.0,
+				"target_speed": 331.9316796875
+			},
+			{
+				"chunks": 7.0,
+				"distance": 27633.81640625,
+				"elapsed": 90.1499999999962,
+				"gap": 2834.71821125015,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 3163.0,
+				"target_speed": 335.2676328125
+			},
+			{
+				"chunks": 6.0,
+				"distance": 29318.533203125,
+				"elapsed": 95.1499999999959,
+				"gap": 2750.53291654726,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 1.0,
+					"interrupted": 0.0,
+					"last_event": "station",
+					"progress": 0.0,
+					"score_choices": 1.0,
+					"station_score": 200.0,
+					"total": 3.0
+				},
+				"score": 3531.0,
+				"target_speed": 338.63706640625
+			}
+		],
+		"score": 3544.0,
+		"seed": 404.0,
+		"station_event": [
+			{
+				"data": {
+					"amount": 200.0,
+					"id": "404:22",
+					"kind": "score"
+				},
+				"distance": 28502.1484375,
+				"elapsed": 92.7333333333294,
+				"health": 3.0,
+				"kind": "station"
+			}
+		],
+		"strategy": "primary",
+		"timing": "normal wall clock, prior complete run",
+		"wall_seconds": 95.406
+	},
+	{
+		"breakdown": {
+			"combo": 800.0,
+			"completed": 4.0,
+			"distance": 2944.0,
+			"heal_choices": 1.0,
+			"nodes": 1600.0,
+			"score_choices": 0.0,
+			"station": 0.0
+		},
+		"distance": 29448.412109375,
+		"elapsed": 95.5333333333292,
+		"events": [
+			{
+				"data": {
+					"id": "404:5"
+				},
+				"distance": 6586.6611328125,
+				"elapsed": 23.0666666666666,
+				"health": 3.0,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "404:5",
+					"progress": 1.0,
+					"total": 3.0
+				},
+				"distance": 6679.52734375,
+				"elapsed": 23.3833333333333,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "404:5",
+					"progress": 2.0,
+					"total": 3.0
+				},
+				"distance": 6963.37744140625,
+				"elapsed": 24.3499999999999,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "404:5",
+					"progress": 3.0,
+					"total": 3.0
+				},
+				"distance": 7139.83544921875,
+				"elapsed": 24.9499999999999,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200.0,
+					"id": "404:5"
+				},
+				"distance": 7282.1357421875,
+				"elapsed": 25.4333333333332,
+				"health": 3.0,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "404:10"
+				},
+				"distance": 12986.490234375,
+				"elapsed": 44.4333333333321,
+				"health": 3.0,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "404:10",
+					"progress": 1.0,
+					"total": 3.0
+				},
+				"distance": 13078.30859375,
+				"elapsed": 44.7333333333321,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "404:10",
+					"progress": 2.0,
+					"total": 3.0
+				},
+				"distance": 13333.6484375,
+				"elapsed": 45.5666666666654,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "404:10",
+					"progress": 3.0,
+					"total": 3.0
+				},
+				"distance": 13538.2265625,
+				"elapsed": 46.233333333332,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200.0,
+					"id": "404:10"
+				},
+				"distance": 13681.5927734375,
+				"elapsed": 46.6999999999986,
+				"health": 3.0,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "404:15"
+				},
+				"distance": 19389.220703125,
+				"elapsed": 64.9333333333309,
+				"health": 3.0,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "404:15",
+					"progress": 1.0,
+					"total": 3.0
+				},
+				"distance": 19495.515625,
+				"elapsed": 65.2666666666643,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "404:15",
+					"progress": 2.0,
+					"total": 3.0
+				},
+				"distance": 19734.935546875,
+				"elapsed": 66.0166666666642,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "404:15",
+					"progress": 3.0,
+					"total": 3.0
+				},
+				"distance": 19942.724609375,
+				"elapsed": 66.6666666666642,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200.0,
+					"id": "404:15"
+				},
+				"distance": 20081.40234375,
+				"elapsed": 67.0999999999975,
+				"health": 3.0,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "404:20"
+				},
+				"distance": 25788.92578125,
+				"elapsed": 84.6166666666632,
+				"health": 3.0,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "404:20",
+					"progress": 1.0,
+					"total": 3.0
+				},
+				"distance": 25882.900390625,
+				"elapsed": 84.8999999999965,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "404:20",
+					"progress": 2.0,
+					"total": 3.0
+				},
+				"distance": 26131.908203125,
+				"elapsed": 85.6499999999964,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "404:20",
+					"progress": 3.0,
+					"total": 3.0
+				},
+				"distance": 26342.47265625,
+				"elapsed": 86.2833333333297,
+				"health": 3.0,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200.0,
+					"id": "404:20"
+				},
+				"distance": 26481.146484375,
+				"elapsed": 86.6999999999964,
+				"health": 3.0,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"amount": 0.0,
+					"id": "404:22",
+					"kind": "heal"
+				},
+				"distance": 28502.1640625,
+				"elapsed": 92.7333333333294,
+				"health": 3.0,
+				"kind": "station"
+			}
+		],
+		"failure": "",
+		"first_station_index": 22.0,
+		"generator_revision": 4.0,
+		"health": 3.0,
+		"hurt_count": 0.0,
+		"key_presses": 42.0,
+		"phase": "running",
+		"preview_window_seconds": 2.34999999999987,
+		"profile_fingerprint": "28caa4b5e31e",
+		"relay_events": [
+			{
+				"added_delay": 0.9,
+				"count": 1.0,
+				"distance": 6679.52734375,
+				"health": 3.0,
+				"id": "404:5:challenge_1",
+				"position": "(6775.527, 350.5216)",
+				"time": 23.3833333333333
+			},
+			{
+				"added_delay": 0.0,
+				"count": 2.0,
+				"distance": 6963.37744140625,
+				"health": 3.0,
+				"id": "404:5:challenge_2",
+				"position": "(7059.377, 304.9252)",
+				"time": 24.3499999999999
+			},
+			{
+				"added_delay": 0.0,
+				"count": 3.0,
+				"distance": 7139.83544921875,
+				"health": 3.0,
+				"id": "404:5:challenge_3",
+				"position": "(7235.835, 325.9252)",
+				"time": 24.9499999999999
+			},
+			{
+				"added_delay": 0.0,
+				"count": 4.0,
+				"distance": 7316.50439453125,
+				"health": 3.0,
+				"id": "404:5:low",
+				"position": "(7412.504, 377.6752)",
+				"time": 25.5499999999998
+			},
+			{
+				"added_delay": 0.9,
+				"count": 5.0,
+				"distance": 13078.30859375,
+				"health": 3.0,
+				"id": "404:10:challenge_1",
+				"position": "(13174.31, 342.4878)",
+				"time": 44.7333333333321
+			},
+			{
+				"added_delay": 0.0,
+				"count": 6.0,
+				"distance": 13333.6484375,
+				"health": 3.0,
+				"id": "404:10:challenge_2",
+				"position": "(13429.65, 318.9336)",
+				"time": 45.5666666666654
+			},
+			{
+				"added_delay": 0.0,
+				"count": 7.0,
+				"distance": 13538.2265625,
+				"health": 3.0,
+				"id": "404:10:challenge_3",
+				"position": "(13634.23, 384.9252)",
+				"time": 46.233333333332
+			},
+			{
+				"added_delay": 0.0,
+				"count": 8.0,
+				"distance": 13691.8388671875,
+				"health": 3.0,
+				"id": "404:10:low",
+				"position": "(13787.84, 384.9252)",
+				"time": 46.733333333332
+			},
+			{
+				"added_delay": 0.9,
+				"count": 9.0,
+				"distance": 19495.515625,
+				"health": 3.0,
+				"id": "404:15:challenge_1",
+				"position": "(19591.52, 350.5161)",
+				"time": 65.2666666666643
+			},
+			{
+				"added_delay": 0.0,
+				"count": 10.0,
+				"distance": 19734.935546875,
+				"health": 3.0,
+				"id": "404:15:challenge_2",
+				"position": "(19830.94, 328.8777)",
+				"time": 66.0166666666642
+			},
+			{
+				"added_delay": 0.0,
+				"count": 11.0,
+				"distance": 19942.724609375,
+				"health": 3.0,
+				"id": "404:15:challenge_3",
+				"position": "(20038.72, 400.9352)",
+				"time": 66.6666666666642
+			},
+			{
+				"added_delay": 0.0,
+				"count": 12.0,
+				"distance": 20092.07421875,
+				"health": 3.0,
+				"id": "404:15:low",
+				"position": "(20188.07, 400.9352)",
+				"time": 67.1333333333308
+			},
+			{
+				"added_delay": 0.9,
+				"count": 13.0,
+				"distance": 25882.900390625,
+				"health": 3.0,
+				"id": "404:20:challenge_1",
+				"position": "(25978.9, 339.3515)",
+				"time": 84.8999999999965
+			},
+			{
+				"added_delay": 0.0,
+				"count": 14.0,
+				"distance": 26131.908203125,
+				"health": 3.0,
+				"id": "404:20:challenge_2",
+				"position": "(26227.91, 286.5161)",
+				"time": 85.6499999999964
+			},
+			{
+				"added_delay": 0.0,
+				"count": 15.0,
+				"distance": 26342.47265625,
+				"health": 3.0,
+				"id": "404:20:challenge_3",
+				"position": "(26438.47, 358.0086)",
+				"time": 86.2833333333297
+			},
+			{
+				"added_delay": 0.0,
+				"count": 16.0,
+				"distance": 26519.99609375,
+				"health": 3.0,
+				"id": "404:20:low",
+				"position": "(26616.0, 377.6752)",
+				"time": 86.816666666663
+			}
+		],
+		"routes": {
+			"active": "",
+			"combo_score": 800.0,
+			"completed": 4.0,
+			"heal_choices": 1.0,
+			"identities": 2.0,
+			"interrupted": 0.0,
+			"last_event": "station",
+			"progress": 0.0,
+			"score_choices": 0.0,
+			"station_score": 0.0,
+			"total": 3.0
+		},
+		"samples": [
+			{
+				"chunks": 3.0,
+				"distance": 8.83332824707031,
+				"elapsed": 0.1,
+				"gap": 638.83332824707,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 0.0,
+				"target_speed": 280.017666656494
+			},
+			{
+				"chunks": 4.0,
+				"distance": 1417.60375976563,
+				"elapsed": 5.11666666666665,
+				"gap": 1200.21251753715,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 141.0,
+				"target_speed": 282.835207519531
+			},
+			{
+				"chunks": 5.0,
+				"distance": 2838.85083007813,
+				"elapsed": 10.1166666666667,
+				"gap": 1250.92597741351,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 283.0,
+				"target_speed": 285.677701660156
+			},
+			{
+				"chunks": 5.0,
+				"distance": 4274.3828125,
+				"elapsed": 15.116666666667,
+				"gap": 1302.15047992815,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 427.0,
+				"target_speed": 288.548765625
+			},
+			{
+				"chunks": 6.0,
+				"distance": 5724.35205078125,
+				"elapsed": 20.1166666666668,
+				"gap": 1353.89985059291,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 572.0,
+				"target_speed": 291.448704101563
+			},
+			{
+				"chunks": 6.0,
+				"distance": 7208.51513671875,
+				"elapsed": 25.1833333333332,
+				"gap": 1661.69231092006,
+				"health": 3.0,
+				"routes": {
+					"active": "404:5",
+					"combo_score": 0.0,
+					"completed": 0.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "progress",
+					"progress": 3.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1020.0,
+				"target_speed": 294.417030273437
+			},
+			{
+				"chunks": 6.0,
+				"distance": 8687.9619140625,
+				"elapsed": 30.1833333333329,
+				"gap": 1713.78473497488,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 200.0,
+					"completed": 1.0,
+					"heal_choices": 0.0,
+					"identities": 1.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1468.0,
+				"target_speed": 297.375923828125
+			},
+			{
+				"chunks": 6.0,
+				"distance": 10182.2861328125,
+				"elapsed": 35.1833333333326,
+				"gap": 1745.76735100841,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 200.0,
+					"completed": 1.0,
+					"heal_choices": 0.0,
+					"identities": 1.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1618.0,
+				"target_speed": 300.364572265625
+			},
+			{
+				"chunks": 5.0,
+				"distance": 11691.6181640625,
+				"elapsed": 40.1833333333323,
+				"gap": 1778.06118694962,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 200.0,
+					"completed": 1.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 1769.0,
+				"target_speed": 303.383236328125
+			},
+			{
+				"chunks": 5.0,
+				"distance": 13216.1396484375,
+				"elapsed": 45.1833333333321,
+				"gap": 1945.58130165943,
+				"health": 3.0,
+				"routes": {
+					"active": "404:10",
+					"combo_score": 200.0,
+					"completed": 1.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "progress",
+					"progress": 1.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2021.0,
+				"target_speed": 306.432279296875
+			},
+			{
+				"chunks": 6.0,
+				"distance": 14755.970703125,
+				"elapsed": 50.1833333333318,
+				"gap": 2113.53893298314,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 400.0,
+					"completed": 2.0,
+					"heal_choices": 0.0,
+					"identities": 1.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2675.0,
+				"target_speed": 309.51194140625
+			},
+			{
+				"chunks": 6.0,
+				"distance": 16311.271484375,
+				"elapsed": 55.1833333333315,
+				"gap": 2146.81942113837,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 400.0,
+					"completed": 2.0,
+					"heal_choices": 0.0,
+					"identities": 1.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2831.0,
+				"target_speed": 312.62254296875
+			},
+			{
+				"chunks": 6.0,
+				"distance": 17882.203125,
+				"elapsed": 60.1833333333312,
+				"gap": 2179.70074149922,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 400.0,
+					"completed": 2.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 2988.0,
+				"target_speed": 315.76440625
+			},
+			{
+				"chunks": 6.0,
+				"distance": 19468.93359375,
+				"elapsed": 65.1833333333309,
+				"gap": 2190.99635365323,
+				"health": 3.0,
+				"routes": {
+					"active": "404:15",
+					"combo_score": 400.0,
+					"completed": 2.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "started",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 3146.0,
+				"target_speed": 318.9378671875
+			},
+			{
+				"chunks": 7.0,
+				"distance": 21071.6171875,
+				"elapsed": 70.1833333333306,
+				"gap": 2487.71452299661,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 600.0,
+					"completed": 3.0,
+					"heal_choices": 0.0,
+					"identities": 1.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 3907.0,
+				"target_speed": 322.143234375
+			},
+			{
+				"chunks": 6.0,
+				"distance": 22690.39453125,
+				"elapsed": 75.1833333333304,
+				"gap": 2499.23136078446,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 600.0,
+					"completed": 3.0,
+					"heal_choices": 0.0,
+					"identities": 1.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 4069.0,
+				"target_speed": 325.3807890625
+			},
+			{
+				"chunks": 6.0,
+				"distance": 24325.435546875,
+				"elapsed": 80.1833333333301,
+				"gap": 2510.8588163188,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 600.0,
+					"completed": 3.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 4232.0,
+				"target_speed": 328.65087109375
+			},
+			{
+				"chunks": 6.0,
+				"distance": 25976.92578125,
+				"elapsed": 85.1833333333298,
+				"gap": 2615.97695318494,
+				"health": 3.0,
+				"routes": {
+					"active": "404:20",
+					"combo_score": 600.0,
+					"completed": 3.0,
+					"heal_choices": 0.0,
+					"identities": 0.0,
+					"interrupted": 0.0,
+					"last_event": "progress",
+					"progress": 1.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 4497.0,
+				"target_speed": 331.9538515625
+			},
+			{
+				"chunks": 7.0,
+				"distance": 27645.0078125,
+				"elapsed": 90.1833333333295,
+				"gap": 2830.29394959014,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 800.0,
+					"completed": 4.0,
+					"heal_choices": 0.0,
+					"identities": 1.0,
+					"interrupted": 0.0,
+					"last_event": "completed",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 5164.0,
+				"target_speed": 335.290015625
+			},
+			{
+				"chunks": 6.0,
+				"distance": 29329.841796875,
+				"elapsed": 95.1833333333292,
+				"gap": 2745.60399791614,
+				"health": 3.0,
+				"routes": {
+					"active": "",
+					"combo_score": 800.0,
+					"completed": 4.0,
+					"heal_choices": 1.0,
+					"identities": 2.0,
+					"interrupted": 0.0,
+					"last_event": "station",
+					"progress": 0.0,
+					"score_choices": 0.0,
+					"station_score": 0.0,
+					"total": 3.0
+				},
+				"score": 5332.0,
+				"target_speed": 338.65968359375
+			}
+		],
+		"score": 5344.0,
+		"seed": 404.0,
+		"station_event": [
+			{
+				"data": {
+					"amount": 0.0,
+					"id": "404:22",
+					"kind": "heal"
+				},
+				"distance": 28502.1640625,
+				"elapsed": 92.7333333333294,
+				"health": 3.0,
+				"kind": "station"
+			}
+		],
+		"strategy": "upper",
+		"timing": "normal wall clock, prior complete run",
+		"wall_seconds": 95.828
+	},
+	{
+		"breakdown": {
+			"combo": 0,
+			"completed": 0,
+			"distance": 2944,
+			"heal_choices": 0,
+			"nodes": 400,
+			"score_choices": 1,
+			"station": 200
+		},
+		"distance": 29448.396484375,
+		"elapsed": 95.5333333333292,
+		"events": [
+			{
+				"data": {
+					"amount": 200,
+					"id": "77:22",
+					"kind": "score"
+				},
+				"distance": 28502.15234375,
+				"elapsed": 92.7333333333294,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"failure": "",
+		"first_station_index": 22,
+		"generator_revision": 4,
+		"health": 3,
+		"hurt_count": 0,
+		"key_presses": 30,
+		"phase": "running",
+		"preview_window_seconds": 2.34999999999987,
+		"profile_fingerprint": "28caa4b5e31e",
+		"relay_events": [
+			{
+				"added_delay": 0.9,
+				"count": 1,
+				"distance": 7291.9541015625,
+				"health": 3,
+				"id": "77:5:low",
+				"position": "(7387.954, 432.948)",
+				"time": 25.4666666666665
+			},
+			{
+				"added_delay": 0.9,
+				"count": 2,
+				"distance": 13691.83984375,
+				"health": 3,
+				"id": "77:10:low",
+				"position": "(13787.84, 432.9252)",
+				"time": 46.733333333332
+			},
+			{
+				"added_delay": 0.9,
+				"count": 3,
+				"distance": 21372.548828125,
+				"health": 3,
+				"id": "77:16:low",
+				"position": "(21468.55, 432.9252)",
+				"time": 71.1166666666639
+			},
+			{
+				"added_delay": 0.9,
+				"count": 4,
+				"distance": 27773.568359375,
+				"health": 3,
+				"id": "77:21:low",
+				"position": "(27869.57, 381.1502)",
+				"time": 90.5666666666628
+			}
+		],
+		"routes": {
+			"active": "",
+			"combo_score": 0,
+			"completed": 0,
+			"heal_choices": 0,
+			"identities": 1,
+			"interrupted": 0,
+			"last_event": "station",
+			"progress": 0,
+			"score_choices": 1,
+			"station_score": 200,
+			"total": 3
+		},
+		"samples": [
+			{
+				"chunks": 3,
+				"distance": 0.388885498046875,
+				"elapsed": 0.0166666666666667,
+				"gap": 630.388885498047,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 0,
+				"target_speed": 280.000777770996
+			},
+			{
+				"chunks": 4,
+				"distance": 1389.32348632813,
+				"elapsed": 5.01666666666665,
+				"gap": 1199.20336650216,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 138,
+				"target_speed": 282.778646972656
+			},
+			{
+				"chunks": 5,
+				"distance": 2810.28637695313,
+				"elapsed": 10.0166666666667,
+				"gap": 1249.90672133179,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 281,
+				"target_speed": 285.620572753906
+			},
+			{
+				"chunks": 5,
+				"distance": 4245.53076171875,
+				"elapsed": 15.016666666667,
+				"gap": 1301.12045792062,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 424,
+				"target_speed": 288.491061523438
+			},
+			{
+				"chunks": 6,
+				"distance": 5695.22119140625,
+				"elapsed": 20.0166666666668,
+				"gap": 1352.87054881069,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 569,
+				"target_speed": 291.390442382813
+			},
+			{
+				"chunks": 6,
+				"distance": 7159.45458984375,
+				"elapsed": 25.0166666666665,
+				"gap": 1405.11428529576,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 715,
+				"target_speed": 294.318909179688
+			},
+			{
+				"chunks": 6,
+				"distance": 8638.416015625,
+				"elapsed": 30.0166666666662,
+				"gap": 1713.76469827862,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 963,
+				"target_speed": 297.27683203125
+			},
+			{
+				"chunks": 6,
+				"distance": 10132.2421875,
+				"elapsed": 35.016666666666,
+				"gap": 1745.76779530507,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1113,
+				"target_speed": 300.264484375
+			},
+			{
+				"chunks": 5,
+				"distance": 11641.0732421875,
+				"elapsed": 40.0166666666657,
+				"gap": 1778.05281820081,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1264,
+				"target_speed": 303.282146484375
+			},
+			{
+				"chunks": 5,
+				"distance": 13165.078125,
+				"elapsed": 45.0166666666654,
+				"gap": 1810.67230633882,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1416,
+				"target_speed": 306.33015625
+			},
+			{
+				"chunks": 6,
+				"distance": 14704.3955078125,
+				"elapsed": 50.0166666666651,
+				"gap": 2114.58132767741,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1670,
+				"target_speed": 309.408791015625
+			},
+			{
+				"chunks": 6,
+				"distance": 16259.1806640625,
+				"elapsed": 55.0166666666648,
+				"gap": 2147.8534299879,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1825,
+				"target_speed": 312.518361328125
+			},
+			{
+				"chunks": 6,
+				"distance": 17829.580078125,
+				"elapsed": 60.0166666666645,
+				"gap": 2181.42654842114,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1982,
+				"target_speed": 315.65916015625
+			},
+			{
+				"chunks": 6,
+				"distance": 19415.783203125,
+				"elapsed": 65.0166666666643,
+				"gap": 2192.75998744721,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2141,
+				"target_speed": 318.83156640625
+			},
+			{
+				"chunks": 5,
+				"distance": 21017.923828125,
+				"elapsed": 70.016666666664,
+				"gap": 2204.16285161714,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2301,
+				"target_speed": 322.03584765625
+			},
+			{
+				"chunks": 6,
+				"distance": 22636.1640625,
+				"elapsed": 75.0166666666637,
+				"gap": 2504.33867335123,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2563,
+				"target_speed": 325.272328125
+			},
+			{
+				"chunks": 6,
+				"distance": 24270.658203125,
+				"elapsed": 80.0166666666634,
+				"gap": 2515.9604095078,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2727,
+				"target_speed": 328.54131640625
+			},
+			{
+				"chunks": 6,
+				"distance": 25921.603515625,
+				"elapsed": 85.0166666666631,
+				"gap": 2527.7233100198,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2892,
+				"target_speed": 331.84320703125
+			},
+			{
+				"chunks": 7,
+				"distance": 27589.125,
+				"elapsed": 90.0166666666628,
+				"gap": 2539.56647156806,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 3058,
+				"target_speed": 335.17825
+			},
+			{
+				"chunks": 6,
+				"distance": 29273.392578125,
+				"elapsed": 95.0166666666626,
+				"gap": 2770.87143726469,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "station",
+					"progress": 0,
+					"score_choices": 1,
+					"station_score": 200,
+					"total": 3
+				},
+				"score": 3527,
+				"target_speed": 338.54678515625
+			}
+		],
+		"score": 3544,
+		"seed": 77,
+		"station_event": [
+			{
+				"data": {
+					"amount": 200,
+					"id": "77:22",
+					"kind": "score"
+				},
+				"distance": 28502.15234375,
+				"elapsed": 92.7333333333294,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"strategy": "primary",
+		"timing": "fixed60 GPU accelerated game time",
+		"wall_seconds": 34.899
+	},
+	{
+		"breakdown": {
+			"combo": 600,
+			"completed": 3,
+			"distance": 2944,
+			"heal_choices": 1,
+			"nodes": 1300,
+			"score_choices": 0,
+			"station": 0
+		},
+		"distance": 29449.38671875,
+		"elapsed": 96.0999999999958,
+		"events": [
+			{
+				"data": {
+					"id": "77:5"
+				},
+				"distance": 6587.515625,
+				"elapsed": 23.6333333333333,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "77:5",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 6680.3818359375,
+				"elapsed": 23.9499999999999,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:5",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 6934.8427734375,
+				"elapsed": 24.8166666666665,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:5",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 7140.689453125,
+				"elapsed": 25.5166666666665,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "77:5"
+				},
+				"distance": 7282.9912109375,
+				"elapsed": 25.9999999999998,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "77:10"
+				},
+				"distance": 12987.3701171875,
+				"elapsed": 44.9999999999987,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "77:10",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 13089.3935546875,
+				"elapsed": 45.333333333332,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:10",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 13334.529296875,
+				"elapsed": 46.133333333332,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:10",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 13539.107421875,
+				"elapsed": 46.7999999999986,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "77:10"
+				},
+				"distance": 13682.4755859375,
+				"elapsed": 47.2666666666653,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "77:16"
+				},
+				"distance": 20665.015625,
+				"elapsed": 69.4833333333307,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "77:16",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 20761.439453125,
+				"elapsed": 69.7833333333307,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:16",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 21045.69921875,
+				"elapsed": 70.6666666666639,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:16",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 21222.9453125,
+				"elapsed": 71.2166666666639,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "77:16"
+				},
+				"distance": 21362.732421875,
+				"elapsed": 71.6499999999972,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"amount": 0,
+					"id": "77:22",
+					"kind": "heal"
+				},
+				"distance": 28503.134765625,
+				"elapsed": 93.299999999996,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"failure": "",
+		"first_station_index": 22,
+		"generator_revision": 4,
+		"health": 3,
+		"hurt_count": 0,
+		"key_presses": 43,
+		"phase": "running",
+		"preview_window_seconds": 2.34999999999987,
+		"profile_fingerprint": "28caa4b5e31e",
+		"relay_events": [
+			{
+				"added_delay": 0.9,
+				"count": 1,
+				"distance": 6680.3818359375,
+				"health": 3,
+				"id": "77:5:challenge_1",
+				"position": "(6776.382, 350.5216)",
+				"time": 23.9499999999999
+			},
+			{
+				"added_delay": 0.0,
+				"count": 2,
+				"distance": 6934.8427734375,
+				"health": 3,
+				"id": "77:5:challenge_2",
+				"position": "(7030.843, 325.5728)",
+				"time": 24.8166666666665
+			},
+			{
+				"added_delay": 0.0,
+				"count": 3,
+				"distance": 7140.689453125,
+				"health": 3,
+				"id": "77:5:challenge_3",
+				"position": "(7236.689, 384.9252)",
+				"time": 25.5166666666665
+			},
+			{
+				"added_delay": 0.0,
+				"count": 4,
+				"distance": 7292.810546875,
+				"health": 3,
+				"id": "77:5:low",
+				"position": "(7388.811, 384.9252)",
+				"time": 26.0333333333331
+			},
+			{
+				"added_delay": 0.9,
+				"count": 5,
+				"distance": 13089.3935546875,
+				"health": 3,
+				"id": "77:10:challenge_1",
+				"position": "(13185.39, 350.5161)",
+				"time": 45.333333333332
+			},
+			{
+				"added_delay": 0.0,
+				"count": 6,
+				"distance": 13334.529296875,
+				"health": 3,
+				"id": "77:10:challenge_2",
+				"position": "(13430.53, 334.9336)",
+				"time": 46.133333333332
+			},
+			{
+				"added_delay": 0.0,
+				"count": 7,
+				"distance": 13539.107421875,
+				"health": 3,
+				"id": "77:10:challenge_3",
+				"position": "(13635.11, 400.9352)",
+				"time": 46.7999999999986
+			},
+			{
+				"added_delay": 0.0,
+				"count": 8,
+				"distance": 13692.7216796875,
+				"health": 3,
+				"id": "77:10:low",
+				"position": "(13788.72, 400.9352)",
+				"time": 47.2999999999986
+			},
+			{
+				"added_delay": 0.9,
+				"count": 9,
+				"distance": 20761.439453125,
+				"health": 3,
+				"id": "77:16:challenge_1",
+				"position": "(20857.44, 339.3486)",
+				"time": 69.7833333333307
+			},
+			{
+				"added_delay": 0.0,
+				"count": 10,
+				"distance": 21045.69921875,
+				"health": 3,
+				"id": "77:16:challenge_2",
+				"position": "(21141.7, 336.9252)",
+				"time": 70.6666666666639
+			},
+			{
+				"added_delay": 0.0,
+				"count": 11,
+				"distance": 21222.9453125,
+				"health": 3,
+				"id": "77:16:challenge_3",
+				"position": "(21318.95, 357.9252)",
+				"time": 71.2166666666639
+			},
+			{
+				"added_delay": 0.0,
+				"count": 12,
+				"distance": 21368.111328125,
+				"health": 3,
+				"id": "77:16:low",
+				"position": "(21464.11, 384.9252)",
+				"time": 71.6666666666639
+			},
+			{
+				"added_delay": 0.9,
+				"count": 13,
+				"distance": 27768.953125,
+				"health": 3,
+				"id": "77:21:low",
+				"position": "(27864.95, 385.0944)",
+				"time": 91.1166666666628
+			}
+		],
+		"routes": {
+			"active": "",
+			"combo_score": 600,
+			"completed": 3,
+			"heal_choices": 1,
+			"identities": 1,
+			"interrupted": 0,
+			"last_event": "station",
+			"progress": 0,
+			"score_choices": 0,
+			"station_score": 0,
+			"total": 3
+		},
+		"samples": [
+			{
+				"chunks": 3,
+				"distance": 0.388885498046875,
+				"elapsed": 0.0166666666666667,
+				"gap": 630.388885498047,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 0,
+				"target_speed": 280.000777770996
+			},
+			{
+				"chunks": 4,
+				"distance": 1389.32348632813,
+				"elapsed": 5.01666666666665,
+				"gap": 1199.20336650216,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 138,
+				"target_speed": 282.778646972656
+			},
+			{
+				"chunks": 5,
+				"distance": 2649.35327148438,
+				"elapsed": 10.0166666666667,
+				"gap": 1090.18892358224,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 264,
+				"target_speed": 285.298706542969
+			},
+			{
+				"chunks": 5,
+				"distance": 4082.97900390625,
+				"elapsed": 15.016666666667,
+				"gap": 1141.34367037179,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 408,
+				"target_speed": 288.165958007812
+			},
+			{
+				"chunks": 5,
+				"distance": 5531.0361328125,
+				"elapsed": 20.0166666666668,
+				"gap": 1193.03582900914,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 553,
+				"target_speed": 291.062072265625
+			},
+			{
+				"chunks": 6,
+				"distance": 6993.626953125,
+				"elapsed": 25.0166666666665,
+				"gap": 1500.05688697685,
+				"health": 3,
+				"routes": {
+					"active": "77:5",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "progress",
+					"progress": 2,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 899,
+				"target_speed": 293.98725390625
+			},
+			{
+				"chunks": 6,
+				"distance": 8470.9130859375,
+				"elapsed": 30.0166666666662,
+				"gap": 1552.74791759189,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1447,
+				"target_speed": 296.941826171875
+			},
+			{
+				"chunks": 6,
+				"distance": 9963.0556640625,
+				"elapsed": 35.016666666666,
+				"gap": 1584.71466124501,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1596,
+				"target_speed": 299.926111328125
+			},
+			{
+				"chunks": 5,
+				"distance": 11470.18359375,
+				"elapsed": 40.0166666666657,
+				"gap": 1616.96052193418,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1747,
+				"target_speed": 302.9403671875
+			},
+			{
+				"chunks": 5,
+				"distance": 12992.4697265625,
+				"elapsed": 45.0166666666654,
+				"gap": 1649.54197128129,
+				"health": 3,
+				"routes": {
+					"active": "77:10",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "started",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1899,
+				"target_speed": 305.984939453125
+			},
+			{
+				"chunks": 5,
+				"distance": 14530.0419921875,
+				"elapsed": 50.0166666666651,
+				"gap": 1952.34134181585,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2653,
+				"target_speed": 309.060083984375
+			},
+			{
+				"chunks": 6,
+				"distance": 16083.091796875,
+				"elapsed": 55.0166666666648,
+				"gap": 1985.59270531612,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2808,
+				"target_speed": 312.16618359375
+			},
+			{
+				"chunks": 6,
+				"distance": 17651.73828125,
+				"elapsed": 60.0166666666645,
+				"gap": 2019.14465621471,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2965,
+				"target_speed": 315.3034765625
+			},
+			{
+				"chunks": 6,
+				"distance": 19236.14453125,
+				"elapsed": 65.0166666666643,
+				"gap": 2030.4556879319,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 3123,
+				"target_speed": 318.4722890625
+			},
+			{
+				"chunks": 6,
+				"distance": 20836.48046875,
+				"elapsed": 70.016666666664,
+				"gap": 2116.3511609755,
+				"health": 3,
+				"routes": {
+					"active": "77:16",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "progress",
+					"progress": 1,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 3383,
+				"target_speed": 321.6729609375
+			},
+			{
+				"chunks": 6,
+				"distance": 22452.900390625,
+				"elapsed": 75.0166666666637,
+				"gap": 2340.91930660933,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 4045,
+				"target_speed": 324.90580078125
+			},
+			{
+				"chunks": 6,
+				"distance": 24085.552734375,
+				"elapsed": 80.0166666666634,
+				"gap": 2352.52795520354,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 4208,
+				"target_speed": 328.17110546875
+			},
+			{
+				"chunks": 6,
+				"distance": 25734.6328125,
+				"elapsed": 85.0166666666631,
+				"gap": 2364.27275584526,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 4373,
+				"target_speed": 331.469265625
+			},
+			{
+				"chunks": 6,
+				"distance": 27400.265625,
+				"elapsed": 90.0166666666628,
+				"gap": 2376.09292453917,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 4540,
+				"target_speed": 334.80053125
+			},
+			{
+				"chunks": 7,
+				"distance": 29082.6484375,
+				"elapsed": 95.0166666666626,
+				"gap": 2611.88162564389,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 1,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "station",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 4808,
+				"target_speed": 338.165296875
+			}
+		],
+		"score": 4844,
+		"seed": 77,
+		"station_event": [
+			{
+				"data": {
+					"amount": 0,
+					"id": "77:22",
+					"kind": "heal"
+				},
+				"distance": 28503.134765625,
+				"elapsed": 93.299999999996,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"strategy": "upper",
+		"timing": "fixed60 GPU accelerated game time",
+		"wall_seconds": 37.359
+	},
+	{
+		"breakdown": {
+			"combo": 0,
+			"completed": 0,
+			"distance": 2816,
+			"heal_choices": 0,
+			"nodes": 300,
+			"score_choices": 1,
+			"station": 200
+		},
+		"distance": 28165.490234375,
+		"elapsed": 91.7333333333294,
+		"events": [
+			{
+				"data": {
+					"amount": 200,
+					"id": "9001:21",
+					"kind": "score"
+				},
+				"distance": 27220.837890625,
+				"elapsed": 88.9166666666629,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"failure": "",
+		"first_station_index": 21,
+		"generator_revision": 4,
+		"health": 3,
+		"hurt_count": 0,
+		"key_presses": 28,
+		"phase": "running",
+		"preview_window_seconds": 2.36666666666653,
+		"profile_fingerprint": "28caa4b5e31e",
+		"relay_events": [
+			{
+				"added_delay": 0.9,
+				"count": 1,
+				"distance": 7291.94384765625,
+				"health": 3,
+				"id": "9001:5:low",
+				"position": "(7387.944, 432.948)",
+				"time": 25.4666666666665
+			},
+			{
+				"added_delay": 0.9,
+				"count": 2,
+				"distance": 14972.7666015625,
+				"health": 3,
+				"id": "9001:11:low",
+				"position": "(15068.77, 432.948)",
+				"time": 50.8833333333317
+			},
+			{
+				"added_delay": 0.9,
+				"count": 3,
+				"distance": 22652.4375,
+				"health": 3,
+				"id": "9001:17:low",
+				"position": "(22748.44, 432.948)",
+				"time": 75.0666666666637
+			}
+		],
+		"routes": {
+			"active": "",
+			"combo_score": 0,
+			"completed": 0,
+			"heal_choices": 0,
+			"identities": 1,
+			"interrupted": 0,
+			"last_event": "station",
+			"progress": 0,
+			"score_choices": 1,
+			"station_score": 200,
+			"total": 3
+		},
+		"samples": [
+			{
+				"chunks": 3,
+				"distance": 0.388885498046875,
+				"elapsed": 0.0166666666666667,
+				"gap": 630.388885498047,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 0,
+				"target_speed": 280.000777770996
+			},
+			{
+				"chunks": 4,
+				"distance": 1389.32348632813,
+				"elapsed": 5.01666666666665,
+				"gap": 1199.20336650216,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 138,
+				"target_speed": 282.778646972656
+			},
+			{
+				"chunks": 5,
+				"distance": 2810.28637695313,
+				"elapsed": 10.0166666666667,
+				"gap": 1249.90672133179,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 281,
+				"target_speed": 285.620572753906
+			},
+			{
+				"chunks": 5,
+				"distance": 4245.53173828125,
+				"elapsed": 15.016666666667,
+				"gap": 1301.12142849557,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 424,
+				"target_speed": 288.491063476562
+			},
+			{
+				"chunks": 6,
+				"distance": 5695.2109375,
+				"elapsed": 20.0166666666668,
+				"gap": 1352.86037371564,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 569,
+				"target_speed": 291.390421875
+			},
+			{
+				"chunks": 6,
+				"distance": 7159.4443359375,
+				"elapsed": 25.0166666666665,
+				"gap": 1405.10420907767,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 715,
+				"target_speed": 294.318888671875
+			},
+			{
+				"chunks": 6,
+				"distance": 8638.4169921875,
+				"elapsed": 30.0166666666662,
+				"gap": 1713.76593367116,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 963,
+				"target_speed": 297.276833984375
+			},
+			{
+				"chunks": 6,
+				"distance": 10132.234375,
+				"elapsed": 35.016666666666,
+				"gap": 1745.76026250075,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1113,
+				"target_speed": 300.26446875
+			},
+			{
+				"chunks": 5,
+				"distance": 11641.0634765625,
+				"elapsed": 40.0166666666657,
+				"gap": 1778.04341840617,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1264,
+				"target_speed": 303.282126953125
+			},
+			{
+				"chunks": 5,
+				"distance": 13165.0751953125,
+				"elapsed": 45.0166666666654,
+				"gap": 1810.66979211105,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1416,
+				"target_speed": 306.330150390625
+			},
+			{
+				"chunks": 6,
+				"distance": 14704.3828125,
+				"elapsed": 50.0166666666651,
+				"gap": 1843.6035730418,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1570,
+				"target_speed": 309.408765625
+			},
+			{
+				"chunks": 6,
+				"distance": 16259.1650390625,
+				"elapsed": 55.0166666666648,
+				"gap": 2150.09672463338,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1825,
+				"target_speed": 312.518330078125
+			},
+			{
+				"chunks": 6,
+				"distance": 17829.583984375,
+				"elapsed": 60.0166666666645,
+				"gap": 2183.68944038292,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1982,
+				"target_speed": 315.65916796875
+			},
+			{
+				"chunks": 6,
+				"distance": 19415.77734375,
+				"elapsed": 65.0166666666643,
+				"gap": 2195.01313731636,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2141,
+				"target_speed": 318.8315546875
+			},
+			{
+				"chunks": 5,
+				"distance": 21017.943359375,
+				"elapsed": 70.016666666664,
+				"gap": 2206.44127789394,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2301,
+				"target_speed": 322.03588671875
+			},
+			{
+				"chunks": 6,
+				"distance": 22636.171875,
+				"elapsed": 75.0166666666637,
+				"gap": 2217.94489701177,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2463,
+				"target_speed": 325.27234375
+			},
+			{
+				"chunks": 6,
+				"distance": 24270.673828125,
+				"elapsed": 80.0166666666634,
+				"gap": 2520.52406794415,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2727,
+				"target_speed": 328.54134765625
+			},
+			{
+				"chunks": 6,
+				"distance": 25921.609375,
+				"elapsed": 85.0166666666631,
+				"gap": 2532.2771052907,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2892,
+				"target_speed": 331.84321875
+			},
+			{
+				"chunks": 7,
+				"distance": 27589.123046875,
+				"elapsed": 90.0166666666628,
+				"gap": 2544.1123829127,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "station",
+					"progress": 0,
+					"score_choices": 1,
+					"station_score": 200,
+					"total": 3
+				},
+				"score": 3258,
+				"target_speed": 335.17824609375
+			}
+		],
+		"score": 3316,
+		"seed": 9001,
+		"station_event": [
+			{
+				"data": {
+					"amount": 200,
+					"id": "9001:21",
+					"kind": "score"
+				},
+				"distance": 27220.837890625,
+				"elapsed": 88.9166666666629,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"strategy": "primary",
+		"timing": "fixed60 GPU accelerated game time",
+		"wall_seconds": 34.273
+	},
+	{
+		"breakdown": {
+			"combo": 600,
+			"completed": 3,
+			"distance": 2816,
+			"heal_choices": 1,
+			"nodes": 1200,
+			"score_choices": 0,
+			"station": 0
+		},
+		"distance": 28166.474609375,
+		"elapsed": 92.299999999996,
+		"events": [
+			{
+				"data": {
+					"id": "9001:5"
+				},
+				"distance": 6587.50537109375,
+				"elapsed": 23.6333333333333,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "9001:5",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 6680.37158203125,
+				"elapsed": 23.9499999999999,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "9001:5",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 6934.83251953125,
+				"elapsed": 24.8166666666665,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "9001:5",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 7140.6796875,
+				"elapsed": 25.5166666666665,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "9001:5"
+				},
+				"distance": 7282.9814453125,
+				"elapsed": 25.9999999999998,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "9001:11"
+				},
+				"distance": 14267.59765625,
+				"elapsed": 49.1666666666652,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "9001:11",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 14360.1845703125,
+				"elapsed": 49.4666666666651,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "9001:11",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 14627.9697265625,
+				"elapsed": 50.3333333333318,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "9001:11",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 14818.7919921875,
+				"elapsed": 50.9499999999984,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "9001:11"
+				},
+				"distance": 14963.3544921875,
+				"elapsed": 51.416666666665,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "9001:17"
+				},
+				"distance": 21944.6953125,
+				"elapsed": 73.4499999999971,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "9001:17",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 22041.888671875,
+				"elapsed": 73.7499999999971,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "9001:17",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 22323.00390625,
+				"elapsed": 74.6166666666637,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "9001:17",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 22501.654296875,
+				"elapsed": 75.1666666666637,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "9001:17"
+				},
+				"distance": 22642.546875,
+				"elapsed": 75.599999999997,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"amount": 0,
+					"id": "9001:21",
+					"kind": "heal"
+				},
+				"distance": 27221.81640625,
+				"elapsed": 89.4833333333295,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"failure": "",
+		"first_station_index": 21,
+		"generator_revision": 4,
+		"health": 3,
+		"hurt_count": 0,
+		"key_presses": 41,
+		"phase": "running",
+		"preview_window_seconds": 2.36666666666653,
+		"profile_fingerprint": "28caa4b5e31e",
+		"relay_events": [
+			{
+				"added_delay": 0.9,
+				"count": 1,
+				"distance": 6680.37158203125,
+				"health": 3,
+				"id": "9001:5:challenge_1",
+				"position": "(6776.372, 350.5216)",
+				"time": 23.9499999999999
+			},
+			{
+				"added_delay": 0.0,
+				"count": 2,
+				"distance": 6934.83251953125,
+				"health": 3,
+				"id": "9001:5:challenge_2",
+				"position": "(7030.833, 341.5728)",
+				"time": 24.8166666666665
+			},
+			{
+				"added_delay": 0.0,
+				"count": 3,
+				"distance": 7140.6796875,
+				"health": 3,
+				"id": "9001:5:challenge_3",
+				"position": "(7236.68, 400.9352)",
+				"time": 25.5166666666665
+			},
+			{
+				"added_delay": 0.0,
+				"count": 4,
+				"distance": 7292.80078125,
+				"health": 3,
+				"id": "9001:5:low",
+				"position": "(7388.801, 400.9352)",
+				"time": 26.0333333333331
+			},
+			{
+				"added_delay": 0.9,
+				"count": 5,
+				"distance": 14360.1845703125,
+				"health": 3,
+				"id": "9001:11:challenge_1",
+				"position": "(14456.18, 342.4937)",
+				"time": 49.4666666666651
+			},
+			{
+				"added_delay": 0.0,
+				"count": 6,
+				"distance": 14627.9697265625,
+				"health": 3,
+				"id": "9001:11:challenge_2",
+				"position": "(14723.97, 332.7953)",
+				"time": 50.3333333333318
+			},
+			{
+				"added_delay": 0.0,
+				"count": 7,
+				"distance": 14818.7919921875,
+				"health": 3,
+				"id": "9001:11:challenge_3",
+				"position": "(14914.79, 375.4252)",
+				"time": 50.9499999999984
+			},
+			{
+				"added_delay": 0.0,
+				"count": 8,
+				"distance": 14968.51953125,
+				"health": 3,
+				"id": "9001:11:low",
+				"position": "(15064.52, 384.9252)",
+				"time": 51.4333333333317
+			},
+			{
+				"added_delay": 0.9,
+				"count": 9,
+				"distance": 22041.888671875,
+				"health": 3,
+				"id": "9001:17:challenge_1",
+				"position": "(22137.89, 339.3549)",
+				"time": 73.7499999999971
+			},
+			{
+				"added_delay": 0.0,
+				"count": 10,
+				"distance": 22323.00390625,
+				"health": 3,
+				"id": "9001:17:challenge_2",
+				"position": "(22419.0, 304.9252)",
+				"time": 74.6166666666637
+			},
+			{
+				"added_delay": 0.0,
+				"count": 11,
+				"distance": 22501.654296875,
+				"health": 3,
+				"id": "9001:17:challenge_3",
+				"position": "(22597.65, 325.9252)",
+				"time": 75.1666666666637
+			},
+			{
+				"added_delay": 0.0,
+				"count": 12,
+				"distance": 22680.5,
+				"health": 3,
+				"id": "9001:17:low",
+				"position": "(22776.5, 377.6752)",
+				"time": 75.7166666666637
+			}
+		],
+		"routes": {
+			"active": "",
+			"combo_score": 600,
+			"completed": 3,
+			"heal_choices": 1,
+			"identities": 1,
+			"interrupted": 0,
+			"last_event": "station",
+			"progress": 0,
+			"score_choices": 0,
+			"station_score": 0,
+			"total": 3
+		},
+		"samples": [
+			{
+				"chunks": 3,
+				"distance": 0.388885498046875,
+				"elapsed": 0.0166666666666667,
+				"gap": 630.388885498047,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 0,
+				"target_speed": 280.000777770996
+			},
+			{
+				"chunks": 4,
+				"distance": 1389.32348632813,
+				"elapsed": 5.01666666666665,
+				"gap": 1199.20336650216,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 138,
+				"target_speed": 282.778646972656
+			},
+			{
+				"chunks": 5,
+				"distance": 2649.35327148438,
+				"elapsed": 10.0166666666667,
+				"gap": 1090.18892358224,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 264,
+				"target_speed": 285.298706542969
+			},
+			{
+				"chunks": 5,
+				"distance": 4082.97900390625,
+				"elapsed": 15.016666666667,
+				"gap": 1141.34366968122,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 408,
+				"target_speed": 288.165958007812
+			},
+			{
+				"chunks": 5,
+				"distance": 5531.02587890625,
+				"elapsed": 20.0166666666668,
+				"gap": 1193.02564816197,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 553,
+				"target_speed": 291.062051757813
+			},
+			{
+				"chunks": 6,
+				"distance": 6993.61669921875,
+				"elapsed": 25.0166666666665,
+				"gap": 1500.04678720878,
+				"health": 3,
+				"routes": {
+					"active": "9001:5",
+					"combo_score": 0,
+					"completed": 0,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "progress",
+					"progress": 2,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 899,
+				"target_speed": 293.987233398438
+			},
+			{
+				"chunks": 6,
+				"distance": 8470.923828125,
+				"elapsed": 30.0166666666662,
+				"gap": 1552.75888707081,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1447,
+				"target_speed": 296.94184765625
+			},
+			{
+				"chunks": 6,
+				"distance": 9963.056640625,
+				"elapsed": 35.016666666666,
+				"gap": 1584.71578942278,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1596,
+				"target_speed": 299.92611328125
+			},
+			{
+				"chunks": 5,
+				"distance": 11470.1875,
+				"elapsed": 40.0166666666657,
+				"gap": 1616.96454683002,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1747,
+				"target_speed": 302.940375
+			},
+			{
+				"chunks": 5,
+				"distance": 12992.48828125,
+				"elapsed": 45.0166666666654,
+				"gap": 1649.56050856389,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 1899,
+				"target_speed": 305.9849765625
+			},
+			{
+				"chunks": 5,
+				"distance": 14530.0703125,
+				"elapsed": 50.0166666666651,
+				"gap": 1848.71797633106,
+				"health": 3,
+				"routes": {
+					"active": "9001:11",
+					"combo_score": 200,
+					"completed": 1,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "progress",
+					"progress": 1,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2153,
+				"target_speed": 309.060140625
+			},
+			{
+				"chunks": 6,
+				"distance": 16083.0986328125,
+				"elapsed": 55.0166666666648,
+				"gap": 1987.83968686004,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2808,
+				"target_speed": 312.166197265625
+			},
+			{
+				"chunks": 6,
+				"distance": 17651.740234375,
+				"elapsed": 60.0166666666645,
+				"gap": 2021.38671828155,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 2965,
+				"target_speed": 315.30348046875
+			},
+			{
+				"chunks": 6,
+				"distance": 19236.140625,
+				"elapsed": 65.0166666666643,
+				"gap": 2032.69192100604,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 3123,
+				"target_speed": 318.47228125
+			},
+			{
+				"chunks": 6,
+				"distance": 20836.494140625,
+				"elapsed": 70.016666666664,
+				"gap": 2044.10013955795,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 3283,
+				"target_speed": 321.67298828125
+			},
+			{
+				"chunks": 6,
+				"distance": 22452.91015625,
+				"elapsed": 75.0166666666637,
+				"gap": 2345.45945297037,
+				"health": 3,
+				"routes": {
+					"active": "9001:17",
+					"combo_score": 400,
+					"completed": 2,
+					"heal_choices": 0,
+					"identities": 0,
+					"interrupted": 0,
+					"last_event": "progress",
+					"progress": 2,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 3645,
+				"target_speed": 324.9058203125
+			},
+			{
+				"chunks": 6,
+				"distance": 24085.560546875,
+				"elapsed": 80.0166666666634,
+				"gap": 2357.06605316152,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 4208,
+				"target_speed": 328.17112109375
+			},
+			{
+				"chunks": 6,
+				"distance": 25734.630859375,
+				"elapsed": 85.0166666666631,
+				"gap": 2368.80105721611,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 0,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "completed",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 4373,
+				"target_speed": 331.46926171875
+			},
+			{
+				"chunks": 6,
+				"distance": 27400.279296875,
+				"elapsed": 90.0166666666628,
+				"gap": 2380.63682537754,
+				"health": 3,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 1,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "station",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"score": 4540,
+				"target_speed": 334.80055859375
+			}
+		],
+		"score": 4616,
+		"seed": 9001,
+		"station_event": [
+			{
+				"data": {
+					"amount": 0,
+					"id": "9001:21",
+					"kind": "heal"
+				},
+				"distance": 27221.81640625,
+				"elapsed": 89.4833333333295,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"strategy": "upper",
+		"timing": "fixed60 GPU accelerated game time",
+		"wall_seconds": 33.887
+	}
+]

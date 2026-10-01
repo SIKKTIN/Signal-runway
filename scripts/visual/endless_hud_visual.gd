@@ -43,7 +43,7 @@ func _ready() -> void:
 	_score = _column(row, "总分", "0", 30, Color("e6efed"), 120)
 	_distance = _column(row, "最远距离", "0", 25, Color("45dccb"), 160)
 	_relay = _column(row, "中继", "0", 25, Color("ffd166"), 96)
-	_record = _column(row, "v0.5 本机最高", "0", 25, Color("ffd166"), 140)
+	_record = _column(row, "本机最高", "0", 25, Color("ffd166"), 140)
 	_gain = Label.new()
 	_gain.add_theme_font_size_override("font_size", 18)
 	_gain.add_theme_color_override("font_color", Color("ffd166"))
@@ -86,6 +86,9 @@ func _column(row: HBoxContainer, title: String, initial: String, size: int, colo
 func bind_flow(flow: Node) -> void:
 	_disconnect_sources()
 	_flow = flow
+	if is_instance_valid(_record):
+		var caption: Label = _record.get_parent().get_child(0)
+		caption.text = "v0.%d 本机最高" % int(flow.endless_record.expected_rules_revision)
 	_animation_time = 0
 	_pulse_until = -1
 	_record_until = -1

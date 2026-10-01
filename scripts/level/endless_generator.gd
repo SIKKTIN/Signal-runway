@@ -12,8 +12,13 @@ var last_id := ""
 var last_difficulty := 0
 var walls_since_relay := 0
 var pool: Array[String] = []
+var rhythm: RefCounted
 func reset(seed_value: int, settings: Dictionary = {}) -> void:
 	profile = Profile.defaults() if settings.is_empty() or not Profile.validate(settings).is_empty() else Profile.normalized(settings)
+	rhythm = null
+	if profile.generator_revision == 4:
+		rhythm = load("res://scripts/level/rhythm_generator.gd").new()
+		rhythm.reset(seed_value,profile)
 	rng.seed = seed_value
 	geometry_seed = seed_value
 	recent_vertical.clear()
@@ -24,6 +29,10 @@ func reset(seed_value: int, settings: Dictionary = {}) -> void:
 	walls_since_relay = 0
 	pool = Library.ids()
 func next() -> Dictionary:
+	if rhythm != null:
+		var row: Dictionary = rhythm.next()
+		index = int(row.index)+1
+		return row
 	# Map stage uses nominal route time, independent of frame/prefetch/player input.
 	var stage := mini(3, int(index * Library.LENGTH / profile.stage_distance))
 	var selected := ""

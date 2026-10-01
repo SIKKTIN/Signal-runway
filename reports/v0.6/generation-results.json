@@ -1,0 +1,14 @@
+{
+	"challenges": 3082,
+	"failure_count": 0,
+	"failures": [],
+	"legacy_versions": [
+		2,
+		3
+	],
+	"method": "deterministic snapshot/metadata checks; not physical traversal",
+	"passed": true,
+	"seeds": 100,
+	"segments_per_seed": 200,
+	"stations": 948
+}
