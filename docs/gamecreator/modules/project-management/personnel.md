@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-10-01T09:03:49.786Z
-> 文档内容基准：11aab9ad84660082c681d993182d1a322e0f48e5c276731f6172e7bb35c40009
+> 文档生成时间：2026-10-01T10:06:21.067Z
+> 文档内容基准：43293a94b7b035e55648bb2e926f51f9c6d1a1f3565b649beb65e77535db008b
 
-> 项目版本：v0.5
+> 项目版本：v0.6
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -45,11 +45,11 @@
 - v0.5 编辑器与配置升级 [20674273-a249-42bf-9f19-b64ddfa7aaa7] · 已完成
 - v0.5 追赶联动与成绩集成 [ab334011-e6cf-4ad2-9ee5-0b4a392e4329] · 已完成
 - v0.5 缺陷修复与源工程交付 [b777488d-40ae-4774-9f30-69aee7cd5e43] · 已完成
-- v0.6 段落编排与灰盒 [82ffa77d-030a-4259-ba32-a632022c3067] · 待开始
-- v0.6 高路连段系统 [23476a8c-1736-4a3b-9459-f5d3964c85a3] · 待开始
-- v0.6 恢复站互斥路线 [4787359f-66b5-40a4-a3d3-8294de960f25] · 待开始
-- v0.6 编辑器与规则记录 [f7d4d7cb-bdc7-4dba-884e-6e16023903e7] · 待开始
-- v0.6 调参修复与源交付 [484d3e04-5c5b-4a68-b068-8314eabdfac4] · 待开始
+- v0.6 段落编排与灰盒 [82ffa77d-030a-4259-ba32-a632022c3067] · 已完成
+- v0.6 高路连段系统 [23476a8c-1736-4a3b-9459-f5d3964c85a3] · 已完成
+- v0.6 恢复站互斥路线 [4787359f-66b5-40a4-a3d3-8294de960f25] · 已完成
+- v0.6 编辑器与规则记录 [f7d4d7cb-bdc7-4dba-884e-6e16023903e7] · 已完成
+- v0.6 调参修复与源交付 [484d3e04-5c5b-4a68-b068-8314eabdfac4] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -70,8 +70,8 @@
 - v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
 - v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 已完成
 - v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
-- v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 待开始
-- v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 待开始
+- v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
+- v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -355,7 +355,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 
 ## 制作人行动清单
 
-当前排期判断：已建立计划，准备组织制作。这只是排期快照，不能代替引擎实际检查。
+当前排期判断：任务已完成，需检查里程碑验收与下一轮目标。这只是排期快照，不能代替引擎实际检查。
 
 ### 制作人职责与交接边界
 
@@ -723,7 +723,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.6 段落编排与灰盒
 - ID：82ffa77d-030a-4259-ba32-a632022c3067
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.6-plan.md工作包A；预算3至4小时。当前仅登记计划，待用户启动后执行；日期为建议窗口。
 - 前置任务：无
 - 允许修改路径：scripts、resources/generation、scenes、project.godot、assets/art-manifest.json、planning/v0.6-plan.md、docs、reports/v0.6、README.md
@@ -734,7 +734,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.6 高路连段系统
 - ID：23476a8c-1736-4a3b-9459-f5d3964c85a3
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.6-plan.md工作包B；预算3至4小时。当前仅登记计划，待用户启动后执行；日期为建议窗口。
 - 前置任务：82ffa77d-030a-4259-ba32-a632022c3067
 - 允许修改路径：scripts、resources/generation、scenes、project.godot、assets/art-manifest.json、planning/v0.6-plan.md、docs、reports/v0.6、README.md
@@ -745,7 +745,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.6 恢复站互斥路线
 - ID：4787359f-66b5-40a4-a3d3-8294de960f25
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.6-plan.md工作包C；预算2至3小时。当前仅登记计划，待用户启动后执行；日期为建议窗口。
 - 前置任务：82ffa77d-030a-4259-ba32-a632022c3067
 - 允许修改路径：scripts、resources/generation、scenes、project.godot、assets/art-manifest.json、planning/v0.6-plan.md、docs、reports/v0.6、README.md
@@ -756,7 +756,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.6 编辑器与规则记录
 - ID：f7d4d7cb-bdc7-4dba-884e-6e16023903e7
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.6-plan.md工作包D；预算3至4小时。当前仅登记计划，待用户启动后执行；日期为建议窗口。
 - 前置任务：23476a8c-1736-4a3b-9459-f5d3964c85a3、4787359f-66b5-40a4-a3d3-8294de960f25
 - 允许修改路径：scripts、resources/generation、scenes、project.godot、assets/art-manifest.json、planning/v0.6-plan.md、docs、reports/v0.6、README.md
@@ -767,7 +767,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.6 调参修复与源交付
 - ID：484d3e04-5c5b-4a68-b068-8314eabdfac4
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.6-plan.md工作包G；预算3至5小时。当前仅登记计划，待用户启动后执行；日期为建议窗口。
 - 前置任务：5956e495-dec4-4fe2-942e-edebdfca26d0
 - 允许修改路径：scripts、resources/generation、scenes、project.godot、assets/art-manifest.json、planning/v0.6-plan.md、docs、reports/v0.6、README.md
@@ -817,13 +817,13 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 已完成
 - v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
 - v0.5 缺陷修复与源工程交付 [b777488d-40ae-4774-9f30-69aee7cd5e43] · 已完成
-- v0.6 段落编排与灰盒 [82ffa77d-030a-4259-ba32-a632022c3067] · 待开始
-- v0.6 高路连段系统 [23476a8c-1736-4a3b-9459-f5d3964c85a3] · 待开始
-- v0.6 恢复站互斥路线 [4787359f-66b5-40a4-a3d3-8294de960f25] · 待开始
-- v0.6 编辑器与规则记录 [f7d4d7cb-bdc7-4dba-884e-6e16023903e7] · 待开始
-- v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 待开始
-- v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 待开始
-- v0.6 调参修复与源交付 [484d3e04-5c5b-4a68-b068-8314eabdfac4] · 待开始
+- v0.6 段落编排与灰盒 [82ffa77d-030a-4259-ba32-a632022c3067] · 已完成
+- v0.6 高路连段系统 [23476a8c-1736-4a3b-9459-f5d3964c85a3] · 已完成
+- v0.6 恢复站互斥路线 [4787359f-66b5-40a4-a3d3-8294de960f25] · 已完成
+- v0.6 编辑器与规则记录 [f7d4d7cb-bdc7-4dba-884e-6e16023903e7] · 已完成
+- v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
+- v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
+- v0.6 调参修复与源交付 [484d3e04-5c5b-4a68-b068-8314eabdfac4] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -1268,7 +1268,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.6 场景与状态表现
 - ID：12037ba0-a14d-4412-8ea5-87a3133c4253
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.6-plan.md工作包E；预算3至4小时。当前仅登记计划，待用户启动后执行；日期为建议窗口。
 - 前置任务：23476a8c-1736-4a3b-9459-f5d3964c85a3、4787359f-66b5-40a4-a3d3-8294de960f25
 - 允许修改路径：assets、scenes/ui、scenes/tools/generation_editor_theme.tres、docs/art/v0.6.md、reports/v0.6/art、reports/v0.6/independent-checks、reports/v0.6/independent-review.md
@@ -1278,7 +1278,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.6 同版本独立试玩
 - ID：5956e495-dec4-4fe2-942e-edebdfca26d0
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.6-plan.md工作包F；预算2至3小时。当前仅登记计划，待用户启动后执行；日期为建议窗口。
 - 前置任务：f7d4d7cb-bdc7-4dba-884e-6e16023903e7、12037ba0-a14d-4412-8ea5-87a3133c4253
 - 允许修改路径：assets、scenes/ui、scenes/tools/generation_editor_theme.tres、docs/art/v0.6.md、reports/v0.6/art、reports/v0.6/independent-checks、reports/v0.6/independent-review.md
@@ -1304,5 +1304,5 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
 - v0.5 地形层次与状态美术 [d256cca8-e192-49da-99b5-62aa8d1a96d6] · 已完成
 - v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
-- v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 待开始
-- v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 待开始
+- v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
+- v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成

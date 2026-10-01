@@ -61,6 +61,7 @@
 - [v0.6 制作计划](planning/v0.6-plan.md)
 - [v0.6 运行与编辑器说明](docs/run-v0.6.md)
 - [v0.6 场景与状态美术](docs/art/v0.6.md)
+- [v0.6 正式交付状态](reports/v0.6/delivery-state.md)
 - [v0.6 工程验收](reports/v0.6/final-acceptance.md)
 - [v0.6 主美独立检查](reports/v0.6/independent-review.md)
 - [v0.6 当前源文件清单](reports/v0.6/version-manifest.json)
