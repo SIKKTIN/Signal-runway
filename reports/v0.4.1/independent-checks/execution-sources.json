@@ -1,0 +1,20 @@
+{
+  "version": "v0.4.1+9a4c5e62e9f9",
+  "checkScriptSha256": "f13b619228b757a186b6a142d92d212fe7812fe05b52a4c80ab7ea7b28095c78",
+  "runs": [
+    {
+      "file": "runtime.log",
+      "runner": "主美获批准的检查环境",
+      "passedLines": 27,
+      "falseLines": 0,
+      "logSha256": "249b1c52954e9846578780bbb1075605cfe0a1a7bdfff0856a83a13f8e2b1627"
+    },
+    {
+      "file": "producer-runtime.log",
+      "runner": "制作人代运行同一独立脚本",
+      "passedLines": 27,
+      "falseLines": 0,
+      "logSha256": "249b1c52954e9846578780bbb1075605cfe0a1a7bdfff0856a83a13f8e2b1627"
+    }
+  ]
+}

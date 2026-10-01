@@ -1,0 +1,74 @@
+{
+	"checks": [
+		{
+			"check": "shared_generator_preview_and_theme_ready",
+			"passed": true
+		},
+		{
+			"check": "ui_parameter_live_debounce_changes_sequence",
+			"passed": true
+		},
+		{
+			"check": "locked_safe_and_relay_controls",
+			"passed": true
+		},
+		{
+			"check": "real_mouse_selects_next_chunk",
+			"passed": true
+		},
+		{
+			"check": "single_view_uses_same_geometry",
+			"passed": true
+		},
+		{
+			"check": "wheel_zoom_responds",
+			"passed": true
+		},
+		{
+			"check": "named_save_actual_control",
+			"passed": true
+		},
+		{
+			"check": "reset_restores_builtin_not_applied",
+			"passed": true
+		},
+		{
+			"check": "named_load_restores_parameters",
+			"passed": true
+		},
+		{
+			"check": "apply_opens_confirmation_without_write",
+			"passed": true
+		},
+		{
+			"check": "confirmed_apply_backup_and_baseline",
+			"passed": true
+		},
+		{
+			"check": "backup_load_is_draft_only",
+			"passed": true
+		},
+		{
+			"check": "real_control_launches_main_with_same_profile_seed",
+			"passed": true
+		},
+		{
+			"check": "trial_record_isolation",
+			"passed": true
+		},
+		{
+			"check": "f8_returns_and_cleans_trial",
+			"passed": true
+		},
+		{
+			"check": "invalid_draft_visible_and_blocks_trial",
+			"passed": true
+		},
+		{
+			"check": "960_native_core_controls_within_viewport",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"scope": "Native GPU control clicks/scroll/F8; SpinBox values assigned, confirmation signal explicitly emitted; application file is isolated fixture, real project default never overwritten."
+}

@@ -1,0 +1,27 @@
+{
+	"checks": [
+		{
+			"logical_size": "(1280.0, 720.0)",
+			"overflow": [],
+			"passed": true,
+			"size": "(1280, 720)"
+		},
+		{
+			"logical_size": "(960.0, 540.0)",
+			"overflow": [],
+			"passed": true,
+			"size": "(960, 540)"
+		},
+		{
+			"check": "chinese_font_and_size",
+			"passed": true
+		},
+		{
+			"check": "standalone_resource",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"scope": "Theme controls sample only; actual editor not yet checked."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "generator_revision": 2,
+  "stage_distance": 8400,
+  "relay_min": 5,
+  "relay_max": 6,
+  "templates": {
+    "safe_a": {
+      "enabled": true,
+      "weight": 1
+    },
+    "safe_b": {
+      "enabled": true,
+      "weight": 1
+    },
+    "gap": {
+      "enabled": true,
+      "weight": 1
+    },
+    "spike": {
+      "enabled": true,
+      "weight": 1
+    },
+    "relay_a": {
+      "enabled": true,
+      "weight": 1
+    },
+    "wall_a": {
+      "enabled": true,
+      "weight": 1
+    },
+    "step": {
+      "enabled": true,
+      "weight": 1
+    },
+    "rhythm_a": {
+      "enabled": true,
+      "weight": 1
+    },
+    "rhythm_b": {
+      "enabled": true,
+      "weight": 1
+    },
+    "rhythm_c": {
+      "enabled": true,
+      "weight": 1
+    },
+    "relay_b": {
+      "enabled": true,
+      "weight": 1
+    },
+    "wall_b": {
+      "enabled": true,
+      "weight": 1
+    }
+  }
+}

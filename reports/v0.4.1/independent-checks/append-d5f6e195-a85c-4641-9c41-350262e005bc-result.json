@@ -1,0 +1,66 @@
+{
+  "id": "d5f6e195-a85c-4641-9c41-350262e005bc",
+  "digest": "a2c03f62014e3c6d30b9edb35121acad0f5128dc03d570ddc841828c47da34ba",
+  "operation": "feedback_append",
+  "memberId": "f460c4d7-9bf2-4d95-b943-64327a53c0fe",
+  "memberName": "主美",
+  "at": "2026-10-01T03:12:17.263Z",
+  "status": "succeeded",
+  "result": {
+    "id": "50db62a4-7a21-41c2-ba7e-6598daac7b38",
+    "taskId": "7edf01a5-f63a-4172-be43-055264d110cb",
+    "memberId": "f460c4d7-9bf2-4d95-b943-64327a53c0fe",
+    "reviewerId": "f1557ee7-66f2-4240-a463-e8209d912a4e",
+    "status": "待验收",
+    "summary": "冻结9a4c5e62e9f9/90文件前后哈希一致；独立编写并自跑27GUI项通过，制作人环境同脚本27项通过。鼠标确认/取消、键盘调参、命名保存加载/备份/试玩R换图F8及960可操作。保留初始目录/窗口坐标夹具问题与两环境日志；目视发现确认框英文样式及1280试玩F8提示叠新手灰字，已发制作人，待评审处理。",
+    "evidence": [
+      "docs/art/v0.4.1-editor.md",
+      "reports/v0.4.1/independent-review.md",
+      "reports/v0.4.1/independent-checks/runtime.json",
+      "reports/v0.4.1/independent-checks/runtime.log",
+      "reports/v0.4.1/independent-checks/producer-runtime.log",
+      "reports/v0.4.1/independent-checks/hashes-before.json",
+      "reports/v0.4.1/independent-checks/hashes-after.json",
+      "reports/v0.4.1/independent-checks/trial.png"
+    ],
+    "at": "2026-10-01T03:10:39.366Z",
+    "evidenceVersion": 2,
+    "state": "pending",
+    "supplements": [
+      {
+        "id": "d5f6e195-a85c-4641-9c41-350262e005bc",
+        "memberId": "f460c4d7-9bf2-4d95-b943-64327a53c0fe",
+        "at": "2026-10-01T03:12:17.331Z",
+        "note": "按制作人要求补入D修复安排：C旧候选27项和提示交叠保留，D改右下提示背板和中文确认；计划不当已实现。C报告评审有效性与最终工程放行分开，新候选只做针对性复核。",
+        "deliveryVersion": "v0.4.1+9a4c5e62e9f9",
+        "evidence": [
+          "reports/v0.4.1/independent-review.md"
+        ]
+      }
+    ],
+    "correctionVersion": 0,
+    "guidance": {
+      "taskStatus": "待验收",
+      "feedbackId": "50db62a4-7a21-41c2-ba7e-6598daac7b38",
+      "feedbackState": "pending",
+      "evidenceVersion": 2,
+      "correctionVersion": 0,
+      "actions": [
+        {
+          "operation": "feedback_append",
+          "cli": "feedback append",
+          "feedbackId": "50db62a4-7a21-41c2-ba7e-6598daac7b38",
+          "meaning": "同一交付补充证据，更新 evidenceVersion"
+        }
+      ],
+      "note": "提示不代替权限、版本、输入与验收检查；更改证据文件不会自动更新已登记的反馈。",
+      "taskRevision": "861561f998b36eeff122a0cfb09464abef562d60ce8e7682c8b3bfe52de50c46"
+    },
+    "reviewMode": "independent",
+    "reviewerName": "制作人",
+    "taskRevision": "861561f998b36eeff122a0cfb09464abef562d60ce8e7682c8b3bfe52de50c46",
+    "delivery": "review_inbox",
+    "next": "等待验收；可继续其他已分配任务",
+    "received": true
+  }
+}

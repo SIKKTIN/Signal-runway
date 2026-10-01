@@ -1,0 +1,7 @@
+{
+  "old": "v0.4.1+9a4c5e62e9f9",
+  "new": "v0.4.1+bb7a199ab9de",
+  "changed": [
+    "scripts/tools/generation_editor.gd"
+  ]
+}

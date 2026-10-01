@@ -1,0 +1,147 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "actual_tool_entry_theme_rows_and_locked_controls",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "wheel_zoom_through_gui",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "middle_drag_pans_through_gui",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "canvas_click_selects_segment_and_reasons",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "single_segment_toggle",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "next_segment_button",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "keyboard_seed_count_commits",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "weight_and_disabled_filter_update_draft",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "details_and_fingerprint_show_difference",
+			"passed": true
+		},
+		{
+			"actual": "已保存",
+			"check": "mouse_save_unique_profile",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "restore_builtin_default",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "mouse_load_restores_saved_draft",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "invalid_name_error_visible",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "invalid_range_visible_and_blocks_trial",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "apply_shows_confirmation_dialog",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "cancel_does_not_apply",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "confirmed_mouse_apply_isolated_file_and_backup",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "backup_load_changes_draft_only",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_play_button_runs_main_with_profile",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "trial_record_isolated_from_official",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "trial_r_preserves_seed_and_config",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "trial_new_map_keeps_profile",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "f8_returns_draft_and_cleans_trial_record",
+			"passed": true
+		},
+		{
+			"actual": {
+				"canvas": "(960.0, 540.0)",
+				"preview": "(658.0, 157.0)"
+			},
+			"check": "960_core_actions_within_native_canvas",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "960_play_return_controls_operate",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "old_game_default_enter_still_runs",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "old_f2_lab_still_manual_goal",
+			"passed": true
+		}
+	],
+	"isolated_default": "res://reports/v0.4.1/independent-checks/isolated-default-27548.json",
+	"passed": true,
+	"profile_file": "user://map_editor_profiles/C104_27548.json",
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"scope": "Input.parse_input_event mouse/key through actual controls; profile dropdown index selection and default_path setup are explicit fixtures. Trial caught result only is a state fixture. No real production default application."
+}

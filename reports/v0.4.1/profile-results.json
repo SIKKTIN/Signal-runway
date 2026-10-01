@@ -1,0 +1,73 @@
+{
+	"checks": [
+		{
+			"check": "built_in_and_project_default_valid",
+			"passed": true
+		},
+		{
+			"check": "field_order_stable_fingerprint",
+			"passed": true
+		},
+		{
+			"check": "invalid_types_ranges_nonfinite_ids_and_locked_rejected",
+			"passed": true
+		},
+		{
+			"check": "100_seed_200_default_legacy_sequences_identical",
+			"passed": true
+		},
+		{
+			"check": "100_seed_200_custom_constraints_and_disabled_filter",
+			"passed": true
+		},
+		{
+			"check": "higher_weight_changes_actual_eligible_distribution",
+			"passed": true
+		},
+		{
+			"check": "custom_seed_unrelated_rng_and_diagnostics_read_only",
+			"passed": true
+		},
+		{
+			"check": "save_load_atomic_profile",
+			"passed": true
+		},
+		{
+			"check": "backup_retains_previous_valid_profile",
+			"passed": true
+		},
+		{
+			"check": "invalid_save_preserves_previous_file",
+			"passed": true
+		},
+		{
+			"check": "write_failure_reported",
+			"passed": true
+		},
+		{
+			"check": "corrupt_missing_safe_visible_fallback",
+			"passed": true
+		},
+		{
+			"check": "real_course_preview_custom_prefix_identical",
+			"passed": true
+		},
+		{
+			"check": "running_course_profile_is_snapshot",
+			"passed": true
+		},
+		{
+			"check": "same_seed_retry_keeps_round_profile",
+			"passed": true
+		},
+		{
+			"check": "fixed_level_manual_and_goal_compatible",
+			"passed": true
+		}
+	],
+	"default_spikes": 1510,
+	"invalid_samples": 16,
+	"passed": true,
+	"scope": "100x200 frozen v0.4 IDs compared; configuration structural constraints and file lifecycle; explicit main prefix fixture, not long-route pressure evidence",
+	"weighted_spikes": 5247
+}

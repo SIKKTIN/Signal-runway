@@ -4,6 +4,7 @@ signal chunks_changed
 signal chunk_added(chunk: Dictionary)
 signal chunk_removed(chunk_id: String)
 var run_seed := 1
+var generation_profile: Dictionary = {}
 var prototype := true
 var chunks: Array[Dictionary] = []
 var total_offset := 0.0
@@ -33,7 +34,7 @@ func _ready() -> void:
 	texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 	for key in ["terrain_platform", "terrain_solid", "terrain_wall_left", "hazard_spike_up"]:
 		_textures[key] = load("res://assets/visual/" + key + ".png")
-	generator.reset(run_seed)
+	generator.reset(run_seed, generation_profile)
 	update_stream(spawn_position.x, -544)
 
 func update_stream(player_x: float, front_x: float) -> void:

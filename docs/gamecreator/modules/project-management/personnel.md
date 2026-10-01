@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-09-30T16:32:49.999Z
-> 文档内容基准：8700778bb1b0f703de1e50a4e67041f7654101d9b5a687a4808259df6789abf6
+> 文档生成时间：2026-10-01T03:18:51.881Z
+> 文档内容基准：dba6b6bfb507fd18a34c9b8b70ed9c0144debbd9889a362c64a5b6a760e2a78f
 
-> 项目版本：v0.4.0
+> 项目版本：v0.4.1
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -36,6 +36,9 @@
 - v0.4 完整片段库计分与记录 [d3448bcb-c006-4530-b0a8-4e8c83b5e920] · 已完成
 - v0.4 多种子集成与长局检查 [b25d15b1-5882-4a38-9594-04994d611935] · 已完成
 - v0.4 修复与最终源工程交付 [04edf782-428e-4ca7-b721-61d77dad2599] · 已完成
+- v0.4.1 配置与生成器接口 [d20365cd-4692-453e-bbe9-edcaee41bd23] · 已完成
+- v0.4.1 地图编辑器与隔离试玩 [c82f936c-f37c-4524-a65b-0e5e9a80ddf0] · 已完成
+- v0.4.1 集成与工具源工程交付 [f307bb6b-6dca-4ede-befc-c60aae0ea443] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -53,6 +56,7 @@
 - v0.4 模块化场景与HUD草案 [d335eb76-b39a-4ebd-b052-d4e7fd2b9db5] · 已完成
 - v0.4 无限模式正式美术接入 [41feb898-38b6-4233-9bf3-77795a0345af] · 已完成
 - v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
+- v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -190,7 +194,7 @@ node gamecreator/gc.cjs content template analysisParameter --json
 node gamecreator/gc.cjs content validate --file draft.json --timing --json
 ```
 
-MCP 对应 gc_content_template：不传 name 返回目录，传 name 只返回一个对象。当前提供 13 个高频模板：milestone、system、capability、functionalUsage、functionalDependency、analysis、analysisParameter、analysisMetric、analysisVariant、map、mapLayer、mapObject、mapConnection。其他对象仍可从现有 context/templates.json 读取。schema <命令> 显示的是工具参数；content template 显示的是要写入的内容对象。
+MCP 对应 gc_content_template：不传 name 返回目录，传 name 只返回一个对象。当前提供 16 个高频模板：designDocument、designBlock、productionTask、milestone、system、capability、functionalUsage、functionalDependency、analysis、analysisParameter、analysisMetric、analysisVariant、map、mapLayer、mapObject、mapConnection。其他对象仍可从现有 context/templates.json 读取。schema <命令> 显示的是工具参数；content template 显示的是要写入的内容对象。
 
 返回 template 是单个条目的初始值，collectionPath 指出所属集合；父级占位 ID 和引用需替换为实际 ID。fields 标明基本结构的 required、类型、枚举、范围以及 access：writable 可编辑；identity 在新建时指定，已有标识不可改；workflow 由进度、验收等专用流程维护，新建保留初始值。字段说明不替代完整 Schema、权限及引用检查。先读取目标模块；修改已有条目以当前内容为基础，不用空模板替换已有条目。
 
@@ -207,6 +211,54 @@ clientTotalMs 为客户端本次调用耗时，全局 MCP 包含本次连接和�
 stagesMs 按实际发生的阶段记录 projectRead、authentication、editorWait、execution、contentValidation、contentWrite、journalWrite。内容校验与写入的细分目前覆盖设计提交流程，其他操作主要查看 execution。阶段可能嵌套，不能直接相加；缺失字段表示没有记录该阶段，不代表零成本。统计不包含 AI 思考、客户端工具调度或整轮对话耗时，不能据此将整个开发耗时归因于 MCP。
 
 列表摘要、按需模板和字段诊断用于减少往返与重复读取；完整校验、权限和写入一致性检查继续保留。
+
+### 连接诊断与请求样例
+
+首次接手、服务连接失败、升级后找不到命令，先用 doctor。它验证本助手凭证，显示管理项目与引擎位置、当前身份及模块授权、客户端/服务版本和导出文件版本，并给出处理步骤。--modules 可检查准备写入的模块；ready 不代表所有操作都有权限。服务离线或缺少凭证时也会返回诊断，不需要查软件源码、进程或内部存档。doctor 不自动启动软件、打开项目或改变授权。
+
+```powershell
+node gamecreator/gc.cjs doctor --modules design-documents,project-schedule --json
+node gamecreator/gc.cjs --version
+node gamecreator/gc.cjs example tasks plan --out task-plan-request.json
+node gamecreator/gc.cjs example feedback append --out append-request.json
+node gamecreator/gc.cjs status --select identity.name,service.version --json
+node gamecreator/gc.cjs content template designDocument --out document-template.json
+```
+
+example 和 schema 无需连接或凭证。example 输出可供 --file 使用的结构，必须填写尖括号占位符、实时版本和业务内容；不自动选择身份、验收结论或执行操作。content validate/submit 的样例是草稿本身；其他命令输出操作参数。MCP 使用 gc_request_example，operation 如 task_plan_apply，参数样例位于 arguments 中。
+
+--out 保存 UTF-8 JSON，成功时 stdout 返回文件位置；现有文件会在请求前拒绝，请选择新文件名。普通操作失败不会创建结果文件；doctor 的失败诊断可保存，但退出码仍非零。--select 选择逗号分隔的字段路径，返回以路径为键的 JSON；这是本地输出裁剪，不减少服务端读取。不要合并 stderr 和 stdout 再解析 JSON。若写入成功但本地保存/选字段失败，错误返回 operationSucceeded 与 requestId；先查询 operations show，不能换新编号重做写入。
+
+### 反馈状态与验收后更正
+
+tasks show、reviews show、反馈回执及任务操作错误返回 guidance：当前任务状态、反馈状态、taskRevision、evidenceVersion、correctionVersion 和当前身份可执行的 actions。指引使用实时岗位与权限，最终操作仍重新检查版本与输入。反馈提交后必须核对成功回执和退出码，不能只因写好了本地文件就宣称提交成功。
+
+- 进行中或受阻：feedback submit 报告实际进度；未完成前置会限制可提交的状态。
+- 待验收：同一交付仅补充说明/证据用 feedback append，传最新 evidenceVersion。交付内容或验收依据改变，请验收人退回后重新提交；不要换 feedbackId 绕过待验收状态。
+- 证据追加后：验收人重新读取证据版本再 reviews submit。旧版验收请求会被拒绝。
+- 已完成：原提交人或指定验收人可用 feedback correct 追加说明更正，传最新 correctionVersion（初始为 0）、note、deliveryVersion 和 evidence。原反馈、证据版本、任务状态和验收结论保留；更正也显示在任务清单反馈中。
+- 更正不能代替重新验收。涉及实现、交付范围或原结论变化时创建后续任务；更正文件建议另存为带版本的证据，不只覆盖原报告。仅修改磁盘上的报告不会更新 GameCreator 的反馈版本。
+
+```powershell
+node gamecreator/gc.cjs reviews show <反馈ID> --json
+node gamecreator/gc.cjs example feedback correct --out correction-request.json
+# 填写并核对 correction-request.json 后执行
+node gamecreator/gc.cjs feedback correct --file correction-request.json --json
+```
+
+### 交付检查
+
+```powershell
+node gamecreator/gc.cjs delivery check --limit 20 --json
+node gamecreator/gc.cjs delivery check --task <任务ID> --json
+node gamecreator/gc.cjs delivery check --milestone-id <里程碑ID> --json
+```
+
+交付检查只返回当前身份可见的任务、未完成前置、待验收反馈、关联模块的登记状态，以及相关里程碑是否已具备单独确认的条件。支持 offset/limit 分页；milestones 汇总不局限于当前页。当仅能看到部分任务时 coverage=partial，不能据此判断整个里程碑。
+
+任务完成不等于功能状态更新。素材和工具按全部关联任务及各自规则汇总；功能、玩法等状态独立维护。里程碑任务全部完成后仍需在项目排期中单独确认验收。检查不会改变任何进度，不运行引擎，也不读取或验证证据文件，实际表现与证据仍需负责人核对。
+
+MCP 对应 gc_diagnose、gc_request_example、gc_delivery_check、gc_feedback_correct；与 CLI 复用同一服务和权限。升级后更新协作文件、工程同步并重启旧适配器；无需重新签发仍有效的成员凭证。
 
 
 ## 接手、反馈与验收
@@ -553,6 +605,40 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 自验收约定：制作人开发；先提交证据，再单独填写结论
 - 验收要求：无启动/生成可达/计分/重开/记录阻塞；修复有同版本确认，docs/run-v0.4.md和reports/v0.4/final-acceptance.md齐全，不打包。
 - 验收负责人：制作人
+### v0.4.1 配置与生成器接口
+- ID：d20365cd-4692-453e-bbe9-edcaee41bd23
+- 当前状态：已完成
+- 内容：执行planning/v0.4.1-editor-plan.md对应工作包；源工程不打包。
+- 前置任务：无
+- 允许修改路径：scripts/level、scripts/tools、scripts/core、resources/generation、scenes/tools/generation_editor.tscn、project.godot、planning/v0.4.1-editor-plan.md、docs、reports/v0.4.1、README.md
+- 接口契约：GenerationProfile校验/指纹/读写；Generator.reset(seed,profile)/next诊断；Editor draft/rows/preview/控件节点名及default_path仅用于隔离测试。root维护业务与几何，主美Theme和只读验收。
+- 交付入口：res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：对应计划测试门与报告，拒绝坏输入、共享生成器、旧默认兼容、安全约束保留；不冒称真人体验。
+- 验收负责人：制作人
+### v0.4.1 地图编辑器与隔离试玩
+- ID：c82f936c-f37c-4524-a65b-0e5e9a80ddf0
+- 当前状态：已完成
+- 内容：执行planning/v0.4.1-editor-plan.md对应工作包；源工程不打包。
+- 前置任务：d20365cd-4692-453e-bbe9-edcaee41bd23
+- 允许修改路径：scripts/level、scripts/tools、scripts/core、resources/generation、scenes/tools/generation_editor.tscn、project.godot、planning/v0.4.1-editor-plan.md、docs、reports/v0.4.1、README.md
+- 接口契约：GenerationProfile校验/指纹/读写；Generator.reset(seed,profile)/next诊断；Editor draft/rows/preview/控件节点名及default_path仅用于隔离测试。root维护业务与几何，主美Theme和只读验收。
+- 交付入口：res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：对应计划测试门与报告，拒绝坏输入、共享生成器、旧默认兼容、安全约束保留；不冒称真人体验。
+- 验收负责人：制作人
+### v0.4.1 集成与工具源工程交付
+- ID：f307bb6b-6dca-4ede-befc-c60aae0ea443
+- 当前状态：已完成
+- 内容：执行planning/v0.4.1-editor-plan.md对应工作包；源工程不打包。
+- 前置任务：c82f936c-f37c-4524-a65b-0e5e9a80ddf0、7edf01a5-f63a-4172-be43-055264d110cb
+- 允许修改路径：scripts/level、scripts/tools、scripts/core、resources/generation、scenes/tools/generation_editor.tscn、project.godot、planning/v0.4.1-editor-plan.md、docs、reports/v0.4.1、README.md
+- 接口契约：GenerationProfile校验/指纹/读写；Generator.reset(seed,profile)/next诊断；Editor draft/rows/preview/控件节点名及default_path仅用于隔离测试。root维护业务与几何，主美Theme和只读验收。
+- 交付入口：res://scenes/tools/generation_editor.tscn
+- 集成来源任务：c82f936c-f37c-4524-a65b-0e5e9a80ddf0、7edf01a5-f63a-4172-be43-055264d110cb
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：对应计划测试门与报告，拒绝坏输入、共享生成器、旧默认兼容、安全约束保留；不冒称真人体验。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -581,6 +667,10 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.4 多种子集成与长局检查 [b25d15b1-5882-4a38-9594-04994d611935] · 已完成
 - v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
 - v0.4 修复与最终源工程交付 [04edf782-428e-4ca7-b721-61d77dad2599] · 已完成
+- v0.4.1 配置与生成器接口 [d20365cd-4692-453e-bbe9-edcaee41bd23] · 已完成
+- v0.4.1 地图编辑器与隔离试玩 [c82f936c-f37c-4524-a65b-0e5e9a80ddf0] · 已完成
+- v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成
+- v0.4.1 集成与工具源工程交付 [f307bb6b-6dca-4ede-befc-c60aae0ea443] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -713,7 +803,7 @@ node gamecreator/gc.cjs content template analysisParameter --json
 node gamecreator/gc.cjs content validate --file draft.json --timing --json
 ```
 
-MCP 对应 gc_content_template：不传 name 返回目录，传 name 只返回一个对象。当前提供 13 个高频模板：milestone、system、capability、functionalUsage、functionalDependency、analysis、analysisParameter、analysisMetric、analysisVariant、map、mapLayer、mapObject、mapConnection。其他对象仍可从现有 context/templates.json 读取。schema <命令> 显示的是工具参数；content template 显示的是要写入的内容对象。
+MCP 对应 gc_content_template：不传 name 返回目录，传 name 只返回一个对象。当前提供 16 个高频模板：designDocument、designBlock、productionTask、milestone、system、capability、functionalUsage、functionalDependency、analysis、analysisParameter、analysisMetric、analysisVariant、map、mapLayer、mapObject、mapConnection。其他对象仍可从现有 context/templates.json 读取。schema <命令> 显示的是工具参数；content template 显示的是要写入的内容对象。
 
 返回 template 是单个条目的初始值，collectionPath 指出所属集合；父级占位 ID 和引用需替换为实际 ID。fields 标明基本结构的 required、类型、枚举、范围以及 access：writable 可编辑；identity 在新建时指定，已有标识不可改；workflow 由进度、验收等专用流程维护，新建保留初始值。字段说明不替代完整 Schema、权限及引用检查。先读取目标模块；修改已有条目以当前内容为基础，不用空模板替换已有条目。
 
@@ -730,6 +820,54 @@ clientTotalMs 为客户端本次调用耗时，全局 MCP 包含本次连接和�
 stagesMs 按实际发生的阶段记录 projectRead、authentication、editorWait、execution、contentValidation、contentWrite、journalWrite。内容校验与写入的细分目前覆盖设计提交流程，其他操作主要查看 execution。阶段可能嵌套，不能直接相加；缺失字段表示没有记录该阶段，不代表零成本。统计不包含 AI 思考、客户端工具调度或整轮对话耗时，不能据此将整个开发耗时归因于 MCP。
 
 列表摘要、按需模板和字段诊断用于减少往返与重复读取；完整校验、权限和写入一致性检查继续保留。
+
+### 连接诊断与请求样例
+
+首次接手、服务连接失败、升级后找不到命令，先用 doctor。它验证本助手凭证，显示管理项目与引擎位置、当前身份及模块授权、客户端/服务版本和导出文件版本，并给出处理步骤。--modules 可检查准备写入的模块；ready 不代表所有操作都有权限。服务离线或缺少凭证时也会返回诊断，不需要查软件源码、进程或内部存档。doctor 不自动启动软件、打开项目或改变授权。
+
+```powershell
+node gamecreator/gc.cjs doctor --modules design-documents,project-schedule --json
+node gamecreator/gc.cjs --version
+node gamecreator/gc.cjs example tasks plan --out task-plan-request.json
+node gamecreator/gc.cjs example feedback append --out append-request.json
+node gamecreator/gc.cjs status --select identity.name,service.version --json
+node gamecreator/gc.cjs content template designDocument --out document-template.json
+```
+
+example 和 schema 无需连接或凭证。example 输出可供 --file 使用的结构，必须填写尖括号占位符、实时版本和业务内容；不自动选择身份、验收结论或执行操作。content validate/submit 的样例是草稿本身；其他命令输出操作参数。MCP 使用 gc_request_example，operation 如 task_plan_apply，参数样例位于 arguments 中。
+
+--out 保存 UTF-8 JSON，成功时 stdout 返回文件位置；现有文件会在请求前拒绝，请选择新文件名。普通操作失败不会创建结果文件；doctor 的失败诊断可保存，但退出码仍非零。--select 选择逗号分隔的字段路径，返回以路径为键的 JSON；这是本地输出裁剪，不减少服务端读取。不要合并 stderr 和 stdout 再解析 JSON。若写入成功但本地保存/选字段失败，错误返回 operationSucceeded 与 requestId；先查询 operations show，不能换新编号重做写入。
+
+### 反馈状态与验收后更正
+
+tasks show、reviews show、反馈回执及任务操作错误返回 guidance：当前任务状态、反馈状态、taskRevision、evidenceVersion、correctionVersion 和当前身份可执行的 actions。指引使用实时岗位与权限，最终操作仍重新检查版本与输入。反馈提交后必须核对成功回执和退出码，不能只因写好了本地文件就宣称提交成功。
+
+- 进行中或受阻：feedback submit 报告实际进度；未完成前置会限制可提交的状态。
+- 待验收：同一交付仅补充说明/证据用 feedback append，传最新 evidenceVersion。交付内容或验收依据改变，请验收人退回后重新提交；不要换 feedbackId 绕过待验收状态。
+- 证据追加后：验收人重新读取证据版本再 reviews submit。旧版验收请求会被拒绝。
+- 已完成：原提交人或指定验收人可用 feedback correct 追加说明更正，传最新 correctionVersion（初始为 0）、note、deliveryVersion 和 evidence。原反馈、证据版本、任务状态和验收结论保留；更正也显示在任务清单反馈中。
+- 更正不能代替重新验收。涉及实现、交付范围或原结论变化时创建后续任务；更正文件建议另存为带版本的证据，不只覆盖原报告。仅修改磁盘上的报告不会更新 GameCreator 的反馈版本。
+
+```powershell
+node gamecreator/gc.cjs reviews show <反馈ID> --json
+node gamecreator/gc.cjs example feedback correct --out correction-request.json
+# 填写并核对 correction-request.json 后执行
+node gamecreator/gc.cjs feedback correct --file correction-request.json --json
+```
+
+### 交付检查
+
+```powershell
+node gamecreator/gc.cjs delivery check --limit 20 --json
+node gamecreator/gc.cjs delivery check --task <任务ID> --json
+node gamecreator/gc.cjs delivery check --milestone-id <里程碑ID> --json
+```
+
+交付检查只返回当前身份可见的任务、未完成前置、待验收反馈、关联模块的登记状态，以及相关里程碑是否已具备单独确认的条件。支持 offset/limit 分页；milestones 汇总不局限于当前页。当仅能看到部分任务时 coverage=partial，不能据此判断整个里程碑。
+
+任务完成不等于功能状态更新。素材和工具按全部关联任务及各自规则汇总；功能、玩法等状态独立维护。里程碑任务全部完成后仍需在项目排期中单独确认验收。检查不会改变任何进度，不运行引擎，也不读取或验证证据文件，实际表现与证据仍需负责人核对。
+
+MCP 对应 gc_diagnose、gc_request_example、gc_delivery_check、gc_feedback_correct；与 CLI 复用同一服务和权限。升级后更新协作文件、工程同步并重启旧适配器；无需重新签发仍有效的成员凭证。
 
 
 ## 接手、反馈与验收
@@ -945,6 +1083,16 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 交付入口：res://scenes/main/main.tscn；planning/v0.4-execution-plan.md
 - 验收要求：reports/v0.4/independent-review.md含同版本哈希、步骤/实际/范围，区分fixture、引用路线、体验与试听。
 - 验收负责人：制作人
+### v0.4.1 工具美术与同版本独立检查
+- ID：7edf01a5-f63a-4172-be43-055264d110cb
+- 当前状态：已完成
+- 内容：执行planning/v0.4.1-editor-plan.md对应工作包；源工程不打包。
+- 前置任务：c82f936c-f37c-4524-a65b-0e5e9a80ddf0
+- 允许修改路径：scenes/tools/generation_editor_theme.tres、docs/art/v0.4.1-editor.md、reports/v0.4.1/art、reports/v0.4.1/independent-review.md、reports/v0.4.1/independent-checks
+- 接口契约：GenerationProfile校验/指纹/读写；Generator.reset(seed,profile)/next诊断；Editor draft/rows/preview/控件节点名及default_path仅用于隔离测试。root维护业务与几何，主美Theme和只读验收。
+- 交付入口：res://scenes/tools/generation_editor.tscn
+- 验收要求：同版本实际编辑器1280/960界面、真实操作/调参/保存/试玩/F8独立报告，生成逻辑不变，制作人评审。
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -960,3 +1108,4 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.4 模块化场景与HUD草案 [d335eb76-b39a-4ebd-b052-d4e7fd2b9db5] · 已完成
 - v0.4 无限模式正式美术接入 [41feb898-38b6-4233-9bf3-77795a0345af] · 已完成
 - v0.4 独立技术与表现检查 [8005841f-57c0-430d-a664-1876eecef397] · 已完成
+- v0.4.1 工具美术与同版本独立检查 [7edf01a5-f63a-4172-be43-055264d110cb] · 已完成

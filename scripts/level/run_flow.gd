@@ -18,6 +18,11 @@ const InterfaceScript = preload("res://scripts/ui/interface.gd")
 const ChaseScript = preload("res://scripts/level/chase_controller.gd")
 const EndlessCourseScript = preload("res://scripts/level/endless_course.gd")
 const EndlessRecordScript = preload("res://scripts/level/endless_record.gd")
+const GenerationProfile = preload("res://scripts/level/generation_profile.gd")
+var generation_profile: Dictionary = {}
+var generation_notice := ""
+var _generation_profile_override := false
+var _generation_notice_label: Label
 var phase := "menu"
 var mode := "pursuit"
 var level_id := "level01"
@@ -63,6 +68,11 @@ var _best_by_mode := {"time_trial": {"seconds": -1.0, "deaths": 0}, "pursuit": {
 var _best_by_level: Dictionary = {}
 
 func _ready() -> void:
+	_generation_profile_override = not generation_profile.is_empty()
+	if generation_profile.is_empty():
+		var loaded := GenerationProfile.load_profile()
+		generation_profile = loaded.profile
+		generation_notice = "生成配置不可用，已回退内置默认" if loaded.fallback else ""
 	reload_endless_record()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Resolve the front after the player's current-frame move_and_slide.
@@ -86,6 +96,16 @@ func _ready() -> void:
 	_build_world(false)
 	player.set_control_enabled(false)
 	ui.show_menu()
+	_show_generation_notice()
+
+func _show_generation_notice() -> void:
+	if not is_instance_valid(_generation_notice_label):
+		_generation_notice_label = Label.new()
+		_generation_notice_label.position = Vector2(24, 508)
+		_generation_notice_label.add_theme_color_override("font_color", Color("ffc95c"))
+		ui.add_child(_generation_notice_label)
+	_generation_notice_label.text = generation_notice
+	_generation_notice_label.visible = not generation_notice.is_empty()
 
 func _build_world(use_lab: bool) -> void:
 	if world:
@@ -102,6 +122,7 @@ func _build_world(use_lab: bool) -> void:
 	course.level_id = level_id
 	course.relay_prototype = relay_prototype
 	if is_endless():
+		course.generation_profile = generation_profile.duplicate(true)
 		course.run_seed = run_seed
 		course.prototype = endless_prototype
 		course.test_sequence = endless_test_sequence
@@ -220,6 +241,11 @@ func start_challenge(use_lab: bool = false, selected_mode: String = "", selected
 	_update_ui()
 
 func start_endless(seed_value: int = -1) -> void:
+	if not _generation_profile_override:
+		var loaded := GenerationProfile.load_profile()
+		generation_profile = loaded.profile
+		generation_notice = "生成配置不可用，已回退内置默认" if loaded.fallback else ""
+		_show_generation_notice()
 	if seed_value < 0:
 		var rng := RandomNumberGenerator.new()
 		rng.randomize()

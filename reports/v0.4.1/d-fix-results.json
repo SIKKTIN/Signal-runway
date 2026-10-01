@@ -1,0 +1,34 @@
+{
+	"checks": [
+		{
+			"check": "confirmation_chinese_buttons_and_tool_theme",
+			"passed": true
+		},
+		{
+			"check": "hint_bottom_right_inside_1280",
+			"passed": true
+		},
+		{
+			"check": "hint_backplate_text_and_ignores_mouse_1280",
+			"passed": true
+		},
+		{
+			"check": "f8_returns_after_hint_fix_1280",
+			"passed": true
+		},
+		{
+			"check": "hint_bottom_right_inside_960",
+			"passed": true
+		},
+		{
+			"check": "hint_backplate_text_and_ignores_mouse_960",
+			"passed": true
+		},
+		{
+			"check": "f8_returns_after_hint_fix_960",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"scope": "Targeted D confirmation text/theme, actual trial UI anchored positions and F8 input; request/play called directly, no configuration/physics changes or production default writes."
+}
