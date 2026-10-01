@@ -1,0 +1,38 @@
+{
+	"checks": [
+		{
+			"name": "独立v06文件名",
+			"passed": true
+		},
+		{
+			"name": "原子保存完整新规则",
+			"passed": true
+		},
+		{
+			"name": "JSON重新加载v06",
+			"passed": true
+		},
+		{
+			"name": "低分不覆盖",
+			"passed": true
+		},
+		{
+			"name": "v05规则拒绝混入v06",
+			"passed": true
+		},
+		{
+			"name": "坏档可见",
+			"passed": true
+		},
+		{
+			"name": "写失败保留内存成绩",
+			"passed": true
+		},
+		{
+			"name": "旧v05成绩逐字节保留",
+			"passed": true
+		}
+	],
+	"method": "isolated record files; read/write failures and rule mismatch fixtures",
+	"passed": true
+}

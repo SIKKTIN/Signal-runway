@@ -1,7 +1,7 @@
 # 测试3
 
-> 文档生成时间：2026-10-01T10:06:21.067Z
-> 文档内容基准：43293a94b7b035e55648bb2e926f51f9c6d1a1f3565b649beb65e77535db008b
+> 文档生成时间：2026-10-01T10:38:59.469Z
+> 文档内容基准：3dfc8efdd73d1b135cee11f8b272ea2bc1f40dcb215e75390f78bf2bd4fdab56
 
 > 项目版本：v0.6
 > 由 GameCreator 同步，供开发查阅。
@@ -50,6 +50,11 @@
 - v0.6 恢复站互斥路线 [4787359f-66b5-40a4-a3d3-8294de960f25] · 已完成
 - v0.6 编辑器与规则记录 [f7d4d7cb-bdc7-4dba-884e-6e16023903e7] · 已完成
 - v0.6 调参修复与源交付 [484d3e04-5c5b-4a68-b068-8314eabdfac4] · 已完成
+- v0.7 连续地形灰盒 [88297466-e439-4fe4-9d82-829062f8df51] · 待开始
+- v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332] · 待开始
+- v0.7 运行兼容与记录 [899c343b-d951-4092-b276-2e50c5735e83] · 待开始
+- v0.7 编辑器扩展 [43354328-744f-4674-ad67-e2f6257e8f05] · 待开始
+- v0.7 修复与源交付 [6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76] · 待开始
 
 ### 主美
 - 岗位 ID：art-director
@@ -72,6 +77,8 @@
 - v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
 - v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
 - v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
+- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 待开始
+- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 待开始
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -355,7 +362,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 
 ## 制作人行动清单
 
-当前排期判断：任务已完成，需检查里程碑验收与下一轮目标。这只是排期快照，不能代替引擎实际检查。
+当前排期判断：已建立计划，准备组织制作。这只是排期快照，不能代替引擎实际检查。
 
 ### 制作人职责与交接边界
 
@@ -777,6 +784,62 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 自验收约定：制作人开发；先提交证据，再单独填写结论
 - 验收要求：依独立报告调参、阻塞缺陷针对性复验、必要旧模式/工具回归和跨重定位长局，运行说明/冻结清单/GameCreator与GitHub源工程，不打包。
 - 验收负责人：制作人
+### v0.7 连续地形灰盒
+- ID：88297466-e439-4fe4-9d82-829062f8df51
+- 当前状态：待开始
+- 内容：执行planning/v0.7-plan.md工作包A；估算4至6小时，建议日期按M1结果调整。
+- 前置任务：无
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：坡面碰撞与稳定移动、有界高度、坡面安全恢复、三速度和受伤降速轨迹
+- 验收负责人：制作人
+### v0.7 路线组合与空间库
+- ID：bf11b980-a86d-476d-8817-3aaadab1d332
+- 当前状态：待开始
+- 内容：执行planning/v0.7-plan.md工作包B；估算5至7小时，建议日期按M1结果调整。
+- 前置任务：88297466-e439-4fe4-9d82-829062f8df51
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：四结构变体、跨段高路、确定性连接/兜底、节点跟随几何
+- 验收负责人：制作人
+### v0.7 运行兼容与记录
+- ID：899c343b-d951-4092-b276-2e50c5735e83
+- 当前状态：待开始
+- 内容：执行planning/v0.7-plan.md工作包C；估算2至3小时，建议日期按M1结果调整。
+- 前置任务：bf11b980-a86d-476d-8817-3aaadab1d332
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：新版记录、旧2/3/4兼容、恢复/镜头/重定位、连段站点回归
+- 验收负责人：制作人
+### v0.7 编辑器扩展
+- ID：43354328-744f-4674-ad67-e2f6257e8f05
+- 当前状态：待开始
+- 内容：执行planning/v0.7-plan.md工作包D；估算3至4小时，建议日期按M1结果调整。
+- 前置任务：bf11b980-a86d-476d-8817-3aaadab1d332、899c343b-d951-4092-b276-2e50c5735e83
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：同源坡面/连接/起跳落点、连接试玩、失败种子存取/配置指纹与隔离
+- 验收负责人：制作人
+### v0.7 修复与源交付
+- ID：6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76
+- 当前状态：待开始
+- 内容：执行planning/v0.7-plan.md工作包G；估算4至6小时，建议日期按M1结果调整。
+- 前置任务：3dcc45d3-8bd4-4930-b1d2-2a370c075abd
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 集成来源任务：3dcc45d3-8bd4-4930-b1d2-2a370c075abd
+- 自验收约定：制作人开发；先提交证据，再单独填写结论
+- 验收要求：阻塞修复复验、必要回归、文档/清单、GameCreator验收/GitHub源工程，无打包
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -824,6 +887,13 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
 - v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
 - v0.6 调参修复与源交付 [484d3e04-5c5b-4a68-b068-8314eabdfac4] · 已完成
+- v0.7 连续地形灰盒 [88297466-e439-4fe4-9d82-829062f8df51] · 待开始
+- v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332] · 待开始
+- v0.7 运行兼容与记录 [899c343b-d951-4092-b276-2e50c5735e83] · 待开始
+- v0.7 编辑器扩展 [43354328-744f-4674-ad67-e2f6257e8f05] · 待开始
+- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 待开始
+- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 待开始
+- v0.7 修复与源交付 [6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76] · 待开始
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -1286,6 +1356,26 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
 - 验收要求：三种子各稳妥/冲分到首站之后，记录版本/输入/距离/局长/分数/受伤/连段/选择/失败和局限；主美独立报告由制作人评审。
 - 验收负责人：制作人
+### v0.7 空间美术
+- ID：ff683b7b-e7cf-42a1-ad85-7d3180df8109
+- 当前状态：待开始
+- 内容：执行planning/v0.7-plan.md工作包E；估算4至6小时，建议日期按M1结果调整。
+- 前置任务：bf11b980-a86d-476d-8817-3aaadab1d332
+- 允许修改路径：assets/visual/v07、scripts/visual/spatial_visual.gd、scripts/visual/endless_module_visual.gd、scripts/visual/route_visual.gd、docs/art/v0.7.md、reports/v0.7/art、reports/v0.7/independent-checks、reports/v0.7/independent-review.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 验收要求：实际支撑/区段层次/路线标识，两尺寸高速不遮落点/顶沿
+- 验收负责人：制作人
+### v0.7 独立检查
+- ID：3dcc45d3-8bd4-4930-b1d2-2a370c075abd
+- 当前状态：待开始
+- 内容：执行planning/v0.7-plan.md工作包F；估算2至4小时，建议日期按M1结果调整。
+- 前置任务：43354328-744f-4674-ad67-e2f6257e8f05、ff683b7b-e7cf-42a1-ad85-7d3180df8109
+- 允许修改路径：assets/visual/v07、scripts/visual/spatial_visual.gd、scripts/visual/endless_module_visual.gd、scripts/visual/route_visual.gd、docs/art/v0.7.md、reports/v0.7/art、reports/v0.7/independent-checks、reports/v0.7/independent-review.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 验收要求：冻结版本三种子稳妥/高路到首站后，覆盖高路接缝；工具/暂停、可见性、缺陷与方法
+- 验收负责人：制作人
 
 只提交获准任务的反馈。私有凭证由管理者单独交付；提交方式见 ../README.md。
 历史成员任务：
@@ -1306,3 +1396,5 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
 - v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
 - v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
+- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 待开始
+- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 待开始

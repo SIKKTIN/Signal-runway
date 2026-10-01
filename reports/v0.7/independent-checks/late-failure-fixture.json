@@ -1,0 +1,86 @@
+{
+	"created_at": "2026-10-01T11:13:04",
+	"failed_x": 256800.0,
+	"fingerprint": "898098e31330",
+	"profile": {
+		"challenge_limit": 2,
+		"challenge_weight": 1,
+		"combo_bonus": 200,
+		"elevation_range": 32,
+		"elevation_step": 64,
+		"gap_max": 96,
+		"gap_min": 64,
+		"generator_revision": 5,
+		"height_max": 64,
+		"height_min": 32,
+		"phase_one": 10000,
+		"phase_two": 30000,
+		"relay_max": 6,
+		"relay_min": 5,
+		"schema": 1,
+		"spatial_weights": {
+			"basin": 2,
+			"bridge": 2,
+			"slope": 2,
+			"terrace": 2
+		},
+		"stage_distance": 8400.0,
+		"station_bonus": 200,
+		"station_max": 24,
+		"station_min": 16,
+		"templates": {
+			"gap": {
+				"enabled": true,
+				"weight": 4.0
+			},
+			"relay_a": {
+				"enabled": true,
+				"weight": 4.0
+			},
+			"relay_b": {
+				"enabled": true,
+				"weight": 4.0
+			},
+			"rhythm_a": {
+				"enabled": true,
+				"weight": 4.0
+			},
+			"rhythm_b": {
+				"enabled": true,
+				"weight": 1.0
+			},
+			"rhythm_c": {
+				"enabled": true,
+				"weight": 1.0
+			},
+			"safe_a": {
+				"enabled": true,
+				"weight": 1.0
+			},
+			"safe_b": {
+				"enabled": true,
+				"weight": 4.0
+			},
+			"spike": {
+				"enabled": true,
+				"weight": 1.0
+			},
+			"step": {
+				"enabled": true,
+				"weight": 4.0
+			},
+			"wall_a": {
+				"enabled": false,
+				"weight": 1.0
+			},
+			"wall_b": {
+				"enabled": false,
+				"weight": 1.0
+			}
+		},
+		"upper_span": 3
+	},
+	"reason": "fixture-late-caught",
+	"schema": 1,
+	"seed": 9001
+}

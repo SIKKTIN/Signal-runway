@@ -1,0 +1,13 @@
+{
+  "version": "v0.7.0+214fe88fb80f",
+  "files": 109,
+  "mismatches": [],
+  "pause_changed_pixels": 0,
+  "gray_previews": [
+    "natural-404-upper-seam-960-gray.png",
+    "natural-404-upper-station-selected-gray.png",
+    "tool-late-connection-960-gray.png"
+  ],
+  "passed": true,
+  "method": "Actual Esc pause pair from natural seed404 upper route, whole image comparison. Current source hashes independently checked against manifest. Grayscale previews are legibility evidence; no quantitative all-map overlap claim."
+}

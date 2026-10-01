@@ -1,0 +1,78 @@
+{
+	"method": "headless fixed60, real Player/collision, synthetic jump controller using actual jump windows. Four structures and two-chunk upper corridor; 3 envelope variants x3 speeds x normal/explicit injury at ascending jump or mid-ground. No position/speed/clock injections during traversal except disclosed injury.",
+	"passed": true,
+	"runs": [
+		{
+			"id": "bridge",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": "(2418.74, 432.9253)",
+			"rewards": [],
+			"seam_height": 464.968414306641,
+			"speed": 280,
+			"variant": 2
+		},
+		{
+			"id": "bridge",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": "(2418.74, 432.9253)",
+			"rewards": [],
+			"seam_height": 464.968414306641,
+			"speed": 280,
+			"variant": 2
+		},
+		{
+			"id": "bridge",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": "(2418.758, 432.9253)",
+			"rewards": [],
+			"seam_height": 464.950622558594,
+			"speed": 330,
+			"variant": 2
+		},
+		{
+			"id": "bridge",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": "(2419.055, 432.9253)",
+			"rewards": [],
+			"seam_height": 464.924011230469,
+			"speed": 330,
+			"variant": 2
+		},
+		{
+			"id": "bridge",
+			"injured": false,
+			"injury": false,
+			"jumps": 2,
+			"passed": true,
+			"position": "(2417.669, 432.9253)",
+			"rewards": [],
+			"seam_height": 464.942504882813,
+			"speed": 380,
+			"variant": 2
+		},
+		{
+			"id": "bridge",
+			"injured": true,
+			"injury": true,
+			"jumps": 2,
+			"passed": true,
+			"position": "(2416.02, 432.9841)",
+			"rewards": [],
+			"seam_height": 464.938079833984,
+			"speed": 380,
+			"variant": 2
+		}
+	]
+}

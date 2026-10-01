@@ -1,0 +1,70 @@
+{
+	"checks": [
+		{
+			"name": "v5空间控件与多边形预览",
+			"passed": true
+		},
+		{
+			"name": "新参数归一化不丢失",
+			"passed": true
+		},
+		{
+			"name": "20段最终生成几何和工具相同",
+			"passed": true
+		},
+		{
+			"name": "新参数配置读写及备份",
+			"passed": true
+		},
+		{
+			"name": "旧2保持版本且空间锁定",
+			"passed": true
+		},
+		{
+			"name": "旧3保持版本且空间锁定",
+			"passed": true
+		},
+		{
+			"name": "旧4保持版本且空间锁定",
+			"passed": true
+		},
+		{
+			"name": "真实Enter显式升级5且未写默认",
+			"passed": true
+		},
+		{
+			"name": "连接前安全起跑与完整可见注入说明",
+			"passed": true
+		},
+		{
+			"name": "隔离成绩为规则7生成5",
+			"passed": true
+		},
+		{
+			"name": "真实F8清理试玩成绩并保留草稿",
+			"passed": true
+		},
+		{
+			"name": "失败种子保存冻结配置和指纹",
+			"passed": true
+		},
+		{
+			"name": "失败种子加载恢复种子配置定位",
+			"passed": true
+		},
+		{
+			"name": "失败定位试玩仍隔离且可见",
+			"passed": true
+		},
+		{
+			"name": "坏指纹拒绝且原文件保留",
+			"passed": true
+		},
+		{
+			"name": "正式配置和新旧成绩不污染",
+			"passed": true
+		}
+	],
+	"method": "GPU fixed60 synthetic Enter/F8, actual editor widgets. Isolated default/replay fixtures and explicitly queued caught terminal to test real failure serialization; connection/replay are disclosed debug position/distance injections, not natural routes. No production default/formal records writes.",
+	"passed": true
+}

@@ -1,0 +1,2436 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "actual_Main_installs_v5_identity_spatial_visual",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "basin_actual_geometry_is_read_only",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_Esc_freezes_all_spatial_and_route_clocks",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "slope_actual_geometry_is_read_only",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "challenge_actual_geometry_is_read_only",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "upper-merge_actual_geometry_is_read_only",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "bridge_actual_geometry_is_read_only",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "terrace_actual_geometry_is_read_only",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "station_actual_geometry_is_read_only",
+			"passed": true
+		},
+		{
+			"actual": {
+				"basin": 2,
+				"bridge": 8,
+				"challenge": 5,
+				"slope": 3,
+				"station": 22,
+				"terrace": 19,
+				"upper-merge": 6
+			},
+			"check": "actual_seed_covers_four_shapes_and_upper_merge",
+			"passed": true
+		},
+		{
+			"actual": {
+				"animation_time": 1.55,
+				"chunks": 5,
+				"ids": [
+					"404:20",
+					"404:21",
+					"404:22",
+					"404:23",
+					"404:24"
+				],
+				"origins": [
+					25600.0,
+					26880.0,
+					28160.0,
+					29440.0,
+					30720.0
+				],
+				"structures": [
+					"slope",
+					"basin",
+					"slope",
+					"slope",
+					"terrace"
+				],
+				"visible": true,
+				"zones": [
+					"高架区",
+					"下沉区",
+					"恢复区",
+					"坡地区",
+					"高架区"
+				]
+			},
+			"check": "spatial_live_ids_match_recycled_course",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "rebind_does_not_duplicate_spatial_listeners",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "new_run_replaces_world_and_clears_old_ids",
+			"passed": true
+		},
+		{
+			"actual": {
+				"completed": 0,
+				"elapsed": 3.03333333333333,
+				"goal": 11440.0,
+				"health": 3,
+				"offset": 0.0,
+				"position": "(11442.33, 391.499)",
+				"samples": [
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 23.3333339691162,
+						"x": 10336.388671875,
+						"y": 432.583343505859
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 10492.7109375,
+						"y": 432.925262451172
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 10682.7021484375,
+						"y": 335.679473876953
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 10885.3583984375,
+						"y": 400.925201416016
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 11075.349609375,
+						"y": 307.3486328125
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 11265.33984375,
+						"y": 402.675262451172
+					}
+				],
+				"start": 10336.0
+			},
+			"check": "actual_380_bridge_reaches_target_with_clear_health",
+			"passed": true
+		},
+		{
+			"actual": {
+				"completed": 1,
+				"elapsed": 6.38333333333332,
+				"goal": 8880.0,
+				"health": 3,
+				"offset": 0.0,
+				"position": "(8882.064, 496.9251)",
+				"samples": [
+					{
+						"camera_y": 333.583343505859,
+						"health": 3,
+						"speed": 23.3333339691162,
+						"x": 6496.388671875,
+						"y": 496.583343505859
+					},
+					{
+						"camera_y": 308.341918945313,
+						"health": 3,
+						"speed": 380.0,
+						"x": 6652.7255859375,
+						"y": 471.341918945313
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 6842.73046875,
+						"y": 430.933654785156
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 7045.40283203125,
+						"y": 342.487854003906
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 7235.40771484375,
+						"y": 381.175231933594
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 7425.41259765625,
+						"y": 432.924011230469
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 7615.41748046875,
+						"y": 432.924011230469
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 7818.08935546875,
+						"y": 432.924011230469
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 8008.09423828125,
+						"y": 342.511535644531
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 8198.0986328125,
+						"y": 400.925201416016
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 8388.08984375,
+						"y": 301.431121826172
+					},
+					{
+						"camera_y": 270.0,
+						"health": 3,
+						"speed": 380.0,
+						"x": 8578.080078125,
+						"y": 432.925201416016
+					},
+					{
+						"camera_y": 333.925140380859,
+						"health": 3,
+						"speed": 380.0,
+						"x": 8768.0703125,
+						"y": 496.925140380859
+					}
+				],
+				"start": 6496.0
+			},
+			"check": "actual_380_upper-chain_reaches_target_with_clear_health",
+			"passed": true
+		}
+	],
+	"method": "E actual Main default5; frozen snapshots use explicit stream position/player/camera/380 UI fixtures, no F natural-route claim. Then fresh actual Main bridge and challenge+next-chain traversals at explicit selected seed chunk and speed380. During traversal real Player/SPACE physics, no position/health/front/clock injection. GPU fixed60 accelerates game time. Actual Esc and retry cleanup. No human experience claim.",
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"shots": [
+		{
+			"camera_y": 270.0,
+			"case": "basin",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 448.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 448.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "rhythm",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 448.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 448.0), S: (160.0, 192.0)]",
+					"[P: (576.0, 544.0), S: (128.0, 96.0)]",
+					"[P: (1120.0, 512.0), S: (160.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 448.0)",
+						"to": "(160.0, 448.0)"
+					},
+					{
+						"from": "(160.0, 448.0)",
+						"to": "(576.0, 544.0)"
+					},
+					{
+						"from": "(576.0, 544.0)",
+						"to": "(704.0, 544.0)"
+					},
+					{
+						"from": "(704.0, 544.0)",
+						"to": "(1120.0, 512.0)"
+					},
+					{
+						"from": "(1120.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(352.0, 512.0)",
+						"kind": "upper",
+						"landing": "[P: (460.0, 490.0), S: (232.0, 12.0)]",
+						"takeoff": "[P: (248.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(448.0, 496.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 448.0,
+					"exit_y": 512.0,
+					"height": 64.0,
+					"spacing": 80.0
+				},
+				"phase": 0,
+				"platforms": [
+					"[P: (448.0, 496.0), S: (256.0, 20.0)]"
+				],
+				"polygons": [
+					"[(160.0, 448.0), (576.0, 544.0), (576.0, 640.0), (160.0, 640.0)]",
+					"[(704.0, 544.0), (1120.0, 512.0), (1120.0, 640.0), (704.0, 640.0)]"
+				],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 448.0)",
+						"kind": "primary",
+						"to": "(160.0, 448.0)"
+					},
+					{
+						"from": "(160.0, 448.0)",
+						"kind": "primary",
+						"to": "(576.0, 544.0)"
+					},
+					{
+						"from": "(576.0, 544.0)",
+						"kind": "primary",
+						"to": "(704.0, 544.0)"
+					},
+					{
+						"from": "(704.0, 544.0)",
+						"kind": "primary",
+						"to": "(1120.0, 512.0)"
+					},
+					{
+						"from": "(1120.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					},
+					{
+						"from": "(448.0, 496.0)",
+						"kind": "upper",
+						"to": "(704.0, 496.0)"
+					}
+				],
+				"segment_role": "挑战",
+				"spatial_id": "basin",
+				"spikes": [],
+				"structure": "下沉回升",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 2,
+				"vertical": true,
+				"walls": [],
+				"zone": "下沉区"
+			},
+			"index": 2,
+			"size": "(1280, 720)",
+			"spatial": {
+				"animation_time": 0.15,
+				"chunks": 5,
+				"ids": [
+					"404:0",
+					"404:1",
+					"404:2",
+					"404:3",
+					"404:4"
+				],
+				"origins": [
+					0.0,
+					1280.0,
+					2560.0,
+					3840.0,
+					5120.0
+				],
+				"structures": [
+					"slope",
+					"slope",
+					"basin",
+					"slope",
+					"basin"
+				],
+				"visible": true,
+				"zones": [
+					"坡地区",
+					"坡地区",
+					"下沉区",
+					"坡地区",
+					"下沉区"
+				]
+			}
+		},
+		{
+			"camera_y": 270.0,
+			"case": "basin",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 448.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 448.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "rhythm",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 448.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 448.0), S: (160.0, 192.0)]",
+					"[P: (576.0, 544.0), S: (128.0, 96.0)]",
+					"[P: (1120.0, 512.0), S: (160.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 448.0)",
+						"to": "(160.0, 448.0)"
+					},
+					{
+						"from": "(160.0, 448.0)",
+						"to": "(576.0, 544.0)"
+					},
+					{
+						"from": "(576.0, 544.0)",
+						"to": "(704.0, 544.0)"
+					},
+					{
+						"from": "(704.0, 544.0)",
+						"to": "(1120.0, 512.0)"
+					},
+					{
+						"from": "(1120.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(352.0, 512.0)",
+						"kind": "upper",
+						"landing": "[P: (460.0, 490.0), S: (232.0, 12.0)]",
+						"takeoff": "[P: (248.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(448.0, 496.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 448.0,
+					"exit_y": 512.0,
+					"height": 64.0,
+					"spacing": 80.0
+				},
+				"phase": 0,
+				"platforms": [
+					"[P: (448.0, 496.0), S: (256.0, 20.0)]"
+				],
+				"polygons": [
+					"[(160.0, 448.0), (576.0, 544.0), (576.0, 640.0), (160.0, 640.0)]",
+					"[(704.0, 544.0), (1120.0, 512.0), (1120.0, 640.0), (704.0, 640.0)]"
+				],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 448.0)",
+						"kind": "primary",
+						"to": "(160.0, 448.0)"
+					},
+					{
+						"from": "(160.0, 448.0)",
+						"kind": "primary",
+						"to": "(576.0, 544.0)"
+					},
+					{
+						"from": "(576.0, 544.0)",
+						"kind": "primary",
+						"to": "(704.0, 544.0)"
+					},
+					{
+						"from": "(704.0, 544.0)",
+						"kind": "primary",
+						"to": "(1120.0, 512.0)"
+					},
+					{
+						"from": "(1120.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					},
+					{
+						"from": "(448.0, 496.0)",
+						"kind": "upper",
+						"to": "(704.0, 496.0)"
+					}
+				],
+				"segment_role": "挑战",
+				"spatial_id": "basin",
+				"spikes": [],
+				"structure": "下沉回升",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 2,
+				"vertical": true,
+				"walls": [],
+				"zone": "下沉区"
+			},
+			"index": 2,
+			"size": "(960, 540)",
+			"spatial": {
+				"animation_time": 0.2,
+				"chunks": 5,
+				"ids": [
+					"404:0",
+					"404:1",
+					"404:2",
+					"404:3",
+					"404:4"
+				],
+				"origins": [
+					0.0,
+					1280.0,
+					2560.0,
+					3840.0,
+					5120.0
+				],
+				"structures": [
+					"slope",
+					"slope",
+					"basin",
+					"slope",
+					"basin"
+				],
+				"visible": true,
+				"zones": [
+					"坡地区",
+					"坡地区",
+					"下沉区",
+					"坡地区",
+					"下沉区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "slope",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "safe",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 0,
+				"floors": [
+					"[P: (0.0, 512.0), S: (192.0, 128.0)]",
+					"[P: (576.0, 544.0), S: (192.0, 96.0)]",
+					"[P: (1088.0, 512.0), S: (192.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(192.0, 512.0)"
+					},
+					{
+						"from": "(192.0, 512.0)",
+						"to": "(576.0, 544.0)"
+					},
+					{
+						"from": "(576.0, 544.0)",
+						"to": "(768.0, 544.0)"
+					},
+					{
+						"from": "(768.0, 544.0)",
+						"to": "(1088.0, 512.0)"
+					},
+					{
+						"from": "(1088.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(304.0, 544.0)",
+						"kind": "upper",
+						"landing": "[P: (396.0, 506.0), S: (168.0, 12.0)]",
+						"takeoff": "[P: (200.0, 536.0), S: (80.0, 16.0)]",
+						"to": "(384.0, 512.0)"
+					},
+					{
+						"from": "(576.0, 512.0)",
+						"kind": "upper",
+						"landing": "[P: (700.0, 474.0), S: (168.0, 12.0)]",
+						"takeoff": "[P: (472.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(688.0, 480.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 64.0,
+					"spacing": 80.0
+				},
+				"phase": 0,
+				"platforms": [
+					"[P: (384.0, 512.0), S: (192.0, 20.0)]",
+					"[P: (688.0, 480.0), S: (192.0, 20.0)]"
+				],
+				"polygons": [
+					"[(192.0, 512.0), (576.0, 544.0), (576.0, 640.0), (192.0, 640.0)]",
+					"[(768.0, 544.0), (1088.0, 512.0), (1088.0, 640.0), (768.0, 640.0)]"
+				],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(192.0, 512.0)"
+					},
+					{
+						"from": "(192.0, 512.0)",
+						"kind": "primary",
+						"to": "(576.0, 544.0)"
+					},
+					{
+						"from": "(576.0, 544.0)",
+						"kind": "primary",
+						"to": "(768.0, 544.0)"
+					},
+					{
+						"from": "(768.0, 544.0)",
+						"kind": "primary",
+						"to": "(1088.0, 512.0)"
+					},
+					{
+						"from": "(1088.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					},
+					{
+						"from": "(384.0, 512.0)",
+						"kind": "upper",
+						"to": "(576.0, 512.0)"
+					},
+					{
+						"from": "(688.0, 480.0)",
+						"kind": "upper",
+						"to": "(880.0, 480.0)"
+					}
+				],
+				"segment_role": "缓和",
+				"spatial_id": "slope",
+				"spikes": [],
+				"structure": "坡地连跳",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 3,
+				"vertical": true,
+				"walls": [],
+				"zone": "坡地区"
+			},
+			"index": 3,
+			"size": "(1280, 720)",
+			"spatial": {
+				"animation_time": 0.366666666666667,
+				"chunks": 5,
+				"ids": [
+					"404:1",
+					"404:2",
+					"404:3",
+					"404:4",
+					"404:5"
+				],
+				"origins": [
+					1280.0,
+					2560.0,
+					3840.0,
+					5120.0,
+					6400.0
+				],
+				"structures": [
+					"slope",
+					"basin",
+					"slope",
+					"basin",
+					"slope"
+				],
+				"visible": true,
+				"zones": [
+					"坡地区",
+					"下沉区",
+					"坡地区",
+					"下沉区",
+					"高架区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "slope",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "safe",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 0,
+				"floors": [
+					"[P: (0.0, 512.0), S: (192.0, 128.0)]",
+					"[P: (576.0, 544.0), S: (192.0, 96.0)]",
+					"[P: (1088.0, 512.0), S: (192.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(192.0, 512.0)"
+					},
+					{
+						"from": "(192.0, 512.0)",
+						"to": "(576.0, 544.0)"
+					},
+					{
+						"from": "(576.0, 544.0)",
+						"to": "(768.0, 544.0)"
+					},
+					{
+						"from": "(768.0, 544.0)",
+						"to": "(1088.0, 512.0)"
+					},
+					{
+						"from": "(1088.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(304.0, 544.0)",
+						"kind": "upper",
+						"landing": "[P: (396.0, 506.0), S: (168.0, 12.0)]",
+						"takeoff": "[P: (200.0, 536.0), S: (80.0, 16.0)]",
+						"to": "(384.0, 512.0)"
+					},
+					{
+						"from": "(576.0, 512.0)",
+						"kind": "upper",
+						"landing": "[P: (700.0, 474.0), S: (168.0, 12.0)]",
+						"takeoff": "[P: (472.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(688.0, 480.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 64.0,
+					"spacing": 80.0
+				},
+				"phase": 0,
+				"platforms": [
+					"[P: (384.0, 512.0), S: (192.0, 20.0)]",
+					"[P: (688.0, 480.0), S: (192.0, 20.0)]"
+				],
+				"polygons": [
+					"[(192.0, 512.0), (576.0, 544.0), (576.0, 640.0), (192.0, 640.0)]",
+					"[(768.0, 544.0), (1088.0, 512.0), (1088.0, 640.0), (768.0, 640.0)]"
+				],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(192.0, 512.0)"
+					},
+					{
+						"from": "(192.0, 512.0)",
+						"kind": "primary",
+						"to": "(576.0, 544.0)"
+					},
+					{
+						"from": "(576.0, 544.0)",
+						"kind": "primary",
+						"to": "(768.0, 544.0)"
+					},
+					{
+						"from": "(768.0, 544.0)",
+						"kind": "primary",
+						"to": "(1088.0, 512.0)"
+					},
+					{
+						"from": "(1088.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					},
+					{
+						"from": "(384.0, 512.0)",
+						"kind": "upper",
+						"to": "(576.0, 512.0)"
+					},
+					{
+						"from": "(688.0, 480.0)",
+						"kind": "upper",
+						"to": "(880.0, 480.0)"
+					}
+				],
+				"segment_role": "缓和",
+				"spatial_id": "slope",
+				"spikes": [],
+				"structure": "坡地连跳",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 3,
+				"vertical": true,
+				"walls": [],
+				"zone": "坡地区"
+			},
+			"index": 3,
+			"size": "(960, 540)",
+			"spatial": {
+				"animation_time": 0.416666666666667,
+				"chunks": 5,
+				"ids": [
+					"404:1",
+					"404:2",
+					"404:3",
+					"404:4",
+					"404:5"
+				],
+				"origins": [
+					1280.0,
+					2560.0,
+					3840.0,
+					5120.0,
+					6400.0
+				],
+				"structures": [
+					"slope",
+					"basin",
+					"slope",
+					"basin",
+					"slope"
+				],
+				"visible": true,
+				"zones": [
+					"坡地区",
+					"下沉区",
+					"坡地区",
+					"下沉区",
+					"高架区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "challenge",
+			"connection": {
+				"chain_id": "5",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": 448.0,
+				"upper_from": false,
+				"upper_to": true
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "relay",
+				"challenge": {
+					"bonus": 200,
+					"entry": "[P: (280.0, 0.0), S: (96.0, 438.0)]",
+					"exit_x": 976.0,
+					"lower": "[P: (370.0, 474.0), S: (606.0, 110.0)]",
+					"order": [
+						"challenge_1",
+						"challenge_2",
+						"challenge_3"
+					]
+				},
+				"connection": {
+					"chain_id": "5",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": 448.0,
+					"upper_from": false,
+					"upper_to": true
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 512.0), S: (1280.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(288.0, 512.0)",
+						"kind": "upper",
+						"landing": "[P: (300.0, 442.0), S: (176.0, 12.0)]",
+						"takeoff": "[P: (184.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(288.0, 448.0)"
+					},
+					{
+						"from": "(488.0, 448.0)",
+						"kind": "upper",
+						"landing": "[P: (596.0, 378.0), S: (176.0, 12.0)]",
+						"takeoff": "[P: (384.0, 440.0), S: (80.0, 16.0)]",
+						"to": "(584.0, 384.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 64.0,
+					"spacing": 96.0
+				},
+				"phase": 0,
+				"platforms": [
+					"[P: (288.0, 448.0), S: (200.0, 20.0)]",
+					"[P: (584.0, 384.0), S: (200.0, 20.0)]",
+					"[P: (768.0, 448.0), S: (208.0, 20.0)]",
+					"[P: (960.0, 448.0), S: (320.0, 20.0)]"
+				],
+				"polygons": [],
+				"relays": [
+					{
+						"local_id": "challenge_1",
+						"position": "(400.0, 414.0)"
+					},
+					{
+						"local_id": "challenge_2",
+						"position": "(684.0, 350.0)"
+					},
+					{
+						"local_id": "challenge_3",
+						"position": "(860.0, 414.0)"
+					},
+					{
+						"local_id": "low",
+						"position": "(1010.0, 474.0)"
+					}
+				],
+				"routes": [
+					{
+						"from": "(288.0, 448.0)",
+						"kind": "upper",
+						"to": "(488.0, 448.0)"
+					},
+					{
+						"from": "(584.0, 384.0)",
+						"kind": "upper",
+						"to": "(784.0, 384.0)"
+					},
+					{
+						"from": "(768.0, 448.0)",
+						"kind": "upper",
+						"to": "(976.0, 448.0)"
+					},
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					},
+					{
+						"from": "(960.0, 448.0)",
+						"kind": "upper",
+						"to": "(1280.0, 448.0)"
+					}
+				],
+				"segment_role": "分路",
+				"spatial_id": "slope",
+				"spikes": [],
+				"structure": "上下双路线",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 0,
+				"vertical": true,
+				"walls": [],
+				"zone": "高架区"
+			},
+			"index": 5,
+			"size": "(1280, 720)",
+			"spatial": {
+				"animation_time": 0.533333333333333,
+				"chunks": 5,
+				"ids": [
+					"404:3",
+					"404:4",
+					"404:5",
+					"404:6",
+					"404:7"
+				],
+				"origins": [
+					3840.0,
+					5120.0,
+					6400.0,
+					7680.0,
+					8960.0
+				],
+				"structures": [
+					"slope",
+					"basin",
+					"slope",
+					"slope",
+					"slope"
+				],
+				"visible": true,
+				"zones": [
+					"坡地区",
+					"下沉区",
+					"高架区",
+					"高架区",
+					"坡地区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "challenge",
+			"connection": {
+				"chain_id": "5",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": 448.0,
+				"upper_from": false,
+				"upper_to": true
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "relay",
+				"challenge": {
+					"bonus": 200,
+					"entry": "[P: (280.0, 0.0), S: (96.0, 438.0)]",
+					"exit_x": 976.0,
+					"lower": "[P: (370.0, 474.0), S: (606.0, 110.0)]",
+					"order": [
+						"challenge_1",
+						"challenge_2",
+						"challenge_3"
+					]
+				},
+				"connection": {
+					"chain_id": "5",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": 448.0,
+					"upper_from": false,
+					"upper_to": true
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 512.0), S: (1280.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(288.0, 512.0)",
+						"kind": "upper",
+						"landing": "[P: (300.0, 442.0), S: (176.0, 12.0)]",
+						"takeoff": "[P: (184.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(288.0, 448.0)"
+					},
+					{
+						"from": "(488.0, 448.0)",
+						"kind": "upper",
+						"landing": "[P: (596.0, 378.0), S: (176.0, 12.0)]",
+						"takeoff": "[P: (384.0, 440.0), S: (80.0, 16.0)]",
+						"to": "(584.0, 384.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 64.0,
+					"spacing": 96.0
+				},
+				"phase": 0,
+				"platforms": [
+					"[P: (288.0, 448.0), S: (200.0, 20.0)]",
+					"[P: (584.0, 384.0), S: (200.0, 20.0)]",
+					"[P: (768.0, 448.0), S: (208.0, 20.0)]",
+					"[P: (960.0, 448.0), S: (320.0, 20.0)]"
+				],
+				"polygons": [],
+				"relays": [
+					{
+						"local_id": "challenge_1",
+						"position": "(400.0, 414.0)"
+					},
+					{
+						"local_id": "challenge_2",
+						"position": "(684.0, 350.0)"
+					},
+					{
+						"local_id": "challenge_3",
+						"position": "(860.0, 414.0)"
+					},
+					{
+						"local_id": "low",
+						"position": "(1010.0, 474.0)"
+					}
+				],
+				"routes": [
+					{
+						"from": "(288.0, 448.0)",
+						"kind": "upper",
+						"to": "(488.0, 448.0)"
+					},
+					{
+						"from": "(584.0, 384.0)",
+						"kind": "upper",
+						"to": "(784.0, 384.0)"
+					},
+					{
+						"from": "(768.0, 448.0)",
+						"kind": "upper",
+						"to": "(976.0, 448.0)"
+					},
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					},
+					{
+						"from": "(960.0, 448.0)",
+						"kind": "upper",
+						"to": "(1280.0, 448.0)"
+					}
+				],
+				"segment_role": "分路",
+				"spatial_id": "slope",
+				"spikes": [],
+				"structure": "上下双路线",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 0,
+				"vertical": true,
+				"walls": [],
+				"zone": "高架区"
+			},
+			"index": 5,
+			"size": "(960, 540)",
+			"spatial": {
+				"animation_time": 0.583333333333333,
+				"chunks": 5,
+				"ids": [
+					"404:3",
+					"404:4",
+					"404:5",
+					"404:6",
+					"404:7"
+				],
+				"origins": [
+					3840.0,
+					5120.0,
+					6400.0,
+					7680.0,
+					8960.0
+				],
+				"structures": [
+					"slope",
+					"basin",
+					"slope",
+					"slope",
+					"slope"
+				],
+				"visible": true,
+				"zones": [
+					"坡地区",
+					"下沉区",
+					"高架区",
+					"高架区",
+					"坡地区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "upper-merge",
+			"connection": {
+				"chain_id": "5",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": 448.0,
+				"upper_exit_y": -1.0,
+				"upper_from": true,
+				"upper_to": false
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "rhythm",
+				"connection": {
+					"chain_id": "5",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": 448.0,
+					"upper_exit_y": -1.0,
+					"upper_from": true,
+					"upper_to": false
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 512.0), S: (1280.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(256.0, 448.0)",
+						"kind": "upper",
+						"landing": "[P: (332.0, 410.0), S: (232.0, 12.0)]",
+						"takeoff": "[P: (152.0, 440.0), S: (80.0, 16.0)]",
+						"to": "(320.0, 416.0)"
+					},
+					{
+						"from": "(576.0, 416.0)",
+						"kind": "upper",
+						"landing": "[P: (652.0, 442.0), S: (296.0, 12.0)]",
+						"takeoff": "[P: (472.0, 408.0), S: (80.0, 16.0)]",
+						"to": "(640.0, 448.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 32.0,
+					"spacing": 80.0
+				},
+				"phase": 0,
+				"platforms": [
+					"[P: (0.0, 448.0), S: (256.0, 20.0)]",
+					"[P: (320.0, 416.0), S: (256.0, 20.0)]",
+					"[P: (640.0, 448.0), S: (320.0, 20.0)]"
+				],
+				"polygons": [],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					},
+					{
+						"from": "(0.0, 448.0)",
+						"kind": "upper",
+						"to": "(256.0, 448.0)"
+					},
+					{
+						"from": "(320.0, 416.0)",
+						"kind": "upper",
+						"to": "(576.0, 416.0)"
+					},
+					{
+						"from": "(640.0, 448.0)",
+						"kind": "upper",
+						"to": "(960.0, 448.0)"
+					},
+					{
+						"from": "(960.0, 448.0)",
+						"kind": "merge",
+						"to": "(1184.0, 512.0)"
+					}
+				],
+				"segment_role": "挑战",
+				"spatial_id": "slope",
+				"spikes": [],
+				"structure": "高路汇回",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 0,
+				"vertical": true,
+				"walls": [],
+				"zone": "高架区"
+			},
+			"index": 6,
+			"size": "(1280, 720)",
+			"spatial": {
+				"animation_time": 0.666666666666667,
+				"chunks": 5,
+				"ids": [
+					"404:4",
+					"404:5",
+					"404:6",
+					"404:7",
+					"404:8"
+				],
+				"origins": [
+					5120.0,
+					6400.0,
+					7680.0,
+					8960.0,
+					10240.0
+				],
+				"structures": [
+					"basin",
+					"slope",
+					"slope",
+					"slope",
+					"bridge"
+				],
+				"visible": true,
+				"zones": [
+					"下沉区",
+					"高架区",
+					"高架区",
+					"坡地区",
+					"高架区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "upper-merge",
+			"connection": {
+				"chain_id": "5",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": 448.0,
+				"upper_exit_y": -1.0,
+				"upper_from": true,
+				"upper_to": false
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "rhythm",
+				"connection": {
+					"chain_id": "5",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": 448.0,
+					"upper_exit_y": -1.0,
+					"upper_from": true,
+					"upper_to": false
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 512.0), S: (1280.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(256.0, 448.0)",
+						"kind": "upper",
+						"landing": "[P: (332.0, 410.0), S: (232.0, 12.0)]",
+						"takeoff": "[P: (152.0, 440.0), S: (80.0, 16.0)]",
+						"to": "(320.0, 416.0)"
+					},
+					{
+						"from": "(576.0, 416.0)",
+						"kind": "upper",
+						"landing": "[P: (652.0, 442.0), S: (296.0, 12.0)]",
+						"takeoff": "[P: (472.0, 408.0), S: (80.0, 16.0)]",
+						"to": "(640.0, 448.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 32.0,
+					"spacing": 80.0
+				},
+				"phase": 0,
+				"platforms": [
+					"[P: (0.0, 448.0), S: (256.0, 20.0)]",
+					"[P: (320.0, 416.0), S: (256.0, 20.0)]",
+					"[P: (640.0, 448.0), S: (320.0, 20.0)]"
+				],
+				"polygons": [],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					},
+					{
+						"from": "(0.0, 448.0)",
+						"kind": "upper",
+						"to": "(256.0, 448.0)"
+					},
+					{
+						"from": "(320.0, 416.0)",
+						"kind": "upper",
+						"to": "(576.0, 416.0)"
+					},
+					{
+						"from": "(640.0, 448.0)",
+						"kind": "upper",
+						"to": "(960.0, 448.0)"
+					},
+					{
+						"from": "(960.0, 448.0)",
+						"kind": "merge",
+						"to": "(1184.0, 512.0)"
+					}
+				],
+				"segment_role": "挑战",
+				"spatial_id": "slope",
+				"spikes": [],
+				"structure": "高路汇回",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 0,
+				"vertical": true,
+				"walls": [],
+				"zone": "高架区"
+			},
+			"index": 6,
+			"size": "(960, 540)",
+			"spatial": {
+				"animation_time": 0.716666666666667,
+				"chunks": 5,
+				"ids": [
+					"404:4",
+					"404:5",
+					"404:6",
+					"404:7",
+					"404:8"
+				],
+				"origins": [
+					5120.0,
+					6400.0,
+					7680.0,
+					8960.0,
+					10240.0
+				],
+				"structures": [
+					"basin",
+					"slope",
+					"slope",
+					"slope",
+					"bridge"
+				],
+				"visible": true,
+				"zones": [
+					"下沉区",
+					"高架区",
+					"高架区",
+					"坡地区",
+					"高架区"
+				]
+			}
+		},
+		{
+			"camera_y": 270.0,
+			"case": "bridge",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 448.0,
+				"exit_y": 384.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 448.0,
+			"exit": 384.0,
+			"geometry": {
+				"category": "rhythm",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 448.0,
+					"exit_y": 384.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 448.0), S: (352.0, 192.0)]",
+					"[P: (1008.0, 448.0), S: (80.0, 192.0)]"
+				],
+				"gaps": [
+					"[P: (352.0, 448.0), S: (656.0, 92.0)]"
+				],
+				"ground_segments": [
+					{
+						"from": "(0.0, 448.0)",
+						"to": "(352.0, 448.0)"
+					},
+					{
+						"from": "(1008.0, 448.0)",
+						"to": "(1088.0, 448.0)"
+					},
+					{
+						"from": "(1088.0, 448.0)",
+						"to": "(1280.0, 384.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(352.0, 448.0)",
+						"kind": "primary",
+						"landing": "[P: (444.0, 410.0), S: (232.0, 12.0)]",
+						"takeoff": "[P: (248.0, 440.0), S: (80.0, 16.0)]",
+						"to": "(432.0, 416.0)"
+					},
+					{
+						"from": "(688.0, 416.0)",
+						"kind": "primary",
+						"landing": "[P: (756.0, 410.0), S: (232.0, 12.0)]",
+						"takeoff": "[P: (584.0, 408.0), S: (80.0, 16.0)]",
+						"to": "(744.0, 416.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 448.0,
+					"exit_y": 384.0,
+					"height": 32.0,
+					"spacing": 80.0
+				},
+				"phase": 1,
+				"platforms": [
+					"[P: (432.0, 416.0), S: (256.0, 24.0)]",
+					"[P: (744.0, 416.0), S: (256.0, 24.0)]"
+				],
+				"polygons": [
+					"[(1088.0, 448.0), (1280.0, 384.0), (1280.0, 640.0), (1088.0, 640.0)]"
+				],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 448.0)",
+						"kind": "primary",
+						"to": "(352.0, 448.0)"
+					},
+					{
+						"from": "(432.0, 416.0)",
+						"kind": "primary",
+						"to": "(688.0, 416.0)"
+					},
+					{
+						"from": "(744.0, 416.0)",
+						"kind": "primary",
+						"to": "(1000.0, 416.0)"
+					},
+					{
+						"from": "(1008.0, 448.0)",
+						"kind": "primary",
+						"to": "(1088.0, 448.0)"
+					},
+					{
+						"from": "(1088.0, 448.0)",
+						"kind": "primary",
+						"to": "(1280.0, 384.0)"
+					}
+				],
+				"segment_role": "挑战",
+				"spatial_id": "bridge",
+				"spikes": [],
+				"structure": "断桥接续",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 8,
+				"vertical": true,
+				"walls": [],
+				"zone": "高架区"
+			},
+			"index": 8,
+			"size": "(1280, 720)",
+			"spatial": {
+				"animation_time": 0.833333333333334,
+				"chunks": 5,
+				"ids": [
+					"404:6",
+					"404:7",
+					"404:8",
+					"404:9",
+					"404:10"
+				],
+				"origins": [
+					7680.0,
+					8960.0,
+					10240.0,
+					11520.0,
+					12800.0
+				],
+				"structures": [
+					"slope",
+					"slope",
+					"bridge",
+					"basin",
+					"slope"
+				],
+				"visible": true,
+				"zones": [
+					"高架区",
+					"坡地区",
+					"高架区",
+					"下沉区",
+					"高架区"
+				]
+			}
+		},
+		{
+			"camera_y": 270.0,
+			"case": "bridge",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 448.0,
+				"exit_y": 384.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 448.0,
+			"exit": 384.0,
+			"geometry": {
+				"category": "rhythm",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 448.0,
+					"exit_y": 384.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 448.0), S: (352.0, 192.0)]",
+					"[P: (1008.0, 448.0), S: (80.0, 192.0)]"
+				],
+				"gaps": [
+					"[P: (352.0, 448.0), S: (656.0, 92.0)]"
+				],
+				"ground_segments": [
+					{
+						"from": "(0.0, 448.0)",
+						"to": "(352.0, 448.0)"
+					},
+					{
+						"from": "(1008.0, 448.0)",
+						"to": "(1088.0, 448.0)"
+					},
+					{
+						"from": "(1088.0, 448.0)",
+						"to": "(1280.0, 384.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(352.0, 448.0)",
+						"kind": "primary",
+						"landing": "[P: (444.0, 410.0), S: (232.0, 12.0)]",
+						"takeoff": "[P: (248.0, 440.0), S: (80.0, 16.0)]",
+						"to": "(432.0, 416.0)"
+					},
+					{
+						"from": "(688.0, 416.0)",
+						"kind": "primary",
+						"landing": "[P: (756.0, 410.0), S: (232.0, 12.0)]",
+						"takeoff": "[P: (584.0, 408.0), S: (80.0, 16.0)]",
+						"to": "(744.0, 416.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 448.0,
+					"exit_y": 384.0,
+					"height": 32.0,
+					"spacing": 80.0
+				},
+				"phase": 1,
+				"platforms": [
+					"[P: (432.0, 416.0), S: (256.0, 24.0)]",
+					"[P: (744.0, 416.0), S: (256.0, 24.0)]"
+				],
+				"polygons": [
+					"[(1088.0, 448.0), (1280.0, 384.0), (1280.0, 640.0), (1088.0, 640.0)]"
+				],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 448.0)",
+						"kind": "primary",
+						"to": "(352.0, 448.0)"
+					},
+					{
+						"from": "(432.0, 416.0)",
+						"kind": "primary",
+						"to": "(688.0, 416.0)"
+					},
+					{
+						"from": "(744.0, 416.0)",
+						"kind": "primary",
+						"to": "(1000.0, 416.0)"
+					},
+					{
+						"from": "(1008.0, 448.0)",
+						"kind": "primary",
+						"to": "(1088.0, 448.0)"
+					},
+					{
+						"from": "(1088.0, 448.0)",
+						"kind": "primary",
+						"to": "(1280.0, 384.0)"
+					}
+				],
+				"segment_role": "挑战",
+				"spatial_id": "bridge",
+				"spikes": [],
+				"structure": "断桥接续",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 8,
+				"vertical": true,
+				"walls": [],
+				"zone": "高架区"
+			},
+			"index": 8,
+			"size": "(960, 540)",
+			"spatial": {
+				"animation_time": 0.883333333333334,
+				"chunks": 5,
+				"ids": [
+					"404:6",
+					"404:7",
+					"404:8",
+					"404:9",
+					"404:10"
+				],
+				"origins": [
+					7680.0,
+					8960.0,
+					10240.0,
+					11520.0,
+					12800.0
+				],
+				"structures": [
+					"slope",
+					"slope",
+					"bridge",
+					"basin",
+					"slope"
+				],
+				"visible": true,
+				"zones": [
+					"高架区",
+					"坡地区",
+					"高架区",
+					"下沉区",
+					"高架区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "terrace",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "rhythm",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 512.0), S: (288.0, 128.0)]",
+					"[P: (288.0, 448.0), S: (288.0, 192.0)]",
+					"[P: (1088.0, 512.0), S: (192.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(288.0, 512.0)"
+					},
+					{
+						"from": "(288.0, 448.0)",
+						"to": "(576.0, 448.0)"
+					},
+					{
+						"from": "(576.0, 448.0)",
+						"to": "(1088.0, 512.0)"
+					},
+					{
+						"from": "(1088.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(288.0, 512.0)",
+						"kind": "primary",
+						"landing": "[P: (300.0, 442.0), S: (264.0, 12.0)]",
+						"takeoff": "[P: (184.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(288.0, 448.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 64.0,
+					"spacing": 64.0
+				},
+				"phase": 1,
+				"platforms": [],
+				"polygons": [
+					"[(576.0, 448.0), (1088.0, 512.0), (1088.0, 640.0), (576.0, 640.0)]"
+				],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(288.0, 512.0)"
+					},
+					{
+						"from": "(288.0, 448.0)",
+						"kind": "primary",
+						"to": "(576.0, 448.0)"
+					},
+					{
+						"from": "(576.0, 448.0)",
+						"kind": "primary",
+						"to": "(1088.0, 512.0)"
+					},
+					{
+						"from": "(1088.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"segment_role": "挑战",
+				"spatial_id": "terrace",
+				"spikes": [],
+				"structure": "高台跨越",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 19,
+				"vertical": true,
+				"walls": [],
+				"zone": "高架区"
+			},
+			"index": 19,
+			"size": "(1280, 720)",
+			"spatial": {
+				"animation_time": 1.3,
+				"chunks": 5,
+				"ids": [
+					"404:17",
+					"404:18",
+					"404:19",
+					"404:20",
+					"404:21"
+				],
+				"origins": [
+					21760.0,
+					23040.0,
+					24320.0,
+					25600.0,
+					26880.0
+				],
+				"structures": [
+					"basin",
+					"basin",
+					"terrace",
+					"slope",
+					"basin"
+				],
+				"visible": true,
+				"zones": [
+					"下沉区",
+					"下沉区",
+					"高架区",
+					"高架区",
+					"下沉区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "terrace",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "rhythm",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 1,
+				"floors": [
+					"[P: (0.0, 512.0), S: (288.0, 128.0)]",
+					"[P: (288.0, 448.0), S: (288.0, 192.0)]",
+					"[P: (1088.0, 512.0), S: (192.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(288.0, 512.0)"
+					},
+					{
+						"from": "(288.0, 448.0)",
+						"to": "(576.0, 448.0)"
+					},
+					{
+						"from": "(576.0, 448.0)",
+						"to": "(1088.0, 512.0)"
+					},
+					{
+						"from": "(1088.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(288.0, 512.0)",
+						"kind": "primary",
+						"landing": "[P: (300.0, 442.0), S: (264.0, 12.0)]",
+						"takeoff": "[P: (184.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(288.0, 448.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 64.0,
+					"spacing": 64.0
+				},
+				"phase": 1,
+				"platforms": [],
+				"polygons": [
+					"[(576.0, 448.0), (1088.0, 512.0), (1088.0, 640.0), (576.0, 640.0)]"
+				],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(288.0, 512.0)"
+					},
+					{
+						"from": "(288.0, 448.0)",
+						"kind": "primary",
+						"to": "(576.0, 448.0)"
+					},
+					{
+						"from": "(576.0, 448.0)",
+						"kind": "primary",
+						"to": "(1088.0, 512.0)"
+					},
+					{
+						"from": "(1088.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"segment_role": "挑战",
+				"spatial_id": "terrace",
+				"spikes": [],
+				"structure": "高台跨越",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 19,
+				"vertical": true,
+				"walls": [],
+				"zone": "高架区"
+			},
+			"index": 19,
+			"size": "(960, 540)",
+			"spatial": {
+				"animation_time": 1.35,
+				"chunks": 5,
+				"ids": [
+					"404:17",
+					"404:18",
+					"404:19",
+					"404:20",
+					"404:21"
+				],
+				"origins": [
+					21760.0,
+					23040.0,
+					24320.0,
+					25600.0,
+					26880.0
+				],
+				"structures": [
+					"basin",
+					"basin",
+					"terrace",
+					"slope",
+					"basin"
+				],
+				"visible": true,
+				"zones": [
+					"下沉区",
+					"下沉区",
+					"高架区",
+					"高架区",
+					"下沉区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "station",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "safe",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 0,
+				"floors": [
+					"[P: (0.0, 512.0), S: (1280.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(288.0, 512.0)",
+						"kind": "upper",
+						"landing": "[P: (300.0, 474.0), S: (176.0, 12.0)]",
+						"takeoff": "[P: (184.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(288.0, 480.0)"
+					},
+					{
+						"from": "(488.0, 480.0)",
+						"kind": "upper",
+						"landing": "[P: (580.0, 442.0), S: (176.0, 12.0)]",
+						"takeoff": "[P: (384.0, 472.0), S: (80.0, 16.0)]",
+						"to": "(568.0, 448.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 32.0,
+					"spacing": 80.0
+				},
+				"phase": 1,
+				"platforms": [
+					"[P: (288.0, 480.0), S: (200.0, 20.0)]",
+					"[P: (568.0, 448.0), S: (200.0, 20.0)]",
+					"[P: (768.0, 480.0), S: (208.0, 20.0)]"
+				],
+				"polygons": [],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(288.0, 480.0)",
+						"kind": "upper",
+						"to": "(488.0, 480.0)"
+					},
+					{
+						"from": "(568.0, 448.0)",
+						"kind": "upper",
+						"to": "(768.0, 448.0)"
+					},
+					{
+						"from": "(768.0, 480.0)",
+						"kind": "upper",
+						"to": "(976.0, 480.0)"
+					},
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"segment_role": "恢复",
+				"spatial_id": "slope",
+				"spikes": [],
+				"station": {
+					"bonus": 200,
+					"heal": "(460.0, 446.0)",
+					"score": "(460.0, 494.0)"
+				},
+				"structure": "恢复站双路线",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 0,
+				"vertical": true,
+				"walls": [],
+				"zone": "恢复区"
+			},
+			"index": 22,
+			"size": "(1280, 720)",
+			"spatial": {
+				"animation_time": 1.5,
+				"chunks": 5,
+				"ids": [
+					"404:20",
+					"404:21",
+					"404:22",
+					"404:23",
+					"404:24"
+				],
+				"origins": [
+					25600.0,
+					26880.0,
+					28160.0,
+					29440.0,
+					30720.0
+				],
+				"structures": [
+					"slope",
+					"basin",
+					"slope",
+					"slope",
+					"terrace"
+				],
+				"visible": true,
+				"zones": [
+					"高架区",
+					"下沉区",
+					"恢复区",
+					"坡地区",
+					"高架区"
+				]
+			}
+		},
+		{
+			"camera_y": 333.0,
+			"case": "station",
+			"connection": {
+				"chain_id": "",
+				"entry_y": 512.0,
+				"exit_y": 512.0,
+				"upper_entry_y": -1.0,
+				"upper_exit_y": -1.0,
+				"upper_from": false,
+				"upper_to": false
+			},
+			"entry": 512.0,
+			"exit": 512.0,
+			"geometry": {
+				"category": "safe",
+				"connection": {
+					"chain_id": "",
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"upper_entry_y": -1.0,
+					"upper_exit_y": -1.0,
+					"upper_from": false,
+					"upper_to": false
+				},
+				"difficulty": 0,
+				"floors": [
+					"[P: (0.0, 512.0), S: (1280.0, 128.0)]"
+				],
+				"gaps": [],
+				"ground_segments": [
+					{
+						"from": "(0.0, 512.0)",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"id": "safe_a",
+				"jump_windows": [
+					{
+						"from": "(288.0, 512.0)",
+						"kind": "upper",
+						"landing": "[P: (300.0, 474.0), S: (176.0, 12.0)]",
+						"takeoff": "[P: (184.0, 504.0), S: (80.0, 16.0)]",
+						"to": "(288.0, 480.0)"
+					},
+					{
+						"from": "(488.0, 480.0)",
+						"kind": "upper",
+						"landing": "[P: (580.0, 442.0), S: (176.0, 12.0)]",
+						"takeoff": "[P: (384.0, 472.0), S: (80.0, 16.0)]",
+						"to": "(568.0, 448.0)"
+					}
+				],
+				"length": 1280.0,
+				"parameters": {
+					"entry_y": 512.0,
+					"exit_y": 512.0,
+					"height": 32.0,
+					"spacing": 80.0
+				},
+				"phase": 1,
+				"platforms": [
+					"[P: (288.0, 480.0), S: (200.0, 20.0)]",
+					"[P: (568.0, 448.0), S: (200.0, 20.0)]",
+					"[P: (768.0, 480.0), S: (208.0, 20.0)]"
+				],
+				"polygons": [],
+				"relays": [],
+				"routes": [
+					{
+						"from": "(288.0, 480.0)",
+						"kind": "upper",
+						"to": "(488.0, 480.0)"
+					},
+					{
+						"from": "(568.0, 448.0)",
+						"kind": "upper",
+						"to": "(768.0, 448.0)"
+					},
+					{
+						"from": "(768.0, 480.0)",
+						"kind": "upper",
+						"to": "(976.0, 480.0)"
+					},
+					{
+						"from": "(0.0, 512.0)",
+						"kind": "primary",
+						"to": "(1280.0, 512.0)"
+					}
+				],
+				"segment_role": "恢复",
+				"spatial_id": "slope",
+				"spikes": [],
+				"station": {
+					"bonus": 200,
+					"heal": "(460.0, 446.0)",
+					"score": "(460.0, 494.0)"
+				},
+				"structure": "恢复站双路线",
+				"validation": "有界空间候选；实际动作验收见版本报告，预览非实时模拟",
+				"variant": 0,
+				"vertical": true,
+				"walls": [],
+				"zone": "恢复区"
+			},
+			"index": 22,
+			"size": "(960, 540)",
+			"spatial": {
+				"animation_time": 1.55,
+				"chunks": 5,
+				"ids": [
+					"404:20",
+					"404:21",
+					"404:22",
+					"404:23",
+					"404:24"
+				],
+				"origins": [
+					25600.0,
+					26880.0,
+					28160.0,
+					29440.0,
+					30720.0
+				],
+				"structures": [
+					"slope",
+					"basin",
+					"slope",
+					"slope",
+					"terrace"
+				],
+				"visible": true,
+				"zones": [
+					"高架区",
+					"下沉区",
+					"恢复区",
+					"坡地区",
+					"高架区"
+				]
+			}
+		}
+	],
+	"sources": {
+		"scripts/level/endless_course.gd": "b813969382da75da8569b20f7ba699572d40eda15b2100702e69092c8d1c7452",
+		"scripts/level/run_flow.gd": "468d08ef8376d7a58d7684dc8bc374477297fdab673d25784e765eb9834d155b",
+		"scripts/level/spatial_generator.gd": "0ba067f0b70207ac5e9e80d0e13cd63347d998bcef72e6afb433f91c917da350",
+		"scripts/level/spatial_library.gd": "4caae01da69578e99dceea3728fcb470577a96de07de6e077c8c793bb6a76031",
+		"scripts/visual/endless_module_visual.gd": "afca53895ab5c9ee081ffeed913d5ad84bf4500253f3df71f45743ffbc025b62",
+		"scripts/visual/route_visual.gd": "d0112550f088e1f8ae809efb6b48ca808a19f75c8bd88d49a1d69fdd700e5e71",
+		"scripts/visual/spatial_visual.gd": "9f9b786cffd94da379aef15fd0647e00f13acd0444cf442a43dcfaad28b91e96"
+	}
+}

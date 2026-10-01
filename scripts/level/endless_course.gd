@@ -64,6 +64,30 @@ func update_stream(player_x: float, front_x: float) -> void:
 		chunks_changed.emit()
 		queue_redraw()
 
+func prepare_debug_start(global_x: float) -> void:
+	# Reconstruct deterministic generator state without building discarded bodies.
+	# This API is used only by visibly labelled, isolated editor starts.
+	if not streaming:
+		return
+	var retired_ids: Array[String]=[]
+	for chunk in chunks:
+		retired_ids.append(chunk.id)
+	for holder in _holders.values():
+		remove_child(holder)
+		holder.queue_free()
+	_holders.clear()
+	chunks.clear()
+	for id in retired_ids:
+		chunk_removed.emit(id)
+	total_offset=0
+	_generated_end=0
+	generator.reset(run_seed,generation_profile)
+	var begin:=maxf(0,floor((global_x-RETAIN)/Library.LENGTH)*Library.LENGTH)
+	while _generated_end<begin:
+		var entry: Dictionary=generator.next()
+		_generated_end+=float(entry.length)
+	update_stream(global_x,global_x-640)
+
 func _append_chunk(entry: Dictionary) -> void:
 	var d: Dictionary = entry.get("geometry", Library.definition(entry.template_id))
 	var id := "%d:%d" % [run_seed, entry.index]
@@ -81,6 +105,8 @@ func _append_chunk(entry: Dictionary) -> void:
 		_add_solid(rect, holder)
 	for rect in d.platforms:
 		_add_solid(rect,holder,d.get("vertical",false))
+	for polygon in d.get("polygons",[]):
+		_add_polygon(polygon,holder)
 	for rect in d.spikes:
 		_add_spikes(rect, holder)
 	for relay in d.relays:
@@ -89,6 +115,17 @@ func _append_chunk(entry: Dictionary) -> void:
 	_generated_end += d.length
 	course_length = _generated_end
 	chunk_added.emit(chunk)
+
+func _add_polygon(points: PackedVector2Array,holder: Node) -> void:
+	var body := StaticBody2D.new()
+	body.collision_layer=1
+	body.collision_mask=2
+	var collider := CollisionShape2D.new()
+	var shape := ConvexPolygonShape2D.new()
+	shape.points=points
+	collider.shape=shape
+	body.add_child(collider)
+	holder.add_child(body)
 
 func _sync_geometry() -> void:
 	floors.clear()
@@ -151,6 +188,15 @@ func _add_layout(template_id: String, index: int, origin: float) -> void:
 func safe_surface(point: Vector2) -> Dictionary:
 	for chunk in chunks:
 		var d: Dictionary = chunk.get("geometry", Library.definition(chunk.template_id))
+		for segment in d.get("ground_segments",[]):
+			var a: Vector2=segment.from
+			var b: Vector2=segment.to
+			var local_x: float=point.x-chunk.origin
+			if local_x<a.x+14 or local_x>b.x-14:
+				continue
+			var y:=lerpf(a.y,b.y,(local_x-a.x)/(b.x-a.x))
+			if absf(point.y+15-y)<=5:
+				return {"chunk_id":chunk.id,"global_point":Vector2(point.x+total_offset,y-16)}
 		for rect in d.floors + d.platforms + d.walls:
 			var x: float = point.x - chunk.origin
 			if x < rect.position.x + 14 or x > rect.end.x - 14 or absf(point.y + 15 - rect.position.y) > 5:
@@ -170,11 +216,18 @@ func safe_point_exists(saved: Dictionary) -> bool:
 
 func _draw() -> void:
 	super._draw()
+	for chunk in chunks:
+		for poly in chunk.get("geometry",{}).get("polygons",[]):
+			var points: PackedVector2Array=poly.duplicate()
+			for i in points.size():
+				points[i].x+=chunk.origin
+			draw_colored_polygon(points,Color("334554"))
+			draw_line(points[0],points[1],Color("d4e4e8"),4,true)
 	if not _textures.has("upper_route"):
 		return
 	for chunk in chunks:
 		var d: Dictionary = chunk.get("geometry",{})
-		if not d.get("vertical",false) or d.relays.is_empty() or d.platforms.is_empty():
+		if d.has("connection") or not d.get("vertical",false) or d.relays.is_empty() or d.platforms.is_empty():
 			continue
 		var rect: Rect2 = d.platforms[0]
 		draw_texture_rect(_textures.upper_route,Rect2(chunk.origin+rect.position.x,rect.position.y-58,80,28),false)

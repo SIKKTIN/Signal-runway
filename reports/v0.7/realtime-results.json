@@ -1,0 +1,10 @@
+{
+	"difference": 0.0028323333333371,
+	"fixed_fps": false,
+	"game_seconds": 2.36666666666666,
+	"passed": true,
+	"paused_frozen": true,
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"scope": "Normal graphical CLI without fixed-fps; safe initial terrain, real active delta and pause comparison.",
+	"wall_seconds": 2.369499
+}

@@ -12,6 +12,7 @@ var _total_offset := 0.0
 var _animation_time := 0.0
 var _phase_offset := 0.0
 var _font: Font
+var _spatial: Dictionary = {}
 
 func _ready() -> void:
 	z_index = -8
@@ -28,6 +29,7 @@ func configure(chunk: Dictionary, total_offset: float = 0.0) -> void:
 	_role = str(chunk.get("geometry",{}).get("segment_role",""))
 	_has_challenge = chunk.get("geometry",{}).has("challenge")
 	_has_station = chunk.get("geometry",{}).has("station")
+	_spatial = chunk.get("geometry",{}) if chunk.get("geometry",{}).has("ground_segments") else {}
 	_length = maxf(float(chunk.get("length", 960.0)), 1.0)
 	_phase_offset = float(absi(_chunk_id.hash()) % 127) * 0.17
 	set_world_offset(float(chunk.get("origin", 0.0)), total_offset)
@@ -47,6 +49,9 @@ func _draw() -> void:
 	var inverse := get_global_transform_with_canvas().affine_inverse()
 	var left := maxf(0.0, (inverse * Vector2.ZERO).x - 96.0)
 	var right := minf(_length, (inverse * get_viewport_rect().size).x + 96.0)
+	if not _spatial.is_empty():
+		_draw_spatial_background(left,right)
+		return
 	var gold := _category in ["relay", "relay_branch"]
 	var tower := _category in ["wall", "wall_combo"]
 	var accent := Color("b99752") if gold else Color("426975")
@@ -92,4 +97,29 @@ func _draw() -> void:
 
 func presentation_state() -> Dictionary:
 	return {"id": _chunk_id, "template_id": _template_id, "category": _category, "origin": position.x,
-		"length": _length, "pattern_offset": position.x + _total_offset, "phase_offset": _phase_offset, "animation_time": _animation_time}
+		"length": _length, "pattern_offset": position.x + _total_offset, "phase_offset": _phase_offset, "animation_time": _animation_time,"spatial_id":_spatial.get("spatial_id",""),"zone":_spatial.get("zone","")}
+
+func _surface_y(x: float) -> float:
+	for segment in _spatial.ground_segments:
+		var a: Vector2 = segment.from
+		var b: Vector2 = segment.to
+		if x>=a.x and x<=b.x:
+			return lerpf(a.y,b.y,(x-a.x)/(b.x-a.x))
+	return float(_spatial.connection.entry_y)
+
+func _draw_spatial_background(left: float,right: float) -> void:
+	var zone: String = str(_spatial.zone)
+	var basin: bool = zone=="下沉区"
+	for index in range(int(floor(left/288)),int(ceil(right/288))):
+		var x: float = index*288+38
+		var ground: float = _surface_y(clampf(x+72,0,_length))
+		var height: float = 104 if basin else (176 if zone=="高架区" else 132)
+		var base: float = ground-18
+		draw_rect(Rect2(x,base-height,144,height),Color(.09,.15,.19,.46))
+		draw_line(Vector2(x+12,base-height+14),Vector2(x+132,base-14),Color(.17,.26,.30,.60),1.5)
+		draw_line(Vector2(x+132,base-height+14),Vector2(x+12,base-14),Color(.17,.26,.30,.60),1.5)
+		var pulse: float = .5+.5*sin(_animation_time*1.4+_phase_offset+index)
+		draw_rect(Rect2(x+64,base-height+24,16,3),Color(.27,.60,.61,.16+pulse*.13))
+	if not _has_challenge and not _has_station and not _spatial.connection.upper_from:
+		var y: float = _surface_y(40)-170
+		draw_string(_font,Vector2(40,y),str(_spatial.structure),HORIZONTAL_ALIGNMENT_LEFT,-1,14,Color("78939e"))

@@ -64,6 +64,15 @@ func _draw() -> void:
 		draw_rect(Rect2(x, 0, Library.LENGTH * zoom, size.y), Color(accent, 0.06))
 		draw_line(Vector2(x, 0), Vector2(x, size.y), accent, 2 if i == focus_index else 1)
 		draw_set_transform(Vector2(x, base_y - 448 * zoom), 0, Vector2.ONE * zoom)
+		for polygon in d.get("polygons",[]):
+			draw_colored_polygon(polygon,Color("405966"))
+			draw_line(polygon[0],polygon[1],Color("d5eef0"),3)
+		for segment in d.get("ground_segments",[]):
+			draw_line(segment.from-Vector2(0,14),segment.to-Vector2(0,14),Color("a4e9b5"),2)
+		for w in d.get("jump_windows",[]):
+			draw_rect(w.takeoff,Color(0.85,0.7,0.2,0.5))
+			draw_rect(w.landing,Color(0.2,0.9,0.8,0.5))
+			draw_line(w.from-Vector2(0,20),w.to-Vector2(0,20),Color("85d9ed"),1)
 		for rect in d.floors + d.platforms + d.walls:
 			draw_rect(rect, Color("405966"))
 			draw_line(rect.position, rect.position + Vector2(rect.size.x, 0), Color("d5eef0"), 3)
@@ -90,13 +99,21 @@ func _draw() -> void:
 				var tint:=Color("7ee6cf") if kind=="heal" else Color("ffd166")
 				draw_rect(Rect2(p-Vector2(20,18),Vector2(40,36)),tint,false,3)
 				draw_string(_font,p+Vector2(-10,6),"+1" if kind=="heal" else str(d.station.bonus),HORIZONTAL_ALIGNMENT_LEFT,-1,16,tint)
+		if d.has("connection"):
+			var c: Dictionary=d.connection
+			draw_circle(Vector2(0,c.entry_y),8,Color("a4e9b5"))
+			draw_circle(Vector2(1280,c.exit_y),8,Color("a4e9b5"))
+			if c.upper_from:
+				draw_circle(Vector2(0,c.upper_entry_y),8,Color("ffd166"))
+			if c.upper_to:
+				draw_circle(Vector2(1280,c.upper_exit_y),8,Color("ffd166"))
 		for route in d.get("routes",[]):
 			var color := Color("54e1d3") if route.kind == "upper" else Color("83b0bc")
 			draw_line(route.from-Vector2(0,8),route.to-Vector2(0,8),color,2)
 			draw_circle((route.from+route.to)/2-Vector2(0,16),4,Color("a4e9b5"))
 		draw_set_transform(Vector2.ZERO)
 		if Library.LENGTH * zoom > 95:
-			draw_string(_font, Vector2(x + 6, 22), "%02d %s" % [i, rows[i].template_id], HORIZONTAL_ALIGNMENT_LEFT, Library.LENGTH * zoom - 10, 14, accent)
+			draw_string(_font, Vector2(x + 6, 22), "%02d %s" % [rows[i].index, rows[i].template_id], HORIZONTAL_ALIGNMENT_LEFT, Library.LENGTH * zoom - 10, 14, accent)
 			draw_string(_font, Vector2(x + 6, 42), "%s 阶段%d / 难度%d" % [rows[i].get("segment_role",""),rows[i].stage + 1, d.difficulty], HORIZONTAL_ALIGNMENT_LEFT, Library.LENGTH * zoom - 10, 13, Color("a0b4be"))
 		if i == focus_index:
 			draw_rect(Rect2(x, 1, Library.LENGTH * zoom, size.y - 2), Color("ffc95c"), false, 2)

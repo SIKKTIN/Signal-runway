@@ -1,0 +1,17 @@
+{
+	"chunks_per_seed": 200,
+	"counts": {
+		"basin": 5003,
+		"bridge": 1435,
+		"slope": 12091,
+		"terrace": 1471
+	},
+	"failures": [],
+	"legacy_profiles": 3,
+	"legacy_seeds": 300,
+	"method": "deterministic 100x200 v5 geometry/seam/rhythm invariants; v2/v3/v4 each100x200 exact byte snapshots against saved pre-v07 generator. Structural checks, no physics or player experience.",
+	"passed": true,
+	"seeds": 100,
+	"stations": 948,
+	"upper_seams": 2880
+}

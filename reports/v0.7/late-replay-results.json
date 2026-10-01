@@ -1,0 +1,22 @@
+{
+	"checks": [
+		{
+			"name": "远距离失败预览仍仅20段且包含实际200片段",
+			"passed": true
+		},
+		{
+			"name": "远距离窗口与原同seed前缀生成相同",
+			"passed": true
+		},
+		{
+			"name": "连接试玩使用实际200编号及全球起点",
+			"passed": true
+		},
+		{
+			"name": "远距离试玩清理且草稿窗口保留",
+			"passed": true
+		}
+	],
+	"method": "GPU fixed60, synthetic Enter/F8, isolated failed_x=256800 fixture with frozen seed/profile. Preview is a20chunk window generated after deterministic198chunk prefix; actual connection debug start global255808, not natural run.",
+	"passed": true
+}

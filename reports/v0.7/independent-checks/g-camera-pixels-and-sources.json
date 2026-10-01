@@ -1,0 +1,12 @@
+{
+  "version": "v0.7.0+6c0fc3b291b8",
+  "sha256": "6c0fc3b291b81aefdd92dae2e3691f8721bb25a510a2f955aa3fe5adc5b96028",
+  "files": 109,
+  "mismatches": [],
+  "changed_from_initial_214": [
+    "scripts/level/run_flow.gd"
+  ],
+  "pause_changed_pixels": 0,
+  "passed": true,
+  "method": "Only current camera fix manifest/draw-pause verification. Initial six natural routes and 24 tool results remain unchanged; exactly one production file differs."
+}

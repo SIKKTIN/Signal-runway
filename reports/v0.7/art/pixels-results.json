@@ -1,0 +1,17 @@
+{
+  "pause_changed_pixels": 0,
+  "slope_effect_changed_pixels": 10724,
+  "bright_white_changed_pixels": 0,
+  "method": "Real paused Main pairs. Effect-off disables only SpatialVisual processing/visibility; white mask RGB min>190 and spread<40. Shows detail paint has visible effect and does not alter bright terrain/HUD pixels in this sampled view; not every possible overlap.",
+  "gray_previews": [
+    "final-basin-960-gray.png",
+    "final-bridge-960-gray.png",
+    "final-upper-entry-960-gray.png"
+  ],
+  "final_art_hashes": {
+    "scripts/visual/spatial_visual.gd": "9f9b786cffd94da379aef15fd0647e00f13acd0444cf442a43dcfaad28b91e96",
+    "scripts/visual/endless_module_visual.gd": "afca53895ab5c9ee081ffeed913d5ad84bf4500253f3df71f45743ffbc025b62",
+    "scripts/visual/route_visual.gd": "ee4bf318c7f197ff2a2f7ea8f5ccbf842fa41b2cc5e119ee2440be551c7ec65c"
+  },
+  "passed": true
+}

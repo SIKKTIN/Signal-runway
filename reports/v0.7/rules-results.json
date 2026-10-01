@@ -1,0 +1,106 @@
+{
+	"checks": [
+		{
+			"name": "高路入口开始",
+			"passed": true
+		},
+		{
+			"name": "三个顺序节点尚未出口不给额外分",
+			"passed": true
+		},
+		{
+			"name": "到出口完成且额外200",
+			"passed": true
+		},
+		{
+			"name": "回跑不能重启完成挑战",
+			"passed": true
+		},
+		{
+			"name": "乱序中断无奖励",
+			"passed": true
+		},
+		{
+			"name": "越过节点立即中断",
+			"passed": true
+		},
+		{
+			"name": "落回下路中断",
+			"passed": true
+		},
+		{
+			"name": "受伤帧进入不能启动",
+			"passed": true
+		},
+		{
+			"name": "伤害中断且恢复不能重启",
+			"passed": true
+		},
+		{
+			"name": "补血上限1",
+			"passed": true
+		},
+		{
+			"name": "两路互斥1",
+			"passed": true
+		},
+		{
+			"name": "补血上限2",
+			"passed": true
+		},
+		{
+			"name": "两路互斥2",
+			"passed": true
+		},
+		{
+			"name": "补血上限3",
+			"passed": true
+		},
+		{
+			"name": "两路互斥3",
+			"passed": true
+		},
+		{
+			"name": "积分选择只一次200",
+			"passed": true
+		},
+		{
+			"name": "重复接触不刷分",
+			"passed": true
+		},
+		{
+			"name": "身份随回收有界清理",
+			"passed": true
+		},
+		{
+			"name": "实际Flow扫掠补血2至3",
+			"passed": true
+		},
+		{
+			"name": "Flow同站另一条不能领",
+			"passed": true
+		},
+		{
+			"name": "暂停冻结连段站点",
+			"passed": true
+		},
+		{
+			"name": "重试清理全部连段站点",
+			"passed": true
+		},
+		{
+			"name": "致命伤同帧补血不能复活",
+			"passed": true
+		},
+		{
+			"name": "非致命伤先扣再补且降速保留",
+			"passed": true
+		},
+		{
+			"name": "四类分数明细之和",
+			"passed": true
+		}
+	],
+	"method": "state-machine event cases and actual Main with explicit stationary position/health/geometry injections for same-frame rules; not natural traversal",
+	"passed": true
+}

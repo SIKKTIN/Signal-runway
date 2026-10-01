@@ -25,6 +25,7 @@ const CourseScript = preload("res://scripts/level/course.gd")
 const InterfaceScript = preload("res://scripts/ui/interface.gd")
 const ChaseScript = preload("res://scripts/level/chase_controller.gd")
 const EndlessCourseScript = preload("res://scripts/level/endless_course.gd")
+const GenerationReplay = preload("res://scripts/tools/generation_replay.gd")
 const EndlessRecordScript = preload("res://scripts/level/endless_record.gd")
 const GenerationProfile = preload("res://scripts/level/generation_profile.gd")
 var generation_profile: Dictionary = {}
@@ -90,7 +91,7 @@ func _ready() -> void:
 		var loaded := GenerationProfile.load_profile()
 		generation_profile = loaded.profile
 		generation_notice = "生成配置不可用，已回退内置默认" if loaded.fallback else ""
-	endless_record.expected_rules_revision = 6
+	endless_record.expected_rules_revision = 7
 	reload_endless_record()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Resolve the front after the player's current-frame move_and_slide.
@@ -151,6 +152,9 @@ func _build_world(use_lab: bool) -> void:
 	player.reset_at(course.spawn_position)
 	player.auto_run = is_endless()
 	player.health_enabled = is_endless()
+	if is_endless() and generation_profile.generator_revision==5:
+		player.floor_snap_length=16.0
+		player.floor_constant_speed=true
 	player.damage_taken.connect(_on_damage_taken)
 	_previous_position = player.position
 	player.died.connect(_on_death)
@@ -158,7 +162,7 @@ func _build_world(use_lab: bool) -> void:
 	camera = Camera2D.new()
 	camera.name = "FollowCamera"
 	camera.position = Vector2(480, 270)
-	camera.position_smoothing_enabled = true
+	camera.position_smoothing_enabled = not (is_endless() and generation_profile.generator_revision==5)
 	camera.position_smoothing_speed = 8.0
 	world.add_child(camera)
 	camera.make_current()
@@ -183,12 +187,17 @@ func _install_presentation() -> void:
 		ui.add_child(_survival_status)
 	ui.external_endless_hud = false
 	if is_endless():
-		if generation_profile.generator_revision==4 and ResourceLoader.exists("res://scripts/visual/route_visual.gd"):
+		if generation_profile.generator_revision==5 and ResourceLoader.exists("res://scripts/visual/spatial_visual.gd"):
+			var spatial_visual: Node2D=load("res://scripts/visual/spatial_visual.gd").new()
+			spatial_visual.name="SpatialVisual"
+			world.add_child(spatial_visual)
+			spatial_visual.bind_flow(self,course)
+		if generation_profile.generator_revision>=4 and ResourceLoader.exists("res://scripts/visual/route_visual.gd"):
 			var route_visual: Node2D=load("res://scripts/visual/route_visual.gd").new()
 			route_visual.name="RouteVisual"
 			world.add_child(route_visual)
 			route_visual.bind_flow(self,course)
-		if generation_profile.generator_revision==4 and ResourceLoader.exists("res://scenes/ui/v06_route_status.tscn"):
+		if generation_profile.generator_revision>=4 and ResourceLoader.exists("res://scenes/ui/v06_route_status.tscn"):
 			_route_status=load("res://scenes/ui/v06_route_status.tscn").instantiate()
 			ui.add_child(_route_status)
 			_route_status.bind_flow(self)
@@ -406,7 +415,7 @@ func _physics_process(delta: float) -> void:
 				_queue_failure("caught")
 				player.die("caught")
 			if not player.dead and _failures.is_empty():
-				if is_endless() and course.streaming and generation_profile.generator_revision==4 and fall_recovery_remaining<=0:
+				if is_endless() and course.streaming and generation_profile.generator_revision>=4 and fall_recovery_remaining<=0:
 					_feature_from=_previous_position+Vector2(course.total_offset,0)
 					_feature_to=player.position+Vector2(course.total_offset,0)
 					_feature_pending=true
@@ -424,9 +433,17 @@ func _physics_process(delta: float) -> void:
 				if course.streaming and player.position.x >= course.REBASE_AT:
 					_shift_endless_world(course.REBASE_BY)
 	if phase in ["ready", "running"]:
-		camera.position.x = maxf(player.position.x + 180.0, 480.0) if is_endless() else clampf(player.position.x + player.facing * 96.0, 480.0, course.course_length - 480.0)
-		if is_endless():
-			camera.position.y = clampf(player.position.y-163,270,420)
+		if is_endless() and generation_profile.generator_revision==5:
+			# Smooth world movement while keeping landings above the survival HUD.
+			var blend:=1.0-exp(-8.0*delta)
+			camera.position.x=lerpf(camera.position.x,maxf(player.position.x+180,480),blend)
+			camera.position.y=lerpf(camera.position.y,clampf(player.position.y-130,270,420),blend)
+			# 412 center +15 feet +15 maximum next-frame fall leaves HUD450 clear.
+			camera.position.y=maxf(camera.position.y,clampf(player.position.y-142,270,420))
+		else:
+			camera.position.x = maxf(player.position.x + 180.0, 480.0) if is_endless() else clampf(player.position.x + player.facing * 96.0, 480.0, course.course_length - 480.0)
+			if is_endless():
+				camera.position.y = clampf(player.position.y-163,270,420)
 	_update_ui()
 	_previous_position = player.position
 
@@ -459,7 +476,7 @@ func _queue_relay(relay_id: String) -> void:
 func _activate_pending_relays() -> void:
 	for relay_id in _relay_pending:
 		if course.activate_relay(relay_id):
-			if is_endless() and generation_profile.generator_revision==4:
+			if is_endless() and generation_profile.generator_revision>=4:
 				routes.node(relay_id)
 			relay_count += 1
 			var added := 0.9 if is_pursuit() else 0.0
@@ -540,7 +557,7 @@ func _restore_safe_point() -> void:
 			player.die("caught")
 			return
 		player.recover_at(local)
-		camera.position.y = clampf(local.y-163,270,420)
+		camera.position.y = clampf(local.y-(130 if generation_profile.generator_revision==5 else 163),270,420)
 		camera.reset_smoothing()
 		_previous_position = local
 		return
@@ -620,7 +637,9 @@ func _finish_failure(reason: String) -> void:
 	ui.set_relay_count(relay_count)
 	if is_endless():
 		run_score=total_score()
-		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed, {"rules_revision":6,"generator_revision":generation_profile.generator_revision,"profile_fingerprint":GenerationProfile.fingerprint(generation_profile),"score_breakdown":score_breakdown()})
+		if record_path==EndlessRecordScript.DEFAULT_PATH:
+			GenerationReplay.save(GenerationReplay.make(run_seed,generation_profile,player.position.x+course.total_offset,reason))
+		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed, {"rules_revision":7,"generator_revision":generation_profile.generator_revision,"profile_fingerprint":GenerationProfile.fingerprint(generation_profile),"score_breakdown":score_breakdown()})
 		best_score = int(endless_record.best.score)
 		ui.show_endless_result(reason, elapsed, run_score, run_distance, relay_count, run_seed, best_score, new_record, endless_record.status,score_breakdown())
 	else:

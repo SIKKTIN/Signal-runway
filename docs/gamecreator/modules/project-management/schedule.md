@@ -1,7 +1,7 @@
 # 测试3
 
-> 文档生成时间：2026-10-01T10:06:21.058Z
-> 文档内容基准：8ec130e8ba3ec184d74f6880d90ab3a87f1fdaa27ad2ee131f96159477ee2bd1
+> 文档生成时间：2026-10-01T10:38:59.452Z
+> 文档内容基准：0ed24a8bd14407edf3e1f037be9888ac2dd90c4bc6948d00a50dc238c9a3c6e3
 
 > 项目版本：v0.6
 > 由 GameCreator 同步，供开发查阅。
@@ -169,6 +169,34 @@ v0.6已批准计划；10月2至6日为建议执行窗口，启动后按实际开
 - 目标：2026-10-06；负责人：制作人；计划中
 v0.6已批准计划；10月2至6日为建议执行窗口，启动后按实际开始时间调整。
 - 验收条件：F/G：三种子两策略报告到首站后、平衡调整/阻塞修复、必要回归、冻结清单与协作/源工程。
+- 验收记录：未填写
+
+### 里程碑：M1 v0.7 连续地形灰盒
+- 所属版本：未分组
+- 目标：2026-10-02；负责人：制作人；计划中
+建议窗口依M1实际结果调整，非承诺实际日期
+- 验收条件：A：实际坡面碰撞/高度接缝、三速度及伤后可达
+- 验收记录：未填写
+
+### 里程碑：M2 v0.7 路线组合生成
+- 所属版本：未分组
+- 目标：2026-10-03；负责人：制作人；计划中
+建议窗口依M1实际结果调整，非承诺实际日期
+- 验收条件：B/C：四结构/跨段高路/主路/原奖励恢复规则及旧配置
+- 验收记录：未填写
+
+### 里程碑：M3 v0.7 工具与正式美术
+- 所属版本：未分组
+- 目标：2026-10-04；负责人：制作人；计划中
+建议窗口依M1实际结果调整，非承诺实际日期
+- 验收条件：D/E：同源预览/连接试玩/种子回放，两尺寸可读
+- 验收记录：未填写
+
+### 里程碑：M4 v0.7 独立验收与源交付
+- 所属版本：未分组
+- 目标：2026-10-05；负责人：制作人；计划中
+建议窗口依M1实际结果调整，非承诺实际日期
+- 验收条件：F/G：独立多种子报告、阻塞修复、回归和清单/正式记录/GitHub
 - 验收记录：未填写
 
 ### 制作任务：v0.1 主干与移动测试房
@@ -1209,6 +1237,131 @@ v0.6已批准计划；10月2至6日为建议执行窗口，启动后按实际开
 - AI 分配：主负责人 f1557ee7-66f2-4240-a463-e8209d912a4e；协作者 无；验收负责人 f1557ee7-66f2-4240-a463-e8209d912a4e
 - 来源：玩法文档 / v0.6 段落节奏与风险收益无限跑 [54eafbff-9e02-40f2-bcfd-0fd5fd37bd4a]
 
+### 制作任务：v0.7 连续地形灰盒
+- ID：88297466-e439-4fe4-9d82-829062f8df51
+- 程序；高；待开始；负责人：制作人
+- 里程碑：M1 v0.7 连续地形灰盒
+- 计划：2026-10-02 → 2026-10-02
+- 实际：未记录 → 未记录
+执行planning/v0.7-plan.md工作包A；估算4至6小时，建议日期按M1结果调整。
+- 验收条件：坡面碰撞与稳定移动、有界高度、坡面安全恢复、三速度和受伤降速轨迹
+- 验收结果：未填写
+- 前置任务：无
+- 工作岗位：producer
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；仅限本人独立执行，先证据后结论
+- AI 分配：主负责人 f1557ee7-66f2-4240-a463-e8209d912a4e；协作者 无；验收负责人 f1557ee7-66f2-4240-a463-e8209d912a4e
+- 来源：玩法文档 / v0.7 连续地形与跨段路线无限跑 [5abb28cb-881c-416c-9575-a06873c08f45]
+
+### 制作任务：v0.7 路线组合与空间库
+- ID：bf11b980-a86d-476d-8817-3aaadab1d332
+- 程序；高；待开始；负责人：制作人
+- 里程碑：M2 v0.7 路线组合生成
+- 计划：2026-10-03 → 2026-10-03
+- 实际：未记录 → 未记录
+执行planning/v0.7-plan.md工作包B；估算5至7小时，建议日期按M1结果调整。
+- 验收条件：四结构变体、跨段高路、确定性连接/兜底、节点跟随几何
+- 验收结果：未填写
+- 前置任务：v0.7 连续地形灰盒 [88297466-e439-4fe4-9d82-829062f8df51]
+- 工作岗位：producer
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；仅限本人独立执行，先证据后结论
+- AI 分配：主负责人 f1557ee7-66f2-4240-a463-e8209d912a4e；协作者 无；验收负责人 f1557ee7-66f2-4240-a463-e8209d912a4e
+- 来源：玩法文档 / v0.7 连续地形与跨段路线无限跑 [5abb28cb-881c-416c-9575-a06873c08f45]
+
+### 制作任务：v0.7 运行兼容与记录
+- ID：899c343b-d951-4092-b276-2e50c5735e83
+- 程序；高；待开始；负责人：制作人
+- 里程碑：M2 v0.7 路线组合生成
+- 计划：2026-10-03 → 2026-10-03
+- 实际：未记录 → 未记录
+执行planning/v0.7-plan.md工作包C；估算2至3小时，建议日期按M1结果调整。
+- 验收条件：新版记录、旧2/3/4兼容、恢复/镜头/重定位、连段站点回归
+- 验收结果：未填写
+- 前置任务：v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332]
+- 工作岗位：producer
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；仅限本人独立执行，先证据后结论
+- AI 分配：主负责人 f1557ee7-66f2-4240-a463-e8209d912a4e；协作者 无；验收负责人 f1557ee7-66f2-4240-a463-e8209d912a4e
+- 来源：玩法文档 / v0.7 连续地形与跨段路线无限跑 [5abb28cb-881c-416c-9575-a06873c08f45]
+
+### 制作任务：v0.7 编辑器扩展
+- ID：43354328-744f-4674-ad67-e2f6257e8f05
+- 程序；高；待开始；负责人：制作人
+- 里程碑：M3 v0.7 工具与正式美术
+- 计划：2026-10-04 → 2026-10-04
+- 实际：未记录 → 未记录
+执行planning/v0.7-plan.md工作包D；估算3至4小时，建议日期按M1结果调整。
+- 验收条件：同源坡面/连接/起跳落点、连接试玩、失败种子存取/配置指纹与隔离
+- 验收结果：未填写
+- 前置任务：v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332]、v0.7 运行兼容与记录 [899c343b-d951-4092-b276-2e50c5735e83]
+- 工作岗位：producer
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 自验收约定：制作人开发；仅限本人独立执行，先证据后结论
+- AI 分配：主负责人 f1557ee7-66f2-4240-a463-e8209d912a4e；协作者 无；验收负责人 f1557ee7-66f2-4240-a463-e8209d912a4e
+- 来源：玩法文档 / v0.7 连续地形与跨段路线无限跑 [5abb28cb-881c-416c-9575-a06873c08f45]
+
+### 制作任务：v0.7 空间美术
+- ID：ff683b7b-e7cf-42a1-ad85-7d3180df8109
+- 美术；高；待开始；负责人：主美
+- 里程碑：M3 v0.7 工具与正式美术
+- 计划：2026-10-04 → 2026-10-04
+- 实际：未记录 → 未记录
+执行planning/v0.7-plan.md工作包E；估算4至6小时，建议日期按M1结果调整。
+- 验收条件：实际支撑/区段层次/路线标识，两尺寸高速不遮落点/顶沿
+- 验收结果：未填写
+- 前置任务：v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332]
+- 工作岗位：art-director
+- 允许修改路径：assets/visual/v07、scripts/visual/spatial_visual.gd、scripts/visual/endless_module_visual.gd、scripts/visual/route_visual.gd、docs/art/v0.7.md、reports/v0.7/art、reports/v0.7/independent-checks、reports/v0.7/independent-review.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- AI 分配：主负责人 f460c4d7-9bf2-4d95-b943-64327a53c0fe；协作者 无；验收负责人 f1557ee7-66f2-4240-a463-e8209d912a4e
+- 来源：玩法文档 / v0.7 连续地形与跨段路线无限跑 [5abb28cb-881c-416c-9575-a06873c08f45]
+
+### 制作任务：v0.7 独立检查
+- ID：3dcc45d3-8bd4-4930-b1d2-2a370c075abd
+- 其他；高；待开始；负责人：主美
+- 里程碑：M4 v0.7 独立验收与源交付
+- 计划：2026-10-05 → 2026-10-05
+- 实际：未记录 → 未记录
+执行planning/v0.7-plan.md工作包F；估算2至4小时，建议日期按M1结果调整。
+- 验收条件：冻结版本三种子稳妥/高路到首站后，覆盖高路接缝；工具/暂停、可见性、缺陷与方法
+- 验收结果：未填写
+- 前置任务：v0.7 编辑器扩展 [43354328-744f-4674-ad67-e2f6257e8f05]、v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109]
+- 工作岗位：art-director
+- 允许修改路径：assets/visual/v07、scripts/visual/spatial_visual.gd、scripts/visual/endless_module_visual.gd、scripts/visual/route_visual.gd、docs/art/v0.7.md、reports/v0.7/art、reports/v0.7/independent-checks、reports/v0.7/independent-review.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- AI 分配：主负责人 f460c4d7-9bf2-4d95-b943-64327a53c0fe；协作者 无；验收负责人 f1557ee7-66f2-4240-a463-e8209d912a4e
+- 来源：玩法文档 / v0.7 连续地形与跨段路线无限跑 [5abb28cb-881c-416c-9575-a06873c08f45]
+
+### 制作任务：v0.7 修复与源交付
+- ID：6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76
+- 程序；高；待开始；负责人：制作人
+- 里程碑：M4 v0.7 独立验收与源交付
+- 计划：2026-10-05 → 2026-10-05
+- 实际：未记录 → 未记录
+执行planning/v0.7-plan.md工作包G；估算4至6小时，建议日期按M1结果调整。
+- 验收条件：阻塞修复复验、必要回归、文档/清单、GameCreator验收/GitHub源工程，无打包
+- 验收结果：未填写
+- 前置任务：v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd]
+- 工作岗位：producer
+- 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
+- 接口契约：geometry.ground_segments/polygons/routes/jump_windows/connection/spatial_id/zone为只读实际几何；既有challenge/station与RunFlow事件保持。主美只改表现，冻结候选后不改生产。
+- 交付入口：res://scenes/main/main.tscn；工具res://scenes/tools/generation_editor.tscn
+- 主干集成来源任务：3dcc45d3-8bd4-4930-b1d2-2a370c075abd；模块通过不等于主干已集成
+- 自验收约定：制作人开发；仅限本人独立执行，先证据后结论
+- AI 分配：主负责人 f1557ee7-66f2-4240-a463-e8209d912a4e；协作者 无；验收负责人 f1557ee7-66f2-4240-a463-e8209d912a4e
+- 来源：玩法文档 / v0.7 连续地形与跨段路线无限跑 [5abb28cb-881c-416c-9575-a06873c08f45]
+
 ### 排期待处理
 - v0.2 修复与最终工程交付：计划重叠：应在「v0.2 独立技术与表现检查」完成后的日期开始
 - v0.3 中继站场景包装：计划重叠：应在「v0.3 断线中继站完整关卡」完成后的日期开始
@@ -1225,4 +1378,14 @@ v0.6已批准计划；10月2至6日为建议执行窗口，启动后按实际开
 - v0.5 立体灰盒与恢复接口：计划重叠：应在「v0.5 生命与距离加速原型」完成后的日期开始
 - v0.5 编辑器与配置升级：计划重叠：应在「v0.5 参数化生成与地图内容」完成后的日期开始
 - v0.5 缺陷修复与源工程交付：计划重叠：应在「v0.5 同版本独立试玩与验收」完成后的日期开始
+- v0.7 路线组合与空间库：前置未完成：v0.7 连续地形灰盒
+- v0.7 运行兼容与记录：前置未完成：v0.7 路线组合与空间库
+- v0.7 运行兼容与记录：计划重叠：应在「v0.7 路线组合与空间库」完成后的日期开始
+- v0.7 编辑器扩展：前置未完成：v0.7 路线组合与空间库
+- v0.7 编辑器扩展：前置未完成：v0.7 运行兼容与记录
+- v0.7 空间美术：前置未完成：v0.7 路线组合与空间库
+- v0.7 独立检查：前置未完成：v0.7 编辑器扩展
+- v0.7 独立检查：前置未完成：v0.7 空间美术
+- v0.7 修复与源交付：前置未完成：v0.7 独立检查
+- v0.7 修复与源交付：计划重叠：应在「v0.7 独立检查」完成后的日期开始
 - M1 v0.4.1 规则预览成立：包含晚于目标日期完成的任务

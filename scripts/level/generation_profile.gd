@@ -7,10 +7,15 @@ static func v05_defaults() -> Dictionary:
 	for id in Library.ids():
 		entries[id] = {"enabled": id not in ["wall_a","wall_b"], "weight": 4.0 if id in ["safe_b","step","gap","rhythm_a","relay_a","relay_b"] else 1.0}
 	return {"schema": 1, "generator_revision": 3, "stage_distance": 8400.0, "relay_min": 5, "relay_max": 6, "height_min":32,"height_max":64,"gap_min":64,"gap_max":96,"templates": entries}
-static func defaults() -> Dictionary:
+static func v06_defaults() -> Dictionary:
 	var result := v05_defaults()
 	result.generator_revision = 4
 	result.merge({"phase_one":10000,"phase_two":30000,"challenge_weight":1,"challenge_limit":2,"station_min":16,"station_max":24,"combo_bonus":200,"station_bonus":200})
+	return result
+static func defaults() -> Dictionary:
+	var result:=v06_defaults()
+	result.generator_revision=5
+	result.merge({"elevation_step":64,"elevation_range":64,"upper_span":2,"spatial_weights":{"slope":2,"terrace":2,"bridge":2,"basin":2}})
 	return result
 static func legacy_defaults() -> Dictionary:
 	var result := v05_defaults()
@@ -24,7 +29,7 @@ static func validate(value: Variant) -> Array[String]:
 	var errors: Array[String] = []
 	if not value is Dictionary:
 		return ["配置必须是对象"]
-	var expected: Array = (legacy_defaults() if value.get("generator_revision") == 2 else (v05_defaults() if value.get("generator_revision") == 3 else defaults())).keys()
+	var expected: Array = (legacy_defaults() if value.get("generator_revision") == 2 else (v05_defaults() if value.get("generator_revision") == 3 else (v06_defaults() if value.get("generator_revision") == 4 else defaults()))).keys()
 	for key in value:
 		if key not in expected:
 			errors.append("未知字段：" + str(key))
@@ -33,7 +38,7 @@ static func validate(value: Variant) -> Array[String]:
 			errors.append("缺少字段：" + key)
 	if not errors.is_empty():
 		return errors
-	if value.schema != 1 or (value.generator_revision != 2 and value.generator_revision != 3 and value.generator_revision != 4):
+	if value.schema != 1 or (value.generator_revision != 2 and value.generator_revision != 3 and value.generator_revision != 4 and value.generator_revision != 5):
 		errors.append("不支持的配置/生成规则版本")
 	for key in ["stage_distance", "relay_min", "relay_max"]:
 		var v: Variant = value[key]
@@ -52,13 +57,28 @@ static func validate(value: Variant) -> Array[String]:
 				errors.append(pair[0]+"须在已验证范围按16档位取值")
 		if errors.is_empty() and (value.height_min > value.height_max or value.gap_min > value.gap_max):
 			errors.append("几何最小值不能大于最大值")
-	if value.generator_revision == 4:
+	if value.generator_revision >= 4:
 		for pair in [["phase_one",5000,20000],["phase_two",20000,60000],["challenge_weight",1,3],["challenge_limit",1,2],["station_min",16,24],["station_max",16,24],["combo_bonus",100,400],["station_bonus",100,400]]:
 			var v: Variant = value[pair[0]]
 			if not (v is int or v is float) or not is_finite(float(v)) or v < pair[1] or v > pair[2] or floor(float(v)) != float(v):
 				errors.append(pair[0]+"超出节奏参数整数范围")
 		if errors.is_empty() and (value.phase_one >= value.phase_two or value.station_min > value.station_max):
 			errors.append("阶段边界须递增，恢复站最小间隔不能超过最大")
+	if value.generator_revision==5:
+		for key in ["elevation_step","elevation_range"]:
+			var v: Variant=value[key]
+			if not (v is int or v is float) or not is_finite(float(v)) or v<32 or v>64 or fmod(float(v),16)!=0:
+				errors.append(key+"须在32至64按16档位取值")
+		var span: Variant=value.upper_span
+		if not (span is int or span is float) or not is_finite(float(span)) or span<2 or span>3 or floor(float(span))!=span:
+			errors.append("高路长度须为2至3片段")
+		if not value.spatial_weights is Dictionary or value.spatial_weights.size()!=4:
+			errors.append("空间结构权重须有四项")
+		else:
+			for id in ["slope","terrace","bridge","basin"]:
+				var w: Variant=value.spatial_weights.get(id)
+				if not (w is int or w is float) or not is_finite(float(w)) or w<(1 if id=="slope" else 0) or w>10:
+					errors.append(id+"空间权重超范围，坡地安全候选至少1")
 	if not value.templates is Dictionary:
 		errors.append("templates必须是对象")
 		return errors
@@ -80,16 +100,21 @@ static func validate(value: Variant) -> Array[String]:
 			errors.append(id + "为安全/奖励保障，必须启用且权重至少1")
 	return errors
 static func normalized(value: Dictionary) -> Dictionary:
-	var result := legacy_defaults() if value.generator_revision == 2 else (v05_defaults() if value.generator_revision == 3 else defaults())
+	var result := legacy_defaults() if value.generator_revision == 2 else (v05_defaults() if value.generator_revision == 3 else (v06_defaults() if value.generator_revision == 4 else defaults()))
 	result.stage_distance = float(value.stage_distance)
 	result.relay_min = int(value.relay_min)
 	result.relay_max = int(value.relay_max)
 	if value.generator_revision >= 3:
 		for key in ["height_min","height_max","gap_min","gap_max"]:
 			result[key] = int(value[key])
-	if value.generator_revision == 4:
+	if value.generator_revision >= 4:
 		for key in ["phase_one","phase_two","challenge_weight","challenge_limit","station_min","station_max","combo_bonus","station_bonus"]:
 			result[key] = int(value[key])
+	if value.generator_revision==5:
+		for key in ["elevation_step","elevation_range","upper_span"]:
+			result[key]=int(value[key])
+		for id in result.spatial_weights:
+			result.spatial_weights[id]=float(value.spatial_weights[id])
 	for id in Library.ids():
 		result.templates[id] = {"enabled": bool(value.templates[id].enabled), "weight": float(value.templates[id].weight)}
 	return result

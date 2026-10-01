@@ -40,7 +40,7 @@ func _refresh() -> void:
 		return
 	for chunk in _course.chunks:
 		var d: Dictionary = chunk.get("geometry",{})
-		if d.has("challenge") or d.has("station"):
+		if d.has("challenge") or d.has("station") or d.has("ground_segments"):
 			_features.append({"id":chunk.id,"origin":chunk.origin,"geometry":d})
 	queue_redraw()
 
@@ -108,6 +108,8 @@ func _draw() -> void:
 		if x+1280 < left or x > right:
 			continue
 		var d: Dictionary = feature.geometry
+		if d.has("ground_segments"):
+			_draw_spatial_routes(d,x)
 		if d.has("challenge"):
 			var challenge: Dictionary = d.challenge
 			var entry: Rect2 = challenge.entry
@@ -122,8 +124,13 @@ func _draw() -> void:
 				for relay in d.relays:
 					if relay.local_id == challenge.order[i]:
 						_hex(relay.position+Vector2(x,0),i+1,activated.has(feature.id+":"+relay.local_id),state.active==feature.id and int(state.progress)==i,_flow.routes.closed.has(feature.id))
-			_text(Vector2(x+challenge.exit_x-15,330),"出口结算",GOLD,13)
-			_text(Vector2(x+challenge.exit_x-15,349),"+%d 连段" % int(challenge.bonus),GOLD,13)
+			var exit_y: float = 330
+			if d.has("ground_segments"):
+				for relay in d.relays:
+					if relay.local_id==challenge.order[-1]:
+						exit_y=relay.position.y-42
+			_text(Vector2(x+challenge.exit_x-15,exit_y),"出口结算",GOLD,13)
+			_text(Vector2(x+challenge.exit_x-15,exit_y+19),"+%d 连段" % int(challenge.bonus),GOLD,13)
 		if d.has("station"):
 			var station: Dictionary = d.station
 			# Keep the advance sign below the threat HUD when the camera follows a valley.
@@ -150,6 +157,35 @@ func _draw() -> void:
 
 func presentation_state() -> Dictionary:
 	return {"animation_time":_clock,"features":_features.size(),"phase":_phase,"visible":visible,"feature_ids":_features.map(func(row):return row.id)}
+
+func _direction(at: Vector2,title: String,color: Color,down: bool = false) -> void:
+	# Keep auxiliary route words above bottom HUD and below top/status cards.
+	var transform := get_global_transform_with_canvas()
+	var screen_at: Vector2 = transform*at
+	screen_at.y=clampf(screen_at.y,148,426)
+	if screen_at.x>660 and screen_at.y<294:
+		screen_at.y=314
+	at=transform.affine_inverse()*screen_at
+	_text(at,title,color,13)
+	var tilt: float = 4 if down else -4
+	draw_polyline(PackedVector2Array([at+Vector2(0,10),at+Vector2(24,10+tilt),at+Vector2(18,5+tilt)]),color,1.5,true)
+
+func _draw_spatial_routes(d: Dictionary,x: float) -> void:
+	var connection: Dictionary = d.connection
+	if connection.upper_from:
+		_direction(Vector2(x+40,connection.upper_entry_y-58),"高路延续" if connection.upper_to else "高路 · 前方汇回",GOLD)
+		_direction(Vector2(x+40,connection.entry_y-44),"主路",MUTED)
+		if not connection.upper_to:
+			for route in d.routes:
+				if route.kind=="merge":
+					_direction(Vector2(x+route.from.x-36,route.from.y-58),"汇回主路",MUTED,true)
+	elif not d.has("challenge") and not d.has("station"):
+		for route in d.routes:
+			if route.kind=="upper":
+				_direction(Vector2(x+route.from.x-48,route.from.y-62),"高路入口",GOLD)
+				break
+		if str(d.spatial_id)=="bridge":
+			_direction(Vector2(x+232,connection.entry_y-62),"断桥 · 接续",MUTED)
 
 func station_presentation(id: String) -> Dictionary:
 	for feature in _features:
