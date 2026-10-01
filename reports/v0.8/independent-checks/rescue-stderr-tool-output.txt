@@ -1,0 +1,19 @@
+Evidence source correction, 2026-10-01
+
+The following is copied verbatim from the exec tool result of the first independent
+prototype rescue run (PID28456), not from rescue.log. The shell Tee-Object pipeline
+saved stdout only; stderr was displayed in the tool result. This saved excerpt is
+not a new execution, a complete stderr file, or an operating-system log export.
+
+ERROR: The InputMap action "jump" doesn't exist.
+   at: action_release (core/input/input.cpp:1429)
+   GDScript backtrace (most recent call first):
+       [0] stop (res://scripts/tools/dash_prototypes.gd:67)
+       [1] play (res://scripts/tools/dash_prototypes.gd:45)
+       [2] <anonymous lambda> (res://scripts/tools/dash_prototypes.gd:42)
+ERROR: The InputMap action "dash" doesn't exist.
+   at: action_release (core/input/input.cpp:1429)
+   GDScript backtrace (most recent call first):
+       [0] stop (res://scripts/tools/dash_prototypes.gd:67)
+       [1] play (res://scripts/tools/dash_prototypes.gd:45)
+       [2] <anonymous lambda> (res://scripts/tools/dash_prototypes.gd:42)

@@ -1,0 +1,638 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "118_new_candidate_before",
+			"passed": true
+		},
+		{
+			"actual": {
+				"card_overlap_frames": 0,
+				"completed": 0,
+				"corridor256_landed": false,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"game_seconds": 13.4500000000002,
+				"health": 3,
+				"high224_landed": false,
+				"hurt_count": 0,
+				"landings": [
+					{
+						"body_top": 364.522277832031,
+						"camera": "(480.0, 259.403)",
+						"canvas_white_bottom": 398.597015380859,
+						"health": 3,
+						"id": "77:0:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 384.998992919922,
+						"camera": "(1429.781, 238.925)",
+						"canvas_white_bottom": 419.074981689453,
+						"health": 3,
+						"id": "77:1:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 387.658996582031,
+						"camera": "(1709.778, 172.2663)",
+						"canvas_white_bottom": 421.733764648438,
+						"health": 3,
+						"id": "77:1:320.0:224.0",
+						"world_y": 320.0
+					},
+					{
+						"body_top": 397.0,
+						"camera": "(2122.045, 226.9252)",
+						"canvas_white_bottom": 431.074798583984,
+						"health": 3,
+						"id": "77:1:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 384.999145507813,
+						"camera": "(2709.784, 238.9249)",
+						"canvas_white_bottom": 419.075134277344,
+						"health": 3,
+						"id": "77:2:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 384.999938964844,
+						"camera": "(3988.473, 238.9241)",
+						"canvas_white_bottom": 419.075927734375,
+						"health": 3,
+						"id": "77:3:384.0:0.0",
+						"world_y": 384.0
+					}
+				],
+				"lower_hud_overlap_frames": 0,
+				"maximum_landed_white_bottom": 431.074798583984,
+				"minimum_body_top": 289.149108886719,
+				"phase": "running",
+				"reached": true,
+				"speed": 280,
+				"wall_seconds": 7.25
+			},
+			"check": "boundary_280_real_chain",
+			"passed": false
+		},
+		{
+			"actual": {
+				"card_overlap": 0,
+				"lower_hud_overlap": 0,
+				"maximum_landed_white": 431.074798583984,
+				"minimum_top": 289.149108886719
+			},
+			"check": "boundary_280_body_and_white_clear",
+			"passed": true
+		},
+		{
+			"actual": {
+				"card_overlap_frames": 0,
+				"completed": 1,
+				"corridor256_landed": true,
+				"dash": {
+					"active": false,
+					"charges": 0,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 2
+				},
+				"game_seconds": 11.1833333333335,
+				"health": 3,
+				"high224_landed": true,
+				"hurt_count": 0,
+				"landings": [
+					{
+						"body_top": 364.522277832031,
+						"camera": "(480.0, 259.403)",
+						"canvas_white_bottom": 398.597015380859,
+						"health": 3,
+						"id": "77:0:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 384.998840332031,
+						"camera": "(1422.106, 238.9252)",
+						"canvas_white_bottom": 419.074829101563,
+						"health": 3,
+						"id": "77:1:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 387.658996582031,
+						"camera": "(1730.106, 172.2662)",
+						"canvas_white_bottom": 421.733764648438,
+						"health": 3,
+						"id": "77:1:320.0:224.0",
+						"world_y": 320.0
+					},
+					{
+						"body_top": 357.897125244141,
+						"camera": "(2095.757, 170.0281)",
+						"canvas_white_bottom": 391.971923828125,
+						"health": 3,
+						"id": "77:1:288.0:672.0",
+						"world_y": 288.0
+					},
+					{
+						"body_top": 325.925170898438,
+						"camera": "(2548.36, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:1:256.0:1120.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 325.923950195313,
+						"camera": "(2704.394, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:2:256.0:0.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 293.925140380859,
+						"camera": "(3144.605, 170.0001)",
+						"canvas_white_bottom": 327.999938964844,
+						"health": 3,
+						"id": "77:2:224.0:320.0",
+						"world_y": 224.0
+					},
+					{
+						"body_top": 325.925109863281,
+						"camera": "(3496.606, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:2:256.0:640.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 397.0,
+						"camera": "(3788.106, 226.9251)",
+						"canvas_white_bottom": 431.074859619141,
+						"health": 3,
+						"id": "77:2:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 385.097900390625,
+						"camera": "(3986.106, 238.8261)",
+						"canvas_white_bottom": 419.173889160156,
+						"health": 3,
+						"id": "77:3:384.0:0.0",
+						"world_y": 384.0
+					}
+				],
+				"lower_hud_overlap_frames": 0,
+				"maximum_landed_white_bottom": 431.074859619141,
+				"minimum_body_top": 193.402587890625,
+				"phase": "running",
+				"reached": true,
+				"speed": 330,
+				"wall_seconds": 5.92
+			},
+			"check": "boundary_330_real_chain",
+			"passed": true
+		},
+		{
+			"actual": {
+				"card_overlap": 0,
+				"lower_hud_overlap": 0,
+				"maximum_landed_white": 431.074859619141,
+				"minimum_top": 193.402587890625
+			},
+			"check": "boundary_330_body_and_white_clear",
+			"passed": true
+		},
+		{
+			"actual": {
+				"card_overlap_frames": 0,
+				"completed": 1,
+				"corridor256_landed": true,
+				"dash": {
+					"active": false,
+					"charges": 0,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 2
+				},
+				"game_seconds": 9.7833333333334,
+				"health": 3,
+				"high224_landed": true,
+				"hurt_count": 0,
+				"landings": [
+					{
+						"body_top": 364.522277832031,
+						"camera": "(480.0, 259.403)",
+						"canvas_white_bottom": 398.597015380859,
+						"health": 3,
+						"id": "77:0:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 384.998992919922,
+						"camera": "(1419.43, 238.925)",
+						"canvas_white_bottom": 419.074981689453,
+						"health": 3,
+						"id": "77:1:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 387.658996582031,
+						"camera": "(1755.099, 172.2662)",
+						"canvas_white_bottom": 421.733764648438,
+						"health": 3,
+						"id": "77:1:320.0:224.0",
+						"world_y": 320.0
+					},
+					{
+						"body_top": 357.900756835938,
+						"camera": "(2118.044, 170.0244)",
+						"canvas_white_bottom": 391.975555419922,
+						"health": 3,
+						"id": "77:1:288.0:672.0",
+						"world_y": 288.0
+					},
+					{
+						"body_top": 325.925170898438,
+						"camera": "(2563.039, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:1:256.0:1120.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 325.923950195313,
+						"camera": "(2695.343, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:2:256.0:0.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 293.925140380859,
+						"camera": "(3170.758, 170.0001)",
+						"canvas_white_bottom": 327.999938964844,
+						"health": 3,
+						"id": "77:2:224.0:320.0",
+						"world_y": 224.0
+					},
+					{
+						"body_top": 325.925109863281,
+						"camera": "(3531.754, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:2:256.0:640.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 397.0,
+						"camera": "(3804.084, 226.9251)",
+						"canvas_white_bottom": 431.074859619141,
+						"health": 3,
+						"id": "77:2:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 385.286071777344,
+						"camera": "(3981.415, 238.6379)",
+						"canvas_white_bottom": 419.362060546875,
+						"health": 3,
+						"id": "77:3:384.0:0.0",
+						"world_y": 384.0
+					}
+				],
+				"lower_hud_overlap_frames": 0,
+				"maximum_landed_white_bottom": 431.074859619141,
+				"minimum_body_top": 193.40266418457,
+				"phase": "running",
+				"reached": true,
+				"speed": 380,
+				"wall_seconds": 5.309
+			},
+			"check": "boundary_380_real_chain",
+			"passed": true
+		},
+		{
+			"actual": {
+				"card_overlap": 0,
+				"lower_hud_overlap": 0,
+				"maximum_landed_white": 431.074859619141,
+				"minimum_top": 193.40266418457
+			},
+			"check": "boundary_380_body_and_white_clear",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "118_new_candidate_unchanged",
+			"passed": true
+		}
+	],
+	"method": "Focused gen6 real Main/Player/Course fixture: initial ground384, maxheight64 relay platforms320/288/256, true Spatial.extend_upper corridor256/224/256 and merge384. Initial spawn/chase/fixed280/330/380 are explicit fixtures. No traversal teleport/resource/speed/front/time changes. Actual synthetic jump/dash windows, landed feet/white4px and reserved card/lower HUD rectangles sampled. GPU fixed60 accelerated. Not natural default seeds or a broad matrix rerun.",
+	"passed": false,
+	"runs": [
+		{
+			"card_overlap_frames": 0,
+			"completed": 0,
+			"corridor256_landed": false,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"game_seconds": 13.4500000000002,
+			"health": 3,
+			"high224_landed": false,
+			"hurt_count": 0,
+			"landings": [
+				{
+					"body_top": 364.522277832031,
+					"camera": "(480.0, 259.403)",
+					"canvas_white_bottom": 398.597015380859,
+					"health": 3,
+					"id": "77:0:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 384.998992919922,
+					"camera": "(1429.781, 238.925)",
+					"canvas_white_bottom": 419.074981689453,
+					"health": 3,
+					"id": "77:1:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 387.658996582031,
+					"camera": "(1709.778, 172.2663)",
+					"canvas_white_bottom": 421.733764648438,
+					"health": 3,
+					"id": "77:1:320.0:224.0",
+					"world_y": 320.0
+				},
+				{
+					"body_top": 397.0,
+					"camera": "(2122.045, 226.9252)",
+					"canvas_white_bottom": 431.074798583984,
+					"health": 3,
+					"id": "77:1:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 384.999145507813,
+					"camera": "(2709.784, 238.9249)",
+					"canvas_white_bottom": 419.075134277344,
+					"health": 3,
+					"id": "77:2:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 384.999938964844,
+					"camera": "(3988.473, 238.9241)",
+					"canvas_white_bottom": 419.075927734375,
+					"health": 3,
+					"id": "77:3:384.0:0.0",
+					"world_y": 384.0
+				}
+			],
+			"lower_hud_overlap_frames": 0,
+			"maximum_landed_white_bottom": 431.074798583984,
+			"minimum_body_top": 289.149108886719,
+			"phase": "running",
+			"reached": true,
+			"speed": 280,
+			"wall_seconds": 7.25
+		},
+		{
+			"card_overlap_frames": 0,
+			"completed": 1,
+			"corridor256_landed": true,
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"game_seconds": 11.1833333333335,
+			"health": 3,
+			"high224_landed": true,
+			"hurt_count": 0,
+			"landings": [
+				{
+					"body_top": 364.522277832031,
+					"camera": "(480.0, 259.403)",
+					"canvas_white_bottom": 398.597015380859,
+					"health": 3,
+					"id": "77:0:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 384.998840332031,
+					"camera": "(1422.106, 238.9252)",
+					"canvas_white_bottom": 419.074829101563,
+					"health": 3,
+					"id": "77:1:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 387.658996582031,
+					"camera": "(1730.106, 172.2662)",
+					"canvas_white_bottom": 421.733764648438,
+					"health": 3,
+					"id": "77:1:320.0:224.0",
+					"world_y": 320.0
+				},
+				{
+					"body_top": 357.897125244141,
+					"camera": "(2095.757, 170.0281)",
+					"canvas_white_bottom": 391.971923828125,
+					"health": 3,
+					"id": "77:1:288.0:672.0",
+					"world_y": 288.0
+				},
+				{
+					"body_top": 325.925170898438,
+					"camera": "(2548.36, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:1:256.0:1120.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 325.923950195313,
+					"camera": "(2704.394, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:2:256.0:0.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 293.925140380859,
+					"camera": "(3144.605, 170.0001)",
+					"canvas_white_bottom": 327.999938964844,
+					"health": 3,
+					"id": "77:2:224.0:320.0",
+					"world_y": 224.0
+				},
+				{
+					"body_top": 325.925109863281,
+					"camera": "(3496.606, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:2:256.0:640.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 397.0,
+					"camera": "(3788.106, 226.9251)",
+					"canvas_white_bottom": 431.074859619141,
+					"health": 3,
+					"id": "77:2:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 385.097900390625,
+					"camera": "(3986.106, 238.8261)",
+					"canvas_white_bottom": 419.173889160156,
+					"health": 3,
+					"id": "77:3:384.0:0.0",
+					"world_y": 384.0
+				}
+			],
+			"lower_hud_overlap_frames": 0,
+			"maximum_landed_white_bottom": 431.074859619141,
+			"minimum_body_top": 193.402587890625,
+			"phase": "running",
+			"reached": true,
+			"speed": 330,
+			"wall_seconds": 5.92
+		},
+		{
+			"card_overlap_frames": 0,
+			"completed": 1,
+			"corridor256_landed": true,
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"game_seconds": 9.7833333333334,
+			"health": 3,
+			"high224_landed": true,
+			"hurt_count": 0,
+			"landings": [
+				{
+					"body_top": 364.522277832031,
+					"camera": "(480.0, 259.403)",
+					"canvas_white_bottom": 398.597015380859,
+					"health": 3,
+					"id": "77:0:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 384.998992919922,
+					"camera": "(1419.43, 238.925)",
+					"canvas_white_bottom": 419.074981689453,
+					"health": 3,
+					"id": "77:1:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 387.658996582031,
+					"camera": "(1755.099, 172.2662)",
+					"canvas_white_bottom": 421.733764648438,
+					"health": 3,
+					"id": "77:1:320.0:224.0",
+					"world_y": 320.0
+				},
+				{
+					"body_top": 357.900756835938,
+					"camera": "(2118.044, 170.0244)",
+					"canvas_white_bottom": 391.975555419922,
+					"health": 3,
+					"id": "77:1:288.0:672.0",
+					"world_y": 288.0
+				},
+				{
+					"body_top": 325.925170898438,
+					"camera": "(2563.039, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:1:256.0:1120.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 325.923950195313,
+					"camera": "(2695.343, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:2:256.0:0.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 293.925140380859,
+					"camera": "(3170.758, 170.0001)",
+					"canvas_white_bottom": 327.999938964844,
+					"health": 3,
+					"id": "77:2:224.0:320.0",
+					"world_y": 224.0
+				},
+				{
+					"body_top": 325.925109863281,
+					"camera": "(3531.754, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:2:256.0:640.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 397.0,
+					"camera": "(3804.084, 226.9251)",
+					"canvas_white_bottom": 431.074859619141,
+					"health": 3,
+					"id": "77:2:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 385.286071777344,
+					"camera": "(3981.415, 238.6379)",
+					"canvas_white_bottom": 419.362060546875,
+					"health": 3,
+					"id": "77:3:384.0:0.0",
+					"world_y": 384.0
+				}
+			],
+			"lower_hud_overlap_frames": 0,
+			"maximum_landed_white_bottom": 431.074859619141,
+			"minimum_body_top": 193.40266418457,
+			"phase": "running",
+			"reached": true,
+			"speed": 380,
+			"wall_seconds": 5.309
+		}
+	]
+}

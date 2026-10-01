@@ -1,0 +1,11 @@
+{
+  "old": "v0.8.0+638292b1ee3b",
+  "new": "v0.8.0+8fcd492eb25d",
+  "new_sha256": "8fcd492eb25d1f73746ecdbf3483a2d147faf7746e1c9737a074f7ff74b9e1fe",
+  "count": 118,
+  "changed": [
+    "scripts/level/run_flow.gd",
+    "scripts/tools/dash_prototypes.gd"
+  ],
+  "mismatches": []
+}

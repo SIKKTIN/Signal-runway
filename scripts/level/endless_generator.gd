@@ -17,7 +17,7 @@ func reset(seed_value: int, settings: Dictionary = {}) -> void:
 	profile = Profile.defaults() if settings.is_empty() or not Profile.validate(settings).is_empty() else Profile.normalized(settings)
 	rhythm = null
 	if profile.generator_revision >= 4:
-		rhythm = load("res://scripts/level/spatial_generator.gd" if profile.generator_revision==5 else "res://scripts/level/rhythm_generator.gd").new()
+		rhythm = load("res://scripts/level/skill_generator.gd" if profile.generator_revision==6 else ("res://scripts/level/spatial_generator.gd" if profile.generator_revision==5 else "res://scripts/level/rhythm_generator.gd")).new()
 		rhythm.reset(seed_value,profile)
 	rng.seed = seed_value
 	geometry_seed = seed_value

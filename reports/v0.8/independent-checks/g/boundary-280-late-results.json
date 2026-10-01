@@ -1,0 +1,370 @@
+{
+	"checks": [
+		{
+			"actual": "",
+			"check": "118_new_candidate_before",
+			"passed": true
+		},
+		{
+			"actual": {
+				"card_overlap_frames": 0,
+				"completed": 1,
+				"corridor256_landed": true,
+				"dash": {
+					"active": false,
+					"charges": 0,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 2
+				},
+				"game_seconds": 13.0666666666669,
+				"health": 3,
+				"high224_landed": true,
+				"hurt_count": 0,
+				"initial_high_fixture": false,
+				"input_log": [
+					{
+						"chunk": "77:1",
+						"elapsed": 4.74999999999999,
+						"feet": 383.924011230469,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 123.831787109375
+					},
+					{
+						"chunk": "77:1",
+						"elapsed": 5.69999999999999,
+						"feet": 319.925231933594,
+						"key": "SPACE",
+						"kind": "skill",
+						"x": 389.829467773438
+					},
+					{
+						"charges_before": 1,
+						"chunk": "77:1",
+						"elapsed": 5.93333333333332,
+						"feet": 232.622634887695,
+						"key": "Shift",
+						"kind": "relay",
+						"x": 455.162719726563
+					},
+					{
+						"chunk": "77:1",
+						"elapsed": 6.93333333333331,
+						"feet": 287.925201416016,
+						"key": "SPACE",
+						"kind": "skill",
+						"x": 839.1630859375
+					},
+					{
+						"charges_before": 1,
+						"chunk": "77:1",
+						"elapsed": 7.16666666666665,
+						"feet": 200.622619628906,
+						"key": "Shift",
+						"kind": "relay",
+						"x": 904.498046875
+					},
+					{
+						"chunk": "77:2",
+						"elapsed": 8.96666666666669,
+						"feet": 255.924011230469,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 232.5048828125
+					},
+					{
+						"chunk": "77:2",
+						"elapsed": 10.1166666666667,
+						"feet": 223.925201416016,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 554.510498046875
+					}
+				],
+				"landings": [
+					{
+						"body_top": 364.522277832031,
+						"camera": "(480.0, 259.403)",
+						"canvas_white_bottom": 398.597015380859,
+						"health": 3,
+						"id": "77:0:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 384.998992919922,
+						"camera": "(1429.781, 238.925)",
+						"canvas_white_bottom": 419.074981689453,
+						"health": 3,
+						"id": "77:1:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 387.658996582031,
+						"camera": "(1709.778, 172.2663)",
+						"canvas_white_bottom": 421.733764648438,
+						"health": 3,
+						"id": "77:1:320.0:224.0",
+						"world_y": 320.0
+					},
+					{
+						"body_top": 357.898681640625,
+						"camera": "(2094.542, 170.0265)",
+						"canvas_white_bottom": 391.973510742188,
+						"health": 3,
+						"id": "77:1:288.0:672.0",
+						"world_y": 288.0
+					},
+					{
+						"body_top": 325.925170898438,
+						"camera": "(2537.988, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:1:256.0:1120.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 325.923950195313,
+						"camera": "(2711.023, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:2:256.0:0.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 293.925140380859,
+						"camera": "(3117.121, 170.0001)",
+						"canvas_white_bottom": 327.999938964844,
+						"health": 3,
+						"id": "77:2:224.0:320.0",
+						"world_y": 224.0
+					},
+					{
+						"body_top": 325.925109863281,
+						"camera": "(3467.128, 170.0001)",
+						"canvas_white_bottom": 359.999938964844,
+						"health": 3,
+						"id": "77:2:256.0:640.0",
+						"world_y": 256.0
+					},
+					{
+						"body_top": 397.0,
+						"camera": "(3779.8, 226.9251)",
+						"canvas_white_bottom": 431.074859619141,
+						"health": 3,
+						"id": "77:2:384.0:0.0",
+						"world_y": 384.0
+					},
+					{
+						"body_top": 385.028869628906,
+						"camera": "(3989.804, 238.8951)",
+						"canvas_white_bottom": 419.104858398438,
+						"health": 3,
+						"id": "77:3:384.0:0.0",
+						"world_y": 384.0
+					}
+				],
+				"late_space_to_edge_plus4": true,
+				"lower_hud_overlap_frames": 0,
+				"maximum_landed_white_bottom": 431.074859619141,
+				"minimum_body_top": 193.402526855469,
+				"phase": "running",
+				"reached": true,
+				"speed": 280,
+				"wall_seconds": 7.088
+			},
+			"check": "boundary_280_real_chain",
+			"passed": true
+		},
+		{
+			"actual": {
+				"card_overlap": 0,
+				"lower_hud_overlap": 0,
+				"maximum_landed_white": 431.074859619141,
+				"minimum_top": 193.402526855469
+			},
+			"check": "boundary_280_body_and_white_clear",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "118_new_candidate_unchanged",
+			"passed": true
+		}
+	],
+	"method": "Focused gen6 real Main/Player/Course fixture: initial ground384, maxheight64 relay platforms320/288/256, true Spatial.extend_upper corridor256/224/256 and merge384. Initial spawn/chase/fixed280/330/380 are explicit fixtures. --high280 separately starts initially at x2656,y238 on true y256 corridor with initial camera3136/270, proves actual jump/landing224/256 and ground return only, not relay completion. No traversal teleport/resource/speed/front/time changes. Actual synthetic jump/dash windows, landed feet/white4px and reserved card/lower HUD rectangles sampled. GPU fixed60 accelerated. Not natural default seeds or a broad matrix rerun.",
+	"passed": true,
+	"runs": [
+		{
+			"card_overlap_frames": 0,
+			"completed": 1,
+			"corridor256_landed": true,
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"game_seconds": 13.0666666666669,
+			"health": 3,
+			"high224_landed": true,
+			"hurt_count": 0,
+			"initial_high_fixture": false,
+			"input_log": [
+				{
+					"chunk": "77:1",
+					"elapsed": 4.74999999999999,
+					"feet": 383.924011230469,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 123.831787109375
+				},
+				{
+					"chunk": "77:1",
+					"elapsed": 5.69999999999999,
+					"feet": 319.925231933594,
+					"key": "SPACE",
+					"kind": "skill",
+					"x": 389.829467773438
+				},
+				{
+					"charges_before": 1,
+					"chunk": "77:1",
+					"elapsed": 5.93333333333332,
+					"feet": 232.622634887695,
+					"key": "Shift",
+					"kind": "relay",
+					"x": 455.162719726563
+				},
+				{
+					"chunk": "77:1",
+					"elapsed": 6.93333333333331,
+					"feet": 287.925201416016,
+					"key": "SPACE",
+					"kind": "skill",
+					"x": 839.1630859375
+				},
+				{
+					"charges_before": 1,
+					"chunk": "77:1",
+					"elapsed": 7.16666666666665,
+					"feet": 200.622619628906,
+					"key": "Shift",
+					"kind": "relay",
+					"x": 904.498046875
+				},
+				{
+					"chunk": "77:2",
+					"elapsed": 8.96666666666669,
+					"feet": 255.924011230469,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 232.5048828125
+				},
+				{
+					"chunk": "77:2",
+					"elapsed": 10.1166666666667,
+					"feet": 223.925201416016,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 554.510498046875
+				}
+			],
+			"landings": [
+				{
+					"body_top": 364.522277832031,
+					"camera": "(480.0, 259.403)",
+					"canvas_white_bottom": 398.597015380859,
+					"health": 3,
+					"id": "77:0:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 384.998992919922,
+					"camera": "(1429.781, 238.925)",
+					"canvas_white_bottom": 419.074981689453,
+					"health": 3,
+					"id": "77:1:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 387.658996582031,
+					"camera": "(1709.778, 172.2663)",
+					"canvas_white_bottom": 421.733764648438,
+					"health": 3,
+					"id": "77:1:320.0:224.0",
+					"world_y": 320.0
+				},
+				{
+					"body_top": 357.898681640625,
+					"camera": "(2094.542, 170.0265)",
+					"canvas_white_bottom": 391.973510742188,
+					"health": 3,
+					"id": "77:1:288.0:672.0",
+					"world_y": 288.0
+				},
+				{
+					"body_top": 325.925170898438,
+					"camera": "(2537.988, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:1:256.0:1120.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 325.923950195313,
+					"camera": "(2711.023, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:2:256.0:0.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 293.925140380859,
+					"camera": "(3117.121, 170.0001)",
+					"canvas_white_bottom": 327.999938964844,
+					"health": 3,
+					"id": "77:2:224.0:320.0",
+					"world_y": 224.0
+				},
+				{
+					"body_top": 325.925109863281,
+					"camera": "(3467.128, 170.0001)",
+					"canvas_white_bottom": 359.999938964844,
+					"health": 3,
+					"id": "77:2:256.0:640.0",
+					"world_y": 256.0
+				},
+				{
+					"body_top": 397.0,
+					"camera": "(3779.8, 226.9251)",
+					"canvas_white_bottom": 431.074859619141,
+					"health": 3,
+					"id": "77:2:384.0:0.0",
+					"world_y": 384.0
+				},
+				{
+					"body_top": 385.028869628906,
+					"camera": "(3989.804, 238.8951)",
+					"canvas_white_bottom": 419.104858398438,
+					"health": 3,
+					"id": "77:3:384.0:0.0",
+					"world_y": 384.0
+				}
+			],
+			"late_space_to_edge_plus4": true,
+			"lower_hud_overlap_frames": 0,
+			"maximum_landed_white_bottom": 431.074859619141,
+			"minimum_body_top": 193.402526855469,
+			"phase": "running",
+			"reached": true,
+			"speed": 280,
+			"wall_seconds": 7.088
+		}
+	]
+}

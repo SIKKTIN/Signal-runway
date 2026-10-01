@@ -1,0 +1,2301 @@
+{
+	"after": {
+		"files": {
+			"assets/audio/relay/relay_connect.wav": "b696b2f4a468d2aa3bd3298234ff704caf8b2145c249684eb93adb30929afb95",
+			"assets/audio/sfx_death.wav": "69136391022a1047faedbd5ad24fdcf2720da409c0c002adf176631ee9571b74",
+			"assets/audio/sfx_finish.wav": "72b0e889b72ff0b3cba039d611505de9473c3a5817025d0c8ff51bac4b9bb0df",
+			"assets/audio/sfx_jump.wav": "b67cdb34135fea5c197246048bbc37ccaf57a0797482d3ec95929bf9c407f425",
+			"assets/audio/sfx_land.wav": "1a15ce70804b8b7f970747b1a27ee034c107b0b63643628d8073d2d8e0c08c14",
+			"assets/audio/sfx_wall_jump.wav": "0025c2125c26a8925c91254849a5278530dd340e73bc56013186214617a03b9c",
+			"assets/audio/v02/caught.wav": "510b33ca40c5db191e92c6f22fc543d860f29a30edc07636a9e9492ff2e6eab5",
+			"assets/audio/v02/threat_loop.wav": "bb5826542031177af24e69d7c7bff6b3a95692e70e63397e7fd1e0208b5c3fe2",
+			"assets/audio/v02/warning_near.wav": "a19ae770588811ce05e3edf2b048bc4a78986059c2d1bdc7fb9fdd2292cbdcdd",
+			"assets/audio/v02/warning_urgent.wav": "4d936db8ec6f10664ec4cd9e7c3b3ab60d86951d13fdf3513ab4bf0aa3f01086",
+			"assets/audio/v05/hurt_tick.wav": "c39756f5fdf6250be879bb1c993a013eb22c7a6fdd69b0fc4fd5c9b26f7291ca",
+			"assets/audio/v06/complete.wav": "b8fa6314b8a49ca1c57dd9ad250c510d6e1d9b6597bddeaf46fd98775a9c5565",
+			"assets/audio/v06/recover.wav": "7219a77788edc264ec45c0fd665d159bb44d058215d2dec28f9ea4faa59d69ca",
+			"assets/audio/v08/dash_refill.wav": "8b4607245e130c2c3d4388aca34cc53a5fd76a0ca47154a184cd5f78e14b0c18",
+			"assets/audio/v08/dash_start.wav": "a968f3842aa0f106694f91e60ff4bdfbd19a7162f4a547fd955a5860d65006b9",
+			"assets/visual/background_industrial.png": "5f9e6edcff206dba5c251864df09353e465dae58d8a273d5a337e2486a86d4fb",
+			"assets/visual/goal_gate.png": "2c623896484f0d04b8373e455b098db252be7c485e904a71280fb71a77c0595e",
+			"assets/visual/hazard_spike_left.png": "81dc1291cd87171bb3dff97bfe1d749def5b6e4533d99cc4cddb13130cf87210",
+			"assets/visual/hazard_spike_right.png": "1a86c88b80838968e22db5264f282c234e14fe7581b709b79776280b36e69c8c",
+			"assets/visual/hazard_spike_up.png": "42b3a170a713aed96dc3f89d3b507e82a8ee209859bb5d0141fddd75178882a2",
+			"assets/visual/player_dead_0.png": "55a17c7b2375a58dca713d3186a2f8c01897d98ad992e4b41297c8bcc71dc420",
+			"assets/visual/player_fall_0.png": "57d5050f8acf426f95ac98b5e0b074eae01e0e7c8b229da8afb3a0949492ef6b",
+			"assets/visual/player_finish_0.png": "4fac9bb221e87c5313ed5cff923bdc8a2dea0961870262a86243a55f0ca2cb4f",
+			"assets/visual/player_idle_0.png": "57fd6a53a3c1d039c6bea1cdb3eedb182d24d0d8774d260b80db694cc76488a7",
+			"assets/visual/player_jump_0.png": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+			"assets/visual/player_land_0.png": "d555c80904bae1ae47d64168acb3f1b61b2126814cfeeefc799a79f02cb4b0cf",
+			"assets/visual/player_rise_0.png": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+			"assets/visual/player_run_0_0.png": "95546103282c3690d78a8ce7ed788a4f705d8e9b7b54faba474ed072ae08d5e4",
+			"assets/visual/player_run_1_0.png": "9ee19fe10d58529d9e734c5b2cc78a3b722bf0562e8468ae5b13315f0f066661",
+			"assets/visual/player_wall_jump_0.png": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+			"assets/visual/player_wall_slide_0.png": "0b6bb6de22a61f60ab995e3d1335e6e8e2373964dc6532afc530b54b14fca7dc",
+			"assets/visual/relay/relay_activated.png": "93bab59513c10423871889e7506d1c25890f50e8e99142449428c7c753dc5790",
+			"assets/visual/relay/relay_activating.png": "43351a87222c9da4df7a6537a1844f023776b0aa8f7495c295ccc0a6cc8f5742",
+			"assets/visual/relay/relay_available.png": "c8d4317ee7a376a47ccba5d9dd4856cb0761323ebee2f93787f26ee10f76feed",
+			"assets/visual/terrain_platform.png": "7d95b9e9b1d82603f31167c11dbfaceac8f67376b476d005aded9c1675e4a5e0",
+			"assets/visual/terrain_solid.png": "5eb87d8dd555db3b2193506229ab0b2c80a758e081b59299d8c04e9a673785f7",
+			"assets/visual/terrain_wall_left.png": "8ff6f6424cf16363926ca996e09389d3c80e03bdb5e9cfd39e968008cbf35dd4",
+			"assets/visual/terrain_wall_right.png": "97e2051952c9f52e0f6ec3d0f45098f6ef074308d67718246f243c190ec11e4c",
+			"assets/visual/ui_clock.png": "0e89de8d85a42f39001f0dceeb50987d85017d1368ea9e89ec6dc3a122483047",
+			"assets/visual/ui_deaths.png": "746a9d675b90d1b54a98290b25d89e07c4b60777a0ae7dff1cc84f9da6d6cb05",
+			"assets/visual/ui_finish.png": "d2182b63a37af0bc0a6f077951c0236639df7b62f7510e2ccd36fc7e843e8202",
+			"assets/visual/v02/collapse_cover.png": "521cd44d86d6239df730ff80de917d4d18e8acd232f7072750a3f595498a3891",
+			"assets/visual/v02/collapse_front.png": "573d1bb2ef99a76d3dcf7be6048992690b1a094c1412102b441380e48ea0d523",
+			"assets/visual/v02/failure_caught.png": "938368fe03e203f1f0adfdd4f77ac2b10512e9a9592d7cdaae40e25de05f7ffb",
+			"assets/visual/v02/failure_fall.png": "d8f512af1e7ea1267d92ce606c52d4638311576d8c0fabe9b6c4a3984a5e240b",
+			"assets/visual/v02/failure_spike.png": "de1c1e9a3cfeeec54538ba3500ae6cb22a4106966be47b82f8d3a6fe3b54a648",
+			"assets/visual/v02/warning_near.png": "28cd9a0f23ea839431834e7a240120fe97115eb4218c50e8a1b06fda90d86519",
+			"assets/visual/v02/warning_safe.png": "0bce7a588b5c53fab7d85f9da8fc41bdd2bbdc9ab465990a6d35c3134ca4abda",
+			"assets/visual/v02/warning_urgent.png": "1719005b2086b80dbcd2e555655c239fd9fba4d9d2de80a2ddbad69a89e06e98",
+			"assets/visual/v05/ground_side.svg": "58e266bb1104e9615cce3ea11c917038358178b9e569646d5e8307e3f454c840",
+			"assets/visual/v05/platform_cap.svg": "e036c057be516a4dfaf11881bd0f921aa8a2686ffce6224c22155a31e0f5cd3d",
+			"assets/visual/v05/route_upper.svg": "6c65d43852864ecee35ed766cccebff5fd0525d828a5cbaf64538da9257e7720",
+			"project.godot": "a5e0cad4afecd4c4c624e19a01b508cf2b6173e55e9e2478f6d6b7a47eae57dd",
+			"resources/generation/endless_default.json": "6e9e9d622bf94758429b5a8099e681adbf8f0ef6e18fef12187d16aa813d8d84",
+			"scenes/levels/level_01.tscn": "7cb2e5d7576a2efe9785e317371d8da6de1266cf4319e1b7e0e22848079a2aff",
+			"scenes/main/main.tscn": "ab96f1052da19d012ec461557ebef11a65b62c8e332f08325b35cb19fd7dfbb3",
+			"scenes/player/player.tscn": "6cb01e34ccd43613f38e49b3d327ce8a4648d55d068d7b867e3320c8c4141ee9",
+			"scenes/test_room/test_room.tscn": "79fda5f414c9bce82ddee1fd6a5d305e35e6f388b460a35da3999ac6e3064692",
+			"scenes/tools/dash_prototypes.tscn": "22c01b3f8fc980351f3020cb8e4b4ed2b5de503fb43273b8ab675e7b2cfe64c9",
+			"scenes/tools/generation_editor.tscn": "6fc92948ae9b5368782c56adf2d5a2d4441a0f17d9e6cd44c46356d710cf1f37",
+			"scenes/tools/generation_editor_theme.tres": "7204f9d58b6599c5099144ec00eadbd526498749058a68110f024db5bff7190c",
+			"scenes/ui/skins/chase_theme.tres": "628a473b8149ccbcba930fecd3482fb123c337fda805e0ca427635568dc3fd0d",
+			"scenes/ui/skins/signal_theme.tres": "4695c6d964072d8915fa547379fa1c8ac90b4329e07e93f7c2237b0eae480b54",
+			"scenes/ui/v05_status.gd": "9bdaca284fd97778cd5518c905692f26368276411a8f4225d34f32711a0b7938",
+			"scenes/ui/v05_status.tscn": "309cb394b1d047ae1cf3eb7f91540caf8d427ba221ee67cce2bec33f163fe4df",
+			"scenes/ui/v06_route_status.gd": "8877f8f1fec84b6e7966833bf5b7b5038cd5424d069b1a331134a7be7c49b715",
+			"scenes/ui/v06_route_status.tscn": "44b7bfe6ecaba9ddd29ce48df4505451eb600f09cc1d9275c09e3770f5b5ff31",
+			"scenes/ui/v08_dash_status.gd": "fdfe4569c13edf2cdc7e68ab99240e608a6679255b95e87502c4a1b97a4bfe7a",
+			"scenes/ui/v08_dash_status.tscn": "41538f15e72bb1bfb026d6738dc951d3f52363a38448a47a71e8eab362d1b00a",
+			"scenes/visual/art_preview.tscn": "125da6ae384a5d2f324e8427e2ffdd90256c15a278986438304cc87bf38ae832",
+			"scenes/visual/chase_preview.tscn": "44025c087c17b55a49cf8c64a0c8b78249812e6e603dda7e25714dad598622e9",
+			"scenes/visual/endless_art_preview.tscn": "9bdf1680266d289c8f7763f23002bb1357b9170837450e66414ce92858758881",
+			"scenes/visual/relay_preview.tscn": "c800329f7cb8932ba71b39e988bee96d33ec1017d6e5d72f63efbd18a2b66686",
+			"scripts/core/input_bindings.gd": "4250747cfa6ef6dbea7e7237d3c900db79ce101f521bfd35bda26bcfbde2434b",
+			"scripts/core/test_room.gd": "2f32b91a2f8e7be30210d914da4c607aa3aa258312bc73c78637b79f98fdc342",
+			"scripts/level/chase_controller.gd": "782b5eed7d423c5f697472d53107156d5540cbbaa37fe4b9dbcfb124af8d6978",
+			"scripts/level/continuous_hazard.gd": "d37b707d4119a0a4b6b3af2beaa9b3339844cd38f69586a4b225c446fee0b669",
+			"scripts/level/course.gd": "091c0c461ea362b17a749ddcb8bdfbccb221a5d2e2480ddfcac7743a5ba78d89",
+			"scripts/level/endless_course.gd": "28bf04f74b0746ce67a1c0e29f03086bb16d31074416a17910b3e2b271dcf3ad",
+			"scripts/level/endless_generator.gd": "d899dd5702ec18a1d04cb39b922a3ecaffb4e6d439fe7d7ab9646908efddf42e",
+			"scripts/level/endless_library.gd": "9347086d5701b5ed1ae212e43792337e24269b6116d36be28036d777bb330880",
+			"scripts/level/endless_record.gd": "65964aa8aa197417abd94800c47baefed8c85185bb202d47cac1e2d09ab35541",
+			"scripts/level/generation_profile.gd": "b4618b717c7c50ed1d8cf7f8b01aace9948532416dce722827219fc29cc9189c",
+			"scripts/level/relay_layout.gd": "02b504241dfcfd0a5bc6589a1cc8eea145c4915e1fee9d10c003e81802faeee5",
+			"scripts/level/rhythm_generator.gd": "da1a54facb06d07be534cfd5439512ef461abe2c6b5f9f5ddb3c826db759eb92",
+			"scripts/level/route_challenge.gd": "f8e72e45a60cff1c6f898ad149da01cdb6a064f68ff6f05592c639b176be8399",
+			"scripts/level/run_flow.gd": "c9450a4672dc6f284216dc9a79cbbe4c9bc612f982d1741ebe08a65d2fd2005d",
+			"scripts/level/skill_generator.gd": "1357de3152c0bd10e58be7f8e0e2980dd28d9d61f5d9fe0e192484d578a06a9a",
+			"scripts/level/skill_library.gd": "4b0ae249fac5fd67529b1ba6a6d850b0b46f2614128d2d08941aaafbe3a8dcb0",
+			"scripts/level/spatial_generator.gd": "0ba067f0b70207ac5e9e80d0e13cd63347d998bcef72e6afb433f91c917da350",
+			"scripts/level/spatial_library.gd": "4caae01da69578e99dceea3728fcb470577a96de07de6e077c8c793bb6a76031",
+			"scripts/level/vertical_library.gd": "7da30f013126330cae7afb82384e61ea4d71bdfe67ddeffc229160314ba04b99",
+			"scripts/player/player.gd": "175338edae8e6f5fe0172c2f473c37d06308b320b0ca3af1b325f43580477e43",
+			"scripts/tools/dash_prototypes.gd": "23f1d744c1c8af4202277dfc33469e29e7c48e1b7bd2042a285c6e7522680ea4",
+			"scripts/tools/generation_editor.gd": "762ad79066e196d117f7f4d08064ec2db8a5b3d0026313aaa93b888f76cfefc6",
+			"scripts/tools/generation_replay.gd": "b01c70a48a0043f7bbff2afc6cb91b7906508d8e9891eac7bf220d6b2d0d6ea8",
+			"scripts/tools/map_preview.gd": "b61180d8824c12b2c7b6ddee62dab5a11f47cfb67ee923834289fab39d6ab1e1",
+			"scripts/ui/interface.gd": "b4cb05e6feb9faf1919aa0ea6b261141dd64200a3c167a4c39f9b913f2984b22",
+			"scripts/visual/art_preview.gd": "8b1bf0edf4fd3d17996596c0ee03890ab7b7f357d6caab04de12f5252f7fe69c",
+			"scripts/visual/capture_preview.gd": "a663820bc7b03b07af006a12ac4ff76c057cd1b2ae0d24fb5796b2640f85a5c7",
+			"scripts/visual/capture_v02_preview.gd": "fc6de402e8e63ddc255742c92d9e3939131d101085ab41ac8fc58eb72658708e",
+			"scripts/visual/chase_preview.gd": "1e4f7a031728b5ab6feb5945ffe7c7a2e4a3278ef62a1a23c99fafbf87c7fe03",
+			"scripts/visual/chase_preview_source.gd": "ec880b154454561a0e7e72c1b17c256f0d375122b30ab744f06692d361e63341",
+			"scripts/visual/chase_visual.gd": "810f5b171c4770f01e4ae37a2591b76286362e9541e3846dff8b64af70c65d58",
+			"scripts/visual/dash_visual.gd": "7679156128da73f72e438a6361edc05c2e62c50e7a98fd7aa1b0b99ce542f51b",
+			"scripts/visual/endless_art_preview.gd": "5809206ae7bda33c42f0ae4907b6caa31e7b3cfe946644df0ada372bb3dd2fb9",
+			"scripts/visual/endless_hud_visual.gd": "22f653f3c43b3be633af0c446edd6f80f1fcb6381672f1fd8d477d78af334d0b",
+			"scripts/visual/endless_module_visual.gd": "afca53895ab5c9ee081ffeed913d5ad84bf4500253f3df71f45743ffbc025b62",
+			"scripts/visual/endless_world_visual.gd": "13f4c877c9285db4e707ff3febda195a57731c915791a68cb413acfff6109431",
+			"scripts/visual/environment_visual.gd": "80c7e0c8d87bacb210a850d60165ce9450f0f35e4e9de33551b25569ebb17136",
+			"scripts/visual/generate_chase_theme.gd": "2d0da9a120ada4727d5d5c7f1db0175274ac742038c2aa9ff0cc883893b6b9e0",
+			"scripts/visual/generate_theme.gd": "ef11d0522d3db1b258406bb70cfb8cd04cec9517feffba7498fef157b7700789",
+			"scripts/visual/player_visual.gd": "59ee940a7cfd6c94563448dd1e2e481fef41818eb4bdb31a7f271486270dc45c",
+			"scripts/visual/relay_preview.gd": "f5c4d77193a1222561851622e275bb336536b42f889ce8ce2354eaee6dd83863",
+			"scripts/visual/relay_visual.gd": "2bb1f0bb788de7009ac37452fad8a30114206e402b200e3cab7e8e89dc7c428e",
+			"scripts/visual/route_visual.gd": "3f90a4e6d191dc081b37999e255a8e8276c392fc54d2d954da66021715bf41aa",
+			"scripts/visual/spatial_visual.gd": "9f9b786cffd94da379aef15fd0647e00f13acd0444cf442a43dcfaad28b91e96",
+			"scripts/visual/verify_audio.gd": "30e03155992edf4c30de4c02766c83bb9fab5e5028cd96cfc0a9e7d237e9f570"
+		},
+		"manifest_sha256": "8fcd492eb25d1f73746ecdbf3483a2d147faf7746e1c9737a074f7ff74b9e1fe",
+		"mismatches": [],
+		"version": "v0.8.0+8fcd492eb25d"
+	},
+	"before": {
+		"files": {
+			"assets/audio/relay/relay_connect.wav": "b696b2f4a468d2aa3bd3298234ff704caf8b2145c249684eb93adb30929afb95",
+			"assets/audio/sfx_death.wav": "69136391022a1047faedbd5ad24fdcf2720da409c0c002adf176631ee9571b74",
+			"assets/audio/sfx_finish.wav": "72b0e889b72ff0b3cba039d611505de9473c3a5817025d0c8ff51bac4b9bb0df",
+			"assets/audio/sfx_jump.wav": "b67cdb34135fea5c197246048bbc37ccaf57a0797482d3ec95929bf9c407f425",
+			"assets/audio/sfx_land.wav": "1a15ce70804b8b7f970747b1a27ee034c107b0b63643628d8073d2d8e0c08c14",
+			"assets/audio/sfx_wall_jump.wav": "0025c2125c26a8925c91254849a5278530dd340e73bc56013186214617a03b9c",
+			"assets/audio/v02/caught.wav": "510b33ca40c5db191e92c6f22fc543d860f29a30edc07636a9e9492ff2e6eab5",
+			"assets/audio/v02/threat_loop.wav": "bb5826542031177af24e69d7c7bff6b3a95692e70e63397e7fd1e0208b5c3fe2",
+			"assets/audio/v02/warning_near.wav": "a19ae770588811ce05e3edf2b048bc4a78986059c2d1bdc7fb9fdd2292cbdcdd",
+			"assets/audio/v02/warning_urgent.wav": "4d936db8ec6f10664ec4cd9e7c3b3ab60d86951d13fdf3513ab4bf0aa3f01086",
+			"assets/audio/v05/hurt_tick.wav": "c39756f5fdf6250be879bb1c993a013eb22c7a6fdd69b0fc4fd5c9b26f7291ca",
+			"assets/audio/v06/complete.wav": "b8fa6314b8a49ca1c57dd9ad250c510d6e1d9b6597bddeaf46fd98775a9c5565",
+			"assets/audio/v06/recover.wav": "7219a77788edc264ec45c0fd665d159bb44d058215d2dec28f9ea4faa59d69ca",
+			"assets/audio/v08/dash_refill.wav": "8b4607245e130c2c3d4388aca34cc53a5fd76a0ca47154a184cd5f78e14b0c18",
+			"assets/audio/v08/dash_start.wav": "a968f3842aa0f106694f91e60ff4bdfbd19a7162f4a547fd955a5860d65006b9",
+			"assets/visual/background_industrial.png": "5f9e6edcff206dba5c251864df09353e465dae58d8a273d5a337e2486a86d4fb",
+			"assets/visual/goal_gate.png": "2c623896484f0d04b8373e455b098db252be7c485e904a71280fb71a77c0595e",
+			"assets/visual/hazard_spike_left.png": "81dc1291cd87171bb3dff97bfe1d749def5b6e4533d99cc4cddb13130cf87210",
+			"assets/visual/hazard_spike_right.png": "1a86c88b80838968e22db5264f282c234e14fe7581b709b79776280b36e69c8c",
+			"assets/visual/hazard_spike_up.png": "42b3a170a713aed96dc3f89d3b507e82a8ee209859bb5d0141fddd75178882a2",
+			"assets/visual/player_dead_0.png": "55a17c7b2375a58dca713d3186a2f8c01897d98ad992e4b41297c8bcc71dc420",
+			"assets/visual/player_fall_0.png": "57d5050f8acf426f95ac98b5e0b074eae01e0e7c8b229da8afb3a0949492ef6b",
+			"assets/visual/player_finish_0.png": "4fac9bb221e87c5313ed5cff923bdc8a2dea0961870262a86243a55f0ca2cb4f",
+			"assets/visual/player_idle_0.png": "57fd6a53a3c1d039c6bea1cdb3eedb182d24d0d8774d260b80db694cc76488a7",
+			"assets/visual/player_jump_0.png": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+			"assets/visual/player_land_0.png": "d555c80904bae1ae47d64168acb3f1b61b2126814cfeeefc799a79f02cb4b0cf",
+			"assets/visual/player_rise_0.png": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+			"assets/visual/player_run_0_0.png": "95546103282c3690d78a8ce7ed788a4f705d8e9b7b54faba474ed072ae08d5e4",
+			"assets/visual/player_run_1_0.png": "9ee19fe10d58529d9e734c5b2cc78a3b722bf0562e8468ae5b13315f0f066661",
+			"assets/visual/player_wall_jump_0.png": "aec8f3729d6741ef7abc4be0cc69dd15860a352d9200703d8cb33d7cdf84c0c7",
+			"assets/visual/player_wall_slide_0.png": "0b6bb6de22a61f60ab995e3d1335e6e8e2373964dc6532afc530b54b14fca7dc",
+			"assets/visual/relay/relay_activated.png": "93bab59513c10423871889e7506d1c25890f50e8e99142449428c7c753dc5790",
+			"assets/visual/relay/relay_activating.png": "43351a87222c9da4df7a6537a1844f023776b0aa8f7495c295ccc0a6cc8f5742",
+			"assets/visual/relay/relay_available.png": "c8d4317ee7a376a47ccba5d9dd4856cb0761323ebee2f93787f26ee10f76feed",
+			"assets/visual/terrain_platform.png": "7d95b9e9b1d82603f31167c11dbfaceac8f67376b476d005aded9c1675e4a5e0",
+			"assets/visual/terrain_solid.png": "5eb87d8dd555db3b2193506229ab0b2c80a758e081b59299d8c04e9a673785f7",
+			"assets/visual/terrain_wall_left.png": "8ff6f6424cf16363926ca996e09389d3c80e03bdb5e9cfd39e968008cbf35dd4",
+			"assets/visual/terrain_wall_right.png": "97e2051952c9f52e0f6ec3d0f45098f6ef074308d67718246f243c190ec11e4c",
+			"assets/visual/ui_clock.png": "0e89de8d85a42f39001f0dceeb50987d85017d1368ea9e89ec6dc3a122483047",
+			"assets/visual/ui_deaths.png": "746a9d675b90d1b54a98290b25d89e07c4b60777a0ae7dff1cc84f9da6d6cb05",
+			"assets/visual/ui_finish.png": "d2182b63a37af0bc0a6f077951c0236639df7b62f7510e2ccd36fc7e843e8202",
+			"assets/visual/v02/collapse_cover.png": "521cd44d86d6239df730ff80de917d4d18e8acd232f7072750a3f595498a3891",
+			"assets/visual/v02/collapse_front.png": "573d1bb2ef99a76d3dcf7be6048992690b1a094c1412102b441380e48ea0d523",
+			"assets/visual/v02/failure_caught.png": "938368fe03e203f1f0adfdd4f77ac2b10512e9a9592d7cdaae40e25de05f7ffb",
+			"assets/visual/v02/failure_fall.png": "d8f512af1e7ea1267d92ce606c52d4638311576d8c0fabe9b6c4a3984a5e240b",
+			"assets/visual/v02/failure_spike.png": "de1c1e9a3cfeeec54538ba3500ae6cb22a4106966be47b82f8d3a6fe3b54a648",
+			"assets/visual/v02/warning_near.png": "28cd9a0f23ea839431834e7a240120fe97115eb4218c50e8a1b06fda90d86519",
+			"assets/visual/v02/warning_safe.png": "0bce7a588b5c53fab7d85f9da8fc41bdd2bbdc9ab465990a6d35c3134ca4abda",
+			"assets/visual/v02/warning_urgent.png": "1719005b2086b80dbcd2e555655c239fd9fba4d9d2de80a2ddbad69a89e06e98",
+			"assets/visual/v05/ground_side.svg": "58e266bb1104e9615cce3ea11c917038358178b9e569646d5e8307e3f454c840",
+			"assets/visual/v05/platform_cap.svg": "e036c057be516a4dfaf11881bd0f921aa8a2686ffce6224c22155a31e0f5cd3d",
+			"assets/visual/v05/route_upper.svg": "6c65d43852864ecee35ed766cccebff5fd0525d828a5cbaf64538da9257e7720",
+			"project.godot": "a5e0cad4afecd4c4c624e19a01b508cf2b6173e55e9e2478f6d6b7a47eae57dd",
+			"resources/generation/endless_default.json": "6e9e9d622bf94758429b5a8099e681adbf8f0ef6e18fef12187d16aa813d8d84",
+			"scenes/levels/level_01.tscn": "7cb2e5d7576a2efe9785e317371d8da6de1266cf4319e1b7e0e22848079a2aff",
+			"scenes/main/main.tscn": "ab96f1052da19d012ec461557ebef11a65b62c8e332f08325b35cb19fd7dfbb3",
+			"scenes/player/player.tscn": "6cb01e34ccd43613f38e49b3d327ce8a4648d55d068d7b867e3320c8c4141ee9",
+			"scenes/test_room/test_room.tscn": "79fda5f414c9bce82ddee1fd6a5d305e35e6f388b460a35da3999ac6e3064692",
+			"scenes/tools/dash_prototypes.tscn": "22c01b3f8fc980351f3020cb8e4b4ed2b5de503fb43273b8ab675e7b2cfe64c9",
+			"scenes/tools/generation_editor.tscn": "6fc92948ae9b5368782c56adf2d5a2d4441a0f17d9e6cd44c46356d710cf1f37",
+			"scenes/tools/generation_editor_theme.tres": "7204f9d58b6599c5099144ec00eadbd526498749058a68110f024db5bff7190c",
+			"scenes/ui/skins/chase_theme.tres": "628a473b8149ccbcba930fecd3482fb123c337fda805e0ca427635568dc3fd0d",
+			"scenes/ui/skins/signal_theme.tres": "4695c6d964072d8915fa547379fa1c8ac90b4329e07e93f7c2237b0eae480b54",
+			"scenes/ui/v05_status.gd": "9bdaca284fd97778cd5518c905692f26368276411a8f4225d34f32711a0b7938",
+			"scenes/ui/v05_status.tscn": "309cb394b1d047ae1cf3eb7f91540caf8d427ba221ee67cce2bec33f163fe4df",
+			"scenes/ui/v06_route_status.gd": "8877f8f1fec84b6e7966833bf5b7b5038cd5424d069b1a331134a7be7c49b715",
+			"scenes/ui/v06_route_status.tscn": "44b7bfe6ecaba9ddd29ce48df4505451eb600f09cc1d9275c09e3770f5b5ff31",
+			"scenes/ui/v08_dash_status.gd": "fdfe4569c13edf2cdc7e68ab99240e608a6679255b95e87502c4a1b97a4bfe7a",
+			"scenes/ui/v08_dash_status.tscn": "41538f15e72bb1bfb026d6738dc951d3f52363a38448a47a71e8eab362d1b00a",
+			"scenes/visual/art_preview.tscn": "125da6ae384a5d2f324e8427e2ffdd90256c15a278986438304cc87bf38ae832",
+			"scenes/visual/chase_preview.tscn": "44025c087c17b55a49cf8c64a0c8b78249812e6e603dda7e25714dad598622e9",
+			"scenes/visual/endless_art_preview.tscn": "9bdf1680266d289c8f7763f23002bb1357b9170837450e66414ce92858758881",
+			"scenes/visual/relay_preview.tscn": "c800329f7cb8932ba71b39e988bee96d33ec1017d6e5d72f63efbd18a2b66686",
+			"scripts/core/input_bindings.gd": "4250747cfa6ef6dbea7e7237d3c900db79ce101f521bfd35bda26bcfbde2434b",
+			"scripts/core/test_room.gd": "2f32b91a2f8e7be30210d914da4c607aa3aa258312bc73c78637b79f98fdc342",
+			"scripts/level/chase_controller.gd": "782b5eed7d423c5f697472d53107156d5540cbbaa37fe4b9dbcfb124af8d6978",
+			"scripts/level/continuous_hazard.gd": "d37b707d4119a0a4b6b3af2beaa9b3339844cd38f69586a4b225c446fee0b669",
+			"scripts/level/course.gd": "091c0c461ea362b17a749ddcb8bdfbccb221a5d2e2480ddfcac7743a5ba78d89",
+			"scripts/level/endless_course.gd": "28bf04f74b0746ce67a1c0e29f03086bb16d31074416a17910b3e2b271dcf3ad",
+			"scripts/level/endless_generator.gd": "d899dd5702ec18a1d04cb39b922a3ecaffb4e6d439fe7d7ab9646908efddf42e",
+			"scripts/level/endless_library.gd": "9347086d5701b5ed1ae212e43792337e24269b6116d36be28036d777bb330880",
+			"scripts/level/endless_record.gd": "65964aa8aa197417abd94800c47baefed8c85185bb202d47cac1e2d09ab35541",
+			"scripts/level/generation_profile.gd": "b4618b717c7c50ed1d8cf7f8b01aace9948532416dce722827219fc29cc9189c",
+			"scripts/level/relay_layout.gd": "02b504241dfcfd0a5bc6589a1cc8eea145c4915e1fee9d10c003e81802faeee5",
+			"scripts/level/rhythm_generator.gd": "da1a54facb06d07be534cfd5439512ef461abe2c6b5f9f5ddb3c826db759eb92",
+			"scripts/level/route_challenge.gd": "f8e72e45a60cff1c6f898ad149da01cdb6a064f68ff6f05592c639b176be8399",
+			"scripts/level/run_flow.gd": "c9450a4672dc6f284216dc9a79cbbe4c9bc612f982d1741ebe08a65d2fd2005d",
+			"scripts/level/skill_generator.gd": "1357de3152c0bd10e58be7f8e0e2980dd28d9d61f5d9fe0e192484d578a06a9a",
+			"scripts/level/skill_library.gd": "4b0ae249fac5fd67529b1ba6a6d850b0b46f2614128d2d08941aaafbe3a8dcb0",
+			"scripts/level/spatial_generator.gd": "0ba067f0b70207ac5e9e80d0e13cd63347d998bcef72e6afb433f91c917da350",
+			"scripts/level/spatial_library.gd": "4caae01da69578e99dceea3728fcb470577a96de07de6e077c8c793bb6a76031",
+			"scripts/level/vertical_library.gd": "7da30f013126330cae7afb82384e61ea4d71bdfe67ddeffc229160314ba04b99",
+			"scripts/player/player.gd": "175338edae8e6f5fe0172c2f473c37d06308b320b0ca3af1b325f43580477e43",
+			"scripts/tools/dash_prototypes.gd": "23f1d744c1c8af4202277dfc33469e29e7c48e1b7bd2042a285c6e7522680ea4",
+			"scripts/tools/generation_editor.gd": "762ad79066e196d117f7f4d08064ec2db8a5b3d0026313aaa93b888f76cfefc6",
+			"scripts/tools/generation_replay.gd": "b01c70a48a0043f7bbff2afc6cb91b7906508d8e9891eac7bf220d6b2d0d6ea8",
+			"scripts/tools/map_preview.gd": "b61180d8824c12b2c7b6ddee62dab5a11f47cfb67ee923834289fab39d6ab1e1",
+			"scripts/ui/interface.gd": "b4cb05e6feb9faf1919aa0ea6b261141dd64200a3c167a4c39f9b913f2984b22",
+			"scripts/visual/art_preview.gd": "8b1bf0edf4fd3d17996596c0ee03890ab7b7f357d6caab04de12f5252f7fe69c",
+			"scripts/visual/capture_preview.gd": "a663820bc7b03b07af006a12ac4ff76c057cd1b2ae0d24fb5796b2640f85a5c7",
+			"scripts/visual/capture_v02_preview.gd": "fc6de402e8e63ddc255742c92d9e3939131d101085ab41ac8fc58eb72658708e",
+			"scripts/visual/chase_preview.gd": "1e4f7a031728b5ab6feb5945ffe7c7a2e4a3278ef62a1a23c99fafbf87c7fe03",
+			"scripts/visual/chase_preview_source.gd": "ec880b154454561a0e7e72c1b17c256f0d375122b30ab744f06692d361e63341",
+			"scripts/visual/chase_visual.gd": "810f5b171c4770f01e4ae37a2591b76286362e9541e3846dff8b64af70c65d58",
+			"scripts/visual/dash_visual.gd": "7679156128da73f72e438a6361edc05c2e62c50e7a98fd7aa1b0b99ce542f51b",
+			"scripts/visual/endless_art_preview.gd": "5809206ae7bda33c42f0ae4907b6caa31e7b3cfe946644df0ada372bb3dd2fb9",
+			"scripts/visual/endless_hud_visual.gd": "22f653f3c43b3be633af0c446edd6f80f1fcb6381672f1fd8d477d78af334d0b",
+			"scripts/visual/endless_module_visual.gd": "afca53895ab5c9ee081ffeed913d5ad84bf4500253f3df71f45743ffbc025b62",
+			"scripts/visual/endless_world_visual.gd": "13f4c877c9285db4e707ff3febda195a57731c915791a68cb413acfff6109431",
+			"scripts/visual/environment_visual.gd": "80c7e0c8d87bacb210a850d60165ce9450f0f35e4e9de33551b25569ebb17136",
+			"scripts/visual/generate_chase_theme.gd": "2d0da9a120ada4727d5d5c7f1db0175274ac742038c2aa9ff0cc883893b6b9e0",
+			"scripts/visual/generate_theme.gd": "ef11d0522d3db1b258406bb70cfb8cd04cec9517feffba7498fef157b7700789",
+			"scripts/visual/player_visual.gd": "59ee940a7cfd6c94563448dd1e2e481fef41818eb4bdb31a7f271486270dc45c",
+			"scripts/visual/relay_preview.gd": "f5c4d77193a1222561851622e275bb336536b42f889ce8ce2354eaee6dd83863",
+			"scripts/visual/relay_visual.gd": "2bb1f0bb788de7009ac37452fad8a30114206e402b200e3cab7e8e89dc7c428e",
+			"scripts/visual/route_visual.gd": "3f90a4e6d191dc081b37999e255a8e8276c392fc54d2d954da66021715bf41aa",
+			"scripts/visual/spatial_visual.gd": "9f9b786cffd94da379aef15fd0647e00f13acd0444cf442a43dcfaad28b91e96",
+			"scripts/visual/verify_audio.gd": "30e03155992edf4c30de4c02766c83bb9fab5e5028cd96cfc0a9e7d237e9f570"
+		},
+		"manifest_sha256": "8fcd492eb25d1f73746ecdbf3483a2d147faf7746e1c9737a074f7ff74b9e1fe",
+		"mismatches": [],
+		"version": "v0.8.0+8fcd492eb25d"
+	},
+	"checks": [
+		{
+			"actual": "",
+			"check": "118_frozen_before",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_Esc_dash_and_hud_freeze",
+			"passed": true
+		},
+		{
+			"actual": {
+				"breakdown": {
+					"combo": 600,
+					"completed": 3,
+					"distance": 2944,
+					"heal_choices": 1,
+					"nodes": 1200,
+					"score_choices": 0,
+					"station": 0
+				},
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"dash_events": [
+					{
+						"elapsed": 23.4166666666666,
+						"global_x": 6774.26708984375,
+						"health": 3,
+						"snapshot": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 1,
+							"reason": "charging",
+							"refilled": 0,
+							"remaining": 0.0,
+							"used": 0
+						}
+					},
+					{
+						"elapsed": 24.0166666666666,
+						"global_x": 6950.3857421875,
+						"health": 3,
+						"snapshot": {
+							"active": true,
+							"charges": 0,
+							"enabled": true,
+							"progress": 1,
+							"reason": "started",
+							"refilled": 0,
+							"remaining": 0.2,
+							"used": 1
+						}
+					},
+					{
+						"elapsed": 24.1999999999999,
+						"global_x": 7110.3876953125,
+						"health": 3,
+						"snapshot": {
+							"active": false,
+							"charges": 0,
+							"enabled": true,
+							"progress": 1,
+							"reason": "finished",
+							"refilled": 0,
+							"remaining": 0.0,
+							"used": 1
+						}
+					},
+					{
+						"elapsed": 24.6666666666665,
+						"global_x": 7242.759765625,
+						"health": 3,
+						"snapshot": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 0,
+							"reason": "refilled",
+							"refilled": 1,
+							"remaining": 0.0,
+							"used": 1
+						}
+					},
+					{
+						"elapsed": 25.8999999999998,
+						"global_x": 7606.16650390625,
+						"health": 3,
+						"snapshot": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 1,
+							"reason": "charging",
+							"refilled": 1,
+							"remaining": 0.0,
+							"used": 1
+						}
+					},
+					{
+						"elapsed": 44.4999999999988,
+						"global_x": 13181.4912109375,
+						"health": 3,
+						"snapshot": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"reason": "refilled",
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						}
+					}
+				],
+				"dash_ui_overlap_frames": 0,
+				"distance": 29445.5859375,
+				"elapsed": 95.3833333333292,
+				"failure": "",
+				"first_station_index": 22,
+				"health": 3,
+				"hurt_count": 0,
+				"input_log": [
+					{
+						"chunk": "77:5",
+						"elapsed": 22.8833333333333,
+						"feet": 383.996704101563,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 217.86474609375
+					},
+					{
+						"chunk": "77:5",
+						"elapsed": 23.7666666666666,
+						"feet": 335.925170898438,
+						"key": "SPACE",
+						"kind": "skill",
+						"x": 476.97705078125
+					},
+					{
+						"charges_before": 1,
+						"chunk": "77:5",
+						"elapsed": 24.0166666666666,
+						"feet": 245.511779785156,
+						"key": "Shift",
+						"kind": "shortcut",
+						"x": 550.3857421875
+					},
+					{
+						"chunk": "77:5",
+						"elapsed": 24.9999999999999,
+						"feet": 303.925201416016,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 940.8896484375
+					},
+					{
+						"chunk": "77:6",
+						"elapsed": 26.9499999999998,
+						"feet": 335.924011230469,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 236.25634765625
+					},
+					{
+						"chunk": "77:6",
+						"elapsed": 28.033333333333,
+						"feet": 303.925201416016,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 556.8759765625
+					},
+					{
+						"chunk": "77:7",
+						"elapsed": 31.5833333333328,
+						"feet": 402.566040039063,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 331.52734375
+					},
+					{
+						"chunk": "77:8",
+						"elapsed": 35.8666666666659,
+						"feet": 383.924011230469,
+						"key": "SPACE",
+						"kind": "primary",
+						"x": 332.072265625
+					},
+					{
+						"chunk": "77:8",
+						"elapsed": 36.9166666666659,
+						"feet": 351.925201416016,
+						"key": "SPACE",
+						"kind": "primary",
+						"x": 648.3984375
+					},
+					{
+						"chunk": "77:10",
+						"elapsed": 43.9999999999988,
+						"feet": 447.924011230469,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 228.4853515625
+					},
+					{
+						"chunk": "77:10",
+						"elapsed": 44.7833333333321,
+						"feet": 415.925201416016,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 468.26171875
+					},
+					{
+						"chunk": "77:11",
+						"elapsed": 48.1833333333319,
+						"feet": 415.924011230469,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 233.3662109375
+					},
+					{
+						"chunk": "77:11",
+						"elapsed": 49.2166666666652,
+						"feet": 383.925201416016,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 552.40625
+					},
+					{
+						"chunk": "77:12",
+						"elapsed": 52.6333333333316,
+						"feet": 466.537689208984,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 331.0673828125
+					},
+					{
+						"chunk": "77:13",
+						"elapsed": 56.4166666666647,
+						"feet": 447.924011230469,
+						"key": "SPACE",
+						"kind": "primary",
+						"x": 229.76953125
+					},
+					{
+						"chunk": "77:16",
+						"elapsed": 68.5999999999974,
+						"feet": 447.924011230469,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 232.28125
+					},
+					{
+						"chunk": "77:16",
+						"elapsed": 69.3333333333307,
+						"feet": 399.925170898438,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 468.021484375
+					},
+					{
+						"chunk": "77:17",
+						"elapsed": 72.5833333333305,
+						"feet": 399.924011230469,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 236.94921875
+					},
+					{
+						"chunk": "77:17",
+						"elapsed": 73.5666666666638,
+						"feet": 367.925201416016,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 555.66015625
+					},
+					{
+						"chunk": "77:19",
+						"elapsed": 81.3999999999967,
+						"feet": 479.925262451172,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 552.31640625
+					},
+					{
+						"chunk": "77:20",
+						"elapsed": 84.2999999999965,
+						"feet": 511.923980712891,
+						"key": "SPACE",
+						"kind": "primary",
+						"x": 230.779296875
+					},
+					{
+						"chunk": "77:22",
+						"elapsed": 91.9833333333294,
+						"feet": 511.962463378906,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 233.26171875
+					},
+					{
+						"chunk": "77:22",
+						"elapsed": 92.6833333333294,
+						"feet": 479.925231933594,
+						"key": "SPACE",
+						"kind": "upper",
+						"x": 469.05859375
+					}
+				],
+				"jump_presses": 22,
+				"phase": "running",
+				"preview_seconds": 2.34999999999987,
+				"relay_events": [
+					{
+						"added_delay": 0.9,
+						"count": 1,
+						"distance": 6678.26708984375,
+						"health": 3,
+						"id": "77:5:challenge_1",
+						"position": "(6774.267, 296.8951)",
+						"time": 23.4166666666666
+					},
+					{
+						"added_delay": 0.0,
+						"count": 2,
+						"distance": 7146.759765625,
+						"health": 3,
+						"id": "77:5:challenge_2",
+						"position": "(7242.76, 288.9252)",
+						"time": 24.6666666666665
+					},
+					{
+						"added_delay": 0.0,
+						"count": 3,
+						"distance": 7510.16650390625,
+						"health": 3,
+						"id": "77:5:challenge_3",
+						"position": "(7606.167, 320.9252)",
+						"time": 25.8999999999998
+					},
+					{
+						"added_delay": 0.9,
+						"count": 4,
+						"distance": 13085.4912109375,
+						"health": 3,
+						"id": "77:10:challenge_1",
+						"position": "(13181.49, 350.5158)",
+						"time": 44.4999999999988
+					},
+					{
+						"added_delay": 0.0,
+						"count": 5,
+						"distance": 13330.6201171875,
+						"health": 3,
+						"id": "77:10:challenge_2",
+						"position": "(13426.62, 323.4053)",
+						"time": 45.2999999999987
+					},
+					{
+						"added_delay": 0.0,
+						"count": 6,
+						"distance": 13540.3115234375,
+						"health": 3,
+						"id": "77:10:challenge_3",
+						"position": "(13636.31, 400.9352)",
+						"time": 45.983333333332
+					},
+					{
+						"added_delay": 0.0,
+						"count": 7,
+						"distance": 13688.8037109375,
+						"health": 3,
+						"id": "77:10:low",
+						"position": "(13784.8, 400.924)",
+						"time": 46.4666666666653
+					},
+					{
+						"added_delay": 0.9,
+						"count": 8,
+						"distance": 20760.896484375,
+						"health": 3,
+						"id": "77:16:challenge_1",
+						"position": "(20856.9, 339.3483)",
+						"time": 69.0499999999974
+					},
+					{
+						"added_delay": 0.0,
+						"count": 9,
+						"distance": 21045.154296875,
+						"health": 3,
+						"id": "77:16:challenge_2",
+						"position": "(21141.15, 336.9252)",
+						"time": 69.9333333333307
+					},
+					{
+						"added_delay": 0.0,
+						"count": 10,
+						"distance": 21222.400390625,
+						"health": 3,
+						"id": "77:16:challenge_3",
+						"position": "(21318.4, 357.9252)",
+						"time": 70.4833333333306
+					},
+					{
+						"added_delay": 0.0,
+						"count": 11,
+						"distance": 21372.9453125,
+						"health": 3,
+						"id": "77:16:low",
+						"position": "(21468.95, 384.924)",
+						"time": 70.9499999999973
+					},
+					{
+						"added_delay": 0.9,
+						"count": 12,
+						"distance": 27882.6796875,
+						"health": 3,
+						"id": "77:21:low",
+						"position": "(27978.68, 497.8211)",
+						"time": 90.7499999999961
+					}
+				],
+				"resource_ui_sync": true,
+				"route_events": [
+					{
+						"data": {
+							"id": "77:5"
+						},
+						"distance": 6551.20166015625,
+						"elapsed": 22.9833333333333,
+						"health": 3,
+						"kind": "started"
+					},
+					{
+						"data": {
+							"id": "77:5",
+							"progress": 1,
+							"total": 3
+						},
+						"distance": 6678.26708984375,
+						"elapsed": 23.4166666666666,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"id": "77:5",
+							"progress": 2,
+							"total": 3
+						},
+						"distance": 7146.759765625,
+						"elapsed": 24.6666666666665,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"id": "77:5",
+							"progress": 3,
+							"total": 3
+						},
+						"distance": 7510.16650390625,
+						"elapsed": 25.8999999999998,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"bonus": 200,
+							"id": "77:5"
+						},
+						"distance": 7574.10009765625,
+						"elapsed": 26.1166666666665,
+						"health": 3,
+						"kind": "completed"
+					},
+					{
+						"data": {
+							"id": "77:10"
+						},
+						"distance": 12988.5693359375,
+						"elapsed": 44.1833333333321,
+						"health": 3,
+						"kind": "started"
+					},
+					{
+						"data": {
+							"id": "77:10",
+							"progress": 1,
+							"total": 3
+						},
+						"distance": 13085.4912109375,
+						"elapsed": 44.4999999999988,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"id": "77:10",
+							"progress": 2,
+							"total": 3
+						},
+						"distance": 13330.6201171875,
+						"elapsed": 45.2999999999987,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"id": "77:10",
+							"progress": 3,
+							"total": 3
+						},
+						"distance": 13540.3115234375,
+						"elapsed": 45.983333333332,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"bonus": 200,
+							"id": "77:10"
+						},
+						"distance": 13683.6806640625,
+						"elapsed": 46.4499999999986,
+						"health": 3,
+						"kind": "completed"
+					},
+					{
+						"data": {
+							"id": "77:16"
+						},
+						"distance": 20664.47265625,
+						"elapsed": 68.7499999999974,
+						"health": 3,
+						"kind": "started"
+					},
+					{
+						"data": {
+							"id": "77:16",
+							"progress": 1,
+							"total": 3
+						},
+						"distance": 20760.896484375,
+						"elapsed": 69.0499999999974,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"id": "77:16",
+							"progress": 2,
+							"total": 3
+						},
+						"distance": 21045.154296875,
+						"elapsed": 69.9333333333307,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"id": "77:16",
+							"progress": 3,
+							"total": 3
+						},
+						"distance": 21222.400390625,
+						"elapsed": 70.4833333333306,
+						"health": 3,
+						"kind": "progress"
+					},
+					{
+						"data": {
+							"bonus": 200,
+							"id": "77:16"
+						},
+						"distance": 21362.1875,
+						"elapsed": 70.9166666666639,
+						"health": 3,
+						"kind": "completed"
+					},
+					{
+						"data": {
+							"amount": 0,
+							"id": "77:22",
+							"kind": "heal"
+						},
+						"distance": 28499.353515625,
+						"elapsed": 92.5833333333294,
+						"health": 3,
+						"kind": "station"
+					}
+				],
+				"route_ui_overlap_frames": 0,
+				"routes": {
+					"active": "",
+					"combo_score": 600,
+					"completed": 3,
+					"heal_choices": 1,
+					"identities": 1,
+					"interrupted": 0,
+					"last_event": "station",
+					"progress": 0,
+					"score_choices": 0,
+					"station_score": 0,
+					"total": 3
+				},
+				"samples": [
+					{
+						"chunks": 3,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 0,
+							"remaining": 0.0,
+							"used": 0
+						},
+						"distance": 0.388885498046875,
+						"elapsed": 0.0166666666666667,
+						"gap": 630.388885498047,
+						"health": 3,
+						"score": 0,
+						"target_speed": 280.000777770996
+					},
+					{
+						"chunks": 4,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 0,
+							"remaining": 0.0,
+							"used": 0
+						},
+						"distance": 1389.32348632813,
+						"elapsed": 5.01666666666665,
+						"gap": 1199.20336650216,
+						"health": 3,
+						"score": 138,
+						"target_speed": 282.778646972656
+					},
+					{
+						"chunks": 5,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 0,
+							"remaining": 0.0,
+							"used": 0
+						},
+						"distance": 2809.740234375,
+						"elapsed": 10.0166666666667,
+						"gap": 1249.36089017683,
+						"health": 3,
+						"score": 280,
+						"target_speed": 285.61948046875
+					},
+					{
+						"chunks": 5,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 0,
+							"remaining": 0.0,
+							"used": 0
+						},
+						"distance": 4241.8310546875,
+						"elapsed": 15.016666666667,
+						"gap": 1297.44246211809,
+						"health": 3,
+						"score": 424,
+						"target_speed": 288.483662109375
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 0,
+							"remaining": 0.0,
+							"used": 0
+						},
+						"distance": 5684.21875,
+						"elapsed": 20.0166666666668,
+						"gap": 1341.94968181675,
+						"health": 3,
+						"score": 568,
+						"target_speed": 291.3684375
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 1,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 7269.4326171875,
+						"elapsed": 25.0833333333332,
+						"gap": 1751.03490208914,
+						"health": 3,
+						"score": 926,
+						"target_speed": 294.538865234375
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 1,
+							"refilled": 1,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 8749.490234375,
+						"elapsed": 30.0833333333329,
+						"gap": 1803.57248864443,
+						"health": 3,
+						"score": 1374,
+						"target_speed": 297.49898046875
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 1,
+							"refilled": 1,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 10240.5146484375,
+						"elapsed": 35.0833333333326,
+						"gap": 1831.6660961128,
+						"health": 3,
+						"score": 1524,
+						"target_speed": 300.481029296875
+					},
+					{
+						"chunks": 5,
+						"dash": {
+							"active": false,
+							"charges": 1,
+							"enabled": true,
+							"progress": 1,
+							"refilled": 1,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 11746.9638671875,
+						"elapsed": 40.0833333333323,
+						"gap": 1860.50616762624,
+						"health": 3,
+						"score": 1674,
+						"target_speed": 303.493927734375
+					},
+					{
+						"chunks": 5,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 13264.1923828125,
+						"elapsed": 45.0833333333321,
+						"gap": 2060.25168900948,
+						"health": 3,
+						"score": 1926,
+						"target_speed": 306.528384765625
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 14804.4970703125,
+						"elapsed": 50.0833333333318,
+						"gap": 2188.22670368419,
+						"health": 3,
+						"score": 2580,
+						"target_speed": 309.608994140625
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 16356.451171875,
+						"elapsed": 55.0833333333315,
+						"gap": 2217.69193421316,
+						"health": 3,
+						"score": 2735,
+						"target_speed": 312.71290234375
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 17916.890625,
+						"elapsed": 60.0833333333312,
+						"gap": 2240.12520604956,
+						"health": 3,
+						"score": 2891,
+						"target_speed": 315.83378125
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 19501.458984375,
+						"elapsed": 65.0833333333309,
+						"gap": 2248.92574171038,
+						"health": 3,
+						"score": 3050,
+						"target_speed": 319.00291796875
+					},
+					{
+						"chunks": 7,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 21093.4765625,
+						"elapsed": 70.0833333333306,
+						"gap": 2536.99206276366,
+						"health": 3,
+						"score": 3409,
+						"target_speed": 322.186953125
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 22712.46484375,
+						"elapsed": 75.0833333333304,
+						"gap": 2548.50172860347,
+						"health": 3,
+						"score": 3971,
+						"target_speed": 325.4249296875
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 24345.396484375,
+						"elapsed": 80.0833333333301,
+						"gap": 2557.80969277154,
+						"health": 3,
+						"score": 4134,
+						"target_speed": 328.69079296875
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 25994.630859375,
+						"elapsed": 85.0833333333298,
+						"gap": 2567.13751684848,
+						"health": 3,
+						"score": 4299,
+						"target_speed": 331.98926171875
+					},
+					{
+						"chunks": 7,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 27659.556640625,
+						"elapsed": 90.0833333333295,
+						"gap": 2575.38268938783,
+						"health": 3,
+						"score": 4465,
+						"target_speed": 335.31911328125
+					},
+					{
+						"chunks": 6,
+						"dash": {
+							"active": false,
+							"charges": 2,
+							"enabled": true,
+							"progress": 0,
+							"refilled": 2,
+							"remaining": 0.0,
+							"used": 1
+						},
+						"distance": 29343.951171875,
+						"elapsed": 95.0833333333292,
+						"gap": 2806.71869210554,
+						"health": 3,
+						"score": 4734,
+						"target_speed": 338.68790234375
+					}
+				],
+				"score": 4744,
+				"seed": 77,
+				"station_events": [
+					{
+						"data": {
+							"amount": 0,
+							"id": "77:22",
+							"kind": "heal"
+						},
+						"distance": 28499.353515625,
+						"elapsed": 92.5833333333294,
+						"health": 3,
+						"kind": "station"
+					}
+				],
+				"strategy": "skill",
+				"timing": "fixed60 GPU accelerated clock",
+				"ui_mismatches": [],
+				"wall_seconds": 52.565
+			},
+			"check": "natural_77_skill_after_first_station",
+			"passed": true
+		},
+		{
+			"actual": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 2,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"check": "natural_77_skill_actual_strategy",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "natural_77_skill_health_station_mutex",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "natural_77_skill_score_ui",
+			"passed": true
+		},
+		{
+			"actual": {
+				"dash_overlap": 0,
+				"route_overlap": 0,
+				"station_preview_seconds": 2.34999999999987
+			},
+			"check": "natural_77_skill_readable",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_R_initial_resource_single_hud",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "118_sources_and_formal_records_unchanged",
+			"passed": true
+		}
+	],
+	"method": "G focused frozen default Main, only seed77 skill actual Player run to first station after. Prior five passing natural routes inherit old638 F evidence. Synthetic SPACE/Shift/Esc/R from real geometry. Initial public start_endless only; isolated record destination. No position/resource/speed/health/front/time injection. Skill strategy uses optional routes if available and deliberate short rescue jump. GPU fixed60 accelerated, per-run wall/game seconds. Not human fun proof; no producer long-run duplication.",
+	"passed": true,
+	"records_after": {
+		"earlier": "missing",
+		"failure": "missing",
+		"failure_v07": "missing",
+		"v05": "missing",
+		"v06": "missing",
+		"v07": "missing",
+		"v08": "missing"
+	},
+	"records_before": {
+		"earlier": "missing",
+		"failure": "missing",
+		"failure_v07": "missing",
+		"v05": "missing",
+		"v06": "missing",
+		"v07": "missing",
+		"v08": "missing"
+	},
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"runs": [
+		{
+			"breakdown": {
+				"combo": 600,
+				"completed": 3,
+				"distance": 2944,
+				"heal_choices": 1,
+				"nodes": 1200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 2,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"dash_events": [
+				{
+					"elapsed": 23.4166666666666,
+					"global_x": 6774.26708984375,
+					"health": 3,
+					"snapshot": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 1,
+						"reason": "charging",
+						"refilled": 0,
+						"remaining": 0.0,
+						"used": 0
+					}
+				},
+				{
+					"elapsed": 24.0166666666666,
+					"global_x": 6950.3857421875,
+					"health": 3,
+					"snapshot": {
+						"active": true,
+						"charges": 0,
+						"enabled": true,
+						"progress": 1,
+						"reason": "started",
+						"refilled": 0,
+						"remaining": 0.2,
+						"used": 1
+					}
+				},
+				{
+					"elapsed": 24.1999999999999,
+					"global_x": 7110.3876953125,
+					"health": 3,
+					"snapshot": {
+						"active": false,
+						"charges": 0,
+						"enabled": true,
+						"progress": 1,
+						"reason": "finished",
+						"refilled": 0,
+						"remaining": 0.0,
+						"used": 1
+					}
+				},
+				{
+					"elapsed": 24.6666666666665,
+					"global_x": 7242.759765625,
+					"health": 3,
+					"snapshot": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 0,
+						"reason": "refilled",
+						"refilled": 1,
+						"remaining": 0.0,
+						"used": 1
+					}
+				},
+				{
+					"elapsed": 25.8999999999998,
+					"global_x": 7606.16650390625,
+					"health": 3,
+					"snapshot": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 1,
+						"reason": "charging",
+						"refilled": 1,
+						"remaining": 0.0,
+						"used": 1
+					}
+				},
+				{
+					"elapsed": 44.4999999999988,
+					"global_x": 13181.4912109375,
+					"health": 3,
+					"snapshot": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"reason": "refilled",
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					}
+				}
+			],
+			"dash_ui_overlap_frames": 0,
+			"distance": 29445.5859375,
+			"elapsed": 95.3833333333292,
+			"failure": "",
+			"first_station_index": 22,
+			"health": 3,
+			"hurt_count": 0,
+			"input_log": [
+				{
+					"chunk": "77:5",
+					"elapsed": 22.8833333333333,
+					"feet": 383.996704101563,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 217.86474609375
+				},
+				{
+					"chunk": "77:5",
+					"elapsed": 23.7666666666666,
+					"feet": 335.925170898438,
+					"key": "SPACE",
+					"kind": "skill",
+					"x": 476.97705078125
+				},
+				{
+					"charges_before": 1,
+					"chunk": "77:5",
+					"elapsed": 24.0166666666666,
+					"feet": 245.511779785156,
+					"key": "Shift",
+					"kind": "shortcut",
+					"x": 550.3857421875
+				},
+				{
+					"chunk": "77:5",
+					"elapsed": 24.9999999999999,
+					"feet": 303.925201416016,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 940.8896484375
+				},
+				{
+					"chunk": "77:6",
+					"elapsed": 26.9499999999998,
+					"feet": 335.924011230469,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 236.25634765625
+				},
+				{
+					"chunk": "77:6",
+					"elapsed": 28.033333333333,
+					"feet": 303.925201416016,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 556.8759765625
+				},
+				{
+					"chunk": "77:7",
+					"elapsed": 31.5833333333328,
+					"feet": 402.566040039063,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 331.52734375
+				},
+				{
+					"chunk": "77:8",
+					"elapsed": 35.8666666666659,
+					"feet": 383.924011230469,
+					"key": "SPACE",
+					"kind": "primary",
+					"x": 332.072265625
+				},
+				{
+					"chunk": "77:8",
+					"elapsed": 36.9166666666659,
+					"feet": 351.925201416016,
+					"key": "SPACE",
+					"kind": "primary",
+					"x": 648.3984375
+				},
+				{
+					"chunk": "77:10",
+					"elapsed": 43.9999999999988,
+					"feet": 447.924011230469,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 228.4853515625
+				},
+				{
+					"chunk": "77:10",
+					"elapsed": 44.7833333333321,
+					"feet": 415.925201416016,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 468.26171875
+				},
+				{
+					"chunk": "77:11",
+					"elapsed": 48.1833333333319,
+					"feet": 415.924011230469,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 233.3662109375
+				},
+				{
+					"chunk": "77:11",
+					"elapsed": 49.2166666666652,
+					"feet": 383.925201416016,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 552.40625
+				},
+				{
+					"chunk": "77:12",
+					"elapsed": 52.6333333333316,
+					"feet": 466.537689208984,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 331.0673828125
+				},
+				{
+					"chunk": "77:13",
+					"elapsed": 56.4166666666647,
+					"feet": 447.924011230469,
+					"key": "SPACE",
+					"kind": "primary",
+					"x": 229.76953125
+				},
+				{
+					"chunk": "77:16",
+					"elapsed": 68.5999999999974,
+					"feet": 447.924011230469,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 232.28125
+				},
+				{
+					"chunk": "77:16",
+					"elapsed": 69.3333333333307,
+					"feet": 399.925170898438,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 468.021484375
+				},
+				{
+					"chunk": "77:17",
+					"elapsed": 72.5833333333305,
+					"feet": 399.924011230469,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 236.94921875
+				},
+				{
+					"chunk": "77:17",
+					"elapsed": 73.5666666666638,
+					"feet": 367.925201416016,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 555.66015625
+				},
+				{
+					"chunk": "77:19",
+					"elapsed": 81.3999999999967,
+					"feet": 479.925262451172,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 552.31640625
+				},
+				{
+					"chunk": "77:20",
+					"elapsed": 84.2999999999965,
+					"feet": 511.923980712891,
+					"key": "SPACE",
+					"kind": "primary",
+					"x": 230.779296875
+				},
+				{
+					"chunk": "77:22",
+					"elapsed": 91.9833333333294,
+					"feet": 511.962463378906,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 233.26171875
+				},
+				{
+					"chunk": "77:22",
+					"elapsed": 92.6833333333294,
+					"feet": 479.925231933594,
+					"key": "SPACE",
+					"kind": "upper",
+					"x": 469.05859375
+				}
+			],
+			"jump_presses": 22,
+			"phase": "running",
+			"preview_seconds": 2.34999999999987,
+			"relay_events": [
+				{
+					"added_delay": 0.9,
+					"count": 1,
+					"distance": 6678.26708984375,
+					"health": 3,
+					"id": "77:5:challenge_1",
+					"position": "(6774.267, 296.8951)",
+					"time": 23.4166666666666
+				},
+				{
+					"added_delay": 0.0,
+					"count": 2,
+					"distance": 7146.759765625,
+					"health": 3,
+					"id": "77:5:challenge_2",
+					"position": "(7242.76, 288.9252)",
+					"time": 24.6666666666665
+				},
+				{
+					"added_delay": 0.0,
+					"count": 3,
+					"distance": 7510.16650390625,
+					"health": 3,
+					"id": "77:5:challenge_3",
+					"position": "(7606.167, 320.9252)",
+					"time": 25.8999999999998
+				},
+				{
+					"added_delay": 0.9,
+					"count": 4,
+					"distance": 13085.4912109375,
+					"health": 3,
+					"id": "77:10:challenge_1",
+					"position": "(13181.49, 350.5158)",
+					"time": 44.4999999999988
+				},
+				{
+					"added_delay": 0.0,
+					"count": 5,
+					"distance": 13330.6201171875,
+					"health": 3,
+					"id": "77:10:challenge_2",
+					"position": "(13426.62, 323.4053)",
+					"time": 45.2999999999987
+				},
+				{
+					"added_delay": 0.0,
+					"count": 6,
+					"distance": 13540.3115234375,
+					"health": 3,
+					"id": "77:10:challenge_3",
+					"position": "(13636.31, 400.9352)",
+					"time": 45.983333333332
+				},
+				{
+					"added_delay": 0.0,
+					"count": 7,
+					"distance": 13688.8037109375,
+					"health": 3,
+					"id": "77:10:low",
+					"position": "(13784.8, 400.924)",
+					"time": 46.4666666666653
+				},
+				{
+					"added_delay": 0.9,
+					"count": 8,
+					"distance": 20760.896484375,
+					"health": 3,
+					"id": "77:16:challenge_1",
+					"position": "(20856.9, 339.3483)",
+					"time": 69.0499999999974
+				},
+				{
+					"added_delay": 0.0,
+					"count": 9,
+					"distance": 21045.154296875,
+					"health": 3,
+					"id": "77:16:challenge_2",
+					"position": "(21141.15, 336.9252)",
+					"time": 69.9333333333307
+				},
+				{
+					"added_delay": 0.0,
+					"count": 10,
+					"distance": 21222.400390625,
+					"health": 3,
+					"id": "77:16:challenge_3",
+					"position": "(21318.4, 357.9252)",
+					"time": 70.4833333333306
+				},
+				{
+					"added_delay": 0.0,
+					"count": 11,
+					"distance": 21372.9453125,
+					"health": 3,
+					"id": "77:16:low",
+					"position": "(21468.95, 384.924)",
+					"time": 70.9499999999973
+				},
+				{
+					"added_delay": 0.9,
+					"count": 12,
+					"distance": 27882.6796875,
+					"health": 3,
+					"id": "77:21:low",
+					"position": "(27978.68, 497.8211)",
+					"time": 90.7499999999961
+				}
+			],
+			"resource_ui_sync": true,
+			"route_events": [
+				{
+					"data": {
+						"id": "77:5"
+					},
+					"distance": 6551.20166015625,
+					"elapsed": 22.9833333333333,
+					"health": 3,
+					"kind": "started"
+				},
+				{
+					"data": {
+						"id": "77:5",
+						"progress": 1,
+						"total": 3
+					},
+					"distance": 6678.26708984375,
+					"elapsed": 23.4166666666666,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"id": "77:5",
+						"progress": 2,
+						"total": 3
+					},
+					"distance": 7146.759765625,
+					"elapsed": 24.6666666666665,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"id": "77:5",
+						"progress": 3,
+						"total": 3
+					},
+					"distance": 7510.16650390625,
+					"elapsed": 25.8999999999998,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"bonus": 200,
+						"id": "77:5"
+					},
+					"distance": 7574.10009765625,
+					"elapsed": 26.1166666666665,
+					"health": 3,
+					"kind": "completed"
+				},
+				{
+					"data": {
+						"id": "77:10"
+					},
+					"distance": 12988.5693359375,
+					"elapsed": 44.1833333333321,
+					"health": 3,
+					"kind": "started"
+				},
+				{
+					"data": {
+						"id": "77:10",
+						"progress": 1,
+						"total": 3
+					},
+					"distance": 13085.4912109375,
+					"elapsed": 44.4999999999988,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"id": "77:10",
+						"progress": 2,
+						"total": 3
+					},
+					"distance": 13330.6201171875,
+					"elapsed": 45.2999999999987,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"id": "77:10",
+						"progress": 3,
+						"total": 3
+					},
+					"distance": 13540.3115234375,
+					"elapsed": 45.983333333332,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"bonus": 200,
+						"id": "77:10"
+					},
+					"distance": 13683.6806640625,
+					"elapsed": 46.4499999999986,
+					"health": 3,
+					"kind": "completed"
+				},
+				{
+					"data": {
+						"id": "77:16"
+					},
+					"distance": 20664.47265625,
+					"elapsed": 68.7499999999974,
+					"health": 3,
+					"kind": "started"
+				},
+				{
+					"data": {
+						"id": "77:16",
+						"progress": 1,
+						"total": 3
+					},
+					"distance": 20760.896484375,
+					"elapsed": 69.0499999999974,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"id": "77:16",
+						"progress": 2,
+						"total": 3
+					},
+					"distance": 21045.154296875,
+					"elapsed": 69.9333333333307,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"id": "77:16",
+						"progress": 3,
+						"total": 3
+					},
+					"distance": 21222.400390625,
+					"elapsed": 70.4833333333306,
+					"health": 3,
+					"kind": "progress"
+				},
+				{
+					"data": {
+						"bonus": 200,
+						"id": "77:16"
+					},
+					"distance": 21362.1875,
+					"elapsed": 70.9166666666639,
+					"health": 3,
+					"kind": "completed"
+				},
+				{
+					"data": {
+						"amount": 0,
+						"id": "77:22",
+						"kind": "heal"
+					},
+					"distance": 28499.353515625,
+					"elapsed": 92.5833333333294,
+					"health": 3,
+					"kind": "station"
+				}
+			],
+			"route_ui_overlap_frames": 0,
+			"routes": {
+				"active": "",
+				"combo_score": 600,
+				"completed": 3,
+				"heal_choices": 1,
+				"identities": 1,
+				"interrupted": 0,
+				"last_event": "station",
+				"progress": 0,
+				"score_choices": 0,
+				"station_score": 0,
+				"total": 3
+			},
+			"samples": [
+				{
+					"chunks": 3,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 0,
+						"remaining": 0.0,
+						"used": 0
+					},
+					"distance": 0.388885498046875,
+					"elapsed": 0.0166666666666667,
+					"gap": 630.388885498047,
+					"health": 3,
+					"score": 0,
+					"target_speed": 280.000777770996
+				},
+				{
+					"chunks": 4,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 0,
+						"remaining": 0.0,
+						"used": 0
+					},
+					"distance": 1389.32348632813,
+					"elapsed": 5.01666666666665,
+					"gap": 1199.20336650216,
+					"health": 3,
+					"score": 138,
+					"target_speed": 282.778646972656
+				},
+				{
+					"chunks": 5,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 0,
+						"remaining": 0.0,
+						"used": 0
+					},
+					"distance": 2809.740234375,
+					"elapsed": 10.0166666666667,
+					"gap": 1249.36089017683,
+					"health": 3,
+					"score": 280,
+					"target_speed": 285.61948046875
+				},
+				{
+					"chunks": 5,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 0,
+						"remaining": 0.0,
+						"used": 0
+					},
+					"distance": 4241.8310546875,
+					"elapsed": 15.016666666667,
+					"gap": 1297.44246211809,
+					"health": 3,
+					"score": 424,
+					"target_speed": 288.483662109375
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 0,
+						"remaining": 0.0,
+						"used": 0
+					},
+					"distance": 5684.21875,
+					"elapsed": 20.0166666666668,
+					"gap": 1341.94968181675,
+					"health": 3,
+					"score": 568,
+					"target_speed": 291.3684375
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 1,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 7269.4326171875,
+					"elapsed": 25.0833333333332,
+					"gap": 1751.03490208914,
+					"health": 3,
+					"score": 926,
+					"target_speed": 294.538865234375
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 1,
+						"refilled": 1,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 8749.490234375,
+					"elapsed": 30.0833333333329,
+					"gap": 1803.57248864443,
+					"health": 3,
+					"score": 1374,
+					"target_speed": 297.49898046875
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 1,
+						"refilled": 1,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 10240.5146484375,
+					"elapsed": 35.0833333333326,
+					"gap": 1831.6660961128,
+					"health": 3,
+					"score": 1524,
+					"target_speed": 300.481029296875
+				},
+				{
+					"chunks": 5,
+					"dash": {
+						"active": false,
+						"charges": 1,
+						"enabled": true,
+						"progress": 1,
+						"refilled": 1,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 11746.9638671875,
+					"elapsed": 40.0833333333323,
+					"gap": 1860.50616762624,
+					"health": 3,
+					"score": 1674,
+					"target_speed": 303.493927734375
+				},
+				{
+					"chunks": 5,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 13264.1923828125,
+					"elapsed": 45.0833333333321,
+					"gap": 2060.25168900948,
+					"health": 3,
+					"score": 1926,
+					"target_speed": 306.528384765625
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 14804.4970703125,
+					"elapsed": 50.0833333333318,
+					"gap": 2188.22670368419,
+					"health": 3,
+					"score": 2580,
+					"target_speed": 309.608994140625
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 16356.451171875,
+					"elapsed": 55.0833333333315,
+					"gap": 2217.69193421316,
+					"health": 3,
+					"score": 2735,
+					"target_speed": 312.71290234375
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 17916.890625,
+					"elapsed": 60.0833333333312,
+					"gap": 2240.12520604956,
+					"health": 3,
+					"score": 2891,
+					"target_speed": 315.83378125
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 19501.458984375,
+					"elapsed": 65.0833333333309,
+					"gap": 2248.92574171038,
+					"health": 3,
+					"score": 3050,
+					"target_speed": 319.00291796875
+				},
+				{
+					"chunks": 7,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 21093.4765625,
+					"elapsed": 70.0833333333306,
+					"gap": 2536.99206276366,
+					"health": 3,
+					"score": 3409,
+					"target_speed": 322.186953125
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 22712.46484375,
+					"elapsed": 75.0833333333304,
+					"gap": 2548.50172860347,
+					"health": 3,
+					"score": 3971,
+					"target_speed": 325.4249296875
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 24345.396484375,
+					"elapsed": 80.0833333333301,
+					"gap": 2557.80969277154,
+					"health": 3,
+					"score": 4134,
+					"target_speed": 328.69079296875
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 25994.630859375,
+					"elapsed": 85.0833333333298,
+					"gap": 2567.13751684848,
+					"health": 3,
+					"score": 4299,
+					"target_speed": 331.98926171875
+				},
+				{
+					"chunks": 7,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 27659.556640625,
+					"elapsed": 90.0833333333295,
+					"gap": 2575.38268938783,
+					"health": 3,
+					"score": 4465,
+					"target_speed": 335.31911328125
+				},
+				{
+					"chunks": 6,
+					"dash": {
+						"active": false,
+						"charges": 2,
+						"enabled": true,
+						"progress": 0,
+						"refilled": 2,
+						"remaining": 0.0,
+						"used": 1
+					},
+					"distance": 29343.951171875,
+					"elapsed": 95.0833333333292,
+					"gap": 2806.71869210554,
+					"health": 3,
+					"score": 4734,
+					"target_speed": 338.68790234375
+				}
+			],
+			"score": 4744,
+			"seed": 77,
+			"station_events": [
+				{
+					"data": {
+						"amount": 0,
+						"id": "77:22",
+						"kind": "heal"
+					},
+					"distance": 28499.353515625,
+					"elapsed": 92.5833333333294,
+					"health": 3,
+					"kind": "station"
+				}
+			],
+			"strategy": "skill",
+			"timing": "fixed60 GPU accelerated clock",
+			"ui_mismatches": [],
+			"wall_seconds": 52.565
+		}
+	]
+}

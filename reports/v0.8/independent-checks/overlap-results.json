@@ -1,0 +1,42 @@
+{
+	"method": "Same independent skill key planner, default Main seed77, no motion/resource/speed injection. Stop at first real intersection with public pause and hide pause overlay; card removal only is a frozen visual control. Screenshot uses paused same character transform. Not a new complete station sample.",
+	"observations": [
+		{
+			"body": "[P: (324.4321, 183.5117), S: (20.0, 30.0)]",
+			"body_height": 30.0,
+			"body_width": 20.0,
+			"body_x": 324.43212890625,
+			"body_y": 183.511657714844,
+			"camera": "(7560.098, 270.0001)",
+			"card": "[P: (270.0, 128.0), S: (390.0, 58.0)]",
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"elapsed": 25.2499999999998,
+			"global_x": 7414.5302734375,
+			"health": 3,
+			"hurt_count": 0,
+			"offer": {
+				"active": true,
+				"available": true,
+				"charges": 1,
+				"dash_cost": 1,
+				"entry_global_x": 6592.0,
+				"expected_refill": 1,
+				"id": "77:5",
+				"kind": "shortcut",
+				"required": 1,
+				"reward_nodes": 3,
+				"stable": true
+			},
+			"player_position": "(7414.53, 198.5118)"
+		}
+	],
+	"reproduced": true
+}

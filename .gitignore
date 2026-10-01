@@ -154,3 +154,19 @@ Thumbs.db
 /reports/v0.7/independent-checks/*append*.json
 /reports/v0.7/**/isolated-*
 /reports/v0.7/**/*.gd.uid
+
+# v0.8 local signed workflow and isolated fixtures
+/planning/v08-*.txt
+/reports/v0.8/art/workflow.cjs
+/reports/v0.8/art/*start*.json
+/reports/v0.8/art/*submit*.json
+/reports/v0.8/art/*review*.json
+/reports/v0.8/art/*append*.json
+/reports/v0.8/independent-checks/workflow.cjs
+/reports/v0.8/independent-checks/*start*.json
+/reports/v0.8/independent-checks/*submit*.json
+/reports/v0.8/independent-checks/*review*.json
+/reports/v0.8/independent-checks/*append*.json
+/reports/v0.8/independent-checks/*correct*.json
+/reports/v0.8/**/isolated-*
+/reports/v0.8/**/*.gd.uid

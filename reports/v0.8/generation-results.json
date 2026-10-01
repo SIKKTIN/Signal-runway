@@ -1,0 +1,19 @@
+{
+	"counts": {
+		"relay": 447,
+		"rescue": 382,
+		"shortcut": 493
+	},
+	"errors": [],
+	"legacy_revisions": [
+		2,
+		3,
+		4,
+		5
+	],
+	"method": "Deterministic fixed seed/profile geometry and budget checks; 100x200 per legacy revision exact against saved pre-v08 generator/profile. Structural proof, not action simulation.",
+	"passed": true,
+	"seeds": 100,
+	"segments": 200,
+	"upper_seams": 2519
+}

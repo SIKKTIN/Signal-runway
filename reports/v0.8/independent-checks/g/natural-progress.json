@@ -1,0 +1,986 @@
+[
+	{
+		"breakdown": {
+			"combo": 600,
+			"completed": 3,
+			"distance": 2944,
+			"heal_choices": 1,
+			"nodes": 1200,
+			"score_choices": 0,
+			"station": 0
+		},
+		"dash": {
+			"active": false,
+			"charges": 2,
+			"enabled": true,
+			"progress": 0,
+			"refilled": 2,
+			"remaining": 0.0,
+			"used": 1
+		},
+		"dash_events": [
+			{
+				"elapsed": 23.4166666666666,
+				"global_x": 6774.26708984375,
+				"health": 3,
+				"snapshot": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"reason": "charging",
+					"refilled": 0,
+					"remaining": 0.0,
+					"used": 0
+				}
+			},
+			{
+				"elapsed": 24.0166666666666,
+				"global_x": 6950.3857421875,
+				"health": 3,
+				"snapshot": {
+					"active": true,
+					"charges": 0,
+					"enabled": true,
+					"progress": 1,
+					"reason": "started",
+					"refilled": 0,
+					"remaining": 0.2,
+					"used": 1
+				}
+			},
+			{
+				"elapsed": 24.1999999999999,
+				"global_x": 7110.3876953125,
+				"health": 3,
+				"snapshot": {
+					"active": false,
+					"charges": 0,
+					"enabled": true,
+					"progress": 1,
+					"reason": "finished",
+					"refilled": 0,
+					"remaining": 0.0,
+					"used": 1
+				}
+			},
+			{
+				"elapsed": 24.6666666666665,
+				"global_x": 7242.759765625,
+				"health": 3,
+				"snapshot": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 0,
+					"reason": "refilled",
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				}
+			},
+			{
+				"elapsed": 25.8999999999998,
+				"global_x": 7606.16650390625,
+				"health": 3,
+				"snapshot": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"reason": "charging",
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				}
+			},
+			{
+				"elapsed": 44.4999999999988,
+				"global_x": 13181.4912109375,
+				"health": 3,
+				"snapshot": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"reason": "refilled",
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				}
+			}
+		],
+		"dash_ui_overlap_frames": 0,
+		"distance": 29445.5859375,
+		"elapsed": 95.3833333333292,
+		"failure": "",
+		"first_station_index": 22,
+		"health": 3,
+		"hurt_count": 0,
+		"input_log": [
+			{
+				"chunk": "77:5",
+				"elapsed": 22.8833333333333,
+				"feet": 383.996704101563,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 217.86474609375
+			},
+			{
+				"chunk": "77:5",
+				"elapsed": 23.7666666666666,
+				"feet": 335.925170898438,
+				"key": "SPACE",
+				"kind": "skill",
+				"x": 476.97705078125
+			},
+			{
+				"charges_before": 1,
+				"chunk": "77:5",
+				"elapsed": 24.0166666666666,
+				"feet": 245.511779785156,
+				"key": "Shift",
+				"kind": "shortcut",
+				"x": 550.3857421875
+			},
+			{
+				"chunk": "77:5",
+				"elapsed": 24.9999999999999,
+				"feet": 303.925201416016,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 940.8896484375
+			},
+			{
+				"chunk": "77:6",
+				"elapsed": 26.9499999999998,
+				"feet": 335.924011230469,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 236.25634765625
+			},
+			{
+				"chunk": "77:6",
+				"elapsed": 28.033333333333,
+				"feet": 303.925201416016,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 556.8759765625
+			},
+			{
+				"chunk": "77:7",
+				"elapsed": 31.5833333333328,
+				"feet": 402.566040039063,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 331.52734375
+			},
+			{
+				"chunk": "77:8",
+				"elapsed": 35.8666666666659,
+				"feet": 383.924011230469,
+				"key": "SPACE",
+				"kind": "primary",
+				"x": 332.072265625
+			},
+			{
+				"chunk": "77:8",
+				"elapsed": 36.9166666666659,
+				"feet": 351.925201416016,
+				"key": "SPACE",
+				"kind": "primary",
+				"x": 648.3984375
+			},
+			{
+				"chunk": "77:10",
+				"elapsed": 43.9999999999988,
+				"feet": 447.924011230469,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 228.4853515625
+			},
+			{
+				"chunk": "77:10",
+				"elapsed": 44.7833333333321,
+				"feet": 415.925201416016,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 468.26171875
+			},
+			{
+				"chunk": "77:11",
+				"elapsed": 48.1833333333319,
+				"feet": 415.924011230469,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 233.3662109375
+			},
+			{
+				"chunk": "77:11",
+				"elapsed": 49.2166666666652,
+				"feet": 383.925201416016,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 552.40625
+			},
+			{
+				"chunk": "77:12",
+				"elapsed": 52.6333333333316,
+				"feet": 466.537689208984,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 331.0673828125
+			},
+			{
+				"chunk": "77:13",
+				"elapsed": 56.4166666666647,
+				"feet": 447.924011230469,
+				"key": "SPACE",
+				"kind": "primary",
+				"x": 229.76953125
+			},
+			{
+				"chunk": "77:16",
+				"elapsed": 68.5999999999974,
+				"feet": 447.924011230469,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 232.28125
+			},
+			{
+				"chunk": "77:16",
+				"elapsed": 69.3333333333307,
+				"feet": 399.925170898438,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 468.021484375
+			},
+			{
+				"chunk": "77:17",
+				"elapsed": 72.5833333333305,
+				"feet": 399.924011230469,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 236.94921875
+			},
+			{
+				"chunk": "77:17",
+				"elapsed": 73.5666666666638,
+				"feet": 367.925201416016,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 555.66015625
+			},
+			{
+				"chunk": "77:19",
+				"elapsed": 81.3999999999967,
+				"feet": 479.925262451172,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 552.31640625
+			},
+			{
+				"chunk": "77:20",
+				"elapsed": 84.2999999999965,
+				"feet": 511.923980712891,
+				"key": "SPACE",
+				"kind": "primary",
+				"x": 230.779296875
+			},
+			{
+				"chunk": "77:22",
+				"elapsed": 91.9833333333294,
+				"feet": 511.962463378906,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 233.26171875
+			},
+			{
+				"chunk": "77:22",
+				"elapsed": 92.6833333333294,
+				"feet": 479.925231933594,
+				"key": "SPACE",
+				"kind": "upper",
+				"x": 469.05859375
+			}
+		],
+		"jump_presses": 22,
+		"phase": "running",
+		"preview_seconds": 2.34999999999987,
+		"relay_events": [
+			{
+				"added_delay": 0.9,
+				"count": 1,
+				"distance": 6678.26708984375,
+				"health": 3,
+				"id": "77:5:challenge_1",
+				"position": "(6774.267, 296.8951)",
+				"time": 23.4166666666666
+			},
+			{
+				"added_delay": 0.0,
+				"count": 2,
+				"distance": 7146.759765625,
+				"health": 3,
+				"id": "77:5:challenge_2",
+				"position": "(7242.76, 288.9252)",
+				"time": 24.6666666666665
+			},
+			{
+				"added_delay": 0.0,
+				"count": 3,
+				"distance": 7510.16650390625,
+				"health": 3,
+				"id": "77:5:challenge_3",
+				"position": "(7606.167, 320.9252)",
+				"time": 25.8999999999998
+			},
+			{
+				"added_delay": 0.9,
+				"count": 4,
+				"distance": 13085.4912109375,
+				"health": 3,
+				"id": "77:10:challenge_1",
+				"position": "(13181.49, 350.5158)",
+				"time": 44.4999999999988
+			},
+			{
+				"added_delay": 0.0,
+				"count": 5,
+				"distance": 13330.6201171875,
+				"health": 3,
+				"id": "77:10:challenge_2",
+				"position": "(13426.62, 323.4053)",
+				"time": 45.2999999999987
+			},
+			{
+				"added_delay": 0.0,
+				"count": 6,
+				"distance": 13540.3115234375,
+				"health": 3,
+				"id": "77:10:challenge_3",
+				"position": "(13636.31, 400.9352)",
+				"time": 45.983333333332
+			},
+			{
+				"added_delay": 0.0,
+				"count": 7,
+				"distance": 13688.8037109375,
+				"health": 3,
+				"id": "77:10:low",
+				"position": "(13784.8, 400.924)",
+				"time": 46.4666666666653
+			},
+			{
+				"added_delay": 0.9,
+				"count": 8,
+				"distance": 20760.896484375,
+				"health": 3,
+				"id": "77:16:challenge_1",
+				"position": "(20856.9, 339.3483)",
+				"time": 69.0499999999974
+			},
+			{
+				"added_delay": 0.0,
+				"count": 9,
+				"distance": 21045.154296875,
+				"health": 3,
+				"id": "77:16:challenge_2",
+				"position": "(21141.15, 336.9252)",
+				"time": 69.9333333333307
+			},
+			{
+				"added_delay": 0.0,
+				"count": 10,
+				"distance": 21222.400390625,
+				"health": 3,
+				"id": "77:16:challenge_3",
+				"position": "(21318.4, 357.9252)",
+				"time": 70.4833333333306
+			},
+			{
+				"added_delay": 0.0,
+				"count": 11,
+				"distance": 21372.9453125,
+				"health": 3,
+				"id": "77:16:low",
+				"position": "(21468.95, 384.924)",
+				"time": 70.9499999999973
+			},
+			{
+				"added_delay": 0.9,
+				"count": 12,
+				"distance": 27882.6796875,
+				"health": 3,
+				"id": "77:21:low",
+				"position": "(27978.68, 497.8211)",
+				"time": 90.7499999999961
+			}
+		],
+		"resource_ui_sync": true,
+		"route_events": [
+			{
+				"data": {
+					"id": "77:5"
+				},
+				"distance": 6551.20166015625,
+				"elapsed": 22.9833333333333,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "77:5",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 6678.26708984375,
+				"elapsed": 23.4166666666666,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:5",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 7146.759765625,
+				"elapsed": 24.6666666666665,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:5",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 7510.16650390625,
+				"elapsed": 25.8999999999998,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "77:5"
+				},
+				"distance": 7574.10009765625,
+				"elapsed": 26.1166666666665,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "77:10"
+				},
+				"distance": 12988.5693359375,
+				"elapsed": 44.1833333333321,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "77:10",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 13085.4912109375,
+				"elapsed": 44.4999999999988,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:10",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 13330.6201171875,
+				"elapsed": 45.2999999999987,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:10",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 13540.3115234375,
+				"elapsed": 45.983333333332,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "77:10"
+				},
+				"distance": 13683.6806640625,
+				"elapsed": 46.4499999999986,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"id": "77:16"
+				},
+				"distance": 20664.47265625,
+				"elapsed": 68.7499999999974,
+				"health": 3,
+				"kind": "started"
+			},
+			{
+				"data": {
+					"id": "77:16",
+					"progress": 1,
+					"total": 3
+				},
+				"distance": 20760.896484375,
+				"elapsed": 69.0499999999974,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:16",
+					"progress": 2,
+					"total": 3
+				},
+				"distance": 21045.154296875,
+				"elapsed": 69.9333333333307,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"id": "77:16",
+					"progress": 3,
+					"total": 3
+				},
+				"distance": 21222.400390625,
+				"elapsed": 70.4833333333306,
+				"health": 3,
+				"kind": "progress"
+			},
+			{
+				"data": {
+					"bonus": 200,
+					"id": "77:16"
+				},
+				"distance": 21362.1875,
+				"elapsed": 70.9166666666639,
+				"health": 3,
+				"kind": "completed"
+			},
+			{
+				"data": {
+					"amount": 0,
+					"id": "77:22",
+					"kind": "heal"
+				},
+				"distance": 28499.353515625,
+				"elapsed": 92.5833333333294,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"route_ui_overlap_frames": 0,
+		"routes": {
+			"active": "",
+			"combo_score": 600,
+			"completed": 3,
+			"heal_choices": 1,
+			"identities": 1,
+			"interrupted": 0,
+			"last_event": "station",
+			"progress": 0,
+			"score_choices": 0,
+			"station_score": 0,
+			"total": 3
+		},
+		"samples": [
+			{
+				"chunks": 3,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 0,
+					"remaining": 0.0,
+					"used": 0
+				},
+				"distance": 0.388885498046875,
+				"elapsed": 0.0166666666666667,
+				"gap": 630.388885498047,
+				"health": 3,
+				"score": 0,
+				"target_speed": 280.000777770996
+			},
+			{
+				"chunks": 4,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 0,
+					"remaining": 0.0,
+					"used": 0
+				},
+				"distance": 1389.32348632813,
+				"elapsed": 5.01666666666665,
+				"gap": 1199.20336650216,
+				"health": 3,
+				"score": 138,
+				"target_speed": 282.778646972656
+			},
+			{
+				"chunks": 5,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 0,
+					"remaining": 0.0,
+					"used": 0
+				},
+				"distance": 2809.740234375,
+				"elapsed": 10.0166666666667,
+				"gap": 1249.36089017683,
+				"health": 3,
+				"score": 280,
+				"target_speed": 285.61948046875
+			},
+			{
+				"chunks": 5,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 0,
+					"remaining": 0.0,
+					"used": 0
+				},
+				"distance": 4241.8310546875,
+				"elapsed": 15.016666666667,
+				"gap": 1297.44246211809,
+				"health": 3,
+				"score": 424,
+				"target_speed": 288.483662109375
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 0,
+					"remaining": 0.0,
+					"used": 0
+				},
+				"distance": 5684.21875,
+				"elapsed": 20.0166666666668,
+				"gap": 1341.94968181675,
+				"health": 3,
+				"score": 568,
+				"target_speed": 291.3684375
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 7269.4326171875,
+				"elapsed": 25.0833333333332,
+				"gap": 1751.03490208914,
+				"health": 3,
+				"score": 926,
+				"target_speed": 294.538865234375
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 8749.490234375,
+				"elapsed": 30.0833333333329,
+				"gap": 1803.57248864443,
+				"health": 3,
+				"score": 1374,
+				"target_speed": 297.49898046875
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 10240.5146484375,
+				"elapsed": 35.0833333333326,
+				"gap": 1831.6660961128,
+				"health": 3,
+				"score": 1524,
+				"target_speed": 300.481029296875
+			},
+			{
+				"chunks": 5,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 11746.9638671875,
+				"elapsed": 40.0833333333323,
+				"gap": 1860.50616762624,
+				"health": 3,
+				"score": 1674,
+				"target_speed": 303.493927734375
+			},
+			{
+				"chunks": 5,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 13264.1923828125,
+				"elapsed": 45.0833333333321,
+				"gap": 2060.25168900948,
+				"health": 3,
+				"score": 1926,
+				"target_speed": 306.528384765625
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 14804.4970703125,
+				"elapsed": 50.0833333333318,
+				"gap": 2188.22670368419,
+				"health": 3,
+				"score": 2580,
+				"target_speed": 309.608994140625
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 16356.451171875,
+				"elapsed": 55.0833333333315,
+				"gap": 2217.69193421316,
+				"health": 3,
+				"score": 2735,
+				"target_speed": 312.71290234375
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 17916.890625,
+				"elapsed": 60.0833333333312,
+				"gap": 2240.12520604956,
+				"health": 3,
+				"score": 2891,
+				"target_speed": 315.83378125
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 19501.458984375,
+				"elapsed": 65.0833333333309,
+				"gap": 2248.92574171038,
+				"health": 3,
+				"score": 3050,
+				"target_speed": 319.00291796875
+			},
+			{
+				"chunks": 7,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 21093.4765625,
+				"elapsed": 70.0833333333306,
+				"gap": 2536.99206276366,
+				"health": 3,
+				"score": 3409,
+				"target_speed": 322.186953125
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 22712.46484375,
+				"elapsed": 75.0833333333304,
+				"gap": 2548.50172860347,
+				"health": 3,
+				"score": 3971,
+				"target_speed": 325.4249296875
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 24345.396484375,
+				"elapsed": 80.0833333333301,
+				"gap": 2557.80969277154,
+				"health": 3,
+				"score": 4134,
+				"target_speed": 328.69079296875
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 25994.630859375,
+				"elapsed": 85.0833333333298,
+				"gap": 2567.13751684848,
+				"health": 3,
+				"score": 4299,
+				"target_speed": 331.98926171875
+			},
+			{
+				"chunks": 7,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 27659.556640625,
+				"elapsed": 90.0833333333295,
+				"gap": 2575.38268938783,
+				"health": 3,
+				"score": 4465,
+				"target_speed": 335.31911328125
+			},
+			{
+				"chunks": 6,
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 2,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"distance": 29343.951171875,
+				"elapsed": 95.0833333333292,
+				"gap": 2806.71869210554,
+				"health": 3,
+				"score": 4734,
+				"target_speed": 338.68790234375
+			}
+		],
+		"score": 4744,
+		"seed": 77,
+		"station_events": [
+			{
+				"data": {
+					"amount": 0,
+					"id": "77:22",
+					"kind": "heal"
+				},
+				"distance": 28499.353515625,
+				"elapsed": 92.5833333333294,
+				"health": 3,
+				"kind": "station"
+			}
+		],
+		"strategy": "skill",
+		"timing": "fixed60 GPU accelerated clock",
+		"ui_mismatches": [],
+		"wall_seconds": 52.565
+	}
+]

@@ -1,0 +1,504 @@
+{
+	"checks": [
+		{
+			"actual": null,
+			"check": "shortcut_main_installed",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "pause_dash_frozen",
+			"passed": true
+		},
+		{
+			"actual": {
+				"captured": true,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"game_seconds": 9.2166666666667,
+				"health": 3,
+				"kind": "shortcut",
+				"landing_overlaps": 0,
+				"overlap_frames": 0,
+				"phase": "prototype_done",
+				"resource_mismatch_frames": 0,
+				"wall_seconds": 4.006
+			},
+			"check": "shortcut_actual_route",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "shortcut_visible_readable",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "shortcut_resource_matches",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "shortcut_terminal_cleans",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "shortcut_retry_single_hud",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "relay_main_installed",
+			"passed": true
+		},
+		{
+			"actual": {
+				"captured": true,
+				"dash": {
+					"active": false,
+					"charges": 0,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 2
+				},
+				"game_seconds": 8.98333333333336,
+				"health": 3,
+				"kind": "relay",
+				"landing_overlaps": 0,
+				"overlap_frames": 0,
+				"phase": "prototype_done",
+				"resource_mismatch_frames": 0,
+				"wall_seconds": 3.757
+			},
+			"check": "relay_actual_route",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "relay_visible_readable",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "relay_resource_matches",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "relay_terminal_cleans",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "relay_retry_single_hud",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "rescue_main_installed",
+			"passed": true
+		},
+		{
+			"actual": {
+				"captured": true,
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"game_seconds": 9.2166666666667,
+				"health": 3,
+				"kind": "rescue",
+				"landing_overlaps": 0,
+				"overlap_frames": 0,
+				"phase": "prototype_done",
+				"resource_mismatch_frames": 0,
+				"wall_seconds": 3.781
+			},
+			"check": "rescue_actual_route",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "rescue_visible_readable",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "rescue_resource_matches",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "rescue_terminal_cleans",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "rescue_retry_single_hud",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "one_unique_node_progress",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "refill_once",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "full_no_repeated_cue",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "empty_visible",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "detail_fits",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "hurt_clears_trace",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "menu_cleans",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "old_mode_silent",
+			"passed": true
+		}
+	],
+	"events": [
+		{
+			"kind": "shortcut",
+			"position": "(1657.503, 333.4308)",
+			"snapshot": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"reason": "charging",
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			}
+		},
+		{
+			"kind": "shortcut",
+			"position": "(1841.171, 305.0944)",
+			"snapshot": {
+				"active": true,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"reason": "started",
+				"refilled": 0,
+				"remaining": 0.2,
+				"used": 1
+			}
+		},
+		{
+			"kind": "shortcut",
+			"position": "(2001.172, 285.4311)",
+			"snapshot": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"reason": "finished",
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 1
+			}
+		},
+		{
+			"kind": "shortcut",
+			"position": "(2121.504, 352.9252)",
+			"snapshot": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"reason": "refilled",
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			}
+		},
+		{
+			"kind": "shortcut",
+			"position": "(2488.834, 367.6861)",
+			"snapshot": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"reason": "charging",
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			}
+		},
+		{
+			"kind": "relay",
+			"position": "(1562.502, 333.4308)",
+			"snapshot": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"reason": "charging",
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			}
+		},
+		{
+			"kind": "relay",
+			"position": "(1746.17, 305.0944)",
+			"snapshot": {
+				"active": true,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"reason": "started",
+				"refilled": 0,
+				"remaining": 0.2,
+				"used": 1
+			}
+		},
+		{
+			"kind": "relay",
+			"position": "(1906.171, 285.4311)",
+			"snapshot": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"reason": "finished",
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 1
+			}
+		},
+		{
+			"kind": "relay",
+			"position": "(2007.505, 352.9252)",
+			"snapshot": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"reason": "refilled",
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			}
+		},
+		{
+			"kind": "relay",
+			"position": "(2191.171, 273.0944)",
+			"snapshot": {
+				"active": true,
+				"charges": 0,
+				"enabled": true,
+				"progress": 0,
+				"reason": "started",
+				"refilled": 1,
+				"remaining": 0.2,
+				"used": 2
+			}
+		},
+		{
+			"kind": "relay",
+			"position": "(2351.17, 253.4311)",
+			"snapshot": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 0,
+				"reason": "finished",
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			}
+		},
+		{
+			"kind": "relay",
+			"position": "(2458.835, 320.9252)",
+			"snapshot": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"reason": "charging",
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			}
+		},
+		{
+			"kind": "rescue",
+			"position": "(1499.168, 432.924)",
+			"snapshot": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"reason": "charging",
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			}
+		},
+		{
+			"kind": "rescue",
+			"position": "(1657.503, 432.924)",
+			"snapshot": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"reason": "refilled",
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			}
+		},
+		{
+			"kind": "rescue",
+			"position": "(1815.837, 387.0015)",
+			"snapshot": {
+				"active": true,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"reason": "started",
+				"refilled": 1,
+				"remaining": 0.2,
+				"used": 1
+			}
+		},
+		{
+			"kind": "rescue",
+			"position": "(1975.838, 421.9896)",
+			"snapshot": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"reason": "finished",
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			}
+		},
+		{
+			"kind": "rescue",
+			"position": "(2089.838, 432.9253)",
+			"snapshot": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"reason": "charging",
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			}
+		}
+	],
+	"godot": "4.7.2-stable (official)",
+	"main_sha256": "16bb1097f093047efe4e8cbf488c8a6839996bedfa92ad2450e11704b9cfee85",
+	"method": "Actual Main, seed404, explicit Profile.defaults gen6 / prototype kind / fixed380 and isolated record. Three full prototype routes use synthetic jump/dash from actual geometry windows, no position/chase/time/resource injection during traversal. State fixtures separately call real public Player resource/damage APIs on a new Main. GUI fixed60 accelerated clock; no human fun claim.",
+	"passed": true,
+	"pixel_size": "(1280, 720)",
+	"renderer": "NVIDIA GeForce RTX 4050 Laptop GPU",
+	"runs": [
+		{
+			"captured": true,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"game_seconds": 9.2166666666667,
+			"health": 3,
+			"kind": "shortcut",
+			"landing_overlaps": 0,
+			"overlap_frames": 0,
+			"phase": "prototype_done",
+			"resource_mismatch_frames": 0,
+			"wall_seconds": 4.006
+		},
+		{
+			"captured": true,
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"game_seconds": 8.98333333333336,
+			"health": 3,
+			"kind": "relay",
+			"landing_overlaps": 0,
+			"overlap_frames": 0,
+			"phase": "prototype_done",
+			"resource_mismatch_frames": 0,
+			"wall_seconds": 3.757
+		},
+		{
+			"captured": true,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"game_seconds": 9.2166666666667,
+			"health": 3,
+			"kind": "rescue",
+			"landing_overlaps": 0,
+			"overlap_frames": 0,
+			"phase": "prototype_done",
+			"resource_mismatch_frames": 0,
+			"wall_seconds": 3.781
+		}
+	]
+}

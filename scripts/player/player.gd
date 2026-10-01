@@ -4,6 +4,7 @@ signal state_changed(state: String)
 signal action_triggered(action: String)
 signal died(reason: String, position: Vector2)
 signal damage_taken(reason: String, remaining_health: int)
+signal dash_state_changed(snapshot: Dictionary)
 
 @export var move_speed := 280.0
 @export var ground_acceleration := 1800.0
@@ -34,6 +35,68 @@ var health := 3
 var invulnerable_remaining := 0.0
 var hurt_count := 0
 var _hurt_frame := -1
+var dash_enabled := false
+var dash_charges := 1
+var dash_progress := 0
+var dash_remaining := 0.0
+var dash_active := false
+var dash_duration := 0.20
+var dash_speed := 800.0
+var dash_used := 0
+var dash_refilled := 0
+var _dash_nodes: Dictionary = {}
+
+func dash_snapshot() -> Dictionary:
+	return {"enabled":dash_enabled,"charges":dash_charges,"progress":dash_progress,"active":dash_active,"remaining":dash_remaining,"used":dash_used,"refilled":dash_refilled}
+
+func _dash_changed(reason: String) -> void:
+	var snapshot:=dash_snapshot()
+	snapshot.reason=reason
+	dash_state_changed.emit(snapshot)
+
+func try_dash() -> bool:
+	if not dash_enabled or dead or not control_enabled or get_tree().paused or dash_active:
+		return false
+	if dash_charges<=0:
+		_dash_changed("empty")
+		return false
+	dash_charges-=1
+	dash_remaining=dash_duration
+	dash_active=true
+	dash_used+=1
+	action_triggered.emit("dash")
+	_dash_changed("started")
+	return true
+
+func cancel_dash(reason: String) -> void:
+	if not dash_active:
+		return
+	dash_active=false
+	dash_remaining=0
+	velocity.x=minf(velocity.x,move_speed)
+	_dash_changed(reason)
+
+func charge_dash(node_id: String) -> bool:
+	if not dash_enabled or dead or not control_enabled or get_tree().paused or _dash_nodes.has(node_id):
+		return false
+	_dash_nodes[node_id]=true
+	if dash_charges<2:
+		dash_progress+=1
+		if dash_progress==2:
+			dash_progress=0
+			dash_charges+=1
+			dash_refilled+=1
+			_dash_changed("refilled")
+		else:
+			_dash_changed("charging")
+	else:
+		dash_progress=0
+	return true
+
+func prune_dash_nodes(live_chunks: Dictionary) -> void:
+	for id in _dash_nodes.keys():
+		if not live_chunks.has(str(id).get_slice(":",0)+":"+str(id).get_slice(":",1)):
+			_dash_nodes.erase(id)
 
 func _ready() -> void:
 	collision_layer = 2
@@ -62,6 +125,8 @@ func _physics_process(delta: float) -> void:
 		_spent_wall_side = 0.0
 	if control_enabled and Input.is_action_just_pressed("jump"):
 		_buffer = buffer_window
+	if control_enabled and dash_enabled and Input.is_action_just_pressed("dash"):
+		try_dash()
 	if not grounded:
 		velocity.y += (gravity if velocity.y < 0 else fall_gravity) * delta
 		velocity.y = minf(velocity.y, 900.0)
@@ -93,7 +158,12 @@ func _physics_process(delta: float) -> void:
 			action_triggered.emit("wall_jump")
 	if control_enabled and Input.is_action_just_released("jump") and velocity.y < 0.0:
 		velocity.y *= jump_cut
+	if dash_active:
+		velocity.x=move_speed+(dash_speed-move_speed)*minf(1.0,dash_remaining/delta)
+		dash_remaining=maxf(0,dash_remaining-delta)
 	move_and_slide()
+	if dash_active and dash_remaining<=0.00001:
+		cancel_dash("finished")
 	var landed := is_on_floor()
 	if landed and not _previous_floor and velocity.y >= 0.0:
 		action_triggered.emit("land")
@@ -118,6 +188,7 @@ func die(reason: String) -> void:
 	if dead:
 		return
 	dead = true
+	cancel_dash("death")
 	control_enabled = false
 	velocity = Vector2.ZERO
 	_set_state("dead")
@@ -132,6 +203,7 @@ func take_damage(reason: String) -> bool:
 	if dead or get_tree().paused or invulnerable_remaining > 0 or _hurt_frame == Engine.get_physics_frames():
 		return false
 	_hurt_frame = Engine.get_physics_frames()
+	cancel_dash("hurt")
 	health = maxi(0, health - 1)
 	hurt_count += 1
 	invulnerable_remaining = 1.2
@@ -144,6 +216,7 @@ func take_damage(reason: String) -> bool:
 	return true
 
 func recover_at(point: Vector2) -> void:
+	cancel_dash("recovery")
 	global_position = point
 	velocity = Vector2(280, 0)
 	control_enabled = true
@@ -168,6 +241,13 @@ func reset_at(spawn_position: Vector2) -> void:
 	hurt_count = 0
 	_hurt_frame = -1
 	invulnerable_remaining = 0
+	dash_active=false
+	dash_remaining=0
+	dash_charges=1
+	dash_progress=0
+	dash_used=0
+	dash_refilled=0
+	_dash_nodes.clear()
 	modulate.a = 1
 	_set_state("idle")
 	queue_redraw()
@@ -175,6 +255,7 @@ func reset_at(spawn_position: Vector2) -> void:
 func set_control_enabled(enabled: bool) -> void:
 	control_enabled = enabled
 	if not enabled:
+		cancel_dash("control_disabled")
 		velocity.x = 0.0
 		_buffer = 0.0
 		if not dead:

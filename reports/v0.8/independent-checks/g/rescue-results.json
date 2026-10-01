@@ -1,0 +1,71 @@
+{
+	"before_dash": {
+		"dash": {
+			"active": false,
+			"charges": 2,
+			"enabled": true,
+			"progress": 0,
+			"refilled": 1,
+			"remaining": 0.0,
+			"used": 0
+		},
+		"feet": 404.441986083984,
+		"velocity": "(280.0, 86.60699)",
+		"x": 529.828247070313
+	},
+	"checks": [
+		{
+			"actual": "",
+			"check": "public_rescue_main",
+			"passed": true
+		},
+		{
+			"actual": {
+				"dash": {
+					"active": false,
+					"charges": 2,
+					"enabled": true,
+					"progress": 0,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 0
+				},
+				"feet": 404.441986083984,
+				"velocity": "(280.0, 86.60699)",
+				"x": 529.828247070313
+			},
+			"check": "short_jump_rescued_real_landing",
+			"passed": true
+		},
+		{
+			"actual": {
+				"active": true,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0333333333333334,
+				"used": 1
+			},
+			"check": "spent_one_retains_one",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_F8_returns_prototype_hub",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "actual_second_F8_returns_editor",
+			"passed": true
+		},
+		{
+			"actual": "",
+			"check": "118_and_formal_unchanged",
+			"passed": true
+		}
+	],
+	"method": "Actual public editor Prototypes and Rescue buttons via synthetic Enter; explicit tool default initial1/fixed280, isolated score destination. Short SPACE4-frame release then Shift at real x528; real landing aftergap with health3 and one resource retained. Public tool fixture, not a seventh natural default run; no position/front/elapsed injection. GUI fixed60 accelerated. No human fun claim.",
+	"passed": true
+}

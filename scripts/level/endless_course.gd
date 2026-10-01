@@ -9,6 +9,7 @@ var prototype := true
 var chunks: Array[Dictionary] = []
 var total_offset := 0.0
 var test_sequence: Array[String] = []
+var skill_prototype := ""
 const Library = preload("res://scripts/level/endless_library.gd")
 const Generator = preload("res://scripts/level/endless_generator.gd")
 const AHEAD := 3200.0
@@ -41,10 +42,17 @@ func _ready() -> void:
 	if ResourceLoader.exists("res://assets/visual/v05/route_upper.svg"):
 		_textures["upper_route"] = load("res://assets/visual/v05/route_upper.svg")
 	generator.reset(run_seed, generation_profile)
+	if not skill_prototype.is_empty():
+		for i in 3:
+			_append_chunk(preload("res://scripts/level/skill_library.gd").prototype_row(skill_prototype,i))
+		_sync_geometry()
+		chunks_changed.emit()
+		queue_redraw()
+		return
 	update_stream(spawn_position.x, -544)
 
 func update_stream(player_x: float, front_x: float) -> void:
-	if not streaming:
+	if not streaming or not skill_prototype.is_empty():
 		return
 	var changed := false
 	while _generated_end < player_x + AHEAD:

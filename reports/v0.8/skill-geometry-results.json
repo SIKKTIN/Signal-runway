@@ -1,0 +1,2094 @@
+{
+	"method": "72 actual Main trials: 3 envelope variants(384/32,448/48,512/64)x3 speedsxstable/skill, plus shortcut/relay injury cancelling first dash after 0.05 sec. Explicit initial geometry/spawn/speed/resources; no traversal position/chase/time injection. Injured high route may fail but stable ground preserves run, health2 expected.",
+	"passed": true,
+	"runs": [
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.523, 368.9352)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.94, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.668, 368.9352)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.279, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.486, 368.9352)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.558, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.186, 368.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.197, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.167, 368.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.307, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.82, 368.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.082, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.522, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.667, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.484, 368.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 0
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.524, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.94, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.668, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.279, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.486, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.558, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.187, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.197, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.167, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.307, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.82, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.082, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.522, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.667, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.484, 432.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 1
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.523, 496.9251)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.94, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.668, 496.9251)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.279, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.486, 496.9251)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.559, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.186, 496.9251)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.197, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.167, 496.9251)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3637.307, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 100,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 2
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.821, 496.9251)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 2,
+			"injury": true,
+			"kind": "relay",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3636.083, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 200,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.187, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.522, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.167, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.667, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3639.818, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "stable",
+			"variant": 2
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"injury": false,
+			"kind": "rescue",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.484, 496.924)",
+			"score": {
+				"combo": 0,
+				"completed": 0,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill",
+			"variant": 2
+		}
+	]
+}

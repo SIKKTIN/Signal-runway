@@ -10,6 +10,7 @@ var _clock := 0.0
 var _features: Array[Dictionary] = []
 var _connections: Array[Dictionary] = []
 var _phase := "menu"
+var _skill_offer: Dictionary = {}
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -26,12 +27,16 @@ func bind_flow(flow: Node, course: Node) -> void:
 	_course = course
 	_clock = 0
 	_features.clear()
+	_skill_offer.clear()
 	if not is_node_ready():
 		return
 	for pair in [[course,"chunks_changed",_refresh],[flow,"world_shifted",_shifted]]:
 		if pair[0].has_signal(pair[1]):
 			pair[0].connect(pair[1],pair[2])
 			_connections.append({"source":pair[0],"signal":pair[1],"callback":pair[2]})
+	if flow.has_signal("skill_state_changed"):
+		flow.connect("skill_state_changed",_on_skill)
+		_connections.append({"source":flow,"signal":"skill_state_changed","callback":_on_skill})
 	_refresh()
 
 func _refresh() -> void:
@@ -51,9 +56,15 @@ func _process(delta: float) -> void:
 	if not is_instance_valid(_flow):
 		return
 	_phase = str(_flow.phase)
+	if _flow.has_method("current_skill_offer"):
+		_skill_offer = _flow.current_skill_offer()
 	visible = _phase in ["running","paused","recovering"] and _flow.is_endless()
 	if visible and not get_tree().paused:
 		_clock += delta
+	queue_redraw()
+
+func _on_skill(snapshot: Dictionary) -> void:
+	_skill_offer = snapshot.duplicate(true)
 	queue_redraw()
 
 func _text(at: Vector2, label: String, color: Color, font_size: int = 14) -> void:
@@ -110,6 +121,8 @@ func _draw() -> void:
 		var d: Dictionary = feature.geometry
 		if d.has("ground_segments"):
 			_draw_spatial_routes(d,x)
+		if d.has("skill") and bool(_flow.player.get("dash_enabled")):
+			_draw_skill_entry(d,x)
 		if d.has("challenge"):
 			var challenge: Dictionary = d.challenge
 			var entry: Rect2 = challenge.entry
@@ -154,9 +167,57 @@ func _draw() -> void:
 				_symbol(Vector2(x+69,line_y-5),kind,tint,selected==kind,locked)
 				_text(Vector2(x+92,line_y),label,tint,15)
 				_symbol(station[kind]+Vector2(x,0),kind,tint,selected==kind,locked)
+	_draw_skill_offer()
 
 func presentation_state() -> Dictionary:
-	return {"animation_time":_clock,"features":_features.size(),"phase":_phase,"visible":visible,"feature_ids":_features.map(func(row):return row.id)}
+	return {"animation_time":_clock,"features":_features.size(),"phase":_phase,"visible":visible,"feature_ids":_features.map(func(row):return row.id),"skill_offer":_skill_offer.duplicate(true),"skill_rect":Rect2(270,128,390,58) if not _skill_offer.is_empty() else Rect2(),"skill_lines":_skill_lines()}
+
+func _skill_lines() -> Array[String]:
+	if _skill_offer.is_empty():
+		return []
+	var kind: String = str(_skill_offer.get("kind",""))
+	var title: String = str({"shortcut":"冲刺捷径","relay":"空中接力","rescue":"紧急脱险"}.get(kind,"技能路线"))
+	var required: int = int(_skill_offer.get("required",0))
+	var first: String = title + " · 入口需 %d 次" % required
+	if bool(_skill_offer.get("active",false)):
+		first = title + " · 接力中 · 路径用 %d 次" % int(_skill_offer.get("dash_cost",0))
+	elif required == 0:
+		first = title + (" · 正常跳跃 / 冲刺救场" if int(_skill_offer.get("charges",0))>0 else " · 正常跳跃 · 冲刺需储备")
+	elif not bool(_skill_offer.get("available",false)):
+		first = title + " · 冲刺不足 · 走主路"
+	var second: String = "中继 %d · 最多补 %d 次（容量允许） · 主路需跳跃" % [int(_skill_offer.get("reward_nodes",0)),int(_skill_offer.get("expected_refill",0))]
+	return [first,second]
+
+func _draw_skill_offer() -> void:
+	var lines: Array[String] = _skill_lines()
+	if lines.is_empty():
+		return
+	var transform := get_global_transform_with_canvas()
+	var at: Vector2 = transform.affine_inverse()*Vector2(270,128)
+	var enough: bool = bool(_skill_offer.get("available",false)) or bool(_skill_offer.get("active",false))
+	var tint: Color = HEAL if enough else GOLD
+	var panel := StyleBoxFlat.new()
+	panel.bg_color = Color(.05,.09,.13,.95)
+	panel.border_color = tint
+	panel.border_width_left = 2
+	panel.border_width_bottom = 1
+	panel.set_corner_radius_all(4)
+	draw_style_box(panel,Rect2(at,Vector2(390,58)))
+	_text(at+Vector2(10,21),lines[0],tint,14)
+	_text(at+Vector2(10,43),lines[1],Color("9bb5ba"),12)
+
+func _draw_skill_entry(d: Dictionary,x: float) -> void:
+	var skill: Dictionary = d.skill
+	var entry_y: float = float(d.connection.entry_y)
+	if not d.get("platforms",[]).is_empty():
+		entry_y = float(d.platforms[0].position.y)
+	var at := Vector2(x+float(skill.entry_x),entry_y-24)
+	# Small physical entry pointer. It does not connect platforms or promise a landing.
+	var tint: Color = HEAL
+	if _flow.player.dash_charges < int(skill.required):
+		tint = MUTED
+	draw_polyline(PackedVector2Array([at+Vector2(-9,4),at,at+Vector2(-9,-4)]),tint,1.5,true)
+	draw_polyline(PackedVector2Array([at+Vector2(-18,4),at+Vector2(-9,0),at+Vector2(-18,-4)]),tint,1.5,true)
 
 func _direction(at: Vector2,title: String,color: Color,down: bool = false) -> void:
 	# Keep auxiliary route words above bottom HUD and below top/status cards.

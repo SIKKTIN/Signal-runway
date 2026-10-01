@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "check": "menu_defaults_to_new_station",
+      "passed": true
+    },
+    {
+      "check": "menu_enters_selected_station",
+      "passed": true
+    },
+    {
+      "check": "production_layout_five_sections",
+      "passed": true
+    },
+    {
+      "check": "swept_node_contact",
+      "passed": true
+    },
+    {
+      "check": "low_route_does_not_collect_high_node",
+      "passed": true
+    },
+    {
+      "check": "real_overlap_collects_node",
+      "passed": true
+    },
+    {
+      "check": "relay_stops_front_not_clock",
+      "passed": true
+    },
+    {
+      "check": "delay_getter_synchronized",
+      "passed": true
+    },
+    {
+      "check": "relay_visual_installed",
+      "passed": true
+    },
+    {
+      "check": "pause_freezes_delay_world_and_visual",
+      "passed": true
+    },
+    {
+      "check": "front_resumes_after_relay",
+      "passed": true
+    },
+    {
+      "check": "two_nodes_once_total_1_8",
+      "passed": true
+    },
+    {
+      "check": "restart_clears_all_relay_state",
+      "passed": true
+    },
+    {
+      "check": "pending_relay_held_during_pause",
+      "passed": true
+    },
+    {
+      "check": "pending_relay_resolves_on_resume",
+      "passed": true
+    },
+    {
+      "check": "same_frame_death_beats_reward",
+      "passed": true
+    },
+    {
+      "check": "trial_counts_without_hold",
+      "passed": true
+    },
+    {
+      "check": "trial_death_does_not_reset_nodes",
+      "passed": true
+    },
+    {
+      "check": "station_trial_score_saved",
+      "passed": true
+    },
+    {
+      "check": "station_modes_isolated",
+      "passed": true
+    },
+    {
+      "check": "level_scores_isolated",
+      "passed": true
+    },
+    {
+      "check": "station_best_retained",
+      "passed": true
+    },
+    {
+      "check": "original_menu_selection_works",
+      "passed": true
+    },
+    {
+      "check": "lab_has_no_relay_counter",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "Graphical state/contact fixtures and UI callbacks; full input routes in route-results.json."
+}

@@ -1,0 +1,90 @@
+{
+	"method": "Actual CharacterBody2D/solid fixtures, synthetic held Shift/Space, fixed60 headless; explicit initial speed/floor/wall, pause and injury fixtures. Dash duration/real distance/gravity, held input, no penetration and no refund are measured.",
+	"passed": true,
+	"results": [
+		{
+			"air": false,
+			"distance": 164.666732788086,
+			"end_active": false,
+			"held_once": true,
+			"hurt_cancel": true,
+			"initial_vy": 0.0,
+			"passed": true,
+			"pause": true,
+			"speed": 280,
+			"wall": false
+		},
+		{
+			"air": true,
+			"distance": 164.666778564453,
+			"end_active": false,
+			"held_once": true,
+			"hurt_cancel": true,
+			"initial_vy": -436.650024414063,
+			"passed": true,
+			"pause": true,
+			"speed": 280,
+			"wall": false
+		},
+		{
+			"air": false,
+			"distance": 165.500091552734,
+			"end_active": false,
+			"held_once": true,
+			"hurt_cancel": true,
+			"initial_vy": 0.0,
+			"passed": true,
+			"pause": true,
+			"speed": 330,
+			"wall": false
+		},
+		{
+			"air": true,
+			"distance": 165.500122070313,
+			"end_active": false,
+			"held_once": true,
+			"hurt_cancel": true,
+			"initial_vy": -436.650024414063,
+			"passed": true,
+			"pause": true,
+			"speed": 330,
+			"wall": false
+		},
+		{
+			"air": false,
+			"distance": 166.333450317383,
+			"end_active": false,
+			"held_once": true,
+			"hurt_cancel": true,
+			"initial_vy": 0.0,
+			"passed": true,
+			"pause": true,
+			"speed": 380,
+			"wall": false
+		},
+		{
+			"air": true,
+			"distance": 166.333465576172,
+			"end_active": false,
+			"held_once": true,
+			"hurt_cancel": true,
+			"initial_vy": -436.650024414063,
+			"passed": true,
+			"pause": true,
+			"speed": 380,
+			"wall": false
+		},
+		{
+			"air": false,
+			"distance": 48.4427185058594,
+			"end_active": false,
+			"held_once": true,
+			"hurt_cancel": true,
+			"initial_vy": 0.0,
+			"passed": true,
+			"pause": true,
+			"speed": 330,
+			"wall": true
+		}
+	]
+}

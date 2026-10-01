@@ -1,0 +1,157 @@
+{
+	"checks": [
+		{
+			"name": "default6_controls_and_valid_json",
+			"passed": true
+		},
+		{
+			"name": "old5_preserved_skill_locked",
+			"passed": true
+		},
+		{
+			"name": "actual_enter_explicit_upgrade6",
+			"passed": true
+		},
+		{
+			"name": "weight0_removes_skill_routes",
+			"passed": true
+		},
+		{
+			"name": "skill_routes_present",
+			"passed": true
+		},
+		{
+			"name": "details_actual_resource_and_reward",
+			"passed": true
+		},
+		{
+			"name": "preview_matches_actual_generator",
+			"passed": true
+		},
+		{
+			"name": "actual_selected_resources_0",
+			"passed": true
+		},
+		{
+			"name": "hint_three_lines_fit_visible",
+			"passed": true
+		},
+		{
+			"name": "actual_F8_isolation_cleanup_0",
+			"passed": true
+		},
+		{
+			"name": "actual_selected_resources_1",
+			"passed": true
+		},
+		{
+			"name": "actual_F8_isolation_cleanup_1",
+			"passed": true
+		},
+		{
+			"name": "actual_selected_resources_2",
+			"passed": true
+		},
+		{
+			"name": "actual_terminal_record8_generator6",
+			"passed": true
+		},
+		{
+			"name": "editor_captures_resource_failure",
+			"passed": true
+		},
+		{
+			"name": "actual_F8_isolation_cleanup_2",
+			"passed": true
+		},
+		{
+			"name": "actual_failure_save_roundtrip",
+			"passed": true
+		},
+		{
+			"name": "actual_load_late200_window",
+			"passed": true
+		},
+		{
+			"name": "actual_checkbox_snapshot_enabled",
+			"passed": true
+		},
+		{
+			"name": "actual_late_resource_snapshot_and_bounded_course",
+			"passed": true
+		},
+		{
+			"name": "prototype_hub_actual_enter",
+			"passed": true
+		},
+		{
+			"name": "prototype_uses_actual_main_and_isolation",
+			"passed": true
+		},
+		{
+			"name": "prototype_first_F8_returns_hub",
+			"passed": true
+		},
+		{
+			"name": "prototype_second_F8_returns_editor",
+			"passed": true
+		},
+		{
+			"name": "formal_state_preserved_res://resources/generation/endless_default.json",
+			"passed": true
+		},
+		{
+			"name": "formal_state_preserved_user://signal_runway_endless_v08.json",
+			"passed": true
+		},
+		{
+			"name": "formal_state_preserved_user://signal_runway_endless_v07.json",
+			"passed": true
+		},
+		{
+			"name": "formal_state_preserved_user://signal_runway_endless_v06.json",
+			"passed": true
+		},
+		{
+			"name": "formal_state_preserved_user://signal_runway_endless_v05.json",
+			"passed": true
+		},
+		{
+			"name": "formal_state_preserved_user://map_editor_failure_v08.json",
+			"passed": true
+		}
+	],
+	"formal_before": {
+		"res://resources/generation/endless_default.json": "6e9e9d622bf94758429b5a8099e681adbf8f0ef6e18fef12187d16aa813d8d84",
+		"user://map_editor_failure_v08.json": "missing",
+		"user://signal_runway_endless_v05.json": "missing",
+		"user://signal_runway_endless_v06.json": "missing",
+		"user://signal_runway_endless_v07.json": "missing",
+		"user://signal_runway_endless_v08.json": "missing"
+	},
+	"method": "GPU fixed60 actual Enter/Space/F8 widgets; isolated default/failure/terminal, selected and late200 distance/resource injection fixtures. Snapshot replays resources only, not actions/health/chase. Formal files unchanged or missing observed.",
+	"observations": {
+		"hint": {
+			"minimum": "(184.0, 66.0)",
+			"panel": "[P: (704.0, 444.0), S: (240.0, 86.0)]",
+			"rect": "[P: (716.0, 454.0), S: (216.0, 66.0)]",
+			"text": "定点起跑 · 第5段\n资源0 · 距离注入 · 成绩隔离\nF8返回"
+		},
+		"late": {
+			"chunks": 4,
+			"dash": {
+				"active": false,
+				"charges": 0,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"global_x": 255869.078125,
+			"hint": "失败资源快照起跑\n资源0+1/2 · 注入/成绩隔离\nF8返回",
+			"rect": "[P: (716.0, 454.0), S: (216.0, 66.0)]"
+		}
+	},
+	"passed": true
+}

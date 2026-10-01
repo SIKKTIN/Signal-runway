@@ -73,6 +73,12 @@ func _draw() -> void:
 			draw_rect(w.takeoff,Color(0.85,0.7,0.2,0.5))
 			draw_rect(w.landing,Color(0.2,0.9,0.8,0.5))
 			draw_line(w.from-Vector2(0,20),w.to-Vector2(0,20),Color("85d9ed"),1)
+		if d.has("skill"):
+			var skill: Dictionary=d.skill
+			for w in skill.dash_windows:
+				draw_line(w.from-Vector2(0,48),w.to-Vector2(0,48),Color("ffd166"),5)
+				draw_circle(Vector2(w.dash_x,w.from.y-48),10,Color("ffd166"))
+			draw_string(_font,Vector2(skill.entry_x,240),"Shift · 入口%d次 / %d节点"%[skill.required,skill.reward_nodes],HORIZONTAL_ALIGNMENT_LEFT,-1,20,Color("ffd166"))
 		for rect in d.floors + d.platforms + d.walls:
 			draw_rect(rect, Color("405966"))
 			draw_line(rect.position, rect.position + Vector2(rect.size.x, 0), Color("d5eef0"), 3)

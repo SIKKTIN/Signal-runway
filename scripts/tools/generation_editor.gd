@@ -5,6 +5,7 @@ const Library = preload("res://scripts/level/endless_library.gd")
 const Preview = preload("res://scripts/tools/map_preview.gd")
 const Spatial = preload("res://scripts/level/spatial_library.gd")
 const Replay = preload("res://scripts/tools/generation_replay.gd")
+const Skill = preload("res://scripts/level/skill_library.gd")
 const Main = preload("res://scenes/main/main.tscn")
 const PROFILE_DIR := "user://map_editor_profiles"
 var default_path := Profile.DEFAULT_PATH
@@ -32,6 +33,9 @@ var replay_path := Replay.DEFAULT_PATH
 var last_failure: Dictionary={}
 var _trial_failure_saved:=false
 var speed_choice: OptionButton
+var dash_choice: OptionButton
+var replay_resources: CheckBox
+var prototype_view: Control
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	var background := ColorRect.new()
@@ -134,6 +138,12 @@ func _build_ui() -> void:
 		var s:=spin(params,1 if id=="slope" else 0,10,1,2)
 		controls["space_"+id]=s
 		s.value_changed.connect(func(_v):changed())
+	label(params,"v0.8技能：冲刺0.20秒/800，按M1冻结")
+	for spec in [["skill_weight","技能权重（0关闭）",0,3,2],["skill_limit","技能频率档（1疏/2密）",1,2,1]]:
+		label(params,spec[1])
+		var s:=spin(params,spec[2],spec[3],1,spec[4])
+		controls[spec[0]]=s
+		s.value_changed.connect(func(_v):changed())
 	label(params, "片段开关 / 合格候选权重")
 	label(params,"v0.6 段落节奏与奖励")
 	for item in [["phase_one","进阶距离",5000,20000,1000,10000],["phase_two","持续挑战距离",20000,60000,1000,30000],["challenge_weight","挑战基础权重",1,3,1,1],["challenge_limit","最多连续挑战",1,2,1,2],["station_min","恢复站最小段距",16,24,1,16],["station_max","恢复站最大段距",16,24,1,24],["combo_bonus","连段完成分",100,400,100,200],["station_bonus","恢复站积分",100,400,100,200]]:
@@ -187,7 +197,21 @@ func _build_ui() -> void:
 		speed_choice.add_item(item)
 	debug_row.add_child(speed_choice)
 	label(debug_row,"试玩：F9受伤 · F10掉坑 · F8返回")
-	button(debug_row,"升级v5草稿",upgrade_draft,"Upgrade")
+	button(debug_row,"升级v6草稿",upgrade_draft,"Upgrade")
+	var resources_row:=HBoxContainer.new()
+	chrome.add_child(resources_row)
+	label(resources_row,"试玩资源")
+	dash_choice=OptionButton.new()
+	dash_choice.name="DashResources"
+	for i in 3:
+		dash_choice.add_item("%d次冲刺（注入）"%i,i)
+	dash_choice.select(1)
+	resources_row.add_child(dash_choice)
+	replay_resources=CheckBox.new()
+	replay_resources.name="ReplayResources"
+	replay_resources.text="失败复盘用原资源快照（注入）"
+	resources_row.add_child(replay_resources)
+	button(resources_row,"三段玩法原型",play_prototypes,"Prototypes")
 	var actions := HBoxContainer.new()
 	chrome.add_child(actions)
 	profile_name = LineEdit.new()
@@ -239,17 +263,20 @@ func set_draft(value: Dictionary) -> void:
 		controls[key].editable=draft.generator_revision>=4
 	for key in ["elevation_step","elevation_range","upper_span"]:
 		controls[key].value=draft.get(key,Profile.defaults()[key])
-		controls[key].editable=draft.generator_revision==5
+		controls[key].editable=draft.generator_revision>=5
 	for id in Spatial.NAMES:
 		controls["space_"+id].value=draft.get("spatial_weights",Profile.defaults().spatial_weights)[id]
-		controls["space_"+id].editable=draft.generator_revision==5
+		controls["space_"+id].editable=draft.generator_revision>=5
+	for key in ["skill_weight","skill_limit"]:
+		controls[key].value=draft.get(key,Profile.defaults()[key])
+		controls[key].editable=draft.generator_revision==6
 	for id in Library.ids():
 		controls[id].enabled.button_pressed = draft.templates[id].enabled
 		controls[id].weight.value = draft.templates[id].weight
 		var available: bool=draft.generator_revision<4 or id in ["safe_a","safe_b","step","gap","rhythm_a","relay_a","relay_b"]
 		controls[id].enabled.disabled=id in Profile.LOCKED or not available
-		controls[id].weight.editable=available and draft.generator_revision!=5
-		if draft.generator_revision==5:
+		controls[id].weight.editable=available and draft.generator_revision<5
+		if draft.generator_revision>=5:
 			controls[id].enabled.disabled=true
 		controls[id].enabled.tooltip_text="v5使用空间权重与保留的节奏规则；旧模板字段供旧配置兼容" if draft.generator_revision==5 else ("v4段落库暂不选此旧结构；v2/v3保留原行为" if not available else ("安全/奖励保障锁定" if id in Profile.LOCKED else "影响本段合格候选"))
 	controls.stage_distance.editable=draft.generator_revision<4
@@ -266,11 +293,14 @@ func read_draft() -> Dictionary:
 	if value.generator_revision>=4:
 		for key in ["phase_one","phase_two","challenge_weight","challenge_limit","station_min","station_max","combo_bonus","station_bonus"]:
 			value[key]=controls[key].value
-	if value.generator_revision==5:
+	if value.generator_revision>=5:
 		for key in ["elevation_step","elevation_range","upper_span"]:
 			value[key]=controls[key].value
 		for id in Spatial.NAMES:
 			value.spatial_weights[id]=controls["space_"+id].value
+	if value.generator_revision==6:
+		for key in ["skill_weight","skill_limit"]:
+			value[key]=controls[key].value
 	for id in Library.ids():
 		value.templates[id] = {"enabled": controls[id].enabled.button_pressed, "weight": controls[id].weight.value}
 	return value
@@ -328,13 +358,17 @@ func select_chunk(index: int) -> void:
 	if d.has("connection"):
 		details.text+="\n实际地面：%.0f→%.0f · 高路入口%.0f/出口%.0f · 前接%s/后接%s\n空间候选%s · 起跳/落点窗口%d"%[d.connection.entry_y,d.connection.exit_y,d.connection.upper_entry_y,d.connection.upper_exit_y,str(d.connection.upper_from),str(d.connection.upper_to),JSON.stringify(r.get("spatial_candidates",[])),d.jump_windows.size()]
 
+	if d.has("skill"):
+		var skill: Dictionary=d.skill
+		details.text+="\n技能：%s · 入口%d次 / 路径%d次 · %d节点\n充能按两节点与容量结算，稳定主路0资源可走。"%[Skill.NAMES[skill.kind],skill.required,skill.get("dash_cost",0),skill.reward_nodes]
+
 func upgrade_draft() -> void:
 	var value := Profile.defaults()
 	for key in value:
 		if key!="generator_revision":
 			value[key] = draft.get(key,value[key])
 	set_draft(value)
-	message("已显式升级为v5草稿；地形/路线将变化，工程默认需另行应用")
+	message("已显式升级为v6草稿；技能路线将变化，工程默认需另行应用")
 func toggle_single() -> void:
 	preview.single = not preview.single
 	preview.focus_on(preview.focus_index)
@@ -415,6 +449,10 @@ func play_draft() -> void:
 	trial.record_path = _trial_record
 	add_child(trial)
 	trial.start_endless(int(seed_control.value))
+	if trial.player.dash_enabled:
+		trial.player.dash_charges=dash_choice.get_selected_id()
+		trial.player.dash_progress=0
+		trial.player._dash_changed("debug_resources")
 	_trial_failure_saved=false
 	trial.trial_speed = [0.0,280.0,330.0,380.0][speed_choice.selected]
 	chrome.hide()
@@ -430,7 +468,7 @@ func play_draft() -> void:
 	hint.offset_right = -16
 	hint.offset_bottom = -12
 	var hint_text := Label.new()
-	hint_text.text = "工具试玩 · 成绩隔离\nF8返回"
+	hint_text.text = "工具试玩 · 资源%d次注入\n成绩隔离 · F8返回"%dash_choice.get_selected_id()
 	hint_text.tooltip_text = "试玩成绩与正式最高分隔离；F8返回当前配置。"
 	hint_text.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	hint_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -442,6 +480,7 @@ func stop_trial() -> void:
 		trial.queue_free()
 		trial = null
 		Input.action_release("jump")
+		Input.action_release("dash")
 		for suffix in ["", ".bak", ".tmp"]:
 			if FileAccess.file_exists(_trial_record + suffix):
 				DirAccess.remove_absolute(_trial_record + suffix)
@@ -474,8 +513,15 @@ func _place_trial(target: float,label_value: String) -> void:
 	var hint: PanelContainer = trial.ui.get_node("EditorReturnHint")
 	hint.offset_top = -96
 	var hint_text: Label = hint.get_child(0)
-	hint_text.text = label_value+"\n距离注入 · 成绩隔离\nF8返回"
+	hint_text.text = label_value+"\n资源%d · 距离注入 · 成绩隔离\nF8返回"%trial.player.dash_charges
 func _input(event: InputEvent) -> void:
+	if is_instance_valid(prototype_view) and event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_F8 and not is_instance_valid(prototype_view.get("trial")):
+		remove_child(prototype_view)
+		prototype_view.queue_free()
+		prototype_view=null
+		chrome.show()
+		get_viewport().set_input_as_handled()
+		return
 	if is_instance_valid(trial) and event is InputEventKey and event.pressed and not event.echo and event.keycode in [KEY_F9,KEY_F10]:
 		if trial.phase == "running" and not get_tree().paused:
 			if event.keycode == KEY_F9:
@@ -495,7 +541,7 @@ static func sequence_errors(sequence: Array[Dictionary], settings: Dictionary) -
 		var previous_relay:=-1
 		for i in sequence.size():
 			var row:=sequence[i]
-			if settings.generator_revision==5:
+			if settings.generator_revision>=5:
 				issues.append_array(Spatial.errors(row.geometry))
 				if i>0:
 					var a: Dictionary=sequence[i-1].geometry.connection
@@ -554,7 +600,7 @@ func play_connection() -> void:
 		_place_trial(target,"连接前起跑 · 第%d段"%index)
 func _process(_delta: float) -> void:
 	if is_instance_valid(trial) and trial.phase=="failed" and not _trial_failure_saved:
-		last_failure=Replay.make(trial.run_seed,trial.generation_profile,trial.player.position.x+trial.course.total_offset,trial.failure_reason)
+		last_failure=Replay.make(trial.run_seed,trial.generation_profile,trial.player.position.x+trial.course.total_offset,trial.failure_reason,trial.player.dash_snapshot())
 		_trial_failure_saved=true
 func save_failure() -> void:
 	if last_failure.is_empty():
@@ -584,6 +630,21 @@ func play_failure() -> void:
 	play_draft()
 	if is_instance_valid(trial):
 		_place_trial(maxf(96,floor(last_failure.failed_x/Library.LENGTH)*Library.LENGTH-192),"失败连接前起跑")
+		if replay_resources.button_pressed and last_failure.has("dash") and trial.player.dash_enabled:
+			trial.player.dash_charges=int(last_failure.dash.charges)
+			trial.player.dash_progress=int(last_failure.dash.progress)
+			trial.player._dash_changed("debug_snapshot")
+			var hint: Label=trial.ui.get_node("EditorReturnHint").get_child(0)
+			hint.text="失败资源快照起跑\n资源%d+%d/2 · 注入/成绩隔离\nF8返回"%[trial.player.dash_charges,trial.player.dash_progress]
+
+func play_prototypes() -> void:
+	if is_instance_valid(trial) or is_instance_valid(prototype_view):
+		return
+	_debounce.stop()
+	prototype_view=load("res://scenes/tools/dash_prototypes.tscn").instantiate()
+	prototype_view.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(prototype_view)
+	chrome.hide()
 
 func _exit_tree() -> void:
 	get_tree().paused = false

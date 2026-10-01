@@ -1,78 +1,82 @@
 {
-  "schema": 1,
-  "generator_revision": 5,
-  "stage_distance": 8400,
-  "relay_min": 5,
-  "relay_max": 6,
-  "templates": {
-    "safe_a": {
-      "enabled": true,
-      "weight": 1
-    },
-    "safe_b": {
-      "enabled": true,
-      "weight": 4
-    },
-    "gap": {
-      "enabled": true,
-      "weight": 4
-    },
-    "spike": {
-      "enabled": true,
-      "weight": 1
-    },
-    "relay_a": {
-      "enabled": true,
-      "weight": 4
-    },
-    "wall_a": {
-      "enabled": false,
-      "weight": 1
-    },
-    "step": {
-      "enabled": true,
-      "weight": 4
-    },
-    "rhythm_a": {
-      "enabled": true,
-      "weight": 4
-    },
-    "rhythm_b": {
-      "enabled": true,
-      "weight": 1
-    },
-    "rhythm_c": {
-      "enabled": true,
-      "weight": 1
-    },
-    "relay_b": {
-      "enabled": true,
-      "weight": 4
-    },
-    "wall_b": {
-      "enabled": false,
-      "weight": 1
-    }
-  },
-  "height_min": 32,
-  "height_max": 64,
-  "gap_min": 64,
-  "gap_max": 96,
-  "phase_one": 10000,
-  "phase_two": 30000,
-  "challenge_weight": 1,
-  "challenge_limit": 2,
-  "station_min": 16,
-  "station_max": 24,
-  "combo_bonus": 200,
-  "station_bonus": 200,
-  "elevation_step": 64,
-  "elevation_range": 64,
-  "upper_span": 2,
-  "spatial_weights": {
-    "slope": 2,
-    "terrace": 2,
-    "bridge": 2,
-    "basin": 2
-  }
+	"schema": 1,
+	"generator_revision": 6,
+	"stage_distance": 8400,
+	"relay_min": 5,
+	"relay_max": 6,
+	"templates": {
+		"safe_a": {
+			"enabled": true,
+			"weight": 1
+		},
+		"safe_b": {
+			"enabled": true,
+			"weight": 4
+		},
+		"gap": {
+			"enabled": true,
+			"weight": 4
+		},
+		"spike": {
+			"enabled": true,
+			"weight": 1
+		},
+		"relay_a": {
+			"enabled": true,
+			"weight": 4
+		},
+		"wall_a": {
+			"enabled": false,
+			"weight": 1
+		},
+		"step": {
+			"enabled": true,
+			"weight": 4
+		},
+		"rhythm_a": {
+			"enabled": true,
+			"weight": 4
+		},
+		"rhythm_b": {
+			"enabled": true,
+			"weight": 1
+		},
+		"rhythm_c": {
+			"enabled": true,
+			"weight": 1
+		},
+		"relay_b": {
+			"enabled": true,
+			"weight": 4
+		},
+		"wall_b": {
+			"enabled": false,
+			"weight": 1
+		}
+	},
+	"height_min": 32,
+	"height_max": 64,
+	"gap_min": 64,
+	"gap_max": 96,
+	"phase_one": 10000,
+	"phase_two": 30000,
+	"challenge_weight": 1,
+	"challenge_limit": 2,
+	"station_min": 16,
+	"station_max": 24,
+	"combo_bonus": 200,
+	"station_bonus": 200,
+	"elevation_step": 64,
+	"elevation_range": 64,
+	"upper_span": 2,
+	"spatial_weights": {
+		"slope": 2,
+		"terrace": 2,
+		"bridge": 2,
+		"basin": 2
+	},
+	"dash_duration": 0.2,
+	"dash_speed": 800,
+	"skill_weight": 2,
+	"skill_limit": 1
 }

@@ -1,0 +1,173 @@
+{
+  "checks": [
+    {
+      "check": "main_menu_default_pursuit",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "presentation_bound",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "real_front_uses_selected_speed",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "threat_loop_started",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "running_pause_freezes_everything",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "threat_loop_paused",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "resume_restores_running_and_audio",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "pause_r_resets_front_and_stats",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "restart_no_loop_or_warning",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "same_frame_failure_priority",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "failure_does_not_write_best",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "repeated_result_is_ignored",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "failure_stops_threat_loop",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "pause_during_pending_failure_resolves",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "late_contact_after_pause_resolves",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "pending_goal_waits_during_pause",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "pending_goal_resolves_on_resume",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "late_goal_after_pause_is_retained",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "late_goal_resolves_after_resume",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "physical_caught_beats_real_goal",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "physical_fall_is_round_failure",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "20_real_hazard_failure_replays",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "time_trial_disables_pursuer",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "legacy_late_contact_preserves_pause",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "legacy_late_contact_recovers_on_resume",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "legacy_hazard_recovers",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "legacy_recovery_keeps_time",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "trial_success_writes_only_trial_best",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "pursuit_best_is_separate",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "pursuit_success_and_best",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "later_failure_preserves_success_best",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "menu_cleans_threat",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "lab_keeps_legacy_rules",
+      "detail": "",
+      "passed": true
+    }
+  ],
+  "godot": "4.7.2-stable (official)",
+  "passed": true,
+  "scope": "State/collision fixtures; full no-teleport routes are in route-budget-results.json.",
+  "suite": "v0.2-integrated-rules"
+}

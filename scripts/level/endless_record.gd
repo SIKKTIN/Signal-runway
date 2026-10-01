@@ -1,6 +1,7 @@
 extends RefCounted
 ## Separate local endless record. Static-course session scores are not migrated.
-const DEFAULT_PATH := "user://signal_runway_endless_v07.json"
+const DEFAULT_PATH := "user://signal_runway_endless_v08.json"
+const V07_PATH := "user://signal_runway_endless_v07.json"
 const V06_PATH := "user://signal_runway_endless_v06.json"
 const V05_PATH := "user://signal_runway_endless_v05.json"
 const LEGACY_PATH := "user://signal_runway_endless.json"
@@ -29,8 +30,11 @@ func load_from(file_path: String) -> void:
 	if (data.get("schema") != 1 and data.get("schema") != 2) or not data.get("best") is Dictionary:
 		status = "invalid"
 		return
-	if data.schema == 2 and ((data.get("rules_revision") != 5 and data.get("rules_revision") != 6 and data.get("rules_revision") != 7) or (data.get("generator_revision") != 2 and data.get("generator_revision") != 3 and data.get("generator_revision") != 4 and data.get("generator_revision") != 5) or not data.get("profile_fingerprint") is String or data.profile_fingerprint.length() != 12):
+	if data.schema == 2 and ((data.get("rules_revision") != 5 and data.get("rules_revision") != 6 and data.get("rules_revision") != 7 and data.get("rules_revision") != 8) or (data.get("generator_revision") != 2 and data.get("generator_revision") != 3 and data.get("generator_revision") != 4 and data.get("generator_revision") != 5 and data.get("generator_revision") != 6) or not data.get("profile_fingerprint") is String or data.profile_fingerprint.length() != 12):
 		status = "invalid"
+		return
+	if data.schema==2 and ((data.rules_revision==8 and data.generator_revision!=6) or (data.generator_revision==6 and data.rules_revision!=8)):
+		status="invalid"
 		return
 	var row: Dictionary = data.best
 	for key in ["score", "distance", "nodes", "seed"]:

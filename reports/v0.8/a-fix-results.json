@@ -1,0 +1,237 @@
+{
+	"checks": [
+		{
+			"actual": null,
+			"check": "initial_resource",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "unique_node_only",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "two_nodes_refill",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "full_no_hidden_credit",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "start_consumes_once",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "damage_cancels_no_refund",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "recovery_keeps_resource",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "dead_cannot_dash_or_charge",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "retry_initial_resource",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "v5_normalization_preserved",
+			"passed": true
+		},
+		{
+			"actual": null,
+			"check": "v6_profile_valid",
+			"passed": true
+		},
+		{
+			"actual": {
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"health": 3,
+				"kind": "shortcut",
+				"passed": true,
+				"phase": "prototype_done",
+				"position": "(3640.524, 432.9252)",
+				"score": {
+					"combo": 200,
+					"completed": 1,
+					"distance": 354,
+					"heal_choices": 0,
+					"nodes": 300,
+					"score_choices": 0,
+					"station": 0
+				},
+				"speed": 280,
+				"strategy": "skill"
+			},
+			"check": "shortcut_280_skill",
+			"passed": true
+		},
+		{
+			"actual": {
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"health": 3,
+				"kind": "shortcut",
+				"passed": true,
+				"phase": "prototype_done",
+				"position": "(3640.668, 432.9252)",
+				"score": {
+					"combo": 200,
+					"completed": 1,
+					"distance": 354,
+					"heal_choices": 0,
+					"nodes": 300,
+					"score_choices": 0,
+					"station": 0
+				},
+				"speed": 330,
+				"strategy": "skill"
+			},
+			"check": "shortcut_330_skill",
+			"passed": true
+		},
+		{
+			"actual": {
+				"dash": {
+					"active": false,
+					"charges": 1,
+					"enabled": true,
+					"progress": 1,
+					"refilled": 1,
+					"remaining": 0.0,
+					"used": 1
+				},
+				"health": 3,
+				"kind": "shortcut",
+				"passed": true,
+				"phase": "prototype_done",
+				"position": "(3641.486, 432.9252)",
+				"score": {
+					"combo": 200,
+					"completed": 1,
+					"distance": 354,
+					"heal_choices": 0,
+					"nodes": 300,
+					"score_choices": 0,
+					"station": 0
+				},
+				"speed": 380,
+				"strategy": "skill"
+			},
+			"check": "shortcut_380_skill",
+			"passed": true
+		}
+	],
+	"method": "Real Main/Player/course, fixed60 headless, synthetic jump/dash inputs from declared windows. Initial kind/profile/trial speed and zero resources on stable route explicitly injected. Rescue skill uses deliberate short jump; no position/chase/time injections during traversal. Unit damage/recovery/terminal are explicit fixtures. Fun is not measured.",
+	"passed": true,
+	"runs": [
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.524, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 280,
+			"strategy": "skill"
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3640.668, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 330,
+			"strategy": "skill"
+		},
+		{
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"health": 3,
+			"kind": "shortcut",
+			"passed": true,
+			"phase": "prototype_done",
+			"position": "(3641.486, 432.9252)",
+			"score": {
+				"combo": 200,
+				"completed": 1,
+				"distance": 354,
+				"heal_choices": 0,
+				"nodes": 300,
+				"score_choices": 0,
+				"station": 0
+			},
+			"speed": 380,
+			"strategy": "skill"
+		}
+	]
+}

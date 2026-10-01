@@ -1,0 +1,115 @@
+{
+	"checks": [
+		{
+			"check": "default_config6_valid",
+			"passed": true
+		},
+		{
+			"check": "unverified_dash_numbers_rejected",
+			"passed": true
+		},
+		{
+			"check": "v08_atomic_save",
+			"passed": true
+		},
+		{
+			"check": "v08_reloads",
+			"passed": true
+		},
+		{
+			"check": "low_score_preserves_best",
+			"passed": true
+		},
+		{
+			"check": "rules8_old_generator_rejected",
+			"passed": true
+		},
+		{
+			"check": "failure_snapshot_schema2",
+			"passed": true
+		},
+		{
+			"check": "failure_atomic_save",
+			"passed": true
+		},
+		{
+			"check": "failure_snapshot_roundtrip",
+			"passed": false
+		},
+		{
+			"check": "bad_snapshot_rejected",
+			"passed": true
+		},
+		{
+			"check": "legacy_failure_schema1",
+			"passed": true
+		},
+		{
+			"check": "revision_2_feature_gate",
+			"passed": true
+		},
+		{
+			"check": "revision_3_feature_gate",
+			"passed": true
+		},
+		{
+			"check": "revision_4_feature_gate",
+			"passed": true
+		},
+		{
+			"check": "revision_5_feature_gate",
+			"passed": true
+		},
+		{
+			"check": "revision_6_feature_gate",
+			"passed": true
+		},
+		{
+			"check": "flow_duplicate_node_no_refill_or_score",
+			"passed": true
+		},
+		{
+			"check": "terminal_cancels_resource_and_player",
+			"passed": true
+		},
+		{
+			"check": "formal_record_state_preserved_user://signal_runway_endless_v08.json",
+			"passed": true
+		},
+		{
+			"check": "formal_record_state_preserved_user://signal_runway_endless_v07.json",
+			"passed": true
+		},
+		{
+			"check": "formal_record_state_preserved_user://signal_runway_endless_v06.json",
+			"passed": true
+		},
+		{
+			"check": "formal_record_state_preserved_user://signal_runway_endless_v05.json",
+			"passed": true
+		},
+		{
+			"check": "formal_record_state_preserved_user://signal_runway_endless.json",
+			"passed": true
+		},
+		{
+			"check": "formal_record_state_preserved_user://map_editor_failure_v08.json",
+			"passed": true
+		},
+		{
+			"check": "formal_record_state_preserved_user://map_editor_failure_v07.json",
+			"passed": true
+		}
+	],
+	"formal_before": {
+		"user://map_editor_failure_v07.json": "missing",
+		"user://map_editor_failure_v08.json": "missing",
+		"user://signal_runway_endless.json": "missing",
+		"user://signal_runway_endless_v05.json": "missing",
+		"user://signal_runway_endless_v06.json": "missing",
+		"user://signal_runway_endless_v07.json": "missing",
+		"user://signal_runway_endless_v08.json": "missing"
+	},
+	"method": "Isolated records and real Main revisions2..6; explicit invalid metadata/snapshot, duplicate relay and terminal fixtures. Missing means absent observation, not hash validation of existing records.",
+	"passed": false
+}

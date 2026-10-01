@@ -13,6 +13,12 @@ signal endless_stats_changed(score: int, distance: float, count: int, stage: int
 signal world_shifted(distance: float)
 signal route_event(kind: String, data: Dictionary)
 signal route_state_changed(state: Dictionary)
+signal dash_state_changed(state: Dictionary)
+signal skill_state_changed(state: Dictionary)
+var _last_skill_state := ""
+var dash_prototype_kind := ""
+var _dash_fallback: Label
+var _dash_status: Control
 const RouteChallenge = preload("res://scripts/level/route_challenge.gd")
 var routes := RouteChallenge.new()
 var _feature_from := Vector2.ZERO
@@ -91,7 +97,7 @@ func _ready() -> void:
 		var loaded := GenerationProfile.load_profile()
 		generation_profile = loaded.profile
 		generation_notice = "生成配置不可用，已回退内置默认" if loaded.fallback else ""
-	endless_record.expected_rules_revision = 7
+	endless_record.expected_rules_revision = rules_revision()
 	reload_endless_record()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Resolve the front after the player's current-frame move_and_slide.
@@ -145,6 +151,7 @@ func _build_world(use_lab: bool) -> void:
 		course.run_seed = run_seed
 		course.prototype = endless_prototype
 		course.test_sequence = endless_test_sequence
+		course.skill_prototype = dash_prototype_kind
 	world.add_child(course)
 	player = PlayerScene.instantiate()
 	player.name = "Player"
@@ -152,9 +159,14 @@ func _build_world(use_lab: bool) -> void:
 	player.reset_at(course.spawn_position)
 	player.auto_run = is_endless()
 	player.health_enabled = is_endless()
-	if is_endless() and generation_profile.generator_revision==5:
+	if is_endless() and generation_profile.generator_revision>=5:
 		player.floor_snap_length=16.0
 		player.floor_constant_speed=true
+	player.dash_enabled=is_endless() and generation_profile.generator_revision==6
+	if player.dash_enabled:
+		player.dash_duration=generation_profile.dash_duration
+		player.dash_speed=generation_profile.dash_speed
+		player.dash_state_changed.connect(func(snapshot: Dictionary):dash_state_changed.emit(snapshot))
 	player.damage_taken.connect(_on_damage_taken)
 	_previous_position = player.position
 	player.died.connect(_on_death)
@@ -162,7 +174,7 @@ func _build_world(use_lab: bool) -> void:
 	camera = Camera2D.new()
 	camera.name = "FollowCamera"
 	camera.position = Vector2(480, 270)
-	camera.position_smoothing_enabled = not (is_endless() and generation_profile.generator_revision==5)
+	camera.position_smoothing_enabled = not (is_endless() and generation_profile.generator_revision>=5)
 	camera.position_smoothing_speed = 8.0
 	world.add_child(camera)
 	camera.make_current()
@@ -175,6 +187,12 @@ func _build_world(use_lab: bool) -> void:
 	_install_presentation()
 
 func _install_presentation() -> void:
+	if is_instance_valid(_dash_status):
+		_dash_status.queue_free()
+		_dash_status=null
+	if is_instance_valid(_dash_fallback):
+		_dash_fallback.queue_free()
+		_dash_fallback=null
 	if is_instance_valid(_route_status):
 		_route_status.queue_free()
 		_route_status=null
@@ -187,11 +205,26 @@ func _install_presentation() -> void:
 		ui.add_child(_survival_status)
 	ui.external_endless_hud = false
 	if is_endless():
-		if generation_profile.generator_revision==5 and ResourceLoader.exists("res://scripts/visual/spatial_visual.gd"):
+		if generation_profile.generator_revision>=5 and ResourceLoader.exists("res://scripts/visual/spatial_visual.gd"):
 			var spatial_visual: Node2D=load("res://scripts/visual/spatial_visual.gd").new()
 			spatial_visual.name="SpatialVisual"
 			world.add_child(spatial_visual)
 			spatial_visual.bind_flow(self,course)
+		if player.dash_enabled:
+			if ResourceLoader.exists("res://scripts/visual/dash_visual.gd"):
+				var dash_visual: Node2D=load("res://scripts/visual/dash_visual.gd").new()
+				dash_visual.name="DashVisual"
+				world.add_child(dash_visual)
+				dash_visual.bind_flow(self,course)
+			if ResourceLoader.exists("res://scenes/ui/v08_dash_status.tscn"):
+				_dash_status=load("res://scenes/ui/v08_dash_status.tscn").instantiate()
+				ui.add_child(_dash_status)
+				_dash_status.bind_flow(self)
+			else:
+				_dash_fallback=Label.new()
+				_dash_fallback.position=Vector2(24,132)
+				_dash_fallback.add_theme_color_override("font_color",Color("ffd166"))
+				ui.add_child(_dash_fallback)
 		if generation_profile.generator_revision>=4 and ResourceLoader.exists("res://scripts/visual/route_visual.gd"):
 			var route_visual: Node2D=load("res://scripts/visual/route_visual.gd").new()
 			route_visual.name="RouteVisual"
@@ -279,10 +312,13 @@ func start_challenge(use_lab: bool = false, selected_mode: String = "", selected
 	_grounded_frames = 0
 	relay_delay_chunks.clear()
 	routes.reset()
+	_last_skill_state=""
 	_feature_pending=false
 	_feature_damaged=false
 	phase = "ready"
 	_load_best()
+	if is_endless():
+		reload_endless_record()
 	_build_world(use_lab)
 	ui.set_mode(mode)
 	ui.set_course("lab" if lab_mode else level_id, course.section_names)
@@ -317,7 +353,13 @@ func start_endless(seed_value: int = -1) -> void:
 func is_endless() -> bool:
 	return level_id == "endless" and not lab_mode
 
+func rules_revision() -> int:
+	return 8 if generation_profile.get("generator_revision",6)==6 else 7
+
 func reload_endless_record() -> void:
+	if record_path in [EndlessRecordScript.DEFAULT_PATH,EndlessRecordScript.V07_PATH]:
+		record_path=EndlessRecordScript.DEFAULT_PATH if rules_revision()==8 else EndlessRecordScript.V07_PATH
+	endless_record.expected_rules_revision=rules_revision()
 	endless_record.load_from(record_path)
 	best_score = int(endless_record.best.score)
 
@@ -430,21 +472,39 @@ func _physics_process(delta: float) -> void:
 				for id in relay_delay_chunks.keys():
 					if not active_ids.has(id):
 						relay_delay_chunks.erase(id)
+				player.prune_dash_nodes(active_ids)
 				if course.streaming and player.position.x >= course.REBASE_AT:
 					_shift_endless_world(course.REBASE_BY)
 	if phase in ["ready", "running"]:
-		if is_endless() and generation_profile.generator_revision==5:
+		if is_endless() and generation_profile.generator_revision>=5:
 			# Smooth world movement while keeping landings above the survival HUD.
 			var blend:=1.0-exp(-8.0*delta)
+			# Revision 6 relay chains can jump from y224; keep the hero below the skill card.
+			var camera_min_y:=170.0 if generation_profile.generator_revision==6 else 270.0
 			camera.position.x=lerpf(camera.position.x,maxf(player.position.x+180,480),blend)
-			camera.position.y=lerpf(camera.position.y,clampf(player.position.y-130,270,420),blend)
+			camera.position.y=lerpf(camera.position.y,clampf(player.position.y-130,camera_min_y,420),blend)
 			# 412 center +15 feet +15 maximum next-frame fall leaves HUD450 clear.
-			camera.position.y=maxf(camera.position.y,clampf(player.position.y-142,270,420))
+			camera.position.y=maxf(camera.position.y,clampf(player.position.y-142,camera_min_y,420))
 		else:
 			camera.position.x = maxf(player.position.x + 180.0, 480.0) if is_endless() else clampf(player.position.x + player.facing * 96.0, 480.0, course.course_length - 480.0)
 			if is_endless():
 				camera.position.y = clampf(player.position.y-163,270,420)
 	_update_ui()
+	if is_instance_valid(_dash_fallback):
+		_dash_fallback.visible=player.dash_enabled and phase!="menu"
+		_dash_fallback.text="Shift冲刺 %d/2 · 充能 %d/2"%[player.dash_charges,player.dash_progress]
+	if player.dash_enabled:
+		var offer:=current_skill_offer()
+		var key:=JSON.stringify(offer)
+		if key!=_last_skill_state:
+			_last_skill_state=key
+			skill_state_changed.emit(offer)
+	if not dash_prototype_kind.is_empty() and phase=="running" and run_distance>=3540:
+		phase="prototype_done"
+		player.set_control_enabled(false)
+		player.set_physics_process(false)
+		chase.set_enabled(false)
+		ui.set_notice("原型完成 · R同图再试 · F8返回原型选择",Color("45dccb"))
 	_previous_position = player.position
 
 func _shift_endless_world(distance: float) -> void:
@@ -476,6 +536,7 @@ func _queue_relay(relay_id: String) -> void:
 func _activate_pending_relays() -> void:
 	for relay_id in _relay_pending:
 		if course.activate_relay(relay_id):
+			player.charge_dash(relay_id)
 			if is_endless() and generation_profile.generator_revision>=4:
 				routes.node(relay_id)
 			relay_count += 1
@@ -557,7 +618,8 @@ func _restore_safe_point() -> void:
 			player.die("caught")
 			return
 		player.recover_at(local)
-		camera.position.y = clampf(local.y-(130 if generation_profile.generator_revision==5 else 163),270,420)
+		var camera_min_y:=170.0 if generation_profile.generator_revision==6 else 270.0
+		camera.position.y = clampf(local.y-(130 if generation_profile.generator_revision>=5 else 163),camera_min_y,420)
 		camera.reset_smoothing()
 		_previous_position = local
 		return
@@ -637,9 +699,9 @@ func _finish_failure(reason: String) -> void:
 	ui.set_relay_count(relay_count)
 	if is_endless():
 		run_score=total_score()
-		if record_path==EndlessRecordScript.DEFAULT_PATH:
-			GenerationReplay.save(GenerationReplay.make(run_seed,generation_profile,player.position.x+course.total_offset,reason))
-		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed, {"rules_revision":7,"generator_revision":generation_profile.generator_revision,"profile_fingerprint":GenerationProfile.fingerprint(generation_profile),"score_breakdown":score_breakdown()})
+		if record_path in [EndlessRecordScript.DEFAULT_PATH,EndlessRecordScript.V07_PATH]:
+			GenerationReplay.save(GenerationReplay.make(run_seed,generation_profile,player.position.x+course.total_offset,reason,player.dash_snapshot()),GenerationReplay.DEFAULT_PATH if rules_revision()==8 else GenerationReplay.V07_PATH)
+		new_record = endless_record.consider(record_path, run_score, run_distance, relay_count, run_seed, {"rules_revision":rules_revision(),"generator_revision":generation_profile.generator_revision,"profile_fingerprint":GenerationProfile.fingerprint(generation_profile),"score_breakdown":score_breakdown()})
 		best_score = int(endless_record.best.score)
 		ui.show_endless_result(reason, elapsed, run_score, run_distance, relay_count, run_seed, best_score, new_record, endless_record.status,score_breakdown())
 	else:
@@ -693,6 +755,15 @@ func _update_ui() -> void:
 
 func total_score() -> int:
 	return int(floor(run_distance/10.0))+relay_count*100+routes.combo_score+routes.station_score
+func current_skill_offer() -> Dictionary:
+	if not is_endless() or not player.dash_enabled or phase not in ["running","ready","paused"]:
+		return {}
+	for chunk in course.chunks:
+		var d: Dictionary=chunk.get("geometry",{})
+		if d.has("skill") and player.position.x>=chunk.origin-320 and player.position.x<chunk.origin+1270:
+			var s: Dictionary=d.skill
+			return {"id":chunk.id,"kind":s.kind,"required":int(s.required),"dash_cost":int(s.get("dash_cost",0)),"expected_refill":int(s.get("expected_refill",1)),"reward_nodes":int(s.reward_nodes),"charges":player.dash_charges,"available":player.dash_charges>=int(s.required),"entry_global_x":float(chunk.origin+course.total_offset+s.entry_x),"active":routes.active==chunk.id,"stable":true}
+	return {}
 func score_breakdown() -> Dictionary:
 	return {"distance":int(floor(run_distance/10.0)),"nodes":relay_count*100,"combo":routes.combo_score,"station":routes.station_score,"completed":routes.completed,"heal_choices":routes.heal_choices,"score_choices":routes.score_choices}
 func _flush_route_events() -> void:

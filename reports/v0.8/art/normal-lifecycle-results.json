@@ -1,0 +1,22 @@
+{
+	"checks": [
+		{
+			"check": "actual_default_gen6",
+			"passed": true
+		},
+		{
+			"check": "normal_clock_start_cue",
+			"passed": true
+		},
+		{
+			"check": "normal_clock_dash_ends",
+			"passed": true
+		},
+		{
+			"check": "normal_clock_refill_cue",
+			"passed": true
+		}
+	],
+	"method": "Actual default Main gen6, seed404, normal GPU clock (no fixed-fps). Synthetic dash press; explicit unique-node public API refill fixture. Audio playback state/position, not human listening or general leak proof.",
+	"passed": true
+}

@@ -1,0 +1,22 @@
+{
+  "960": {
+    "pause_changed_pixels": 0,
+    "effect_changed_pixels": 573,
+    "bright_neutral_changed_pixels": 0,
+    "method": "Actual Main ground dash, frozen pause with pause overlay hidden for with/without DashVisual pair. Not natural traversal or business validation."
+  },
+  "1280": {
+    "pause_changed_pixels": 0,
+    "effect_changed_pixels": 979,
+    "bright_neutral_changed_pixels": 0,
+    "method": "Actual Main ground dash, frozen pause with pause overlay hidden for with/without DashVisual pair. Not natural traversal or business validation."
+  },
+  "passed": true,
+  "sources": {
+    "scripts/visual/dash_visual.gd": "7679156128da73f72e438a6361edc05c2e62c50e7a98fd7aa1b0b99ce542f51b",
+    "scenes/ui/v08_dash_status.gd": "fdfe4569c13edf2cdc7e68ab99240e608a6679255b95e87502c4a1b97a4bfe7a",
+    "scenes/ui/v08_dash_status.tscn": "41538f15e72bb1bfb026d6738dc951d3f52363a38448a47a71e8eab362d1b00a",
+    "assets/audio/v08/dash_start.wav": "a968f3842aa0f106694f91e60ff4bdfbd19a7162f4a547fd955a5860d65006b9",
+    "assets/audio/v08/dash_refill.wav": "8b4607245e130c2c3d4388aca34cc53a5fd76a0ca47154a184cd5f78e14b0c18"
+  }
+}

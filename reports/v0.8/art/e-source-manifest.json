@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-01",
+  "primary_count": 6,
+  "files": {
+    "scripts/visual/dash_visual.gd": "7679156128da73f72e438a6361edc05c2e62c50e7a98fd7aa1b0b99ce542f51b",
+    "scripts/visual/route_visual.gd": "3f90a4e6d191dc081b37999e255a8e8276c392fc54d2d954da66021715bf41aa",
+    "scenes/ui/v08_dash_status.gd": "fdfe4569c13edf2cdc7e68ab99240e608a6679255b95e87502c4a1b97a4bfe7a",
+    "scenes/ui/v08_dash_status.tscn": "41538f15e72bb1bfb026d6738dc951d3f52363a38448a47a71e8eab362d1b00a",
+    "assets/audio/v08/dash_start.wav": "a968f3842aa0f106694f91e60ff4bdfbd19a7162f4a547fd955a5860d65006b9",
+    "assets/audio/v08/dash_refill.wav": "8b4607245e130c2c3d4388aca34cc53a5fd76a0ca47154a184cd5f78e14b0c18",
+    "scripts/visual/dash_visual.gd.uid": "132a189c55dc9ee19b4aa85fd8866b5551054fac6555747990d56867073a5d1e",
+    "scripts/visual/route_visual.gd.uid": "74ea2f08bad024a0d7f5a5e7f1b8165d4eb10d85d194d0f67c75e74a48ab4f3c",
+    "scenes/ui/v08_dash_status.gd.uid": "f5c0c98775d516dc31899176cd959290bd61d0ea9246441704d01bb2f3e97cd6",
+    "assets/audio/v08/dash_start.wav.import": "4f8cfdc6886199aeac672e052f603d68f5c1ef3e7f509f1dbfbc4bb826377c6b",
+    "assets/audio/v08/dash_refill.wav.import": "75c2a3725ffc76ab435a2d0031c1ca6d70da3028127c9875bed1cf2749aac52a"
+  },
+  "note": "Artist E source delivery snapshot, not whole production freeze; producer owns concurrent Main/C work."
+}

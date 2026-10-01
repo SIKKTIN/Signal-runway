@@ -1,0 +1,603 @@
+{
+	"dash": {
+		"active": false,
+		"charges": 1,
+		"enabled": true,
+		"progress": 1,
+		"refilled": 8,
+		"remaining": 0.0,
+		"used": 8
+	},
+	"distance": 98673.63671875,
+	"elapsed": 299.983333333389,
+	"health": 3,
+	"max_chunks": 7,
+	"max_dash_identities": 4,
+	"method": "Frozen candidate638 actual Main natural start, fixed60 headless geometry-aware synthetic jump/dash, resource-based route choice. No traversal position/chase/clock/resource injection; injury explicitly at120 game seconds. 300 game seconds, not five wall-clock GPU minutes or human fun proof.",
+	"offset": 76800.0,
+	"passed": true,
+	"phase": "running",
+	"reason": "",
+	"samples": [
+		{
+			"chunks": 3,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"dash_identities": 0,
+			"distance": 0.0,
+			"elapsed": 0.0,
+			"health": 3,
+			"nodes": 141,
+			"offset": 0.0,
+			"static_memory": 332476044
+		},
+		{
+			"chunks": 5,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"dash_identities": 0,
+			"distance": 2801.35034179688,
+			"elapsed": 10.0000000000001,
+			"health": 3,
+			"nodes": 171,
+			"offset": 0.0,
+			"static_memory": 373531154
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 0,
+				"remaining": 0.0,
+				"used": 0
+			},
+			"dash_identities": 0,
+			"distance": 5674.57080078125,
+			"elapsed": 20.0000000000001,
+			"health": 3,
+			"nodes": 199,
+			"offset": 0.0,
+			"static_memory": 394250524
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"dash_identities": 3,
+			"distance": 8718.453125,
+			"elapsed": 29.9999999999996,
+			"health": 3,
+			"nodes": 195,
+			"offset": 0.0,
+			"static_memory": 396671846
+		},
+		{
+			"chunks": 5,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 1,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"dash_identities": 0,
+			"distance": 11700.765625,
+			"elapsed": 39.999999999999,
+			"health": 3,
+			"nodes": 183,
+			"offset": 0.0,
+			"static_memory": 376511736
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 2,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"dash_identities": 4,
+			"distance": 14753.685546875,
+			"elapsed": 49.9999999999984,
+			"health": 3,
+			"nodes": 201,
+			"offset": 0.0,
+			"static_memory": 396744518
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 2,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"dash_identities": 0,
+			"distance": 17871.82421875,
+			"elapsed": 59.9999999999979,
+			"health": 3,
+			"nodes": 197,
+			"offset": 0.0,
+			"static_memory": 396315068
+		},
+		{
+			"chunks": 7,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 2,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"dash_identities": 4,
+			"distance": 21055.443359375,
+			"elapsed": 69.9999999999973,
+			"health": 3,
+			"nodes": 209,
+			"offset": 0.0,
+			"static_memory": 416910312
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 2,
+				"remaining": 0.0,
+				"used": 1
+			},
+			"dash_identities": 0,
+			"distance": 24295.5625,
+			"elapsed": 79.9999999999967,
+			"health": 3,
+			"nodes": 191,
+			"offset": 0.0,
+			"static_memory": 396717602
+		},
+		{
+			"chunks": 7,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 3,
+				"remaining": 0.0,
+				"used": 3
+			},
+			"dash_identities": 3,
+			"distance": 27754.08203125,
+			"elapsed": 89.9999999999962,
+			"health": 3,
+			"nodes": 203,
+			"offset": 0.0,
+			"static_memory": 417710416
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 3,
+				"remaining": 0.0,
+				"used": 3
+			},
+			"dash_identities": 0,
+			"distance": 31136.09375,
+			"elapsed": 99.9999999999956,
+			"health": 3,
+			"nodes": 191,
+			"offset": 0.0,
+			"static_memory": 397156380
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 4,
+				"remaining": 0.0,
+				"used": 3
+			},
+			"dash_identities": 4,
+			"distance": 34581.728515625,
+			"elapsed": 109.999999999995,
+			"health": 3,
+			"nodes": 193,
+			"offset": 25600.0,
+			"static_memory": 397562478
+		},
+		{
+			"chunks": 7,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 4,
+				"remaining": 0.0,
+				"used": 3
+			},
+			"dash_identities": 0,
+			"distance": 38085.119140625,
+			"elapsed": 119.999999999994,
+			"health": 3,
+			"nodes": 203,
+			"offset": 25600.0,
+			"static_memory": 418136792
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 4,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 3,
+			"distance": 41017.4755859375,
+			"elapsed": 129.999999999996,
+			"health": 2,
+			"nodes": 189,
+			"offset": 25600.0,
+			"static_memory": 398374846
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 4,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 3,
+			"distance": 43878.7421875,
+			"elapsed": 140.000000000004,
+			"health": 2,
+			"nodes": 193,
+			"offset": 25600.0,
+			"static_memory": 398407742
+		},
+		{
+			"chunks": 7,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 4,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 0,
+			"distance": 46812.83984375,
+			"elapsed": 150.000000000012,
+			"health": 2,
+			"nodes": 211,
+			"offset": 25600.0,
+			"static_memory": 417800764
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 5,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 4,
+			"distance": 49812.19921875,
+			"elapsed": 160.000000000019,
+			"health": 2,
+			"nodes": 201,
+			"offset": 25600.0,
+			"static_memory": 397637834
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 5,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 0,
+			"distance": 52872.70703125,
+			"elapsed": 170.000000000027,
+			"health": 2,
+			"nodes": 195,
+			"offset": 25600.0,
+			"static_memory": 397204592
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 5,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 4,
+			"distance": 55989.015625,
+			"elapsed": 180.000000000035,
+			"health": 2,
+			"nodes": 195,
+			"offset": 25600.0,
+			"static_memory": 397219400
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 5,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 0,
+			"distance": 59170.4233398438,
+			"elapsed": 190.000000000043,
+			"health": 2,
+			"nodes": 203,
+			"offset": 51200.0,
+			"static_memory": 397663802
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 5,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 1,
+			"distance": 62421.6455078125,
+			"elapsed": 200.000000000051,
+			"health": 3,
+			"nodes": 203,
+			"offset": 51200.0,
+			"static_memory": 398059146
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 5,
+				"remaining": 0.0,
+				"used": 4
+			},
+			"dash_identities": 0,
+			"distance": 65715.0380859375,
+			"elapsed": 210.000000000059,
+			"health": 3,
+			"nodes": 197,
+			"offset": 51200.0,
+			"static_memory": 397634844
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 6,
+				"remaining": 0.0,
+				"used": 6
+			},
+			"dash_identities": 3,
+			"distance": 69283.17578125,
+			"elapsed": 220.000000000067,
+			"health": 3,
+			"nodes": 191,
+			"offset": 51200.0,
+			"static_memory": 397607090
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 6,
+				"remaining": 0.0,
+				"used": 6
+			},
+			"dash_identities": 0,
+			"distance": 72729.427734375,
+			"elapsed": 230.000000000075,
+			"health": 3,
+			"nodes": 195,
+			"offset": 51200.0,
+			"static_memory": 397627070
+		},
+		{
+			"chunks": 7,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 7,
+				"remaining": 0.0,
+				"used": 6
+			},
+			"dash_identities": 4,
+			"distance": 76255.828125,
+			"elapsed": 240.000000000083,
+			"health": 3,
+			"nodes": 207,
+			"offset": 51200.0,
+			"static_memory": 417813372
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": true,
+				"charges": 1,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 7,
+				"remaining": 0.1,
+				"used": 7
+			},
+			"dash_identities": 2,
+			"distance": 79882.8046875,
+			"elapsed": 250.000000000091,
+			"health": 3,
+			"nodes": 195,
+			"offset": 51200.0,
+			"static_memory": 398069958
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 7,
+				"remaining": 0.0,
+				"used": 7
+			},
+			"dash_identities": 3,
+			"distance": 83586.03125,
+			"elapsed": 260.000000000092,
+			"health": 3,
+			"nodes": 191,
+			"offset": 51200.0,
+			"static_memory": 397619842
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 8,
+				"remaining": 0.0,
+				"used": 7
+			},
+			"dash_identities": 4,
+			"distance": 87329.8046875,
+			"elapsed": 270.000000000083,
+			"health": 3,
+			"nodes": 197,
+			"offset": 76800.0,
+			"static_memory": 397654898
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 2,
+				"enabled": true,
+				"progress": 0,
+				"refilled": 8,
+				"remaining": 0.0,
+				"used": 7
+			},
+			"dash_identities": 0,
+			"distance": 91070.091796875,
+			"elapsed": 280.000000000074,
+			"health": 3,
+			"nodes": 187,
+			"offset": 76800.0,
+			"static_memory": 398020832
+		},
+		{
+			"chunks": 6,
+			"dash": {
+				"active": false,
+				"charges": 1,
+				"enabled": true,
+				"progress": 1,
+				"refilled": 8,
+				"remaining": 0.0,
+				"used": 8
+			},
+			"dash_identities": 3,
+			"distance": 94916.39453125,
+			"elapsed": 290.000000000065,
+			"health": 3,
+			"nodes": 195,
+			"offset": 76800.0,
+			"static_memory": 398449024
+		}
+	],
+	"score": {
+		"combo": 2000,
+		"completed": 10,
+		"distance": 9867,
+		"heal_choices": 3,
+		"nodes": 4700,
+		"score_choices": 0,
+		"station": 0
+	},
+	"wall_seconds": 75.498
+}
