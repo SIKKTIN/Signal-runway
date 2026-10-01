@@ -1,9 +1,9 @@
 # 测试3
 
-> 文档生成时间：2026-10-01T10:38:59.469Z
-> 文档内容基准：3dfc8efdd73d1b135cee11f8b272ea2bc1f40dcb215e75390f78bf2bd4fdab56
+> 文档生成时间：2026-10-01T11:31:49.672Z
+> 文档内容基准：273d1276887338eb27273275d11e88c4cf2a80b74cc52c2385387f92c4c87d5f
 
-> 项目版本：v0.6
+> 项目版本：v0.7
 > 由 GameCreator 同步，供开发查阅。
 
 [返回目录](../../README.md)
@@ -50,11 +50,11 @@
 - v0.6 恢复站互斥路线 [4787359f-66b5-40a4-a3d3-8294de960f25] · 已完成
 - v0.6 编辑器与规则记录 [f7d4d7cb-bdc7-4dba-884e-6e16023903e7] · 已完成
 - v0.6 调参修复与源交付 [484d3e04-5c5b-4a68-b068-8314eabdfac4] · 已完成
-- v0.7 连续地形灰盒 [88297466-e439-4fe4-9d82-829062f8df51] · 待开始
-- v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332] · 待开始
-- v0.7 运行兼容与记录 [899c343b-d951-4092-b276-2e50c5735e83] · 待开始
-- v0.7 编辑器扩展 [43354328-744f-4674-ad67-e2f6257e8f05] · 待开始
-- v0.7 修复与源交付 [6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76] · 待开始
+- v0.7 连续地形灰盒 [88297466-e439-4fe4-9d82-829062f8df51] · 已完成
+- v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332] · 已完成
+- v0.7 运行兼容与记录 [899c343b-d951-4092-b276-2e50c5735e83] · 已完成
+- v0.7 编辑器扩展 [43354328-744f-4674-ad67-e2f6257e8f05] · 已完成
+- v0.7 修复与源交付 [6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76] · 已完成
 
 ### 主美
 - 岗位 ID：art-director
@@ -77,8 +77,8 @@
 - v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
 - v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
 - v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
-- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 待开始
-- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 待开始
+- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 已完成
+- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 已完成
 
 ### 模块负责人
 - 岗位 ID：module-owner
@@ -362,7 +362,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 
 ## 制作人行动清单
 
-当前排期判断：已建立计划，准备组织制作。这只是排期快照，不能代替引擎实际检查。
+当前排期判断：任务已完成，需检查里程碑验收与下一轮目标。这只是排期快照，不能代替引擎实际检查。
 
 ### 制作人职责与交接边界
 
@@ -786,7 +786,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.7 连续地形灰盒
 - ID：88297466-e439-4fe4-9d82-829062f8df51
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.7-plan.md工作包A；估算4至6小时，建议日期按M1结果调整。
 - 前置任务：无
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
@@ -797,7 +797,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.7 路线组合与空间库
 - ID：bf11b980-a86d-476d-8817-3aaadab1d332
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.7-plan.md工作包B；估算5至7小时，建议日期按M1结果调整。
 - 前置任务：88297466-e439-4fe4-9d82-829062f8df51
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
@@ -808,7 +808,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.7 运行兼容与记录
 - ID：899c343b-d951-4092-b276-2e50c5735e83
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.7-plan.md工作包C；估算2至3小时，建议日期按M1结果调整。
 - 前置任务：bf11b980-a86d-476d-8817-3aaadab1d332
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
@@ -819,7 +819,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.7 编辑器扩展
 - ID：43354328-744f-4674-ad67-e2f6257e8f05
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.7-plan.md工作包D；估算3至4小时，建议日期按M1结果调整。
 - 前置任务：bf11b980-a86d-476d-8817-3aaadab1d332、899c343b-d951-4092-b276-2e50c5735e83
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
@@ -830,7 +830,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.7 修复与源交付
 - ID：6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.7-plan.md工作包G；估算4至6小时，建议日期按M1结果调整。
 - 前置任务：3dcc45d3-8bd4-4930-b1d2-2a370c075abd
 - 允许修改路径：scripts、scenes、resources/generation、project.godot、docs、planning/v0.7-plan.md、reports/v0.7、README.md
@@ -887,13 +887,13 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
 - v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
 - v0.6 调参修复与源交付 [484d3e04-5c5b-4a68-b068-8314eabdfac4] · 已完成
-- v0.7 连续地形灰盒 [88297466-e439-4fe4-9d82-829062f8df51] · 待开始
-- v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332] · 待开始
-- v0.7 运行兼容与记录 [899c343b-d951-4092-b276-2e50c5735e83] · 待开始
-- v0.7 编辑器扩展 [43354328-744f-4674-ad67-e2f6257e8f05] · 待开始
-- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 待开始
-- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 待开始
-- v0.7 修复与源交付 [6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76] · 待开始
+- v0.7 连续地形灰盒 [88297466-e439-4fe4-9d82-829062f8df51] · 已完成
+- v0.7 路线组合与空间库 [bf11b980-a86d-476d-8817-3aaadab1d332] · 已完成
+- v0.7 运行兼容与记录 [899c343b-d951-4092-b276-2e50c5735e83] · 已完成
+- v0.7 编辑器扩展 [43354328-744f-4674-ad67-e2f6257e8f05] · 已完成
+- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 已完成
+- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 已完成
+- v0.7 修复与源交付 [6faf0ed3-0896-40ca-8f34-0d5c9b7a3f76] · 已完成
 
 ### 主美
 - 成员 ID：f460c4d7-9bf2-4d95-b943-64327a53c0fe
@@ -1358,7 +1358,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.7 空间美术
 - ID：ff683b7b-e7cf-42a1-ad85-7d3180df8109
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.7-plan.md工作包E；估算4至6小时，建议日期按M1结果调整。
 - 前置任务：bf11b980-a86d-476d-8817-3aaadab1d332
 - 允许修改路径：assets/visual/v07、scripts/visual/spatial_visual.gd、scripts/visual/endless_module_visual.gd、scripts/visual/route_visual.gd、docs/art/v0.7.md、reports/v0.7/art、reports/v0.7/independent-checks、reports/v0.7/independent-review.md
@@ -1368,7 +1368,7 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - 验收负责人：制作人
 ### v0.7 独立检查
 - ID：3dcc45d3-8bd4-4930-b1d2-2a370c075abd
-- 当前状态：待开始
+- 当前状态：已完成
 - 内容：执行planning/v0.7-plan.md工作包F；估算2至4小时，建议日期按M1结果调整。
 - 前置任务：43354328-744f-4674-ad67-e2f6257e8f05、ff683b7b-e7cf-42a1-ad85-7d3180df8109
 - 允许修改路径：assets/visual/v07、scripts/visual/spatial_visual.gd、scripts/visual/endless_module_visual.gd、scripts/visual/route_visual.gd、docs/art/v0.7.md、reports/v0.7/art、reports/v0.7/independent-checks、reports/v0.7/independent-review.md
@@ -1396,5 +1396,5 @@ gc_project_read 的 contentSnapshotId 是当前内容摘要；snapshotId 只有�
 - v0.5 同版本独立试玩与验收 [55770c96-0113-4ab1-b1f6-721c3418bbef] · 已完成
 - v0.6 场景与状态表现 [12037ba0-a14d-4412-8ea5-87a3133c4253] · 已完成
 - v0.6 同版本独立试玩 [5956e495-dec4-4fe2-942e-edebdfca26d0] · 已完成
-- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 待开始
-- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 待开始
+- v0.7 空间美术 [ff683b7b-e7cf-42a1-ad85-7d3180df8109] · 已完成
+- v0.7 独立检查 [3dcc45d3-8bd4-4930-b1d2-2a370c075abd] · 已完成

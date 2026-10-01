@@ -80,3 +80,7 @@
 正式v0.7/v0.6/v0.5/更早成绩以及正式失败种子文件，本次受限上下文开始/结束均 **missing**。只能说未产生这些正式文件，不能宣称核对过已有内容哈希。独立res记录、早失败和晚失败文件均使用隔离路径，真实四类成绩写入与F8清理通过，默认配置和109生产哈希前后未变。
 
 自然/工具日志无生产脚本、泄漏或孤立资源错误；有已知sandbox shader cache/根证书以及工具profiles目录枚举错误。所有结果保存在 `reports/v0.7/independent-checks/`：natural-results.json（33项及6runs）、tools-results.json（24项和observations）、pixels-and-sources.json、原log/截图与初始manifest。检查数是断言数量，不是57次自然通关。报告由制作人验收，源工程由G关闭必要问题并最终交付。
+
+## G 后续修复说明
+
+上述为原214候选独立报告，已由制作人正式验收，原始失败观察保留。制作人G只改RunFlow生成5镜头后，新候选v0.7.0+6c0fc3b291b8的三种子首站自然选择/落地、真实暂停/R重试和一个连接定点镜头共16项通过，暂停像素0，109哈希前后匹配。实际白顶下缘及脚底均在HUD450上方，F-01按定向范围关闭。详见 `independent-checks/g-camera-report.md` 及其JSON/PNG，明确加速、工具fixture、画布坐标/截图邻帧和旧证据继承范围。未修改已accepted F事务，旧六路线与工具24项未重跑为新版本结论。
